@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-    <link type="text/css" href="css/leaflet.css" rel="stylesheet"/>
+
     <link type="text/css" href="css/leaflet.markercluster.css" rel="stylesheet"/>
 
     <link rel="stylesheet" type="text/css" href="css/dc.css">
@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
 <style>
 /* Change the styles below in order to customize your template */
 
@@ -318,7 +320,26 @@ var shwgp = shwDim.group();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
+var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['age_brakets']; });
+var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group();
 
+  dc.rowChart("#cccm .Direct_Contractor_Voucher",groupname)
+        .dimension(Direct_Contractor_VoucherDim)
+        .group(Direct_Contractor_Vouchergp)
+       // .group(districtsByMen, "Men")
+       //.stack(villbyorg, "Women")
+       // .stack(districtsByBoy, "Boys")
+       // .stack(districtsByGirl, "Girls")
+        .elasticX(true)
+        //.data(function(group) { return group.top(10); })
+        .width(200)
+        .height(350)
+        .renderLabel(true)
+        .ordering(function (p) { return p.value;})
+        .colors(['#FFAA00'])
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 
 $('#reset').on('click', function (){
