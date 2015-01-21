@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-    <link type="text/css" href="css/leaflet.css" rel="stylesheet"/>
+
     <link type="text/css" href="css/leaflet.markercluster.css" rel="stylesheet"/>
 
     <link rel="stylesheet" type="text/css" href="css/dc.css">
@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
 <style>
 /* Change the styles below in order to customize your template */
 
@@ -164,7 +166,11 @@ a:hover{text-decoration: underline;}
 /*     Markers      */
 //var numberFormat = d3.format(",f");
 
+<<<<<<< HEAD
 d3.tsv("data/individual_pop2.tsv", function(data) {
+=======
+d3.tsv("data/individual_pop1.tsv", function(data) {
+>>>>>>> origin/master
  // drawMarkerSelect(data);
   drawMarkerArea(data);
 });

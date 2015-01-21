@@ -34,7 +34,6 @@ dc.leafletChart = function(_chart) {
         };
 
         var overlayMaps = {
-			"Zaatari":ima,
 			"Infrastructure":inf,
 			"Population density":density
 			
