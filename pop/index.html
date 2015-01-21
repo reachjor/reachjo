@@ -223,9 +223,9 @@ function drawMarkerArea(data) {
       //.height(300)
       .center([32.293,36.328])
       .zoom(15)
-      .cluster(true)
+      .cluster(false)
       .renderPopup(false)
-      .filterByArea(true)
+      .filterByArea(false)
 	   //.clusterObject({ maxClusterRadius: 40, disableClusteringAtZoom:10,spiderfyOnMaxZoom: false,showCoverageOnHover: false})
     ;
 
@@ -276,7 +276,7 @@ var stdategp = stdateDim.group();
         .width(200)
         .height(800)
         .renderLabel(true)
-        //.ordering(function (p) { return -p.value;})
+        .ordering(function (p) { return -p.value;})
         .colors(['#E54143'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
