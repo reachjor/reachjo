@@ -165,10 +165,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 //var numberFormat = d3.format(",f");
-
-
 d3.tsv("data/individual_pop.tsv", function(data) {
-
  // drawMarkerSelect(data);
   drawMarkerArea(data);
 });
@@ -337,7 +334,7 @@ var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group();
         .width(200)
         .height(350)
         .renderLabel(true)
-        .ordering(function (p) { return p.value;})
+        //.ordering(function (p) { return p.value;})
         .colors(['#FFAA00'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
