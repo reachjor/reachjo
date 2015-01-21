@@ -276,7 +276,7 @@ var stdategp = stdateDim.group();
         .width(200)
         .height(800)
         .renderLabel(true)
-        //.ordering(function (p) { return -p.value;})
+        .ordering(function (p) { return -p.value;})
         .colors(['#E54143'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
