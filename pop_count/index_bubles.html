@@ -786,6 +786,7 @@ var ndx                  = crossfilter(experiments),
           .x(d3.time.scale().domain([new Date(2012, 1, 01), new Date(2014, 12, 31)]))
           .renderHorizontalGridLines(true)
           .elasticY(true)
+		  .elasticX(true)
           .renderArea(true)
           .brushOn(true)
           .renderDataPoints(false)
