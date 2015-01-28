@@ -742,7 +742,7 @@ var ndx                  = crossfilter(experiments),
           .elasticX(true)
           .renderLabel(true)
          //.ordering(function (p) { return -p.value;})
-          .colors(['#58585A'])
+          .colors(['#d1d1d1'])
           .colorDomain([0,0])
           .colorAccessor(function(d, i){return 1;})
           .xAxis().ticks(4).tickFormat(d3.format("s"));
@@ -799,7 +799,7 @@ var ndx                  = crossfilter(experiments),
           .renderLabel(true)
           //.slicesCap(7)
           .ordering(function (p) { return p.value;})
-          .colors(['#FFAA00'])
+          .colors(['#ffa62e'])
           .colorDomain([0,0])
           .colorAccessor(function(d, i){return 1;})
           .xAxis().ticks(4).tickFormat(d3.format("s"));
@@ -809,7 +809,7 @@ var ndx                  = crossfilter(experiments),
           .dimension(govDimension)
           .group(govGroup)
           .ordering(function (p) { return -p.value;})
-		  .colors(['#FFAE33'])
+		  .colors(['#d1d1d1'])
           .colorDomain([0,0])
           .colorAccessor(function(d, i){return 1;})
           .xAxis().ticks(4).tickFormat(d3.format("s"));
