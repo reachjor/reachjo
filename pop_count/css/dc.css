@@ -73,6 +73,7 @@ div.dc-chart {
 
 .dc-chart .axis text {
     font: 9px sans-serif;
+	margin-left:100px;
 }
 
 .dc-chart .grid-line {
@@ -221,7 +222,7 @@ div.dc-chart {
 }
 
 .dc-legend {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .dc-legend-item {
