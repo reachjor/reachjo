@@ -7,21 +7,6 @@ dc.leafletChart = function(_chart) {
   var _defaultCenter=false;
   var _defaultZoom=false;
 
-/*
-  var _tiles=function(map) {
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-  }
-
-  var _tiles=function(map) {
-    L.tileLayer('http://a.tiles.mapbox.com/v3/unhcr.jg02lf55/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-  }
-*/
-
-
   var _tiles=function(map) {
     L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -42,18 +27,24 @@ dc.leafletChart = function(_chart) {
 		var cupcakeTiles = L.esri.basemapLayer("Gray");
 		var topo = L.esri.basemapLayer("Topographic");
 		var natgeo = L.esri.basemapLayer("NationalGeographic");
-		var sat = L.esri.basemapLayer("Imagery");
+		//var sat = L.esri.basemapLayer("Imagery");
 		var ocean = L.esri.basemapLayer("Oceans");
 		var shade = L.esri.basemapLayer("ShadedRelief");
 		var grey = L.esri.basemapLayer("DarkGray");
+		
+		
+		
+		
 
         // http://map1.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi?TIME=2014-11-21&SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=MODIS_Terra_CorrectedReflectance_TrueColor&STYLE=&TILEMATRIXSET=EPSG4326_250m&TILEMATRIX=5&TILEROW=5&TILECOL=23&FORMAT=image%2Fjpeg
 
         // LAYER CONTROLS
         var baseMaps = {
             "Satellite":satt,
-            "Basemap":basem,
-			"esri":grey
+            "Open street map":basem,
+			"Relief":shade,
+			"Administrative":grey,
+			"Carte du monde":natgeo,
         };
 
         var overlayMaps = {
