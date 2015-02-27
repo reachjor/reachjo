@@ -305,7 +305,7 @@ var Intervgp = IntervDim.group().reduceSum(function (d) { return d['Personnes be
   dc.rowChart("#cccm .ChocType",groupname)
         .dimension(choc)
         .group(chocDim)
-		.data(function(group) {return group.all().filter(function(kv) { return kv.key !=""; });})
+		//.data(function(group) {return group.all().filter(function(kv) { return kv.key !=""; });})
         .width(200)
         .height(200)
         .renderLabel(true)
