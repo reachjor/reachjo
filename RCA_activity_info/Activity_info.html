@@ -183,7 +183,27 @@
 			div.innerHTML = labels.join('<br>');
 			return div;
 		};
-	var legend2 = legend1 
+		
+		var legend2 = L.control({position: 'bottomleft'});
+		legend2.onAdd = function (map) {
+	
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = ["ACF","ACTED","DRC","IRC","PU AMI","SOLIDARITES","Non couvert"],
+				labels = [],
+				from, to;
+			for (var i = 0; i < 7; i++) {
+				from = grades[i];
+				//to = grades[i];
+				labels.push(
+					'<i style="background:' + getColor(from) + '"></i> ' + from);
+			}
+			div.innerHTML = labels.join('<br>');
+			return div;
+		};
+		
+		
+	
+	
 	//legend1.addTo(map)	
 		
 	var  prefectures = L.geoJson(pref, {
