@@ -21,6 +21,7 @@
 	
 	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
+	<script type="text/javascript" src="js/RRM_2015.js"></script>
 	
     <style>
 	
@@ -128,6 +129,7 @@
     			   d == "IRC"  ? '#868478' :
 				   d == "PU AMI"  ? '#53a653' :
 				   d == "SOLIDARITES" ? '#b31b16' :
+				   d == "NA" ? '#ffffff':
 									'#FFEDA0';
 		}
 	
@@ -158,15 +160,21 @@
 			//onEachFeature:
 	});
 
+	var  area_ngo2015 = L.geoJson(RRM_2015, {
+			style: couverture,
+			//onEachFeature:
+	});
+
+	
 	
 	var legend1 = L.control({position: 'bottomleft'});
 		legend1.onAdd = function (map) {
 
 			var div = L.DomUtil.create('div', 'info legend'),
-				grades = ["ACF","ACTED","DRC","IRC","PU AMI","SOLIDARITES"],
+				grades = ["ACF","ACTED","DRC","IRC","PU AMI","SOLIDARITES","Non couvert"],
 				labels = [],
 				from, to;
-			for (var i = 0; i < 6; i++) {
+			for (var i = 0; i < 7; i++) {
 				from = grades[i];
 				//to = grades[i];
 				labels.push(
@@ -198,8 +206,11 @@
 		  "Chocs": {
 			"Incident reportes":alerte
 		 },
-		  "RRM RCA": {
-		   "Couverture ONG":area_ngo,
+		  "Couverture RRM": {
+		   "Couverture ONG 2014":area_ngo,
+		   "Couverture ONG 2015":area_ngo2015
+		    },
+		  "Activite RRM": {
 			"Mission exploratoire":mex,
 			"MSA":MSA,
 			"Intervention RRM":inter	
@@ -207,6 +218,7 @@
 		};
 
 
+//var options = { exclusiveGroups: ["Couverture RRM"] };
 
 layersControl = L.control.groupedLayers(baseMaps, groupedOverlays);
 map.addControl(layersControl);
@@ -214,28 +226,28 @@ map.addControl(layersControl);
 	
 map.on('overlayadd', function (eventLayer) {
     // Switch to the Permafrost legend...
-    if (eventLayer.name === 'Couverture ONG') {
+    if (eventLayer.name === 'Couverture ONG 2014') {
         //map.addControl(legend1);
         legend1.addTo(map);
 		//info.addTo(map);
     }
-	else if (eventLayer.name === 'ITS') {
+	else if (eventLayer.name === 'Couverture ONG 2015') {
         //map.addControl(legend1);
-        //infoITS.addTo(map);
-		//legend_ITS_v2.addTo(map);
+        legend1.addTo(map);
+		//info.addTo(map);
     } 
 });
 
 map.on('overlayremove', function (eventLayer) {
     // Switch to the Permafrost legend...
-    if (eventLayer.name === 'Couverture ONG') {
+    if (eventLayer.name === 'Couverture ONG 2014') {
         map.removeControl(legend1);
         //map.removeControl(info);
         //legend1.addTo(map);
     }
-    else if (eventLayer.name === 'ITS') {
-        //map.removeControl(infoITS);
-		//map.removeControl(legend_ITS_v2);
+    else if (eventLayer.name === 'Couverture ONG 2015') {
+         map.removeControl(legend1);
+        //map.removeControl(info);
         //legend1.addTo(map);
     }	
 });
