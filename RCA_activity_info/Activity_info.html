@@ -169,7 +169,7 @@
 	
 	var legend1 = L.control({position: 'bottomleft'});
 		legend1.onAdd = function (map) {
-
+	
 			var div = L.DomUtil.create('div', 'info legend'),
 				grades = ["ACF","ACTED","DRC","IRC","PU AMI","SOLIDARITES","Non couvert"],
 				labels = [],
@@ -183,7 +183,7 @@
 			div.innerHTML = labels.join('<br>');
 			return div;
 		};
-		
+	var legend2 = legend1 
 	//legend1.addTo(map)	
 		
 	var  prefectures = L.geoJson(pref, {
@@ -233,7 +233,7 @@ map.on('overlayadd', function (eventLayer) {
     }
 	else if (eventLayer.name === 'Couverture ONG 2015') {
         //map.addControl(legend1);
-        legend1.addTo(map);
+        legend2.addTo(map);
 		//info.addTo(map);
     } 
 });
@@ -246,7 +246,7 @@ map.on('overlayremove', function (eventLayer) {
         //legend1.addTo(map);
     }
     else if (eventLayer.name === 'Couverture ONG 2015') {
-         map.removeControl(legend1);
+         map.removeControl(legend2);
         //map.removeControl(info);
         //legend1.addTo(map);
     }	
