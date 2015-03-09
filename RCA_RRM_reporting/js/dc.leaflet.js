@@ -12,50 +12,60 @@ dc.leafletChart = function(_chart) {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-      baseMap ='http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png';
-      sat="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
-      grey= L.esri.basemapLayer("Topographic")
-      clouds = 'http://{s}.tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png';
-            //citiesUrl = 'http://{s}.tiles.mapbox.com/v3/mapbox.world-bank-borders-fr/{z}/{x}/{y}.png';
-      is = 'http://b.tiles.mapbox.com/v3/pierrereach.3wwx2ume/{z}/{x}/{y}.png'
-
-        var basem = new L.TileLayer(baseMap),
-            clo = new L.TileLayer(clouds),
-            iss = new L.TileLayer(is),
-            satt = new L.TileLayer(sat);
-
-		var cupcakeTiles = L.esri.basemapLayer("Gray");
-		var topo = L.esri.basemapLayer("Topographic");
-		var natgeo = L.esri.basemapLayer("NationalGeographic");
-		//var sat = L.esri.basemapLayer("Imagery");
-		var ocean = L.esri.basemapLayer("Oceans");
-		var shade = L.esri.basemapLayer("ShadedRelief");
-		var grey = L.esri.basemapLayer("DarkGray");
+   	var base = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
 		
+	sat="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+	var satt = new L.TileLayer(sat);
+	var topo = L.esri.basemapLayer("Topographic");
+	var natgeo = L.esri.basemapLayer("NationalGeographic");
+	var ocean = L.esri.basemapLayer("Oceans");
+	var shade = L.esri.basemapLayer("ShadedRelief");
+	var grey = L.esri.basemapLayer("DarkGray");
+	
+   
+	
+	var  area_ngo = L.geoJson(area, {
+			style: {
+			weight:0,
+			opacity: 0.9,
+			color: 'white',
+			dashArray: '3',
+			attribution:'RRM RCA'
+			//onEachFeature:
+			}
+	});
 		
-		
-		
+	var  prefectures = L.geoJson(pref, {
+			style: {
+			weight:1.5,
+			opacity: 0.4,
+			color: 'black',
+			dashArray: '3',
+			fillOpacity:0,
+			//onEachFeature:
+			}
+	});
+	 
+	prefectures.addTo(map) 
 
-        // http://map1.vis.earthdata.nasa.gov/wmts-geo/wmts.cgi?TIME=2014-11-21&SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=MODIS_Terra_CorrectedReflectance_TrueColor&STYLE=&TILEMATRIXSET=EPSG4326_250m&TILEMATRIX=5&TILEROW=5&TILECOL=23&FORMAT=image%2Fjpeg
-
-        // LAYER CONTROLS
-        var baseMaps = {
-            "Satellite":satt,
-            "Open street map":basem,
-			"Relief":shade,
-			"Administrative":grey,
-			"Carte du monde":natgeo,
+	
+	   var baseMaps = {
+        "Basemap":base,
+		"Image Sattelite":satt,
+		"NationalGeographic":natgeo,
+		"Topographique":topo,
+		"Frontiere":grey		
         };
 
         var overlayMaps = {
-        //"Cities": cities,
-        "Precipitations": clo,
-        "IS Number of shelter": iss
-        };
+		"Prefectures":prefectures, 
+		"Couverture ONG":area_ngo
+      };
 
-        layersControl = new L.Control.Layers(baseMaps, overlayMaps);
-
-        map.addControl(layersControl);
+       layersControl = new L.Control.Layers(baseMaps,overlayMaps).addTo(map);
+	
   }
 
   _chart.doRender = function() {
