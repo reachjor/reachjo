@@ -168,7 +168,7 @@ dc.leafletMarkerChart = function(parent, chartGroup) {
 
   var _icon = function(d,map) {
     return new L.Icon.Default({
-		iconUrl: 'http://localhost/RCA_RRM_reporting/image/choc.png',
+		iconUrl: 'image/choc.png',
 		iconSize:     [20, 20],
 		shadowSize:   [0, 0],
 		iconAnchor:   [0, 0],});
