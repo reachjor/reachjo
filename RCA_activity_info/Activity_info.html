@@ -28,8 +28,8 @@
 				height: 500px;
 			 }
     </style>
-
 </head>
+
 
 <body>
     <div id="map"></div>
@@ -184,7 +184,7 @@
 
 	var  area_ngo2015 = L.geoJson(RRM_2015, {
 			style: couverture_2015
-	});
+	}).addTo(map);
 
 	var legend1 = L.control({position: 'bottomleft'});
 		legend1.onAdd = function (map) {
@@ -198,13 +198,13 @@
 				labels.push(
 					'<i style="background:' + getColor_2014(from) + '"></i> ' + from);
 			}
-			div.innerHTML = labels.join('<br>');
+			div.innerHTML = '<b>Couverture RRM 2014<b><br/>'+labels.join('<br>');
 			return div;
 		};
 		
 	var legend2 = L.control({position: 'bottomleft'});
 		legend2.onAdd = function (map) {
-	
+				
 			var div = L.DomUtil.create('div', 'info legend'),
 				grades = ["ACF","ACTED","DRC","PU AMI","SOLIDARITES","Non couvert"],
 				labels = [],
@@ -214,16 +214,17 @@
 				labels.push(
 					'<i style="background:' + getColor_2015(from) + '"></i> ' + from);
 			}
-			div.innerHTML = labels.join('<br>');
+			div.innerHTML = '<b>Couverture RRM 2015<b><br/>'+labels.join('<br>');
 			return div;
 		};
+	legend2.addTo(map);
 	
 	var  prefectures = L.geoJson(pref, {
 			style: style,
 	}).addTo(map);
 
 	   var baseMaps = {
-           "Basemap":base,
+        "Basemap":base,
 		"Image Sattelite":satt,
 		"NationalGeographic":natgeo,
 		"Topographique":topo,
