@@ -30,6 +30,10 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
  	<script type="text/javascript"  src="js/esri-leaflet.js"></script>
 	
+	 <link rel="stylesheet" href="js/easyPrint.css"/>
+    <script src="js/jQuery.print.js"></script>
+    <script src="js/leaflet.easyPrint.js"></script>
+	
 
     <style>
  </style>	  
@@ -335,6 +339,7 @@ map.on('overlayremove', function (eventLayer) {
     }
 });
 
+L.easyPrint().addTo(map)
 
 </script>
 </body>
