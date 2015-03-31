@@ -7,13 +7,15 @@ dc.leafletChart = function(_chart) {
   var _defaultZoom=false;
 
   var _tiles=function(map) {
-    L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+     L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 
-   	var base = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-		});
+            attribution: 'Tiles &copy; <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+   	var base =  new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+
+            attribution: 'Tiles &copy; <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 		
 	sat="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
 	var satt = new L.TileLayer(sat);
@@ -38,8 +40,8 @@ dc.leafletChart = function(_chart) {
 	   var baseMaps = {
         "Basemap":base,
 		"Image Sattelite":satt,
-		//"NationalGeographic":natgeo,
-		//"Topographique":topo,
+		"NationalGeographic":natgeo,
+		"Topographique":topo,
 		"Black":grey		
         };
 

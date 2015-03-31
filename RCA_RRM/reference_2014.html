@@ -1,7 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr">
 <head>
+	
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <title>RRM RCA - Carte de reference 2014</title>
+	
      <!-- Load Leaflet from CDN-->
+	<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
 	<script type="text/javascript" src="js/RRM_2015.js"></script>
@@ -10,55 +16,26 @@
 	 
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <script src="leaflet/leaflet-src.js"></script>
-	
-	<link rel="stylesheet" href="css/leaflet.label.css" />
-	<script src="js/leaflet.label.js"></script>
-	
+		
 	<script src="js/leaflet.groupedlayercontrol.js"></script>
 	<link rel="stylesheet" href="css/leaflet.groupedlayercontrol.css" />
 
+   	<script src="js/jquery.nouislider.all.js"></script>
+	<link rel="stylesheet" href="css/jquery.nouislider.css" />
 	
-	<!-- <script src="js/leaflet.label.js"></script> -->
-
 	<script src="js/leaflet.ajax.min.js"></script>
-	
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+ 	<script type="text/javascript"  src="js/esri-leaflet.js"></script>
 	
-	<link rel="stylesheet" href="js/Control.FullScreen.css" />
-	<script src="js/Control.FullScreen.js"></script>
- 
 
-	 
-	<script type="text/javascript"  src="js/esri-leaflet.js"></script>
-
-		
-	<link rel="stylesheet" href="js/Control.MiniMap.js" />
-	 <script src="js/Control.MiniMap.js"></script>
-	
-	<!-- 
-	<script src="js/FunctionButton.js"></script>
-		 -->
-	
     <style>
-	
-	  
+ </style>	  
     </style>
 </head>
-
-	
-	
-	
 <body>
-
-<!-- <nav class='menu-ui'>
-  <a href='#' class='active' data-filter='all'>Show all</a>
-  <a href='#' data-filter='ACTED'>2014</a>
-  <a href='#' data-filter='ACF'>2015</a>
-</nav>
- -->
-
   <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -75,7 +52,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activites <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="Activity_info.html">Carte de reference</a></li>
+                <li><a href="reference_2014.html">Carte de reference 2014</a></li>
+                <li><a href="reference_2015.html">Carte de reference 2015</a></li>
 				<li><a href="alerte.html">Alerte</a></li>
                 <li><a href="mex.html">Mission exploratoire</a></li>
                 <li><a href="MSA.html">MSA</a></li>
@@ -83,7 +61,7 @@
                 <li><a href="pdm.html">PDM</a></li>
               </ul>
             </li>
-				<li><a>Carte de reference</a></li>
+				<li><a>Carte de reference 2014</a></li>
 			</ul>
 			
         </div><!--/.nav-collapse -->
@@ -95,7 +73,12 @@
 <div id="map"></div>
 
  <script>
+ 
+ 
+	var dateyear =d3.time.format("%Y")
 	
+	
+		
 	var LeafIcon = L.Icon.extend({
 				options: {
 					iconSize:     [25, 25],
@@ -128,7 +111,7 @@
 		+ '<br/><b>Date debut: </b>' + feature.properties.startDate 
 		+ '<br/><b>Date fin: </b>' + feature.properties.endDate 
 		+ '<br/><b>ONG: </b>' + feature.properties.partnerName
-		+ '<br/><b>Incident_ID: </b>' + feature.properties.indicators.AlerteID
+		+ '<br/><b>Incident ID: </b>' + feature.properties.indicators.AlerteID
         : '<b></b>')
 		)};
   
@@ -148,6 +131,23 @@
 	var shade = L.esri.basemapLayer("ShadedRelief");
 	var grey = L.esri.basemapLayer("DarkGray");
 	
+	
+        var layer01 = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+
+            attribution: 'Tiles &copy; <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+        var layer02 = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; Map Data <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+   
+	
+	
+	
+	
+	
+	
 	function getColor_2014(d) {
 			return d == "ACF"  ? '#0467b5' :
 			       d == "ACTED"  ? '#0f3a63' :
@@ -158,16 +158,7 @@
 									'#FFEDA0';
 		}
 
-	function getColor_2015(d) {
-			return d == "ACF"  ? '#0467b5' :
-			       d == "ACTED"  ? '#0f3a63' :
-			       d == "DRC"  ? '#ecff5c' :
-				   d == "PU AMI"  ? '#53a653' :
-				   d == "SOLIDARITES" ? '#b31b16' :
-				   d == "Non couvert" ? '#ffffff':
-									'#FFEDA0';
-		}
-
+	
 	function style(feature) {
 		return {
 			weight:1,
@@ -189,74 +180,87 @@
 			};
 	}
 
-		function couverture_2015(feature) {
-		return {
-			weight:0,
-			opacity: 0.9,
-			color: 'white',
-			dashArray: '3',
-			fillOpacity: 0.3,
-			fillColor: getColor_2015(feature.properties.PREF_NOM)
-			};
-	}
 
-	var MSA = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=16230",
+	
+	
+
+	
+	var MSA_2014 = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=16230",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_msa,
 			   opacity:0.9
-			});
-		},
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		    },
 	onEachFeature:popUp
-	});
+	}).addTo(map);
 
-	var inter = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=13327",
+
+	
+	var inter_2014 = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=13327",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_dist,
 			   opacity:0.9
-			});
-		},
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		    },
 	onEachFeature:popUp
-	//filter:filter
-	});
-
-	var mex = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=16227",
+	}).addTo(map);
+	
+	
+	
+	var mex_2014 = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=16227",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_mex,
 			   opacity:0.9
-			});
-		},
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		    },
 	onEachFeature:popUp
-	});
+	}).addTo(map);
+	
+	
+	
 
-	var alerte = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=16228",
+	var alerte_2014 = new L.geoJson.ajax("http://build140.activityinfoeu.appspot.com/resources/sites/points?activity=16228",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_choc,
 			   opacity:0.9
-			});
-		},
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		    },
 	onEachFeature:popUp
-	});
+	}).addTo(map);
 
 	var  area_ngo = L.geoJson(area, {
 			style: couverture_2014
-	});
-
-	var  area_ngo2015 = L.geoJson(RRM_2015, {
-			style: couverture_2015
 	}).addTo(map);
 
+	
 	var legend1 = L.control({position: 'bottomleft'});
 		legend1.onAdd = function (map) {
 	
@@ -269,26 +273,12 @@
 				labels.push(
 					'<i style="background:' + getColor_2014(from) + '"></i> ' + from);
 			}
-			div.innerHTML = '<b>Couverture RRM 2014<b><br/>'+labels.join('<br>');
+			div.innerHTML = '<b>Couverture RRM 2014</b><br/>'+labels.join('<br>');
 			return div;
 		};
 		
-	var legend2 = L.control({position: 'bottomleft'});
-		legend2.onAdd = function (map) {
-				
-			var div = L.DomUtil.create('div', 'info legend'),
-				grades = ["ACF","ACTED","DRC","PU AMI","SOLIDARITES","Non couvert"],
-				labels = [],
-				from, to;
-			for (var i = 0; i < 6; i++) {
-				from = grades[i];
-				labels.push(
-					'<i style="background:' + getColor_2015(from) + '"></i> ' + from);
-			}
-			div.innerHTML = '<b>Couverture RRM 2015<b><br/>'+labels.join('<br>');
-			return div;
-		};
-	legend2.addTo(map);
+	
+	legend1.addTo(map);
 	
 var  prefectures = L.geoJson(pref, {
 			style: style,
@@ -300,9 +290,11 @@ var  prefectures = L.geoJson(pref, {
 var baseMaps = {
         "Basemap":base,
 		"Image Sattelite":satt,
-		//"NationalGeographic":natgeo
-		//"Topographique":topo,
-		//"Frontiere":grey		
+		"OMS1":layer01,
+		"OSM2":layer02,
+		"NationalGeographic":natgeo,
+		"Topographique":topo,
+		"Fonce":grey		
         };
 
 var groupedOverlays = {
@@ -310,16 +302,15 @@ var groupedOverlays = {
 			"Prefectures":prefectures	   
 		  },
 	"Chocs": {
-			"Incident reportes":alerte
+			"Incident reportes 2014":alerte_2014
 		 },
 	"Couverture RRM": {
-		   "Couverture ONG 2014":area_ngo,
-		   "Couverture ONG 2015":area_ngo2015
+		   "Couverture ONG 2014":area_ngo
 		 },
     "Activite RRM": {
-			"Mission exploratoire":mex,
-			"MSA":MSA,
-			"Intervention RRM":inter	
+			"Mission exploratoire 2014":mex_2014,
+			"MSA 2014":MSA_2014,
+			"Intervention RRM 2014":inter_2014
 		 }
 	};
 
@@ -334,9 +325,7 @@ map.on('overlayadd', function (eventLayer) {
     if (eventLayer.name === 'Couverture ONG 2014') {
         legend1.addTo(map);
     }
-	else if (eventLayer.name === 'Couverture ONG 2015') {
-        legend2.addTo(map);
-    } 
+	
 });
 
 map.on('overlayremove', function (eventLayer) {
@@ -344,25 +333,7 @@ map.on('overlayremove', function (eventLayer) {
     if (eventLayer.name === 'Couverture ONG 2014') {
         map.removeControl(legend1);
     }
-    else if (eventLayer.name === 'Couverture ONG 2015') {
-         map.removeControl(legend2);
-    }	
 });
-
-
-//$('.menu-ui a').on('click', function() {
-    // For each filter link, get the 'data-filter' attribute value.
- //   var filter = $(this).data('filter');
- //   $(this).addClass('active').siblings().removeClass('active');
- //   MSA.filtering(function(f) {
- //       // If the data-filter attribute is set to "all", return
- //       // all (true). Otherwise, filter on markers that have
-        // a value set to true based on the filter name.
- //       return (filter === 'all') ? true : f.properties[filter] === true;
- //   });
- //   return false;
-//});
-
 
 
 </script>

@@ -87,7 +87,8 @@ a:hover{text-decoration: underline;}
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activites <span class="caret"></span></a>
 			  
               <ul class="dropdown-menu" role="menu">
-                <li><a href="Activity_info.html">Carte de reference</a></li>
+                <li><a href="reference_2014.html">Carte de reference 2014</a></li>
+                <li><a href="reference_2015.html">Carte de reference 2015</a></li>
 				<li><a href="alerte.html">Alerte</a></li>
                 <li><a href="mex.html">Mission exploratoire</a></li>
                 <li><a href="MSA.html">MSA</a></li>
@@ -174,7 +175,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 
-d3.csv("data/RRM_MEX.csv", function(error,data) {
+d3.csv("data/RRM_mex.csv", function(error,data) {
      //drawMarkerSelect(data);
      drawMarkerArea(data);
 });

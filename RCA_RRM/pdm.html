@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr">
+<head>
+	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <title>RRM RCA - PDM</title>
+	
+	
+
+    <!-- Bootstrap -->
+	
+	<script src="js/html5.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" href="css/leaflet.css" rel="stylesheet"/>
+
+<style>
+
+</style>
+
+</head>
+ <body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">RRM Republique Centrafricaine</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activites <span class="caret"></span></a>
+			  
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="reference_2014.html">Carte de reference 2014</a></li>
+                <li><a href="reference_2015.html">Carte de reference 2015</a></li>
+				<li><a href="alerte.html">Alerte</a></li>
+                <li><a href="mex.html">Mission exploratoire</a></li>
+                <li><a href="MSA.html">MSA</a></li>
+                <li><a href="inter.html">Intervention</a></li>
+                <li><a href="pdm.html">PDM</a></li>
+              </ul>
+            </li>
+			<li><a>PDM - en cours de construction</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li><a class="reset" id="reset" href="#">Reset All</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>   
+	
+
+    <div class="container">
+	<h1>EN COURS DE CONSTRUCTION</h1>
+	 <li><a href="index.html">retour a la page d'acceuil</a></li>
+    </div>
+
+
+ <script src="js/bootstrap.js"></script>
+<!-- Custom Theme JavaScript -->
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>
+
+</body>
+
+
+</html>
