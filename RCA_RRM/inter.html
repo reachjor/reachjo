@@ -118,21 +118,24 @@ a:hover{text-decoration: underline;}
 					</div>
 						<div class="row">
 							<div  class="col-md-4">
-								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre de beneficiaire WASH</h4></div>
+								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires WASH</h4></div>
 							</div>
 							<div  class="col-md-4">
-								<div  class="prefNFI" id="cccm" class="dc-chart"><h4>Nombre de beneficiaire NFI</h4></div>
+								<div  class="prefNFI" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires NFI</h4></div>
 							
 							</div>
 							<div  class="col-md-4">
 								<div  class="partner" id="cccm" class="pie-chart"><h4>Nombre d'intervention par organisation</h4></div>
+							</div>
+							<div  class="col-md-4">
+								<div  class="intertype" id="cccm" class="pie-chart"><h4>Type of intervention</h4></div>
 							</div>
 						</div>
 						<div class="row">
 							
 							<div  class="col-md-4">
 								
-								<div  class="savon" id="cccm" class="dc-chart"><h4>Non Food Items distribues</h4></div>
+								<div  class="savon" id="cccm" class="dc-chart"><h4>Non Food Items distribués</h4></div>
 								<div  class="couverture" id="cccm" class="dc-chart"></div>
 								<div  class="natte" id="cccm" class="dc-chart"></div>
 								<div  class="bidon" id="cccm" class="dc-chart"></div>
@@ -141,29 +144,24 @@ a:hover{text-decoration: underline;}
 								<div  class="kitcuis" id="cccm" class="dc-chart"></div>
 								<div  class="vetenf" id="cccm" class="dc-chart"></div>
 								<div  class="torche" id="cccm" class="dc-chart"></div>
-								<div  class="vetbebe" id="cccm" class="dc-chart"></div>
-																
+								<div  class="vetbebe" id="cccm" class="dc-chart"></div>				
 							</div>
-							
 							<div  class="col-md-4">	
 								<div  class="sensib" id="cccm" class="dc-chart"><h4>Intervention sensibilisation</h4></div>
 								<div  class="comgest" id="cccm" class="dc-chart"></div>
 								<div  class="latbloc" id="cccm" class="dc-chart"><h4>Intervention asssainissement</h4></div>
 								<div  class="lat" id="cccm" class="dc-chart"></div>
 								<div  class="borehole" id="cccm" class="dc-chart"><h4>Intervention eau</h4></div>
-								
+								<div  class="gestion" id="cccm" class="dc-chart"></div>
 							</div>
 							<div  class="col-md-4">
 								
-								<div  class="viplum" id="cccm" class="dc-chart"><h4>Vivres distribues</h4></div>
+								<div  class="viplum" id="cccm" class="dc-chart"><h4>Vivres distribués</h4></div>
 								<div  class="vihuile" id="cccm" class="dc-chart"></div>
 								<div  class="vicsb" id="cccm" class="dc-chart"></div>
 								<div  class="viriz" id="cccm" class="dc-chart"></div>
 							</div>
-							
 						</div>  
-						
-							
 						<div class="row">
 							<div  class="col-md-8">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
@@ -272,7 +270,15 @@ function drawMarkerArea(data) {
         .height(150)
         .renderLabel(true)
         ;
-  
+  var interdim = xf.dimension(function(d) { return d.intervention_type; });
+  var intergp = interdim.group();  
+  dc.pieChart("#cccm .intertype",groupname)
+        .dimension(interdim)
+        .group(intergp)
+        .width(150)
+        .height(150)
+        .renderLabel(true)
+        ;
   
   var pref = xf.dimension(function(d) { return d['type']; });
   var natte = pref.group().reduceSum(function (d) { return d.NFI_Nattes_total; });
@@ -363,7 +369,7 @@ function drawMarkerArea(data) {
         .height(30)
         .renderLabel(false)
         .colors(['#01665e'])
-		.label(function(d) { return "Vetement bebe"; })
+		.label(function(d) { return "Vetement bébé"; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	  dc.rowChart("#cccm .torche",groupname)
@@ -433,7 +439,7 @@ function drawMarkerArea(data) {
         .height(30)
         .renderLabel(false)
         .colors(['#fdae61'])
-		.label(function(d) { return "Comite de gestion"; })
+		.label(function(d) { return "Comité de gestion assainissement"; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
  
@@ -473,6 +479,7 @@ function drawMarkerArea(data) {
 		.x(d3.scale.linear().domain([0, 0.5]))
 
 	var borehole = pref.group().reduceSum(function (d) { return d["réhabilitation_de_forage_ou_source_d.eau"]; });
+	var gestion = pref.group().reduceSum(function (d) { return d["Redynamisation_du_comité_de_gestion_de_la_source_d.eau"]; });
     dc.rowChart("#cccm .borehole",groupname)
         .dimension(pref)
         .group(borehole)
@@ -480,7 +487,17 @@ function drawMarkerArea(data) {
         .height(30)
         .renderLabel(false)
         .colors(['#4393c3'])
-		.label(function(d) { return "Rehabilitation forage"; })
+		.label(function(d) { return "Réhabilitation forage"; })
+		.margins({top: 0, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.05]));
+	 dc.rowChart("#cccm .gestion",groupname)
+        .dimension(pref)
+        .group(gestion)
+        .width(200)
+        .height(30)
+        .renderLabel(false)
+        .colors(['#4393c3'])
+		.label(function(d) { return "Formation comité de gestion d'eau"; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
   
