@@ -82,9 +82,10 @@ a:hover{text-decoration: underline;}
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
-			    <ul class="dropdown-menu" role="menu">
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités<span class="caret"></span></a>
+			  
+                <ul class="dropdown-menu" role="menu">
                 <li><a href="reference_2014.html">Carte de référence 2014</a></li>
                 <li><a href="reference_2015.html">Carte de référence 2015</a></li>
 				<li><a href="alerte.html">Incidents</a></li>
@@ -96,14 +97,14 @@ a:hover{text-decoration: underline;}
             </li>
 			<li><a>Interventions</a></li>
 			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
 			<li><a> </a></li>
 			<li style="top:7px"><img src="image/rrm.png" width="129" height="37"style="border-width:0px;"><li>	
 			<li><a> </a></li>
 			<li style="top:12px"><img src="image/REACH_logo.png" width="129" height="29"style="border-width:0px;"><li>					
-          </ul>
+         </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>   
@@ -115,7 +116,7 @@ a:hover{text-decoration: underline;}
                 <div class="sidepanel">
 					<div class="wrapper">
 						  <p id="gen"><h3>Interventions</h3></p>
-					</div>
+					
 						<div class="row">
 							<div  class="col-md-4">
 								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires WASH</h4></div>
@@ -178,7 +179,8 @@ a:hover{text-decoration: underline;}
                 </div>
             </div>
         </div>
-    </div>
+      
+   
 
     <script type="text/javascript" src="js/intro.js"></script>
     <script type="text/javascript" src="js/d3_002.js"></script>
@@ -578,6 +580,39 @@ $('#reset').on('click', function (){
   dc.renderAll(groupname);
 }
 
+</script>
+
+ <script src="js/bootstrap.js"></script>
+<!-- Custom Theme JavaScript -->
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
 </script>
 
 </body>
