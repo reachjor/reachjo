@@ -270,7 +270,8 @@ function drawMarkerArea(data) {
         .group(partnergp)
         .width(150)
         .height(150)
-        .renderLabel(true)
+        .title(function (d) {return d.value+" interventions";})
+		.renderLabel(true)
         ;
   var interdim = xf.dimension(function(d) { return d.intervention_type; });
   var intergp = interdim.group();  
@@ -279,6 +280,7 @@ function drawMarkerArea(data) {
         .group(intergp)
         .width(150)
         .height(150)
+        .title(function (d) {return d.value+" interventions";})
         .renderLabel(true)
         ;
   
@@ -300,8 +302,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#dfc27d'])
-		.label(function(d) { return "Natte"; })
-		.renderLabel(true)
+		.label(function(d) { return "Natte: "+d.value; })
 		.margins({top: -0.2, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));  
 	dc.rowChart("#cccm .bache",groupname)
@@ -310,8 +311,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#f5f5f5'])
-		.label(function(d) { return "Bache"; })
-		.renderLabel(true)
+		.label(function(d) { return "Bache: "+d.value; })
 		.margins({top: -1, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
     dc.rowChart("#cccm .couverture",groupname)
@@ -319,9 +319,8 @@ function drawMarkerArea(data) {
         .group(couverture)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#bf812d'])
-		.label(function(d) { return "Couverture"; })
+		.label(function(d) { return "Couverture: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	    dc.rowChart("#cccm .savon",groupname)
@@ -329,9 +328,8 @@ function drawMarkerArea(data) {
         .group(savon)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#8c510a'])
-		.label(function(d) { return "Savon"; })
+		.label(function(d) { return "Savons: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	    dc.rowChart("#cccm .bidon",groupname)
@@ -339,9 +337,8 @@ function drawMarkerArea(data) {
         .group(bidon)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#f6e8c3'])
-		.label(function(d) { return "Bidon"; })
+		.label(function(d) { return "Bidon: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	    dc.rowChart("#cccm .kitcuis",groupname)
@@ -349,9 +346,8 @@ function drawMarkerArea(data) {
         .group(kitcuis)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#c7eae5'])
-		.label(function(d) { return "Kit cuisine"; })
+		.label(function(d) { return "Kit cuisine: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	  dc.rowChart("#cccm .vetenf",groupname)
@@ -359,9 +355,8 @@ function drawMarkerArea(data) {
         .group(vetenf)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#80cdc1'])
-		.label(function(d) { return "Vetement Enfant"; })
+		.label(function(d) { return "Vetements Enfant: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	  dc.rowChart("#cccm .vetbebe",groupname)
@@ -369,9 +364,8 @@ function drawMarkerArea(data) {
         .group(vetbebe)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#01665e'])
-		.label(function(d) { return "Vetement bébé"; })
+		.label(function(d) { return "Vetements bébé: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	  dc.rowChart("#cccm .torche",groupname)
@@ -379,9 +373,8 @@ function drawMarkerArea(data) {
         .group(torche)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#35978f'])
-		.label(function(d) { return "Torche"; })
+		.label(function(d) { return "Torche: "+d.value; })
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 800]))
 		;
@@ -396,9 +389,8 @@ function drawMarkerArea(data) {
         .group(viplum)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#542788'])
-		.label(function(d) { return "Plumpy nut"; })
+		.label(function(d) { return "Plumpy nut: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 25]));
 	  dc.rowChart("#cccm .vihuile",groupname)
@@ -406,9 +398,8 @@ function drawMarkerArea(data) {
         .group(vihuile)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#8073ac'])
-		.label(function(d) { return "Huile 2L"; })
+		.label(function(d) { return "Huile 2L: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 25]));
 	  dc.rowChart("#cccm .vicsb",groupname)
@@ -416,9 +407,8 @@ function drawMarkerArea(data) {
         .group(vicsb)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#b2abd2'])
-		.label(function(d) { return "CSB 12.5kg"; })
+		.label(function(d) { return "CSB 12.5kg: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 25]));
 	  dc.rowChart("#cccm .viriz",groupname)
@@ -426,9 +416,8 @@ function drawMarkerArea(data) {
         .group(viriz)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#d8daeb'])
-		.label(function(d) { return "Riz 25kg"; })
+		.label(function(d) { return "Riz 25kg: "+d.value; })
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 25]))
   
@@ -439,9 +428,8 @@ function drawMarkerArea(data) {
         .group(comgest)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#fdae61'])
-		.label(function(d) { return "Comité de gestion assainissement"; })
+		.label(function(d) { return "CG assainissement: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
  
@@ -450,9 +438,8 @@ function drawMarkerArea(data) {
         .group(sensib)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#fdae61'])
-		.label(function(d) { return "Sensibiliation: lavage des mains"; })
+		.label(function(d) { return "Lavage des mains: "+d.value; })
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]))
 
@@ -464,9 +451,8 @@ function drawMarkerArea(data) {
         .group(latbloc)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#d6604d'])
-		.label(function(d) { return "Bloc latrines"; })
+		.label(function(d) { return "Bloc latrines: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.5]));
 	  dc.rowChart("#cccm .lat",groupname)
@@ -474,9 +460,8 @@ function drawMarkerArea(data) {
         .group(lat)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#d6604d'])
-		.label(function(d) { return "Latrine"; })
+		.label(function(d) { return "Latrines: "+d.value; })
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 0.5]))
 
@@ -487,9 +472,8 @@ function drawMarkerArea(data) {
         .group(borehole)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#4393c3'])
-		.label(function(d) { return "Réhabilitation forage"; })
+		.label(function(d) { return "Réhabilitation forages: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
 	 dc.rowChart("#cccm .gestion",groupname)
@@ -497,9 +481,8 @@ function drawMarkerArea(data) {
         .group(gestion)
         .width(200)
         .height(30)
-        .renderLabel(false)
         .colors(['#4393c3'])
-		.label(function(d) { return "Formation comité de gestion d'eau"; })
+		.label(function(d) { return "Formations CG eau: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
   
@@ -511,22 +494,20 @@ function drawMarkerArea(data) {
   dc.rowChart("#cccm .prefWASH",groupname)
         .dimension(prefec)
         .group(pop_WASH)
-		//.filter("NA")
-		//.filter(function(d) { if (d !="NA") {return d;} })
-        .elasticX(true)
+		.elasticX(true)
         .width(200)
         .height(350)
         .renderLabel(true)
         .colors(['#3182bd'])
 		.ordering(function (p) { return -p.value;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));  
+        .xAxis().ticks(4).tickFormat(d3.format("s"))
+		//.title(function (d) {return d.value+" individuals";})
+		;  
 		
 	dc.rowChart("#cccm .prefNFI",groupname)
         .dimension(prefec)
         .group(pop_NFI)
-		//.filter("NA")
-		//.filter(function(d) { if (d !="NA") {return d;} })
-        .elasticX(true)
+		.elasticX(true)
         .width(200)
         .height(350)
         .renderLabel(true)
