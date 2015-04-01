@@ -855,7 +855,7 @@ var ndx                  = crossfilter(experiments),
           .group(dateGroup)
           .x(d3.time.scale().domain([new Date(2012, 1, 01), new Date(2014, 12, 31)]))
           .renderHorizontalGridLines(true)
-     	  .title(function (d) {return d.key + ": "+d.value+" individuals";})
+     	  .title(function (d)  {return d.key + ": "+d.value+" individuals";})
           .elasticY(true)
 		  .elasticX(true)
           .renderArea(true)
