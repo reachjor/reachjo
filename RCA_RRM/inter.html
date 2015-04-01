@@ -169,9 +169,9 @@ a:hover{text-decoration: underline;}
 d3.csv("data/inter_melt.csv", function(error,data) {
     drawMarkerArea(data);
 });
-    function kitNFI(v) {return v.variable == "Kits_NFI_total";}
-    function beneficairies_wash(v) {return v.variable  == "Individus_bénéficiaires_NFI_total";}
-    function beneficairies_nfi(v) {return v.variable  == "Individus_bénéficiaires_NFI_total";}
+    function kitNFI(v) {return v.variable == "Seau";}
+    function beneficairies_wash(v) {return v.variable  == "Individus bénéficiaires NFI total";}
+    function beneficairies_nfi(v) {return v.variable  == "Individus bénéficiaires NFI total";}
 
 
 function drawMarkerArea(db) {
@@ -181,8 +181,6 @@ function drawMarkerArea(db) {
     d.DD  = dateFormat.parse(d.month);
     
     //convert to numbers
-	d.Individus_beneficiaires_NFI_total = +d.Individus_beneficiaires_NFI_total;
-	d.Individus_beneficiaires_NFI_total = +d.Individus_beneficiaires_NFI_total;
 	d.numbers = +d.numbers;
 });
   
@@ -272,9 +270,6 @@ function drawMarkerArea(db) {
 	var facilities = xf.dimension(function(d) { return d.geo; });
 	var facilitiesGroup = facilities.group();
 	
-	var prefec = xf.dimension(function(d) { return d.variable2; });
-	var pop_pref = prefec.group().reduceSum(function (d) { return d.numbers; });
-	
 	var varallDim = xf.dimension(function(d) { return d.variable; });
 	var varallGP = varallDim.group().reduceSum(function(d){return d.numbers;});
 	
@@ -285,8 +280,8 @@ function drawMarkerArea(db) {
             } ).filter(
             function( d )
             {
-                if(d=="NFI_Kit_cuisine_total" | d=="NFI_Moustiquaires" | d=="NFI_Nattes"|d=="NFI_Savons"|d=="NFI_Seau"|d=="NFI_Torche"|
-				d=="NFI_Vêtements_enfants_total"|d=="NFI_bidons"|d=="Kits_NFI_total"|d=="NFI_Bâches"|d=="NFI_Vêtement_bébé")
+                if(d=="Kit cuisine" | d=="Moustiquaires" | d=="Nattes"|d=="Savons"|d=="Seau"|d=="Torche"|
+				d=="Vêtements enfants"|d=="bidons"|d=="Kits NFI"|d=="Bâches"|d=="Vêtement bébé")
                     return d;
             } );
 	
@@ -296,13 +291,6 @@ function drawMarkerArea(db) {
 		}
 	}
 
-	
-	var IntervDim = xf.dimension(function(d) { return d['score_de_Consommation_alimentaire_Limite']; });
-	var Intervgp = IntervDim.group();
-	
-	var FCS_acc = xf.dimension(function(d) { return d['score_de_Consommation_alimentaire_Acceptable']; });
-	var FCS_accGroup = IntervDim.group();
-	
 	var stdateDim = xf.dimension(function(d) {return d.DD});
 	var stdategp = stdateDim.group().reduceSum(function(d){return d.numbers;});
 	
@@ -366,6 +354,7 @@ function drawMarkerArea(db) {
         .elasticX(true)
         .width(300)
         .height(350)
+		.turnOffControls()
         .renderLabel(true)
         //.ordering(function (p) { return -p.value;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
