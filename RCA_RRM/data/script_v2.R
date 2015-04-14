@@ -367,10 +367,10 @@ if(i==3){
 
 if(i==4)
 {
-  db$Type_d_intervention_WASH<-ifelse(db$Type_d_intervention_WASH==1,"WASH",NA)
-  db$Type_d_intervention_NFI<-ifelse(db$Type_d_intervention_NFI==1,"NFI",NA)
+  db$Type_d_intervention_WASH<-ifelse(db$Type_d_intervention_WASH==1,"EHA*",NA)
+  db$Type_d_intervention_NFI<-ifelse(db$Type_d_intervention_NFI==1,"NFI*",NA)
   #db$Type_d_intervention_NFI_WASH_Abris<-ifelse(db$Type_d_intervention_NFI_WASH_Abris==1,"NFI/WASH/Abri",NA)
-  db$Type_d_intervention_NFI_WASH<-ifelse(db$Type_d_intervention_NFI_WASH==1,"NFI/WASH",NA)
+  db$Type_d_intervention_NFI_WASH<-ifelse(db$Type_d_intervention_NFI_WASH==1,"NFI/EHA*",NA)
   
   intervention_type<-paste(db$Type_d_intervention_WASH,db$Type_d_intervention_NFI,
                            db$Type_d_intervention_NFI_WASH_Abris,db$Type_d_intervention_NFI_WASH,sep=" ")

@@ -177,7 +177,9 @@ a:hover{text-decoration: underline;}
 							</div>
 						</div>
 						<div class="row">
-							<h5>* CBS: Mélange maïs-soja; **CG: Comité de gestion </h5>							
+							<h5>*EHA: Eau, Hygiène et Assainissement; NFI: Produits non-alimentaires</h5>	
+							<h5>**CBS: Mélange maïs-soja; ***CG: Comité de gestion </h5>							
+														
 						</div>
 					</div>
                 </div>
@@ -394,7 +396,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#542788'])
-		.label(function(d) { return "Plumpy nut: "+d.value; })
+		.label(function(d) { return "Pâte énergétique: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 25]));
 	  dc.rowChart("#cccm .vihuile",groupname)
