@@ -263,7 +263,7 @@ function drawMarkerArea(data) {
       .title(function (d) {return d.locationName + ": "+d.Individus_bénéficiaires_NFI_total+" individuals";})
     ;
   
-  var partner = xf.dimension(function(d) { return d.partnerName; });
+  var partner = xf.dimension(function(d) { return d.Partner; });
   var partnergp = partner.group();  
   dc.pieChart("#cccm .partner",groupname)
         .dimension(partner)
@@ -422,7 +422,7 @@ function drawMarkerArea(data) {
 		.x(d3.scale.linear().domain([0, 25]))
   
   var sensib = pref.group().reduceSum(function (d) { return d["Sensibilisation_de_la_communauté_lavage_de_main"]; });
-  var comgest = pref.group().reduceSum(function (d) { return d["Mise_en_place_d.un_comité_de_gestion_des_latrines"]; });
+  var comgest = pref.group().reduceSum(function (d) { return d["Mise_en_place_d_un_comité_de_gestion_des_latrines"]; });
     dc.rowChart("#cccm .comgest",groupname)
         .dimension(pref)
         .group(comgest)
@@ -465,8 +465,8 @@ function drawMarkerArea(data) {
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 0.5]))
 
-	var borehole = pref.group().reduceSum(function (d) { return d["réhabilitation_de_forage_ou_source_d.eau"]; });
-	var gestion = pref.group().reduceSum(function (d) { return d["Redynamisation_du_comité_de_gestion_de_la_source_d.eau"]; });
+	var borehole = pref.group().reduceSum(function (d) { return d["réhabilitation_de_forage_ou_source_d_eau"]; });
+	var gestion = pref.group().reduceSum(function (d) { return d["Redynamisation_du_comité_de_gestion_de_la_source_d_eau"]; });
     dc.rowChart("#cccm .borehole",groupname)
         .dimension(pref)
         .group(borehole)

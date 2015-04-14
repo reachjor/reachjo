@@ -11,6 +11,11 @@
 	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
 	<script type="text/javascript" src="js/RRM_2015.js"></script>
+	<script type="text/javascript" src="data/alerte.json"></script>
+	<script type="text/javascript" src="data/MSA.json"></script>
+	<script type="text/javascript" src="data/MEX.json"></script>
+	<script type="text/javascript" src="data/inter.json"></script>
+	
 	<script src="js/jquery-1.11.1.js"></script>
 	<script src="js/bootstrap.js"></script>
 	 
@@ -116,12 +121,12 @@
 	
 	function popUp(feature, layer) {
 		layer.bindPopup(
-		'<h3>'+feature.properties.activityName+ '</h3>' +  (feature ?
-        '<b>Ville: </b>' + feature.properties.locationName 
-		+ '<br/><b>Date debut: </b>' + feature.properties.startDate 
-		+ '<br/><b>Date fin: </b>' + feature.properties.endDate 
-		+ '<br/><b>ONG: </b>' + feature.properties.partnerName
-		+ '<br/><b>Incident ID: </b>' + feature.properties.indicators.AlerteID
+		'<h3>'+feature.properties.type_inter+ '</h3>' +  (feature ?
+        '<b>Ville: </b>' + feature.properties.OCHA_village_v2 
+		+ '<br/><b>Date debut: </b>' + feature.properties.Date1 
+		+ '<br/><b>Date fin: </b>' + feature.properties.Date2 
+		+ '<br/><b>ONG: </b>' + feature.properties.Partner
+		+ '<br/><b>Incident ID: </b>' + feature.properties.AlerteID
         : '<b></b>')
 		)};
   
@@ -151,11 +156,6 @@
             attribution: '&copy; Map Data <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
 
-   
-	
-	
-	
-	
 	
 	
 	function getColor_2014(d) {
@@ -189,13 +189,8 @@
 			fillColor: getColor_2014(feature.properties.PREF_NOM)
 			};
 	}
-
-
 	
-	
-
-	
-	var MSA_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
+	var MSA_2014 = new L.geoJson(MSA,
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -206,16 +201,15 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2014);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
 
 
 	
-	var inter_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
+	var inter_2014 = new L.geoJson(inter,
 	{
-	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_dist,
@@ -224,16 +218,15 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2014);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
 	
 	
 	
-	var mex_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
+	var mex_2014 = new L.geoJson(MEX,
 	{
-	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_mex,
@@ -242,7 +235,7 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2014);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
@@ -250,9 +243,8 @@
 	
 	
 
-	var alerte_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
+	var alerte_2014 = new L.geoJson(alerte,
 	{
-	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_choc,
@@ -261,7 +253,7 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2014);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);

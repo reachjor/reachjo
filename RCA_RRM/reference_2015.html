@@ -11,6 +11,11 @@
 	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
 	<script type="text/javascript" src="js/RRM_2015.js"></script>
+	<script type="text/javascript" src="data/alerte.json"></script>
+	<script type="text/javascript" src="data/MSA.json"></script>
+	<script type="text/javascript" src="data/MEX.json"></script>
+	<script type="text/javascript" src="data/inter.json"></script>
+		
 	<script src="js/jquery-1.11.1.js"></script>
 	<script src="js/bootstrap.js"></script>
 	 
@@ -84,56 +89,6 @@
 
  <script>
  
-  
-// Create the XHR object.
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
-    // XHR for Chrome/Firefox/Opera/Safari.
-    xhr.open(method, url, true);
-  } else if (typeof XDomainRequest != "undefined") {
-    // XDomainRequest for IE.
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-  } else {
-    // CORS not supported.
-    xhr = null;
-  }
-  return xhr;
-}
-
-// Helper method to parse the title tag from the response.
-function getTitle(text) {
-  return text.match('<title>(.*)?</title>')[1];
-}
-
-// Make the actual CORS request.
-function makeCorsRequest() {
-  // All HTML5 Rocks properties support CORS.
-  var url = 'http://localhost';
-
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    alert('CORS not supported');
-    return;
-  }
-
-  // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    var title = getTitle(text);
-    alert('Response from CORS request to ' + url + ': ' + title);
-  };
-
-  xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
-  };
-
-  xhr.send();
-}
-
- 
- 
  
 	var dateyear =d3.time.format("%Y")
 	
@@ -164,13 +119,13 @@ function makeCorsRequest() {
 		  }).setView([6.6,19.90], 7);
 	
 	function popUp(feature, layer) {
-		layer.bindPopup(
-		'<h3>'+feature.properties.activityName+ '</h3>' +  (feature ?
-        '<b>Ville: </b>' + feature.properties.locationName 
-		+ '<br/><b>Date debut: </b>' + feature.properties.startDate 
-		+ '<br/><b>Date fin: </b>' + feature.properties.endDate 
-		+ '<br/><b>ONG: </b>' + feature.properties.partnerName
-		+ '<br/><b>Incident ID: </b>' + feature.properties.indicators.AlerteID
+layer.bindPopup(
+		'<h3>'+feature.properties.type_inter+ '</h3>' +  (feature ?
+        '<b>Ville: </b>' + feature.properties.OCHA_village_v2 
+		+ '<br/><b>Date debut: </b>' + feature.properties.Date1 
+		+ '<br/><b>Date fin: </b>' + feature.properties.Date2 
+		+ '<br/><b>ONG: </b>' + feature.properties.Partner
+		+ '<br/><b>Incident ID: </b>' + feature.properties.AlerteID
         : '<b></b>')
 		)};
   
@@ -233,7 +188,7 @@ function makeCorsRequest() {
 	}
 
 
-	var MSA_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
+	var MSA_2015 = new L.geoJson(MSA,
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -244,16 +199,15 @@ function makeCorsRequest() {
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
 
 
 	
-	var inter_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
+	var inter_2015 = new L.geoJson(inter,
 	{
-	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_dist,
@@ -262,16 +216,15 @@ function makeCorsRequest() {
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
 	
 	
 	
-	var mex_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
+	var mex_2015 = new L.geoJson(MEX,
 	{
-	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_mex,
@@ -280,7 +233,7 @@ function makeCorsRequest() {
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
@@ -288,9 +241,8 @@ function makeCorsRequest() {
 	
 	
 
-	var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
+	var alerte_2015 = new L.geoJson(alerte,
 	{
-	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_choc,
@@ -299,11 +251,10 @@ function makeCorsRequest() {
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
-
 
 	var  area_ngo2015 = L.geoJson(RRM_2015, {
 			style: couverture_2015

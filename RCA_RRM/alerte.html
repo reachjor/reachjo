@@ -114,7 +114,7 @@ a:hover{text-decoration: underline;}
 
                 <div class="sidepanel">
 					<div class="wrapper">
-						  <p id="gen"><h3>Chocs / Incidents reportés</h3></p>
+						  <p id="gen"><h3>Chocs / Alertes reportées</h3></p>
 					</div>
 						
 						<div class="row">
@@ -159,7 +159,7 @@ a:hover{text-decoration: underline;}
 						<div class="row">
 							<div  class="col-md-8">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
-								  <h4>Date du choc</h4>
+								  <h4>Date du choc </br> (selectionner le graphique pour filter par date)</h4>
 								</div>
 							</div>
 						</div>
@@ -354,7 +354,7 @@ var Intervgp = IntervDim.group().reduceCount();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['partnerName']; });
+var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['Partner']; });
 var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCount();
 
   dc.rowChart("#cccm .Partner",groupname)

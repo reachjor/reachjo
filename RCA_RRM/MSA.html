@@ -317,7 +317,7 @@ function drawMarkerArea(data) {
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
   var prefec = xf.dimension(function(d) { return d['PREF_NOM']; });
-  var pop_pref = pref.group().reduceSum(function (d) { return d.Individus_IDPs; });
+  var pop_pref = pref.group().reduceSum(function (d) { return d.Individus_déplacés; });
   
   dc.rowChart("#cccm .prefpop",groupname)
         .dimension(prefec)
@@ -436,7 +436,7 @@ var FCS_accGroup = FCS_acc.group();
         //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
-var waterDim = xf.dimension(function(d) { return d['des_menages_avec_un_source_deau_potable_amelioree']; });
+var waterDim = xf.dimension(function(d) { return d['des_menages_avec_un_source_d_eau_potable_amelioree']; });
 var waterDimGroup = waterDim.group().reduceCount();
 
   dc.rowChart("#cccm .water",groupname)
