@@ -144,7 +144,7 @@ for (i in 1:4)
   db$Nature_du_choc_Violences<-ifelse(db$Nature_du_choc_Violences==1,"Violence",NA)
   #db$Nature_du_choc_Autre<-ifelse(db$Nature_du_choc_Autre==1,"Autre",NA)
   
-  db$Population_affectee_Communaute_hote<-ifelse(db$Population_affectee_Communaute_hote==1,"Communautés  acceuil",NA)
+  db$Population_affectee_Communaute_hote<-ifelse(db$Population_affectee_Communaute_hote==1,"Communautés d'acceuil",NA)
   db$Population_affectee_Deplaces<-ifelse(db$Population_affectee_Deplaces==1,"Deplacés",NA)
   db$Population_affectee_Retours<-ifelse(db$Population_affectee_Retours==1,"Retours",NA)
   db$Population_affectee_Autre<-ifelse(db$Population_affectee_Autre==1,"Autre",NA)
@@ -201,19 +201,19 @@ for (i in 1:4)
 ##################################################################
 if(i==2){
 
-db$Proposition_d_action_Plaidoyer_acces_securitaire <-ifelse(db$Proposition_d_action_Plaidoyer_acces_securitaire==1,"Plaidoyer acces sécuritaire",NA)
+db$Proposition_d_action_Plaidoyer_acces_securitaire <-ifelse(db$Proposition_d_action_Plaidoyer_acces_securitaire==1,"Plaidoyer accès sécuritaire",NA)
 db$Proposition_d_action_Intervention.s._directe.s. <-ifelse(db$Proposition_d_action_Intervention.s._directe.s.==1,"Intervention directe",NA)
-db$Proposition_d_action_MSA_complete <-ifelse(db$Proposition_d_action_MSA_complete==1,"MSA complete",NA)
-db$Proposition_d_action_Rehabilitation_acces_logistique  <-ifelse(db$Proposition_d_action_Rehabilitation_acces_logistique==1,"Réhabilitation acces logistique",NA)
+db$Proposition_d_action_MSA_complete <-ifelse(db$Proposition_d_action_MSA_complete==1,"MSA complète",NA)
+db$Proposition_d_action_Rehabilitation_acces_logistique  <-ifelse(db$Proposition_d_action_Rehabilitation_acces_logistique==1,"Réhabilitation accès logistique",NA)
 db$Proposition_d_action_Evaluation_sectorielle  <-ifelse(db$Proposition_d_action_Evaluation_sectorielle==1,"Evaluation sectorielle",NA)
 db$Proposition_d_action_Autre   <-ifelse(db$Proposition_d_action_Autre ==1,"Autre",NA)
-db$Proposition_d_action_Monitoring_protection  <-ifelse(db$Proposition_d_action_Monitoring_protection==1,"Monitoring protection",NA)
+db$Proposition_d_action_Monitoring_protection  <-ifelse(db$Proposition_d_action_Monitoring_protection==1,"Suivi protection",NA)
 db$Proposition_d_action_Suivi_du_retour_des_déplacés <-ifelse(db$Proposition_d_action_Suivi_du_retour_des_déplacés==1,"Suivi de retour des déplacés",NA)
 db$Nature_du_choc_Violence <-ifelse(db$Nature_du_choc_Violence==1,"Violence",NA)
 db$Nature_du_choc_Catastrophe_naturelle <-ifelse(db$Nature_du_choc_Catastrophe_naturelle==1,"Catastrophe naturelle",NA)
 db$Type_de_population_Deplaces <-ifelse(db$Type_de_population_Deplaces==1,"Deplacés",NA)
 db$Type_de_population_Autre <-ifelse(db$Type_de_population_Autre==1,"Autre",NA)
-db$Type_de_population_Communaute_hote <-ifelse(db$Type_de_population_Communaute_hote==1,"Communautés hote",NA) 
+db$Type_de_population_Communaute_hote <-ifelse(db$Type_de_population_Communaute_hote==1,"Communautés d'acceuil",NA) 
 db$Type_de_population_Retours <-ifelse(db$Type_de_population_Retours ==1,"Retours",NA)
 
 proposition<-paste(db$Proposition_d_action_Plaidoyer_acces_securitaire,db$Proposition_d_action_Intervention.s._directe.s.,
