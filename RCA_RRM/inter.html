@@ -32,6 +32,7 @@ body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
 h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 10px 0 0 0;}
 h4{font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
+h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 p{margin: 8px 0 20px 0; line-height: 18px;}
 a, a:visited{color: #397DB8; text-decoration: none;}
 a:hover{text-decoration: underline;}
@@ -88,7 +89,7 @@ a:hover{text-decoration: underline;}
                 <ul class="dropdown-menu" role="menu">
                 <li><a href="reference_2014.html">Carte de référence 2014</a></li>
                 <li><a href="reference_2015.html">Carte de référence 2015</a></li>
-				<li><a href="alerte.html">Incidents</a></li>
+				<li><a href="alerte.html">Alertes</a></li>
                 <li><a href="mex.html">Missions exploratoires</a></li>
                 <li><a href="MSA.html">MSA</a></li>
                 <li><a href="inter.html">Interventions</a></li>
@@ -129,14 +130,14 @@ a:hover{text-decoration: underline;}
 								<div  class="partner" id="cccm" class="pie-chart"><h4>Nombre d'intervention par organisation</h4></div>
 							</div>
 							<div  class="col-md-4">
-								<div  class="intertype" id="cccm" class="pie-chart"><h4>Type of intervention</h4></div>
+								<div  class="intertype" id="cccm" class="pie-chart"><h4>Type d'intervention</h4></div>
 							</div>
 						</div>
 						<div class="row">
 							
 							<div  class="col-md-4">
 								
-								<div  class="savon" id="cccm" class="dc-chart"><h4>Non Food Items distribués</h4></div>
+								<div  class="savon" id="cccm" class="dc-chart"><h4>Produits non-alimentaires distribués</h4></div>
 								<div  class="couverture" id="cccm" class="dc-chart"></div>
 								<div  class="natte" id="cccm" class="dc-chart"></div>
 								<div  class="bidon" id="cccm" class="dc-chart"></div>
@@ -148,7 +149,7 @@ a:hover{text-decoration: underline;}
 								<div  class="vetbebe" id="cccm" class="dc-chart"></div>				
 							</div>
 							<div  class="col-md-4">	
-								<div  class="sensib" id="cccm" class="dc-chart"><h4>Intervention sensibilisation</h4></div>
+								<div  class="sensib" id="cccm" class="dc-chart"><h4>Intervention sensibilisation hygiène</h4></div>
 								<div  class="comgest" id="cccm" class="dc-chart"></div>
 								<div  class="latbloc" id="cccm" class="dc-chart"><h4>Intervention asssainissement</h4></div>
 								<div  class="lat" id="cccm" class="dc-chart"></div>
@@ -166,7 +167,7 @@ a:hover{text-decoration: underline;}
 						<div class="row">
 							<div  class="col-md-8">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
-								  <h4>Date de l'intervention</h4>
+								  <h4>Date de l'intervention</h4><h5>Selectionner le graphique pour filter par date</h5>
 								</div>
 							</div>
 							 <div  class="col-md-4">
@@ -174,6 +175,9 @@ a:hover{text-decoration: underline;}
 								     <h4>Année</h4>
 								</div>
 							</div>
+						</div>
+						<div class="row">
+							<h5>* CBS: Mélange maïs-soja; **CG: Comité de gestion </h5>							
 						</div>
 					</div>
                 </div>
@@ -260,7 +264,7 @@ function drawMarkerArea(data) {
       .cluster(false)
       .renderPopup(true)
       .filterByArea(true)
-      .title(function (d) {return d.locationName + ": "+d.Individus_bénéficiaires_NFI_total+" individuals";})
+      //.title(function (d) {return d.locationName + ": "+d.Individus_bénéficiaires_NFI_total+" individuals";})
     ;
   
   var partner = xf.dimension(function(d) { return d.Partner; });
@@ -311,7 +315,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#f5f5f5'])
-		.label(function(d) { return "Bache: "+d.value; })
+		.label(function(d) { return "Bâches: "+d.value; })
 		.margins({top: -1, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
     dc.rowChart("#cccm .couverture",groupname)
@@ -356,7 +360,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#80cdc1'])
-		.label(function(d) { return "Vetements Enfant: "+d.value; })
+		.label(function(d) { return "Vêtements Enfant: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	  dc.rowChart("#cccm .vetbebe",groupname)
@@ -365,7 +369,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#01665e'])
-		.label(function(d) { return "Vetements bébé: "+d.value; })
+		.label(function(d) { return "Vêtements bébé: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 800]));
 	  dc.rowChart("#cccm .torche",groupname)
@@ -408,7 +412,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#b2abd2'])
-		.label(function(d) { return "CSB 12.5kg: "+d.value; })
+		.label(function(d) { return "CSB* 12.5kg: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 25]));
 	  dc.rowChart("#cccm .viriz",groupname)
@@ -429,7 +433,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#fdae61'])
-		.label(function(d) { return "CG assainissement: "+d.value; })
+		.label(function(d) { return "CG** assainissement: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
  
@@ -482,7 +486,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#4393c3'])
-		.label(function(d) { return "Formations CG eau: "+d.value; })
+		.label(function(d) { return "Formations CG** eau: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
   

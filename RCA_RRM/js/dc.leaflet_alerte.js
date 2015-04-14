@@ -156,7 +156,7 @@ dc.leafletMarkerChart = function(parent, chartGroup) {
 		iconUrl: 'image/choc.png',
 		iconSize:     [20, 20],
 		shadowSize:   [0, 0],
-		iconAnchor:   [0, 0],});
+		iconAnchor:   [10, 10],});
   }
     
   var _popup = function(d,marker) {
