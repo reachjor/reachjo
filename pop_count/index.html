@@ -76,7 +76,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	 <ul class="nav navbar-nav navbar-left">
         <li><a href="#"> </a></li>
-		<li style="top:5px"><img src="img/unicef-logo.png" width="180" height="37" href="http://www.reach-initiative.org/" style="border-width:0px;"><li>		
+		<li style="top:5px"><img src="img/unicef-logo.png" width="180" height="37" href="#" style="border-width:0px;"><li>		
+		<li style="left:50px; top:5px"><img src="img/UNHCR_logo.png" width="165" height="37" href="#" style="border-width:0px;"><li>		
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"> </a></li>
@@ -855,7 +856,7 @@ var ndx                  = crossfilter(experiments),
           .group(dateGroup)
           .x(d3.time.scale().domain([new Date(2012, 1, 01), new Date(2014, 12, 31)]))
           .renderHorizontalGridLines(true)
-     	  .title(function (d)  {return d.key + ": "+d.value+" individuals";})
+     	  .title(function (d) {return d.key + ": "+d.value+" individuals";})
           .elasticY(true)
 		  .elasticX(true)
           .renderArea(true)
