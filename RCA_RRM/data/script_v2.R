@@ -1,9 +1,11 @@
-#required packages:
-#require("activityinfo")
-#require("reshape2")
-setwd("C:\\wamp\\www\\RCA_RRM\\data")
-
 ## install the packages that are not yet instaled
+setwd("C:\\wamp\\www\\RCA_RRM\\data")
+# install.packages('jsonlite')
+# install.packages('car')
+# install.packages('rgdal')
+# install.packages('stringr')
+# install.packages('xlsx')
+
 library(jsonlite)
 library(car)
 library(rgdal)
@@ -11,6 +13,8 @@ library(stringr)
 library(xlsx)
 
 rm()
+
+
 alerte<-read.xlsx("ActivityInfo_Export_current.xls",1,encoding="UTF-8",startRow=2)
 names(alerte)<-c("RRM-Interventions_-_ALERTES_SiteId",
                             "DateCreated","Date1","Date2","Partner","OCHA_village_v2","Axe","AlerteID_(ORG_XXX_YYYYMMDD)","Date_présumée_du_choc","Nombre_de_localités/villages/sites_afféctés",
@@ -35,7 +39,7 @@ names(MEX)<-c("RRM-Interventions - MISSION EXPLORATOIRE_SiteId","DateCreated","D
 
 MSA<-read.xlsx("ActivityInfo_Export_current.xls",3,encoding="UTF-8",startRow=2)
 names(MSA)<-c("RRM-Interventions_-_MSA_SiteId","DateCreated","Date1","Date2","Partner","OCHA_village_v2","Axe","AlerteID","Nombre_de_localités_villages_sites_afféctés",
-              "Menage_déplacés","Individus_déplacés","Menage_retournes","Individus_returnes","Menages_acceuil","Individus_acceuil","Score_NFI",
+              "Menage_déplacés","Individus_déplacés","Menage_retournes","Individus_returnes","Menages_accueil","Individus_accueil","Score_NFI",
               "de_menages_vivant_ds_un_abris_en_dessous_des_standard","des_menages_ayant_acces_a_une_latrine_hygienique",
               "des_menages_avec_un_source_d_eau_potable_amelioree","Taux_diarrhée_chez_les_enfants_de_moins_de_5_ans_au_cours_des_2_dernières_semaines",
               "Score_Consommation_alimentaire","score_de_Consommation_alimentaire_-_Acceptable","score_de_Consommation_alimentaire_-_Limite",
@@ -43,7 +47,7 @@ names(MSA)<-c("RRM-Interventions_-_MSA_SiteId","DateCreated","Date1","Date2","Pa
               "Statut_du_MSA_Completé","Statut_du_MSA_Prévu","Statut_du_MSA_En_cours","Statut_du_MSA_En_attente_délais_","Statut_du_MSA_Annulé",
               "Cause_de_delais_Sécurité_pas_d_accés_humanitaire_","Cause_de_delais_Changement_de_contexte_a_suivre","Cause_de_delais_Logistique_pas_d_accés_",
               "Cause_de_delais_NA","Cause_d_annulation_Conversion_en_MEX","Cause_d_annulation_Planification_d_une_meme_evaluation_par_une_autre_agence",
-              "Cause_d_annulation_Autre","Cause_d_annulation_NA","Recommandation_s_du_MSA_Intervention_Abris_NFI","Recommandation_s_du_MSA_Intervention_EAH",
+              "Cause_d_annulation_Autre","Cause_d_annulation_NA","Recommandation_s_du_MSA_Intervention_Abris_NFI","Recommandation_s_du_MSA_Intervention_WASH",
               "Recommandation_s_du_MSA_Pas_d_intervention","Recommandation_s_du_MSA_Intervention_Santé_Nutrition","Recommandation_s_du_MSA_Securité_Alimentaire",
               "Recommandation_s_du_MSA_Intervention_Protection","Recommandation_s_du_MSA_Intervention_Education","Recommandation_s_du_MSA_Intervention_Logistique",
               "Code_Préfecture","Préfecture","Code_Sous-Préfecture","Sous-Préfecture","Code_Commune","Commune","Code_Arrondissement","Arrondissement","Longitude","Latitude","Comments")
@@ -51,9 +55,9 @@ names(MSA)<-c("RRM-Interventions_-_MSA_SiteId","DateCreated","Date1","Date2","Pa
 inter<-read.xlsx("ActivityInfo_Export_current.xls",4,encoding="UTF-8",startRow=2)
 names(inter)<-c("RRM_Interventions_INTERVENTION_SiteId","DateCreated","Date1","Date2","Partner","OCHA_village_v2","Axe","AlerteID",
                 "Nombres_de_localités_villages_sites_afféctés","Individus_bénéficiaires_NFI_total","individus_bénéficiaires_NFI_déplacés",
-                "individus_bénéficiaires_NFI_acceuil","Ménages_bénéficiaires_NFI_total","ménages_bénéficiaires_NFI_déplacés",
+                "individus_bénéficiaires_NFI_accueil","Ménages_bénéficiaires_NFI_total","ménages_bénéficiaires_NFI_déplacés",
                 "ménages_bénéficiaires_NFI_accueil","Kits_NFI_total","KITS_NFI_déplacés","Kits_NFI_accueil","NFI_Savons_total",
-                "NFI_savon_déplacés","NFI_savon_acceuil","NFI_Couvertures_total","NFI_couvertures_déplacés","NFI_couvertures_accueil",
+                "NFI_savon_déplacés","NFI_savon_accueil","NFI_Couvertures_total","NFI_couvertures_déplacés","NFI_couvertures_accueil",
                 "NFI_Nattes_total","NFI_nattes_déplacés","NFI_Nattes_accueil","NFI_bidons","NFI_bidons_déplacés","NFI_bidons_accueil",
                 "NFI_Moustiquaires","NFI_Moustiquaires_déplacés","NFI_Moustiquaires_accueil","NFI_Bâches","NFI_Baches_déplacés","NFI_Baches_accueil",
                 "NFI_Torche","NFI_torche_déplacés","NFI_torche_accueil","NFI_Seau","NFI_seau_déplacés","NFI_seau_accueil","NFI_Kit_cuisine_total",
@@ -81,7 +85,7 @@ dsn <-"caf_admbnd3_200k_sigcaf.shp"
 pref<-readOGR(dsn=dsn,layer="caf_admbnd3_200k_sigcaf",encoding="UTF-8")
 
 for (i in 1:4)
-#i=4
+#i=1
   {
   if(i==1){db<-alerte}
   if(i==2){db<-MEX}
@@ -144,7 +148,7 @@ for (i in 1:4)
   db$Nature_du_choc_Violences<-ifelse(db$Nature_du_choc_Violences==1,"Violence",NA)
   #db$Nature_du_choc_Autre<-ifelse(db$Nature_du_choc_Autre==1,"Autre",NA)
   
-  db$Population_affectee_Communaute_hote<-ifelse(db$Population_affectee_Communaute_hote==1,"Communautés d'acceuil",NA)
+  db$Population_affectee_Communaute_hote<-ifelse(db$Population_affectee_Communaute_hote==1,"Communautés d'accueil",NA)
   db$Population_affectee_Deplaces<-ifelse(db$Population_affectee_Deplaces==1,"Deplacés",NA)
   db$Population_affectee_Retours<-ifelse(db$Population_affectee_Retours==1,"Retours",NA)
   db$Population_affectee_Autre<-ifelse(db$Population_affectee_Autre==1,"Autre",NA)
@@ -164,7 +168,7 @@ for (i in 1:4)
     db$Nature_du_choc_Violences,sep=" ")
   
   pop_affect<-paste(
-    db$Population_affectee_Communaute_hoste,
+    db$Population_affectee_Communaute_hote,
     db$Population_affectee_Deplaces,
     db$Population_affectee_Retours,
     db$Population_affectee_Autre,sep=" ")
@@ -213,7 +217,7 @@ db$Nature_du_choc_Violence <-ifelse(db$Nature_du_choc_Violence==1,"Violence",NA)
 db$Nature_du_choc_Catastrophe_naturelle <-ifelse(db$Nature_du_choc_Catastrophe_naturelle==1,"Catastrophe naturelle",NA)
 db$Type_de_population_Deplaces <-ifelse(db$Type_de_population_Deplaces==1,"Deplacés",NA)
 db$Type_de_population_Autre <-ifelse(db$Type_de_population_Autre==1,"Autre",NA)
-db$Type_de_population_Communaute_hote <-ifelse(db$Type_de_population_Communaute_hote==1,"Communautés d'acceuil",NA) 
+db$Type_de_population_Communaute_hote <-ifelse(db$Type_de_population_Communaute_hote==1,"Communautés d'accueil",NA) 
 db$Type_de_population_Retours <-ifelse(db$Type_de_population_Retours ==1,"Retours",NA)
 
 proposition<-paste(db$Proposition_d_action_Plaidoyer_acces_securitaire,db$Proposition_d_action_Intervention.s._directe.s.,
@@ -260,14 +264,14 @@ if(i==3){
   db$Recommandation_s_du_MSA_Pas_d_intervention<-ifelse(db$Recommandation_s_du_MSA_Pas_d_intervention==1,"Pas d'intervention",NA)
   #db$Recommandation_s_du_MSA_Intervention_WASH<-ifelse(db$Recommandation_s_du_MSA_Intervention_WASH==1,"Intervention_WASH",NA)
   db$Recommandation_s_du_MSA_Intervention_Abris_NFI<-ifelse(db$Recommandation_s_du_MSA_Intervention_Abris_NFI==1,"Intervention abris",NA)
-  db$Recommandation_s_du_MSA_Intervention_EAH<-ifelse(db$Recommandation_s_du_MSA_Intervention_EAH==1,"Intervention EHA",NA)
+  db$Recommandation_s_du_MSA_Intervention_WASH<-ifelse(db$Recommandation_s_du_MSA_Intervention_WASH==1,"Intervention EHA",NA)
   db$Recommandation_s_du_MSA_Intervention_Santé_Nutrition<-ifelse(db$Recommandation_s_du_MSA_Intervention_Santé_Nutrition==1,"Intervention santé/nutrition",NA)
   db$Recommandation_s_du_MSA_Securité_Alimentaire<-ifelse(db$Recommandation_s_du_MSA_Securité_Alimentaire==1,"Intervention sécurité alimentaire",NA)
   
   recommandation<-paste(db$Recommandation_s_du_MSA_Pas_d_intervention,
                         #db$Recommandation_s_du_MSA_Intervention_WASH,
                         db$Recommandation_s_du_MSA_Intervention_Abris_NFI,
-                        db$Recommandation_s_du_MSA_Intervention_EAH,
+                        db$Recommandation_s_du_MSA_Intervention_WASH,
                         db$Recommandation_s_du_MSA_Intervention_Santé_Nutrition,
                         db$Recommandation_s_du_MSA_Securité_Alimentaire,sep=" ")
   
@@ -281,7 +285,7 @@ if(i==3){
 #             "de_menages_vivant_ds_un_abris_en_dessous_des_standard","Menage_retournes","Menages_hote","Score_NFI","Individus_returnes","score_de_Consommation_alimentaire_Limite","score_de_Consommation_alimentaire_Acceptable",
 #               "Individus_hote","decole_fonctionnelles","Menage_IDPs","Score_startegie_de_survie","des_menages_avec_un_source_deau_potable_amelioree","Score_Consommation_alimentaire","Taudiarrhee_chez_les_enfants_de_moins_de_5_ans__au_cours_des_2_dernieres_semaines",
 #               "Recommandations_du_MSAPas_dintervention","Recommandations_du_MSAIntervention_SanteNutrition","Recommandations_du_MSASecurite_Alimentaire","Recommandations_du_MSAIntervention_AbrisNFI",
-#               "Recommandations_du_MSAIntervention_EAH","Recommandations_du_MSA_Intervention_Protection","Recommandations_du_MSA_Intervention_Education","Cause delais","Cause_annulation",
+#               "Recommandations_du_MSAIntervention_WASH","Recommandations_du_MSA_Intervention_Protection","Recommandations_du_MSA_Intervention_Education","Cause delais","Cause_annulation",
 #               "type1","geo","X","Y","month","year","REGION_NOM","PREF_NOM","SPREF_NOM","COM_NOM","recommandation")
   
   db<-as.data.frame(db,stringsAsFactors=FALSE)
@@ -367,10 +371,10 @@ if(i==3){
 
 if(i==4)
 {
-  db$Type_d_intervention_WASH<-ifelse(db$Type_d_intervention_WASH==1,"EHA*",NA)
-  db$Type_d_intervention_NFI<-ifelse(db$Type_d_intervention_NFI==1,"NFI*",NA)
+  db$Type_d_intervention_WASH<-ifelse(db$Type_d_intervention_WASH==1,"WASH*",NA)
+  db$Type_d_intervention_NFI<-ifelse(db$Type_d_intervention_NFI==1,"NFI**",NA)
   #db$Type_d_intervention_NFI_WASH_Abris<-ifelse(db$Type_d_intervention_NFI_WASH_Abris==1,"NFI/WASH/Abri",NA)
-  db$Type_d_intervention_NFI_WASH<-ifelse(db$Type_d_intervention_NFI_WASH==1,"NFI/EHA*",NA)
+  db$Type_d_intervention_NFI_WASH<-ifelse(db$Type_d_intervention_NFI_WASH==1,"NFI**/WASH*",NA)
   
   intervention_type<-paste(db$Type_d_intervention_WASH,db$Type_d_intervention_NFI,
                            db$Type_d_intervention_NFI_WASH_Abris,db$Type_d_intervention_NFI_WASH,sep=" ")
@@ -382,7 +386,7 @@ if(i==4)
   db<-as.data.frame(sapply(db,gsub,pattern=" NA",replacement=""))
   db<-as.data.frame(sapply(db,gsub,pattern="  ",replacement=" "))
   db<-as.data.frame(sapply(db,str_trim))
-  inter<-db
+
   write.csv(db,"RRM_intervention.csv",row.names=FALSE,fileEncoding = "UTF-8")
   
   db$Latitude <- as.numeric(levels(db$Latitude)[db$Latitude])
@@ -395,8 +399,5 @@ if(i==4)
   g[1,]<-paste("var inter = ",as.character(g[1,]))
   write.table(g,"inter.json",row.names=FALSE,col.names=FALSE,quote=FALSE)
 }
-
-
-
 }
 

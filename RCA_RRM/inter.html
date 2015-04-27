@@ -120,10 +120,10 @@ a:hover{text-decoration: underline;}
 					
 						<div class="row">
 							<div  class="col-md-4">
-								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires WASH</h4></div>
+								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires WASH*</h4></div>
 							</div>
 							<div  class="col-md-4">
-								<div  class="prefNFI" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires NFI</h4></div>
+								<div  class="prefNFI" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires NFI**</h4></div>
 							
 							</div>
 							<div  class="col-md-4">
@@ -137,7 +137,7 @@ a:hover{text-decoration: underline;}
 							
 							<div  class="col-md-4">
 								
-								<div  class="savon" id="cccm" class="dc-chart"><h4>Produits non-alimentaires distribués</h4></div>
+								<div  class="savon" id="cccm" class="dc-chart"><h4>NFI** distribués</h4></div>
 								<div  class="couverture" id="cccm" class="dc-chart"></div>
 								<div  class="natte" id="cccm" class="dc-chart"></div>
 								<div  class="bidon" id="cccm" class="dc-chart"></div>
@@ -163,6 +163,11 @@ a:hover{text-decoration: underline;}
 								<div  class="vicsb" id="cccm" class="dc-chart"></div>
 								<div  class="viriz" id="cccm" class="dc-chart"></div>
 							</div>
+							<div  class="col-md-4 right">
+								<div  class="year" id="cccm" class="dc-chart">
+								     <h4>Nombre d’interventions par an</h4>
+								</div>
+							</div>
 						</div>  
 						<div class="row">
 							<div  class="col-md-8">
@@ -170,15 +175,10 @@ a:hover{text-decoration: underline;}
 								  <h4>Nombre d'interventions effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
 								</div>
 							</div>
-							 <div  class="col-md-4">
-								<div  class="year" id="cccm" class="dc-chart">
-								     <h4>Année</h4>
-								</div>
-							</div>
 						</div>
 						<div class="row">
-							<h5>*EHA: Eau, Hygiène et Assainissement; NFI: Produits non-alimentaires</h5>	
-							<h5>**CBS: Mélange maïs-soja; ***CG: Comité de gestion </h5>							
+							<h5>*WASH: Eau, Hygiène et Assainissement; **NFI: Produits non-alimentaires</h5>	
+							<h5>***CBS: Mélange maïs-soja; ****CG: Comité de gestion </h5>							
 														
 						</div>
 					</div>
@@ -414,7 +414,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#b2abd2'])
-		.label(function(d) { return "CSB* 12.5kg: "+d.value; })
+		.label(function(d) { return "CSB*** 12.5kg: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 25]));
 	  dc.rowChart("#cccm .viriz",groupname)
@@ -435,7 +435,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#fdae61'])
-		.label(function(d) { return "CG** assainissement: "+d.value; })
+		.label(function(d) { return "CG**** assainissement: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
  
@@ -488,7 +488,7 @@ function drawMarkerArea(data) {
         .width(200)
         .height(30)
         .colors(['#4393c3'])
-		.label(function(d) { return "Formations CG** eau: "+d.value; })
+		.label(function(d) { return "Formations CG eau: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]));
   
