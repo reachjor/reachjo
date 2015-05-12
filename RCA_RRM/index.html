@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="fr">
 <head>
-	
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
@@ -9,11 +8,9 @@
 	
 	
     <!-- Bootstrap -->
-	
 	<script src="js/html5.js"></script>
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	
     <script type="text/javascript" src="js/jquery.js"></script>
 
 <style>
@@ -70,7 +67,6 @@ h3 {
    color:#777777;
 }
 
-
 .vert {
   vertical-align: middle;
   width:100%;
@@ -97,6 +93,47 @@ h3 {
   background: #808080 url('http://www.bootply.com/assets/example/pt_squares_lg.png') repeat center center fixed;
 }
 
+ul.nav-tabs {
+	width: 140px;
+	margin-top: 20px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+
+ul.nav-tabs li {
+	margin: 0;
+	border-top: 1px solid #ddd;
+}
+
+ul.nav-tabs li:first-child {
+	border-top: none;
+}
+
+ul.nav-tabs li a {
+	margin: 0;
+	padding: 8px 16px;
+	border-radius: 0;
+}
+
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover {
+	color: #fff;
+	background: #0088cc;
+	border: 1px solid #0088cc;
+}
+
+ul.nav-tabs li:first-child a {
+	border-radius: 4px 4px 0 0;
+}
+
+ul.nav-tabs li:last-child a {
+	border-radius: 0 0 4px 4px;
+}
+
+ul.nav-tabs.affix {
+	top: 30px; /* Set the top position of pinned element */
+}
+
 /* -- end custom css for Bootstrap 3.x --*/
 
  </style>
@@ -111,12 +148,14 @@ h3 {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">RRM République Centrafricaine</a>
+          <a class="navbar-brand">RRM République Centrafricaine</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
          
 			<li><a>Accueil</a></li>
+			<li><a href="#about">A propos du RRM</a></li>
+			<li><a href="#aboutreach">A propos de REACH</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -130,13 +169,14 @@ h3 {
     </nav>   
 	
   <div class="header vert">
+  
+		
   <div class="container">
     <h1>Mécanisme de Réponse Rapide - RRM</h1>
       <p class="lead">République Centrafricaine</p>
       <div>&nbsp;</div>
 	    <div class="row">
 		<div  class="col-md-4">
-		
 			<a href="./alerte.html">
               <img src="./image/choc.png" >
                 <div>
@@ -146,14 +186,12 @@ h3 {
 		
 		</div>
 		<div  class="col-md-4">
-		
 		<a href="./mex.html">
               <img src="./image/MEx.png" >
                 <div>
                 <h3 fontcolor="white" class="position">Missions Exploratoires</h3>
               </div>
         </a>
-		
 		</div>
 		<div  class="col-md-4">
 		<a href="./MSA.html">
@@ -167,36 +205,67 @@ h3 {
 </div>	 
 <div class="row">
 		<div  class="col-md-4">
-			
 			<a href="./inter.html">
               <img src="./image/distrib.png" >
                 <div>
                 <h3 fontcolor="white" class="position">Interventions</h3>
               </div>
             </a>
-	
 		</div>
 		<div  class="col-md-4">
-		
 		<a href="./reference_2014.html">
               <img src="./image/map_2014.png" >
-                <div>
-                <h3 fontcolor="white" class="position">Carte de référence 2014</h3>
+              <div>
+					<h3 fontcolor="white" class="position">Carte de référence 2014</h3>
               </div>
         </a>
-		
 		</div><div  class="col-md-4">
-		
 		<a href="./reference_2015.html">
               <img src="./image/map.png" >
                 <div>
-                <h3 fontcolor="white" class="position">Carte de référence 2015</h3>
-              </div>
+					<h3 fontcolor="white" class="position">Carte de référence 2015</h3>
+                </div>
         </a>
-		
 		</div>
-  </div>
 </div>
+
+			
+<div class="row" style="margin: 100px 0 0 0";>
+      <h2 id="about">A propos du RRM</h2>
+            <p><strong>Objectifs: </strong>
+				L’un des objectifs spécifiques du RRM, le Mécanisme de Réponse Rapide, est d’alerter la communauté humanitaire sur les situations de crises, 
+				et de répondre dans les plus brefs délais à des situations d’extrême vulnérabilité. Cela est possible grâce à la mise en place d’une veille humanitaire 
+				à travers un partenariat d’Organisations dispersées dans l’ensemble du pays, au pré positionnement de matériels et de personnes qui permettent la réalisation d’évaluations multisectorielles (MSA) mesurant le degré de vulnérabilité des personnes ayant subi un choc suite à un conflit armé, une catastrophe naturelle, ou des épidémies (choléra/shigella, entre autres), et sur la base des résultats de ces MSA, de répondre dans les plus brefs délais dans les secteurs des articles non vivres de première nécessité (NFIs dans ses sigles en Anglais) et le secteur de l’Eau, Hygiène et Assainissement (EHA). Le RRM étant complètement intégré dans le système de Coordination Humanitaire au niveau national, la dissémination de l’information aux différents clusters est assurée et garantit la réponse  dans d’autres secteurs d’intervention.
+				Le RRM est un mécanisme de dernier recours, et les interventions ne se font que s’il n’existe pas de capacités de réponse sur place. 
+				Cela amène le RRM à agir principalement dans des zones isolées auprès de communautés extrêmement vulnérables.</p>
+			<p><strong>Secteur/s d’intervention:  </strong>
+				Veille humanitaire et Evaluations multisectorielles qui évaluent les degrés de vulnérabilité dans les secteurs des Non vivres, EHA, Education, 
+				Santé/Nutrition, Sécurité alimentaire et moyens d’existence. Elles permettent de prendre des décisions sur les interventions, 
+				prioriser les zones d’intervention. Les résultats sont disséminés au niveau de toute la communauté humanitaire en RCA.
+				Réponses d’urgence dans le secteur Non vivres : distribution d’articles de première nécessité aux populations en situation 
+				d’extrême vulnérabilité, et campagnes de sensibilisation sur l’utilisation de ces articles. Réponses d’urgence dans le secteur 
+				de l’Eau Hygiène Assainissement (EHA) : mise en place de systèmes de distribution d’eau d’urgence, chloration de points d’eau, aménagements 
+				de source, réparation de puits/pompes, campagnes de sensibilisation à l’hygiène, construction de latrines et douches, bacs à ordure.</p>
+
+   <hr>
+    <h2 id="aboutreach">A propos de REACH</h2>
+            <p>REACH est une initiative conjointe de deux
+			organisations non-gouvernementales internationales,
+			ACTED et IMPACT Initiatives, et du
+			Programme Opérationnel des Nations Unies
+			pour les Applications Satellitaires (UNOSAT).
+			REACH a été créée en 2010 afin de développer
+			des outils et des produits d’information qui
+			contribuent à renforcer la capacité des acteurs
+			de l’aide à prendre des décisions dans des
+			contextes d’urgence, de relèvement et de développement.
+			L’ensemble des activités de REACH
+			sont menées en appui et au sein des mécanismes
+			inter-agences de coordination établis
+			au niveau local, régional et global. </p>
+   <hr>
+</div>
+</div>		
 </div>
 
 

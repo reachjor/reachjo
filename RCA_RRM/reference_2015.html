@@ -11,11 +11,6 @@
 	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
 	<script type="text/javascript" src="js/RRM_2015.js"></script>
-	<script type="text/javascript" src="data/alerte.json"></script>
-	<script type="text/javascript" src="data/MSA.json"></script>
-	<script type="text/javascript" src="data/MEX.json"></script>
-	<script type="text/javascript" src="data/inter.json"></script>
-		
 	<script src="js/jquery-1.11.1.js"></script>
 	<script src="js/bootstrap.js"></script>
 	 
@@ -63,9 +58,9 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="reference_2014.html">Carte de référence 2014</a></li>
                 <li><a href="reference_2015.html">Carte de référence 2015</a></li>
-				<li><a href="alerte.html">Alertes</a></li>
+				<li><a href="alerte.html">Incidents</a></li>
                 <li><a href="mex.html">Missions exploratoires</a></li>
-                <li><a href="MSA.html">Enquêtes multi-sectorielles</a></li>
+                <li><a href="MSA.html">MSA</a></li>
                 <li><a href="inter.html">Interventions</a></li>
                 <li><a href="pdm.html">PDM</a></li>
               </ul>
@@ -119,13 +114,13 @@
 		  }).setView([6.6,19.90], 7);
 	
 	function popUp(feature, layer) {
-layer.bindPopup(
-		'<h3>'+feature.properties.type_inter+ '</h3>' +  (feature ?
-        '<b>Ville: </b>' + feature.properties.OCHA_village_v2 
-		+ '<br/><b>Date debut: </b>' + feature.properties.Date1 
-		+ '<br/><b>Date fin: </b>' + feature.properties.Date2 
-		+ '<br/><b>ONG: </b>' + feature.properties.Partner
-		+ '<br/><b>Incident ID: </b>' + feature.properties.AlerteID
+		layer.bindPopup(
+		'<h3>'+feature.properties.activityName+ '</h3>' +  (feature ?
+        '<b>Ville: </b>' + feature.properties.locationName 
+		+ '<br/><b>Date debut: </b>' + feature.properties.startDate 
+		+ '<br/><b>Date fin: </b>' + feature.properties.endDate 
+		+ '<br/><b>ONG: </b>' + feature.properties.partnerName
+		+ '<br/><b>Incident ID: </b>' + feature.properties.indicators.AlerteID
         : '<b></b>')
 		)};
   
@@ -188,7 +183,7 @@ layer.bindPopup(
 	}
 
 
-	var MSA_2015 = new L.geoJson(MSA,
+	var MSA_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -199,15 +194,16 @@ layer.bindPopup(
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
 
 
 	
-	var inter_2015 = new L.geoJson(inter,
+	var inter_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
 	{
+	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_dist,
@@ -216,15 +212,16 @@ layer.bindPopup(
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
 	
 	
 	
-	var mex_2015 = new L.geoJson(MEX,
+	var mex_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
 	{
+	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_mex,
@@ -233,7 +230,7 @@ layer.bindPopup(
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
@@ -241,8 +238,9 @@ layer.bindPopup(
 	
 	
 
-	var alerte_2015 = new L.geoJson(alerte,
+	var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
 	{
+	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_choc,
@@ -251,10 +249,11 @@ layer.bindPopup(
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.Date1)) ==2015);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
 	}).addTo(map);
+
 
 	var  area_ngo2015 = L.geoJson(RRM_2015, {
 			style: couverture_2015

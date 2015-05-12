@@ -32,16 +32,16 @@
 body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
 h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 10px 0 0 0;}
-h4{font-size: 12px; color: #000; margin: 10px 0px 0px 10px; line-height:14px}
+h4{font-size: 11px; color: #000; margin: 10px 0 0 10px;line-height:14px}
 h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 p{margin: 8px 0 20px 0; line-height: 18px;}
 a, a:visited{color: #397DB8; text-decoration: none;}
 a:hover{text-decoration: underline;}
 
-.wrapper{display: block; margin: 50px 0 0 0; padding: 4px 30px 0 30px;}
+.wrapper{display: block; margin: 0px 0 0 0; padding: 4px 30px 0 30px;}
 
-.map{background-color:#eee; position: absolute; top: 50px; left: 0; bottom: 0; width: 55%; *height:100%;}
-.sidepanel{background-color:#b6b6b6; position: absolute; top: 0px; right: 0;  bottom: 0; width: 45%; height: 100%; overflow: auto}
+.map{background-color:#eee; position: absolute; top: 50px; left: 0; bottom: 0; width: 50%; *height:100%;}
+.sidepanel{background-color:#b6b6b6; position: absolute; top: 50px; right: 0;  bottom: 0; width: 50%; *height: 100%; overflow: auto}
 
 .context{font-family: Helvetica, Arial; font-size: 13px; color: #999; padding: 10px 0 0 0;}
 .subheader{border-bottom: 1px solid #ddd;}
@@ -123,13 +123,13 @@ a:hover{text-decoration: underline;}
 						<div class="row">
 							<div  class="col-md-4">
 								<div  class="pref" id="cccm" class="dc-chart">
-								  <h4>Nombre de MSA</h4><h5>Par préfecture</h5>
+								  <h4>Nombre de MSA</h4><h5>par préfecture</h5>
 								</div>
 							</div>
 							
 							<div  class="col-md-4">
 								<div  class="prefpop" id="cccm" class="dc-chart">
-										<h4>IDPs affectés</h4><h5>Par préfecture</h5>
+										<h4>IDPs affectés</h4><h5>par préfecture</h5>
 								</div>
 								
 							</div>
@@ -144,47 +144,47 @@ a:hover{text-decoration: underline;}
 						 <div class="row">
 							  <div  class="col-md-4">
 								<div  class="FCS_poor" id="cccm" class="dc-chart">
-									<h4>% de la population avec un SCA Pauvre**</h4><h5>Par village</h5>
+									<h4>Nombre de villages par pourcentage de la population avec un score SCA Pauvre**</h4>
 								</div>
 								
 							  </div>
 							  <div  class="col-md-4">
 								<div  class="FCS_borderline" id="cccm" class="dc-chart">
-								     <h4>% de la population avec un SCA Limite**</h4><h5>Par village</h5>
+								     <h4>Nombre de villages par pourcentage de la population avec un score SCA Limite**</h4>
 								</div>
 							</div>
 							 <div  class="col-md-4">
 								<div  class="FCS_acceptable" id="cccm" class="dc-chart">
-								     <h4>% de la population avec un SCA Pauvre ou Limite**</h4><h5>Par village</h5>
+								     <h4>Nombre de villages par pourcentage de la population avec un score SCA Pauvre ou Limite**</h4>
 								</div>
 							</div>
 						</div>	  
 						 <div class="row">
 							  <div  class="col-md-4">
 								<div  class="water" id="cccm" class="dc-chart">
-									<h4>% de la population ayant accès à une eau de qualité ameliorée</h4><h5>Par village</h5>
+									<h4>Nombre de villages par pourcentage de la population ayant accès à une eau de qualité ameliorée</h4>
 								</div>
 							  </div>
 							  <div  class="col-md-4">
 								<div  class="latrine" id="cccm" class="dc-chart">
-								     <h4>% de la population ayant accès à une latrine ameliorée</h4><h5>Par village</h5>
+								     <h4>Nombre de villages par pourcentage de la population ayant accès à une latrine ameliorée</h4>
 								</div>
 							</div>
 							  <div  class="col-md-4">
 								<div  class="abris" id="cccm" class="dc-chart">
-								     <h4>% de la population vivant dans un abris correspondant aux standards minimums</h4><h5>Par village</h5>
+								     <h4>Nombre de villages par pourcentage de la population vivant dans un abris correspondant aux standards minimums</h4>
 								</div>
 							</div>
 						</div>	  
 						<div class="row">
-							<div  class="col-md-8">
+							<div  class="col-md-9">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
 								  <h4>Nombre de MSA effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
 								</div>
-							</div>
-							 <div  class="col-md-4">
+							</div>	
+							 <div  class="col-md-3">
 								<div  class="year" id="cccm" class="dc-chart">
-								     <h4>Nombre de MSA par an</h4>
+								     <h4>Nombre de MSA effectuées par an</h4>
 								</div>
 							</div>
 						</div>
@@ -251,6 +251,7 @@ function regroup(dim, cols) {
     };
 }
 
+
 function drawMarkerArea(data) {
 
 	var dateFormat = d3.time.format("%Y-%m");
@@ -266,6 +267,7 @@ function drawMarkerArea(data) {
 	d.Menage_IDPs = +d.Menage_IDPs;
 	d.Score_startegie_de_survie = +d.Score_startegie_de_survie;
 	d.Score_Consommation_alimentaire = +d.Score_Consommation_alimentaire;
+	d.year = +d.year;
 
 });
  
@@ -372,7 +374,7 @@ var chocDim = choc.group().reduceCount();
         //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
-var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['score_de_Consommation_alimentaire_Pauvre']; });
+var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['X._score_de_Consommation_alimentaire_Pauvre']; });
 var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCount();
 
   dc.rowChart("#cccm .FCS_poor",groupname)
@@ -391,7 +393,7 @@ var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCou
        //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
-var IntervDim = xf.dimension(function(d) { return d['score_de_Consommation_alimentaire_Limite']; });
+var IntervDim = xf.dimension(function(d) { return d['X._score_de_Consommation_alimentaire_Limite']; });
 var Intervgp = IntervDim.group();
 
   dc.rowChart("#cccm .FCS_borderline",groupname)
@@ -430,7 +432,7 @@ var FCS_accGroup = FCS_acc.group();
         //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
-var waterDim = xf.dimension(function(d) { return d['des_menages_avec_un_source_d_eau_potable_amelioree']; });
+var waterDim = xf.dimension(function(d) { return d['X._des_menages_avec_un_source_d.eau_potable_amelioree']; });
 var waterDimGroup = waterDim.group().reduceCount();
 
   dc.rowChart("#cccm .water",groupname)
@@ -449,7 +451,7 @@ var waterDimGroup = waterDim.group().reduceCount();
        //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
-var latrineDim = xf.dimension(function(d) { return d['des_menages_ayant_acces_a_une_latrine_hygienique']; });
+var latrineDim = xf.dimension(function(d) { return d['X._des_menages_ayant_acces_a_une_latrine_hygienique']; });
 var latrineGP = latrineDim.group();
 
   dc.rowChart("#cccm .latrine",groupname)
@@ -469,7 +471,7 @@ var latrineGP = latrineDim.group();
         //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var shelterDim = xf.dimension(function(d) { return d['de_menages_vivant_ds_un_abris_en_dessous_des_standard']; });
+var shelterDim = xf.dimension(function(d) { return d['X._de_menages_vivant_ds_un_abris_en_dessous_des_standard']; });
 var shelterGP = shelterDim.group();
 
   dc.rowChart("#cccm .abris",groupname)
@@ -492,19 +494,18 @@ var shelterGP = shelterDim.group();
  var yeargp  = xf.dimension(function(d) { return d['year']; });
   var yeargroup = yeargp.group().reduceCount();
 
-  dc.rowChart("#cccm .year",groupname)
-        .dimension(yeargp)
-        .group(yeargroup)
-        .elasticX(true)
-        .width(200)
-        .height(100)
-        .renderLabel(true)
-        .ordering(function (p) { return -p.value;})
-		.colors(d3.scale.category10())
-        //.colors(['#CC3333'])
-        //.colorDomain([0,0])
-        //.colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+    dc.barChart("#cccm .year",groupname)
+		.dimension(yeargp)
+		.group(yeargroup)
+		.width(150)
+        .height(190)
+		.x(d3.scale.ordinal())
+		.margins({top: 10, right: 25, bottom: 25, left: 25})
+		.xUnits(dc.units.ordinal)
+		.brushOn(false)	
+		//.barPadding(0.1)	
+		//.outerPadding(0.05)
+		;
 
 var stdateDim = xf.dimension(function(d) {return d.DD});
 var stdategp = stdateDim.group();
@@ -520,6 +521,8 @@ var times = function(d) {return d.DD};
 	    .xUnits(d3.time.month)
 	    .elasticY(true)
 		.elasticX(true)
+		//.margins({top: 50, right: 50, bottom: 25, left: 40})
+		.renderHorizontalGridLines(true)
 		.renderArea(true)
 		.dotRadius(5)
 		.xAxis().ticks(6)

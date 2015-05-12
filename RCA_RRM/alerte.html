@@ -29,16 +29,16 @@
 body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
 h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 10px 0 0 0;}
-h4{font-size: 12px; color: #000; margin: 10px 0px 0px 10px; line-height:14px}
+h4{font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
 h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 p{margin: 8px 0 20px 0; line-height: 18px;}
 a, a:visited{color: #397DB8; text-decoration: none;}
 a:hover{text-decoration: underline;}
 
-.wrapper{display: block; margin: 50px 0 0 0; padding: 4px 30px 0 30px;}
+.wrapper{display: block; margin: 0px 0 0 0; padding: 4px 30px 0 30px;}
 
-.map{background-color:#eee; position: absolute; top: 50px; left: 0; bottom: 0; width: 55%; *height:100%;}
-.sidepanel{background-color:#b6b6b6; position: absolute; top: 0px; right: 0;  bottom: 0; width: 45%; height: 100%; overflow: auto}
+.map{background-color:#eee; position: absolute; top: 50px; left: 0; bottom: 0; width: 50%; *height:100%;}
+.sidepanel{background-color:#b6b6b6; position: absolute; top: 50px; right: 0;  bottom: 0; width: 50%; *height: 100%; overflow: auto}
 
 .context{font-family: Helvetica, Arial; font-size: 13px; color: #999; padding: 10px 0 0 0;}
 .subheader{border-bottom: 1px solid #ddd;}
@@ -108,66 +108,55 @@ a:hover{text-decoration: underline;}
 	
    <div style="display: block;"  id="dashboard">
              <div class="row" id="cccm">
-                <div  class="map" id="cccm"  > </div>
-
+                <div  class="map" id="cccm"></div>
                 <div class="sidepanel">
-					<div class="wrapper">
-						  <p id="gen"><h3>Chocs / Alertes reportées</h3></p>
-					</div>
-						
+					<div class="wrapper"><p id="gen"><h3>Chocs / Alertes reportées</h3></p>
 						<div class="row">
 							<div  class="col-md-4">
 								<div  class="pref" id="cccm" class="dc-chart">
 								  <h4>Préfecture</h4><h5>Nombre d'alertes</h5>
 								</div>
 							</div>
-							
 							<div  class="col-md-4">
-								<div  class="choctype" id="cccm" class="dc-chart">
-										<h4>Type de choc</h4><h5>Nombre d'alertes</h5>
-								</div>
-								
+								<div  class="choctype" id="cccm" class="dc-chart"><h4>Type de choc</h4><h5>Nombre d'alertes</h5></div>								
 							</div>
-							
 							 <div  class="col-md-4">
-								<div  class="acces" id="cccm" class="dc-chart">
-								  <h4>Accès humanitaire</h4><h5>Nombre d'alertes</h5>
-								</div>
-								
+								<div  class="acces" id="cccm" class="dc-chart"><h4>Accès humanitaire</h4><h5>Nombre d'alertes</h5></div>
 							</div>
 						</div>
 						 <div class="row">
 							  <div  class="col-md-4">
-								<div  class="Partner" id="cccm" class="dc-chart">
-									  <h4>Partenaires</h4><h5>Nombre d'alertes reportées</h5>
-								</div>
-								
+								<div  class="Partner" id="cccm" class="dc-chart"><h4>Partenaires</h4><h5>Nombre d'alertes reportées</h5></div>
 							  </div>
-							  <div  class="col-md-4">
-								<div  class="pop_affect" id="cccm" class="dc-chart">
-								  <h4>Type de population affectée</h4><h5>Nombre d'alertes</h5>
+							<div  class="col-md-6">
+							<div class="row"><h4>Type de population affectée par village</br></br></h4>
+								<div  class="col-md-3">
+									<div  class="popDispDIV" id="cccm" class="dc-chart"><h5>Déplacés:</br></br></h5></div>
 								</div>
-							</div>
-							 <div  class="col-md-4">
-								<div  class="year" id="cccm" class="dc-chart">
-								  <h4>Nombre d'alerte par an</h4>
+								<div  class="col-md-3">
+									<div  class="popReturDIV" id="cccm" class="dc-chart"><h5>Retournés:</br></br></h5></div>
 								</div>
-							</div>
+								<div  class="col-md-3">
+									<div  class="popHotDIV" id="cccm" class="dc-chart"><h5>Communauté d'accueil:</h6></div>
+								</div>
+								<div  class="col-md-3">
+									<div  class="popAutrDIV" id="cccm" class="dc-chart"><h5>Autre:</br></br></h5></div>			
+								</div>
+						</div>				
 						</div>	  
 						<div class="row">
-							<div  class="col-md-8">
-							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
-								  <h4>Nombre d'alertes reportées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
-								</div>
+							<div  class="col-md-9">
+							   <div Class ="start_dates" id="cccm" class="dc-lineChart"><h4>Nombre d'alertes reportées</h4><h5>Selectionner le graphique pour filtrer par date</h5></div>
+							</div>
+							 <div  class="col-md-3">
+								<div  class="year" id="cccm" class="dc-chart"><h4>Nombre d'alerte par an</h4></div>
 							</div>
 						</div>
 					</div>
                 </div>
             </div>
-              
         </div>
     </div>
-
 
     <script type="text/javascript" src="js/intro.js"></script>
     <script type="text/javascript" src="js/d3_002.js"></script>
@@ -220,6 +209,10 @@ function regroup(dim, cols) {
     };
 }
 
+var popty = d3.scale.ordinal()
+     .domain(["Non","Oui"])
+     .range(["#afa3a4","#ff972f"]);
+	 
 function drawMarkerArea(data) {
 //function drawMarkerSelect(error,data) {
 
@@ -249,6 +242,22 @@ function drawMarkerArea(data) {
 	  //.popup(function(d){return d['Partner']+":";})
     ;
 
+ var popDispDim = xf.dimension(function(d) { return d["Population_affectee.Deplaces"]; });
+  var popDispGP = popDispDim.group(); 
+  dc.pieChart("#cccm .popDispDIV",groupname).dimension(popDispDim).group(popDispGP).width(65).height(90).innerRadius(15).colors(popty);
+  
+  var popReturDim = xf.dimension(function(d) { return d["Population_affectee.Retours"]; });
+  var popReturGP = popReturDim.group(); 
+  dc.pieChart("#cccm .popReturDIV",groupname).dimension(popReturDim).group(popReturGP).width(65).height(90).innerRadius(17).colors(popty);
+  
+  var popHotDim = xf.dimension(function(d) { return d["Population_affectee.Communaute_hote"]; });
+  var popHotGP = popHotDim.group(); 
+  dc.pieChart("#cccm .popHotDIV",groupname).dimension(popHotDim).group(popHotGP).width(65).height(90).innerRadius(17).colors(popty);
+    
+  var popAutrDim = xf.dimension(function(d) { return d["Population_affectee.Autre"]; });
+  var popAutrGP = popAutrDim.group(); 
+  dc.pieChart("#cccm .popAutrDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(90).innerRadius(17).colors(popty);
+  
   var pref = xf.dimension(function(d) { return d['PREF_NOM']; });
   var villsect = pref.group().reduceCount();
   
@@ -284,18 +293,19 @@ function drawMarkerArea(data) {
   var yeargp  = xf.dimension(function(d) { return d['year']; });
   var yeargroup = yeargp.group().reduceCount();
 
-  dc.rowChart("#cccm .year",groupname)
-        .dimension(yeargp)
-        .group(yeargroup)
-        .elasticX(true)
-        .width(200)
-        .height(100)
-        .renderLabel(true)
-        .ordering(function (p) { return -p.value;})
-        .colors(['#CC3333'])
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+  dc.barChart("#cccm .year",groupname)
+		.dimension(yeargp)
+		.group(yeargroup)
+		.width(150)
+        .height(210)
+		.x(d3.scale.ordinal())
+		.margins({top: 10, right: 25, bottom: 25, left: 25})
+		.xUnits(dc.units.ordinal)
+		.brushOn(false)	
+		//.barPadding(0.1)	
+		//.outerPadding(0.05)
+		;
+
 
 var stdateDim = xf.dimension(function(d) {return d.DD});
 var stdategp = stdateDim.group();
@@ -311,8 +321,10 @@ var times = function(d) {return d.DD};
 	    .xUnits(d3.time.month)
 	    .elasticY(true)
 		.elasticX(true)
+		//.margins({top: 50, right: 50, bottom: 25, left: 40})
+		.renderHorizontalGridLines(true)
 		.renderArea(true)
-		.dotRadius(5)
+		//.renderDataPoints({radius: 2, fillOpacity: 0.8, strokeOpacity: 0.8})
 		.xAxis().ticks(6)
 		;
  
@@ -350,7 +362,7 @@ var Intervgp = IntervDim.group().reduceCount();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['Partner']; });
+var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['partnerName']; });
 var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCount();
 
   dc.rowChart("#cccm .Partner",groupname)
