@@ -19,9 +19,6 @@
 		
 	<script src="js/leaflet.groupedlayercontrol.js"></script>
 	<link rel="stylesheet" href="css/leaflet.groupedlayercontrol.css" />
-
-   	<script src="js/jquery.nouislider.all.js"></script>
-	<link rel="stylesheet" href="css/jquery.nouislider.css" />
 	
 	<script src="js/leaflet.ajax.min.js"></script>
 
@@ -126,7 +123,7 @@
   
 	var base = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+		});
 		
 	var inset = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -143,7 +140,7 @@
         var layer01 = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 
             attribution: 'Tiles &copy; <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        });
+        }).addTo(map);
 
         var layer02 = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; Map Data <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
