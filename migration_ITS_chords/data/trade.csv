@@ -1,0 +1,231 @@
+year,importer2,importer1,flow1,flow2
+2010-Q2,Irbid,Al Mafraq,12,0
+2011-Q1,Al Mafraq,Al Mafraq,117,0
+2011-Q1,Irbid,Al Mafraq,75,0
+2011-Q1,Maan,Al Mafraq,11,0
+2011-Q2,Al Balqa,Maan,21,0
+2011-Q3,Al Balqa,Al Mafraq,25,0
+2011-Q3,Al Balqa,Maan,21,0
+2011-Q3,Al Mafraq,Irbid,85,0
+2011-Q3,Amman,Amman,40,0
+2011-Q4,Al Balqa,Al Balqa,46,0
+2011-Q4,Amman,Al Mafraq,4,0
+2011-Q4,Irbid,Al Balqa,87,0
+2011-Q4,Irbid,Irbid,75,0
+2011-Q4,Irbid,zarqa,75,0
+2012-Q1,Al Balqa,Al Balqa,11,0
+2012-Q1,Al Balqa,Al Mafraq,50,0
+2012-Q1,Al Balqa,Aqaba,21,0
+2012-Q1,Al Mafraq,Al Mafraq,185,0
+2012-Q1,Amman,Amman,40,0
+2012-Q1,Irbid,Irbid,57,0
+2012-Q2,Al Balqa,Al Balqa,14,0
+2012-Q2,Al Balqa,Al Mafraq,25,0
+2012-Q2,Al Balqa,Amman,26,0
+2012-Q2,Al Balqa,Irbid,11,0
+2012-Q2,Al Mafraq,Al Mafraq,30,0
+2012-Q2,Irbid,Al Mafraq,100,0
+2012-Q2,zarqa,zarqa,50,0
+2012-Q3,Al Balqa,Al Mafraq,94,0
+2012-Q3,Al Balqa,Amman,14,0
+2012-Q3,Al Balqa,Maan,21,0
+2012-Q3,Al Mafraq,Al Mafraq,320,0
+2012-Q3,Al Mafraq,zarqa,30,0
+2012-Q3,Irbid,Al Mafraq,35,0
+2012-Q4,Al Balqa,Al Balqa,74,0
+2012-Q4,Al Balqa,Maan,21,0
+2012-Q4,Al Mafraq,Al Balqa,15,0
+2012-Q4,Al Mafraq,Al Mafraq,522,0
+2012-Q4,Irbid,Al Balqa,80,0
+2012-Q4,Irbid,Irbid,43,0
+2013-Q1,Al Balqa,Al Balqa,166,0
+2013-Q1,Al Balqa,Al Mafraq,7,0
+2013-Q1,Al Mafraq,Al Mafraq,783,0
+2013-Q1,Al Mafraq,Karak,70,0
+2013-Q1,Amman,Al Mafraq,57,0
+2013-Q1,Irbid,Al Balqa,9,0
+2013-Q1,Irbid,Al Mafraq,290,0
+2013-Q1,Irbid,Irbid,55,0
+2013-Q1,Irbid,Maan,31,0
+2013-Q1,Irbid,zarqa,45,0
+2013-Q1,Maan,Al Balqa,15,0
+2013-Q2,Al Balqa,Al Mafraq,105,0
+2013-Q2,Al Balqa,Amman,38,0
+2013-Q2,Al Balqa,Irbid,6,0
+2013-Q2,Al Balqa,zarqa,145,0
+2013-Q2,Al Mafraq,Al Balqa,22,0
+2013-Q2,Al Mafraq,Al Mafraq,785,0
+2013-Q2,Al Mafraq,Irbid,100,0
+2013-Q2,Irbid,Al Balqa,32,0
+2013-Q2,Irbid,Al Mafraq,239,0
+2013-Q2,Irbid,Amman,55,0
+2013-Q2,Irbid,Irbid,174,0
+2013-Q2,Karak,Maan,17,0
+2013-Q2,Maan,Al Mafraq,7,0
+2013-Q2,zarqa,Al Balqa,15,0
+2013-Q2,zarqa,Al Mafraq,60,0
+2013-Q3,Al Balqa,Al Mafraq,150,0
+2013-Q3,Al Balqa,Amman,193,0
+2013-Q3,Al Balqa,Maan,60,0
+2013-Q3,Al Mafraq,Al Balqa,40,0
+2013-Q3,Al Mafraq,Al Mafraq,664,0
+2013-Q3,Amman,Al Mafraq,95,0
+2013-Q3,Amman,Amman,20,0
+2013-Q3,Aqaba,Karak,10,0
+2013-Q3,Irbid,Al Mafraq,195,0
+2013-Q3,Irbid,Amman,31,0
+2013-Q3,Irbid,Irbid,35,0
+2013-Q3,zarqa,Al Mafraq,120,0
+2013-Q3,zarqa,zarqa,19,0
+2013-Q4,Al Balqa,Al Balqa,562,0
+2013-Q4,Al Balqa,Al Mafraq,115,0
+2013-Q4,Al Balqa,Amman,25,0
+2013-Q4,Al Balqa,Karak,55,0
+2013-Q4,Al Balqa,Maan,60,0
+2013-Q4,Al Balqa,zarqa,65,0
+2013-Q4,Al Mafraq,Al Balqa,18,0
+2013-Q4,Al Mafraq,Al Mafraq,496,0
+2013-Q4,Al Mafraq,Amman,22,0
+2013-Q4,Amman,Al Balqa,31,0
+2013-Q4,Amman,Irbid,120,0
+2013-Q4,Aqaba,Al Balqa,80,0
+2013-Q4,Irbid,Al Mafraq,210,0
+2013-Q4,Irbid,Irbid,79,0
+2013-Q4,Maan,Al Balqa,10,0
+2013-Q4,Maan,Amman,32,0
+2013-Q4,Madaba,Madaba,60,0
+2014-Q1,Al Balqa,Al Balqa,303,0
+2014-Q1,Al Balqa,Al Mafraq,734,0
+2014-Q1,Al Balqa,Amman,171,0
+2014-Q1,Al Balqa,Aqaba,130,0
+2014-Q1,Al Balqa,Irbid,30,0
+2014-Q1,Al Balqa,Jarash,300,0
+2014-Q1,Al Balqa,Maan,41,0
+2014-Q1,Al Balqa,Madaba,31,0
+2014-Q1,Al Mafraq,Al Balqa,47,0
+2014-Q1,Al Mafraq,Al Mafraq,760,0
+2014-Q1,Al Mafraq,Jarash,100,0
+2014-Q1,Al Mafraq,Karak,15,0
+2014-Q1,Amman,Al Balqa,54,0
+2014-Q1,Amman,Amman,32,0
+2014-Q1,Amman,Madaba,60,0
+2014-Q1,Irbid,Al Balqa,70,0
+2014-Q1,Irbid,Al Mafraq,383,0
+2014-Q1,Irbid,Amman,50,0
+2014-Q1,Irbid,Irbid,205,0
+2014-Q1,Irbid,Madaba,13,0
+2014-Q1,Maan,Al Balqa,18,0
+2014-Q1,Madaba,Karak,10,0
+2014-Q1,Madaba,Madaba,14,0
+2014-Q1,zarqa,Al Mafraq,11,0
+2014-Q1,zarqa,zarqa,11,0
+2014-Q2,Al Balqa,Al Balqa,239,0
+2014-Q2,Al Balqa,Al Mafraq,1232,0
+2014-Q2,Al Balqa,Amman,964,0
+2014-Q2,Al Balqa,Aqaba,135,0
+2014-Q2,Al Balqa,Irbid,155,0
+2014-Q2,Al Balqa,Maan,590,0
+2014-Q2,Al Balqa,Madaba,18,0
+2014-Q2,Al Balqa,zarqa,285,0
+2014-Q2,Al Mafraq,Al Mafraq,523,0
+2014-Q2,Amman,Al Mafraq,132,0
+2014-Q2,Amman,Al Tafilah,50,0
+2014-Q2,Amman,Amman,469,0
+2014-Q2,Amman,Maan,50,0
+2014-Q2,Amman,Madaba,9,0
+2014-Q2,Amman,zarqa,188,0
+2014-Q2,Aqaba,Al Mafraq,10,0
+2014-Q2,Aqaba,Aqaba,100,0
+2014-Q2,Aqaba,Irbid,105,0
+2014-Q2,Irbid,Al Balqa,100,0
+2014-Q2,Irbid,Al Mafraq,59,0
+2014-Q2,Irbid,Amman,232,0
+2014-Q2,Irbid,Aqaba,100,0
+2014-Q2,Irbid,Irbid,78,0
+2014-Q2,Irbid,Maan,20,0
+2014-Q2,Irbid,Madaba,90,0
+2014-Q2,Irbid,zarqa,14,0
+2014-Q2,Karak,Al Mafraq,98,0
+2014-Q2,Karak,Karak,34,0
+2014-Q2,Maan,Aqaba,18,0
+2014-Q2,Maan,Maan,10,0
+2014-Q2,Madaba,Al Balqa,13,0
+2014-Q2,Madaba,Al Mafraq,30,0
+2014-Q2,Madaba,Irbid,8,0
+2014-Q2,Madaba,Maan,80,0
+2014-Q3,Al Balqa,Al Balqa,137,0
+2014-Q3,Al Balqa,Al Mafraq,232,0
+2014-Q3,Al Balqa,Al Tafilah,100,0
+2014-Q3,Al Balqa,Amman,238,0
+2014-Q3,Al Balqa,Aqaba,140,0
+2014-Q3,Al Balqa,Irbid,50,0
+2014-Q3,Al Balqa,Maan,100,0
+2014-Q3,Al Balqa,Madaba,73,0
+2014-Q3,Al Balqa,zarqa,30,0
+2014-Q3,Al Mafraq,Al Balqa,36,0
+2014-Q3,Al Mafraq,Al Mafraq,287,0
+2014-Q3,Al Mafraq,Al Tafilah,8,0
+2014-Q3,Al Mafraq,Aqaba,162,0
+2014-Q3,Amman,Al Balqa,29,0
+2014-Q3,Amman,Al Mafraq,100,0
+2014-Q3,Amman,Amman,14,0
+2014-Q3,Amman,Aqaba,30,0
+2014-Q3,Aqaba,Al Mafraq,80,0
+2014-Q3,Aqaba,Irbid,105,0
+2014-Q3,Irbid,Al Balqa,114,0
+2014-Q3,Irbid,Al Mafraq,49,0
+2014-Q3,Irbid,Amman,35,0
+2014-Q3,Irbid,Jarash,35,0
+2014-Q3,Irbid,Maan,17,0
+2014-Q3,Irbid,zarqa,35,0
+2014-Q3,Karak,Karak,17,0
+2014-Q3,Maan,Maan,17,0
+2014-Q3,Madaba,Al Balqa,5,0
+2014-Q3,Madaba,Al Mafraq,68,0
+2014-Q3,Madaba,Amman,18,0
+2014-Q3,zarqa,Al Mafraq,50,0
+2014-Q3,zarqa,Amman,50,0
+2014-Q4,Al Balqa,Al Balqa,264,0
+2014-Q4,Al Balqa,Al Mafraq,288,0
+2014-Q4,Al Balqa,Amman,251,0
+2014-Q4,Al Balqa,Aqaba,282,0
+2014-Q4,Al Balqa,Irbid,75,0
+2014-Q4,Al Balqa,Karak,345,0
+2014-Q4,Al Balqa,Maan,80,0
+2014-Q4,Al Mafraq,Al Mafraq,581,0
+2014-Q4,Al Mafraq,Aqaba,100,0
+2014-Q4,Al Mafraq,Karak,138,0
+2014-Q4,Al Mafraq,zarqa,8,0
+2014-Q4,Amman,Al Balqa,456,0
+2014-Q4,Amman,Karak,48,0
+2014-Q4,Aqaba,Al Balqa,80,0
+2014-Q4,Irbid,Al Balqa,85,0
+2014-Q4,Irbid,Al Mafraq,130,0
+2014-Q4,Irbid,Amman,10,0
+2014-Q4,Irbid,Aqaba,90,0
+2014-Q4,Irbid,Irbid,139,0
+2014-Q4,Irbid,Karak,10,0
+2014-Q4,Karak,Aqaba,50,0
+2014-Q4,Karak,Karak,45,0
+2014-Q4,Maan,Al Tafilah,22,0
+2014-Q4,Maan,Karak,33,0
+2014-Q4,Maan,Maan,22,0
+2014-Q4,Madaba,Aqaba,7,0
+2014-Q4,Madaba,Irbid,30,0
+2014-Q4,Madaba,Madaba,69,0
+2014-Q4,zarqa,Al Balqa,50,0
+2014-Q4,zarqa,Aqaba,50,0
+2015-Q1,Al Balqa,Al Balqa,346,0
+2015-Q1,Al Balqa,Al Mafraq,16,0
+2015-Q1,Al Balqa,Aqaba,55,0
+2015-Q1,Al Balqa,Karak,215,0
+2015-Q1,Al Mafraq,Al Mafraq,258,0
+2015-Q1,Al Mafraq,Irbid,244,0
+2015-Q1,Al Mafraq,Karak,197,0
+2015-Q1,Amman,Al Balqa,20,0
+2015-Q1,Amman,Amman,68,0
+2015-Q1,Irbid,Al Balqa,90,0
+2015-Q1,Irbid,Irbid,61,0
+2015-Q1,Maan,Maan,22,0
+2015-Q1,Madaba,Amman,35,0
+2015-Q1,zarqa,zarqa,110,0

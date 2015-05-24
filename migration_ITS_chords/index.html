@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no" />
+    <title>Informal Settlement - Migration Over Time</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+ 
+<style>
+
+h3{font-weight: bold; font-size: 14px; color: #fff;  margin: 10px 0 0 0;}
+h2{font-weight: bold; font-size: 18px; color: #fff;  margin: 10px 0px 12px 0px;;line-height:30px}
+h4{font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
+h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
+h6{font-size: 14px; color: #000}
+label{font-size: 10px; color: #000; margin: 0px 0px 0px 0px}
+</style>
+
+
+ </head>
+  <body ng-app="app" ng-cloak ng-controller="mainCntrl">
+
+    <div class="row" style="background-color:grey">
+      <div class="large-8 columns">
+        <h2>JORDAN - Informal Settlements  - Governorate migration by quarters</h2>
+      </div>
+		<div class="large-2 columns"style="top:15px"><img src="image/REACH_logo.png" width="129" height="29"style="border-width:0px;"></div>
+		<div class="large-2 columns"style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"></div>
+    </div>
+
+    <div class="row" style="position:relative;">
+      <aside class="large-2 small-2 columns panel years">
+        <h3>Quarters</h3>
+        <ul class="side-nav">
+          <li ng-repeat="year in years">
+            <input ng-model="$parent.selected_year" type="radio" name="years" ng-value="year" id="year_{{ year }}">
+            <label for="year_{{ year }}">{{ year }}</label>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="large-7 small-6 columns" role="content">
+        <article>
+          <chord-diagram></chord-diagram>
+          <h6 class="text-center">Migration of refugees living in Informal Settlements: <span>{{ selected_year }}</span></h6>
+        </article>
+      </div>
+
+      <aside class="large-3 small-4 columns">
+        <h5>Filters</h5>
+        <button class="button tiny right" ng-click="filters = {}; hasFilters = false;">
+          clear
+        </button>
+        <div class="panel">
+          <div ng-if="hasFilters === false" style="margin: 15px; opacity: 0.5;">
+            Click on a Governorate name to remove it from the graphic
+          </div>
+          <ul class="side-nav">
+            <li ng-repeat="filter in filters">
+              <input ng-model="filter.hide" id="{{ filter.name }}" type="checkbox">
+              <label for="{{ filter.name }}">{{ filter.name }}</label>
+            </li>
+          </ul>
+        </div>
+		
+		<div class="panel">
+        </div>
+		
+      </aside>
+
+      <fieldset id="tooltip" class="row secondary">
+        <div class="large-12 small-12 columns">
+          <h6>Migration from a location in {{ tooltip.sname }} governorate to  another location in {{ tooltip.tname }} governorate: {{ qFormat(tooltip.svalue) }} individuals</h6>
+          {{ pFormat(tooltip.svalue/tooltip.stotal) }} of {{ tooltip.sname }}'s total migrants ({{ qFormat(tooltip.stotal) }} individuals)
+          {{ pFormat(tooltip.svalue/tooltip.mtotal) }} of the total migration during the quarter ({{ qFormat(tooltip.mtotal) }} individuals)
+        </div>
+        <div class="large-12 small-12 columns">
+          <h6>Migration from a location in {{ tooltip.tname }} governorate to another location in {{ tooltip.sname }} governorate: {{ qFormat(tooltip.tvalue) }} individuals</h6>
+          {{ pFormat(tooltip.tvalue/tooltip.ttotal) }} of {{ tooltip.tname }}'s total migrants ({{ qFormat(tooltip.ttotal) }} individuals)
+          {{ pFormat(tooltip.tvalue/tooltip.mtotal) }} of the total migration during the quarter ({{ qFormat(tooltip.mtotal) }} individuals)
+        </div>
+      </fieldset>
+
+    </div>
+
+  
+    <script src="js/d3.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/matrixFactory.js"></script>
+    <script src="js/chordDirective.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
