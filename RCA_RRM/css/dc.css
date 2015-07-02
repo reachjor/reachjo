@@ -26,6 +26,7 @@
     fill: white;
     font-size: 10px;
     cursor: pointer;
+	text-shadow: 1px 1px 1px black;
 }
 
 .dc-chart .pie-slice :hover {
@@ -51,7 +52,7 @@
 }
 
 .dc-chart .axis text {
-    font: 10px sans-serif;
+    font: 9px sans-serif;
 }
 
 .dc-chart .grid-line {
@@ -103,7 +104,7 @@
 }
 
 .dc-chart .node {
-    font-size: 0.7em;
+    font-size: 0.5em;
     cursor: pointer;
 }
 
@@ -196,10 +197,11 @@
     fill: white;
     font-size: 10px;
     cursor: pointer;
+	text-shadow: 1px 1px 1px black;
 }
 
 .dc-legend {
-    font-size: 11px;
+    font-size: 8px;
 }
 
 .dc-legend-item {
@@ -242,7 +244,7 @@
 }
 
 .dc-chart .box {
-  font: 10px sans-serif;
+  font: 9px sans-serif;
 }
 
 .dc-chart .box line,
