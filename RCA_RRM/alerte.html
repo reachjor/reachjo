@@ -28,8 +28,7 @@
 
 body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
-h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 5px 0 0 0;}
-h3a{font-weight: bold; font-size: 12px; color: #666;  margin: 20px 0 0 0;}
+h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 10px 0 0 0;}
 h4{font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
 h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 p{margin: 8px 0 20px 0; line-height: 18px;}
@@ -111,15 +110,7 @@ a:hover{text-decoration: underline;}
              <div class="row" id="cccm">
                 <div  class="map" id="cccm"></div>
                 <div class="sidepanel">
-					<div class="wrapper">
-						<div class="row">
-							<div  class="col-md-8">
-							<h3>Chocs / Alertes reportées</h3>
-							</div>
-							<div  class="col-md-4" align="right">
-							<h3a>Dernier actualisation: 06 juillet 2015</h3a>
-							</div>
-						</div>
+					<div class="wrapper"><p id="gen"><h3>Chocs / Alertes reportées</h3></p>
 						<div class="row">
 							<div  class="col-md-4">
 								<div  class="pref" id="cccm" class="dc-chart">
@@ -154,12 +145,12 @@ a:hover{text-decoration: underline;}
 						</div>				
 						</div>	  
 						<div class="row">
-							<div  class="col-md-12">
+							<div  class="col-md-9">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart"><h4>Nombre d'alertes reportées</h4><h5>Selectionner le graphique pour filtrer par date</h5></div>
 							</div>
-							<!-- <div  class="col-md-3">
+							 <div  class="col-md-3">
 								<div  class="year" id="cccm" class="dc-chart"><h4>Nombre d'alerte par an</h4></div>
-							</div>-->
+							</div>
 						</div>
 					</div>
                 </div>
@@ -183,7 +174,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 
-d3.csv("data/RRM_Alertes.csv", function(error,data) {
+d3.csv("data/RRM_incident.csv", function(error,data) {
      //drawMarkerSelect(data);
      drawMarkerArea(data);
 });
@@ -224,11 +215,10 @@ var popty = d3.scale.ordinal()
 	 
 function drawMarkerArea(data) {
 //function drawMarkerSelect(error,data) {
-var dateFormat = d3.time.format("%d.%m.%Y");
+
+	var dateFormat = d3.time.format("%Y-%m");
     data.forEach(function (d) {
-	d.DD  = dateFormat.parse(d.startDate)
-	//d.year = d3.time.year(d.DD)
-	d.month= d3.time.month(d.DD)
+    d.DD  = dateFormat.parse(d.month);
 	});
  
 
@@ -236,7 +226,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 
   var groupname = "marker-select";
 
-  var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
+  var facilities = xf.dimension(function(d) { return d.geo; });
   var facilitiesGroup = facilities.group();
   
   dc.leafletMarkerChart(".map",groupname)
@@ -252,23 +242,23 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 	  //.popup(function(d){return d['Partner']+":";})
     ;
 
- var popDispDim = xf.dimension(function(d) { return d["Pop_affectee.Deplaces"]; });
+ var popDispDim = xf.dimension(function(d) { return d["Population_affectee.Deplaces"]; });
   var popDispGP = popDispDim.group(); 
   dc.pieChart("#cccm .popDispDIV",groupname).dimension(popDispDim).group(popDispGP).width(65).height(90).innerRadius(15).colors(popty);
   
-  var popReturDim = xf.dimension(function(d) { return d["Pop_affectee.Retours"]; });
+  var popReturDim = xf.dimension(function(d) { return d["Population_affectee.Retours"]; });
   var popReturGP = popReturDim.group(); 
   dc.pieChart("#cccm .popReturDIV",groupname).dimension(popReturDim).group(popReturGP).width(65).height(90).innerRadius(17).colors(popty);
   
-  var popHotDim = xf.dimension(function(d) { return d["Pop_affectee.Communaute_hote"]; });
+  var popHotDim = xf.dimension(function(d) { return d["Population_affectee.Communaute_hote"]; });
   var popHotGP = popHotDim.group(); 
   dc.pieChart("#cccm .popHotDIV",groupname).dimension(popHotDim).group(popHotGP).width(65).height(90).innerRadius(17).colors(popty);
     
-  var popAutrDim = xf.dimension(function(d) { return d["Pop_affectee.Autre"]; });
+  var popAutrDim = xf.dimension(function(d) { return d["Population_affectee.Autre"]; });
   var popAutrGP = popAutrDim.group(); 
   dc.pieChart("#cccm .popAutrDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(90).innerRadius(17).colors(popty);
   
-  var pref = xf.dimension(function(d) { return d['Prefecture']; });
+  var pref = xf.dimension(function(d) { return d['PREF_NOM']; });
   var villsect = pref.group().reduceCount();
   
   dc.rowChart("#cccm .pref",groupname)
@@ -278,24 +268,13 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .width(200)
         .height(250)
         .renderLabel(true)
-		.margins({top: 0, right: 0, bottom: 0, left: 0})
-        .colors(['#999999'])
+        .colors(['#58585A'])
 		.ordering(function (p) { return -p.value;})
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-  var ONGDim  = xf.dimension(function(d) { 
-		if (d.Nature_choc_Violences == "Oui" )
-			  return "Violence"
-			else if (d.Nature_choc_Catastrophe == "Oui")
-			  return "Catastrophe naturelle" 
-			else if (d.Nature_Choc_Autre == "Oui" )
-			  return "Autre"
-			else 
-			  return "NA"  
-			 
-			});  
+  var ONGDim  = xf.dimension(function(d) { return d['nature']; });
   var ONGsect = ONGDim.group().reduceCount();
 
   dc.rowChart("#cccm .choctype",groupname)
@@ -311,7 +290,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
- /* var yeargp  = xf.dimension(function(d) { return d['year']; });
+  var yeargp  = xf.dimension(function(d) { return d['year']; });
   var yeargroup = yeargp.group().reduceCount();
 
   dc.barChart("#cccm .year",groupname)
@@ -326,9 +305,9 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 		//.barPadding(0.1)	
 		//.outerPadding(0.05)
 		;
-*/
 
-var stdateDim = xf.dimension(function(d) {return d.month});
+
+var stdateDim = xf.dimension(function(d) {return d.DD});
 var stdategp = stdateDim.group();
 var times = function(d) {return d.DD};
 
@@ -346,7 +325,7 @@ var times = function(d) {return d.DD};
 		.renderHorizontalGridLines(true)
 		.renderArea(true)
 		//.renderDataPoints({radius: 2, fillOpacity: 0.8, strokeOpacity: 0.8})
-		.xAxis().ticks(8)
+		.xAxis().ticks(6)
 		;
  
 var IntervDim = xf.dimension(function(d) { return d['pop_affect']; });
@@ -366,21 +345,7 @@ var Intervgp = IntervDim.group().reduceCount();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-  var choc = xf.dimension(function(d) { 
-		if (d.Acces_humanitaire_Oui == "Oui" )
-			  return "Oui"
-			else if (d.Acces_humanitaire_Non_logistique == "Oui")
-			  return "Non - logistique" 
-			else if (d.Acces_humanitaire_Non_securite == "Oui" )
-			  return "Non - sécurité"
-			else if (d.Acces_humanitaire_Non_autre == "Oui" )
-			  return "Non - autre"  
-			else 
-			  return "NA"  
-			 
-			});  
-  
-  
+  var choc = xf.dimension(function(d) { return d['acces']; });
   var chocDim = choc.group().reduceCount();
 
   dc.rowChart("#cccm .acces",groupname)
@@ -397,7 +362,7 @@ var Intervgp = IntervDim.group().reduceCount();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['Partner']; });
+var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['partnerName']; });
 var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCount();
 
   dc.rowChart("#cccm .Partner",groupname)
@@ -464,4 +429,3 @@ $(function() {
 
 
 </html>
-
