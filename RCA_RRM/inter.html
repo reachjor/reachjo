@@ -17,7 +17,7 @@
     <link type="text/css" href="css/leaflet.css" rel="stylesheet"/>
     <link type="text/css" href="css/leaflet.markercluster.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/dc.css">
-    <!-- Add IntroJs styles  -->
+     <!--Add IntroJs styles  -->
     <link rel="stylesheet" type="text/css" href="css/introjs.css">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <link rel="stylesheet" type="text/css" href="css/colorbrewer.css">
@@ -30,7 +30,8 @@
 
 body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
-h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 10px 0 0 0;}
+h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 5px 0 0 0;}
+h3a{font-weight: bold; font-size: 12px; color: #fff;  margin: 20px 0 0 0;}
 h4{font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
 h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 p{margin: 8px 0 20px 0; line-height: 18px;}
@@ -67,47 +68,61 @@ a:hover{text-decoration: underline;}
   shape-rendering: crispEdges;
 }
 </style>
+<style type="text/css">
+			
+			.axis path,
+			.axis line {
+				fill: none;
+				stroke: black;
+				shape-rendering: crispEdges;
+			}
+			
+			.axis text {
+				font-family: sans-serif;
+				font-size: 11px;
+			}
 
+		</style>	
 </head>
  <body>
   <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">RRM République Centrafricaine</a>
+        <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html">RRM République Centrafricaine</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités<span class="caret"></span></a>
+					  
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="reference_2014.html">Carte de référence 2014</a></li>
+							<li><a href="reference_2015.html">Carte de référence 2015</a></li>
+							<li><a href="alerte.html">Alertes</a></li>
+							<li><a href="mex.html">Missions exploratoires</a></li>
+							<li><a href="MSA.html">Enquêtes multi-sectorielles</a></li>
+							<li><a href="inter.html">Interventions</a></li>
+							<li><a href="pdm.html">PDM</a></li>
+					  </ul>
+					</li>
+					<li><a>Interventions</a></li>
+					<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"></li>	
+					<li><a> </a></li>
+					<li style="top:7px"><img src="image/rrm.png" width="129" height="37"style="border-width:0px;"></li>	
+					<li><a> </a></li>
+					<li style="top:12px"><img src="image/REACH_logo.png" width="129" height="29"style="border-width:0px;"></li>					
+				</ul>
+			</div><!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités<span class="caret"></span></a>
-			  
-                <ul class="dropdown-menu" role="menu">
-                <li><a href="reference_2014.html">Carte de référence 2014</a></li>
-                <li><a href="reference_2015.html">Carte de référence 2015</a></li>
-				<li><a href="alerte.html">Alertes</a></li>
-                <li><a href="mex.html">Missions exploratoires</a></li>
-                <li><a href="MSA.html">Enquêtes multi-sectorielles</a></li>
-                <li><a href="inter.html">Interventions</a></li>
-                <li><a href="pdm.html">PDM</a></li>
-              </ul>
-            </li>
-			<li><a>Interventions</a></li>
-			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
-			<li><a> </a></li>
-			<li style="top:7px"><img src="image/rrm.png" width="129" height="37"style="border-width:0px;"><li>	
-			<li><a> </a></li>
-			<li style="top:12px"><img src="image/REACH_logo.png" width="129" height="29"style="border-width:0px;"><li>					
-         </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>   
 	
    <div style="display: block;"  id="dashboard">
@@ -116,8 +131,16 @@ a:hover{text-decoration: underline;}
 
                 <div class="sidepanel">
 					<div class="wrapper">
-						  <p id="gen"><h3>Interventions</h3></p>
 					
+						<div class="row">
+							<div  class="col-md-8">
+							<h3>Interventions</h3>
+							</div>
+							<div  class="col-md-4" align="right">
+							<h3a>Dernier actualisation: 08 juillet 2015</h3a>
+							</div>
+						</div>	
+						 
 						<div class="row">
 							<div  class="col-md-4">
 								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires WASH*</h4></div>
@@ -166,12 +189,12 @@ a:hover{text-decoration: underline;}
 							
 						</div>  
 						<div class="row">
-							<div  class="col-md-10">
+							<div  class="col-md-8">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
 								  <h4>Nombre d'interventions effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
 								</div>
 							</div>
-							<div  class="col-md-2 right">
+							<div  class="col-md-4">
 								<div  class="year" id="cccm" class="dc-barChart">
 								     <h4>Nombre d’interventions par an</h4>
 								</div>
@@ -185,7 +208,7 @@ a:hover{text-decoration: underline;}
 					</div>
                 </div>
             </div>
-        </div>
+    </div>
       
    
 
@@ -206,7 +229,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 
-d3.csv("data/RRM_intervention.csv", function(error,data) {
+d3.csv("data/RRM_Interventons_08juillet2015.csv", function(error,data) {
      //drawMarkerSelect(data);
 	
      drawMarkerArea(data);
@@ -243,19 +266,18 @@ function regroup(dim, cols) {
 }
 
 function drawMarkerArea(data) {
-	var dateFormat = d3.time.format("%Y-%m");
-	data.forEach(function (d) {
-    d.DD  = dateFormat.parse(d.month);
-	 d.year=+d.year;
-
-});
- 
+	var dateFormat = d3.time.format("%d.%m.%Y");
+    data.forEach(function (d) {
+	d.DD  = dateFormat.parse(d.startDate)
+	//d.year = d3.time.year(d.DD)
+	d.month= d3.time.month(d.DD)
+	});
 
   var xf = crossfilter(data);
   var groupname = "marker-select";
 
   
-  var facilities = xf.dimension(function(d) { return d.geo; });
+   var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
   var facilitiesGroup = facilities.group();
   
   dc.leafletMarkerChart(".map",groupname)
@@ -271,7 +293,7 @@ function drawMarkerArea(data) {
       //.title(function (d) {return d.locationName + ": "+d.Individus_bénéficiaires_NFI_total+" individuals";})
     ;
   
-  var partner = xf.dimension(function(d) { return d.partnerName; });
+  var partner = xf.dimension(function(d) { return d.Partner; });
   var partnergp = partner.group();  
   dc.pieChart("#cccm .partner",groupname)
         .dimension(partner)
@@ -281,7 +303,17 @@ function drawMarkerArea(data) {
         .title(function (d) {return d.value+" interventions";})
 		.renderLabel(true)
         ;
-  var interdim = xf.dimension(function(d) { return d.intervention_type; });
+  var interdim = xf.dimension(function(d) { 
+			if (d.NFI_WASH == "Oui" )
+			  return "NFI-WASH"
+			else if (d.NFI == "Oui" )
+			  return "NFI"  
+			else if (d.WASH == "Oui" )
+			  return "WASH"    
+			else
+			  return "NA"   			
+			});   
+  
   var intergp = interdim.group();  
   dc.pieChart("#cccm .intertype",groupname)
         .dimension(interdim)
@@ -292,17 +324,17 @@ function drawMarkerArea(data) {
         .renderLabel(true)
         ;
   
-  var pref = xf.dimension(function(d) { return d['type']; });
-  var natte = pref.group().reduceSum(function (d) { return d.NFI_Nattes_total; });
-  var bache = pref.group().reduceSum(function (d) { return d.NFI_Bâches; });
-  var couverture = pref.group().reduceSum(function (d) { return d.NFI_Couvertures_total; });
-  var savon = pref.group().reduceSum(function (d) { return d.NFI_Savons_total; });
-  var bidon = pref.group().reduceSum(function (d) { return d.NFI_bidons; });
-  var seau = pref.group().reduceSum(function (d) { return d.NFI_Seau; });
-  var kitcuis = pref.group().reduceSum(function (d) { return d.NFI_Kit_cuisine_total; });
-  var vetenf = pref.group().reduceSum(function (d) { return d.NFI_Vêtements_enfants_total; });
-  var vetbebe = pref.group().reduceSum(function (d) { return d.NFI_Vêtement_bébé; });
-  var torche = pref.group().reduceSum(function (d) { return d.NFI_Torche; });
+  var pref = xf.dimension(function(d) { return d.Code_Prefecture; });
+  var natte = pref.group().reduceSum(function (d) { return d.NFI_nattes_total; });
+  var bache = pref.group().reduceSum(function (d) { return d.NFI_baches_total; });
+  var couverture = pref.group().reduceSum(function (d) { return d.NFI_couvertures_total; });
+  var savon = pref.group().reduceSum(function (d) { return d.NFI_savons_total; });
+  var bidon = pref.group().reduceSum(function (d) { return d.NFI_bidons_total; });
+  var seau = pref.group().reduceSum(function (d) { return d.NFI_seau_total; });
+  var kitcuis = pref.group().reduceSum(function (d) { return d.NFI_kitCuisine_total; });
+  var vetenf = pref.group().reduceSum(function (d) { return d.NFI_vetements_enfants_total; });
+  var vetbebe = pref.group().reduceSum(function (d) { return d.NFI_vetement_bebe; });
+  var torche = pref.group().reduceSum(function (d) { return d.NFI_torche_total; });
   
 	dc.rowChart("#cccm .natte",groupname)
         .dimension(pref)
@@ -387,9 +419,9 @@ function drawMarkerArea(data) {
 		.x(d3.scale.linear().domain([0, 1000]))
 		;
 	 
-  var viplum = pref.group().reduceSum(function (d) { return d.Vivres_Plumpy_Sup; });
-  var vihuile = pref.group().reduceSum(function (d) { return d.Vivres_Huile_2L; });
-  var vicsb = pref.group().reduceSum(function (d) { return d["Vivres_CSB._12.5Kg"]; });
+  var viplum = pref.group().reduceSum(function (d) { return d.Vivres_PlumpySup; });
+  var vihuile = pref.group().reduceSum(function (d) { return d.Vivres_Huile2L; });
+  var vicsb = pref.group().reduceSum(function (d) { return d.Vivres_CSB_12Kg; });
   var viriz = pref.group().reduceSum(function (d) { return d.Vivres_Riz_25kg; });	 
 
   	    dc.rowChart("#cccm .viplum",groupname)
@@ -429,8 +461,8 @@ function drawMarkerArea(data) {
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 25]))
   
-  var sensib = pref.group().reduceSum(function (d) { return d["Sensibilisation_de_la_communauté_lavage_de_main"]; });
-  var comgest = pref.group().reduceSum(function (d) { return d["Mise_en_place_d.un_comité_de_gestion_des_latrines"]; });
+  var sensib = pref.group().reduceSum(function (d) { return d.Sensibilisation_communaute_lavage_main; });
+  var comgest = pref.group().reduceSum(function (d) { return d.comite_gestion_latrines; });
     dc.rowChart("#cccm .comgest",groupname)
         .dimension(pref)
         .group(comgest)
@@ -451,8 +483,8 @@ function drawMarkerArea(data) {
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 0.05]))
 
-  var latbloc = pref.group().reduceSum(function (d) { return d.Nombres_de_blocs_de_latrines; });
-  var lat = pref.group().reduceSum(function (d) { return d["nombres_de_latrines_installées"]; });
+  var latbloc = pref.group().reduceSum(function (d) { return d.Nb_blocs_latrines; });
+  var lat = pref.group().reduceSum(function (d) { return d.nb_latrines_installees; });
   	
 	  dc.rowChart("#cccm .latbloc",groupname)
         .dimension(pref)
@@ -473,8 +505,8 @@ function drawMarkerArea(data) {
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 0.5]))
 
-	var borehole = pref.group().reduceSum(function (d) { return d["réhabilitation_de_forage_ou_source_d.eau"]; });
-	var gestion = pref.group().reduceSum(function (d) { return d["Redynamisation_du_comité_de_gestion_de_la_source_d.eau"]; });
+	var borehole = pref.group().reduceSum(function (d) { return d.rehabilitation_forage_source_eau; });
+	var gestion = pref.group().reduceSum(function (d) { return d.Redynamisation_comite_gestion_source_eau; });
     dc.rowChart("#cccm .borehole",groupname)
         .dimension(pref)
         .group(borehole)
@@ -495,9 +527,9 @@ function drawMarkerArea(data) {
 		.x(d3.scale.linear().domain([0, 0.05]));
   
 		
-  var prefec = xf.dimension(function(d) { return d['PREF_NOM']; });
-  var pop_NFI = prefec.group().reduceSum(function (d) { return d.TOTAL_individus_bénéficiaires_NFI; });
-  var pop_WASH = prefec.group().reduceSum(function (d) { return d.Individus_bénéficiaires_WASH_total; });
+  var prefec = xf.dimension(function(d) { return d.Prefecture; });
+  var pop_NFI = prefec.group().reduceSum(function (d) { return d.TOTAL_individus_beneficiaires_NFI; });
+  var pop_WASH = prefec.group().reduceSum(function (d) { return d.TOTAL_individus_beneficiaires_WASH; });
   
   dc.rowChart("#cccm .prefWASH",groupname)
         .dimension(prefec)
@@ -523,24 +555,30 @@ function drawMarkerArea(data) {
 		.colors(["#31a354"])
         .xAxis().ticks(4).tickFormat(d3.format("s"));
  
- var yeargp  = xf.dimension(function(d) { return d['year']; });
-  var yeargroup = yeargp.group();
 
-  dc.barChart("#cccm .year",groupname)
+var yeargp  = xf.dimension(function(d) { return d.year; });
+			
+  var yeargroup = yeargp.group().reduceCount();
+
+    dc.barChart("#cccm .year",groupname)
 		.dimension(yeargp)
 		.group(yeargroup)
-		.width(150)
-        .height(185)
-		.x(d3.scale.ordinal())
-		.margins({top: 10, right: 25, bottom: 25, left: 25})
+		.width(300)
+        .height(200)
+		.x(d3.scale.ordinal().domain([2014,2015]))
 		.xUnits(dc.units.ordinal)
-		.colors(d3.scale.category10())
-		.brushOn(false)
-		//.barPadding(0.1)	
-		//.outerPadding(0.05)
+		.transitionDuration(500)
+		.centerBar(true)	
+		.gap(50)  // 65 = norm
+		.elasticY(true)
+		.xAxisLabel('Année')
+		.yAxisLabel('Nombre d’activités')
+		.xAxis().tickFormat(function (d) {
+        return d})
 		;
 
-var stdateDim = xf.dimension(function(d) {return d.DD});
+
+var stdateDim = xf.dimension(function(d) {return d.month});
 var stdategp = stdateDim.group();
 var times = function(d) {return d.DD};
 
@@ -554,11 +592,13 @@ var times = function(d) {return d.DD};
 	    .xUnits(d3.time.month)
 	    .elasticY(true)
 		.elasticX(true)
-		//.margins({top: 50, right: 50, bottom: 25, left: 40})
+		.margins({top: 10, right: 10, bottom: 30, left: 30})
 		.renderHorizontalGridLines(true)
 		.renderArea(true)
-		.dotRadius(5)
-		.xAxis().ticks(6)
+		.dotRadius(8)
+		
+		.yAxisLabel('Nombre d’activités')
+		.xAxis().ticks(8)
 		;
 
 $('#reset').on('click', function (){
@@ -610,3 +650,4 @@ $(function() {
 
 
 </html>
+
