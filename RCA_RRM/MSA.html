@@ -31,7 +31,8 @@
 
 body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
-h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 10px 0 0 0;}
+h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 5px 0 0 0;}
+h3a{font-weight: bold; font-size: 12px; color: #fff;  margin: 20px 0 0 0;}
 h4{font-size: 11px; color: #000; margin: 10px 0 0 10px;line-height:14px}
 h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 p{margin: 8px 0 20px 0; line-height: 18px;}
@@ -117,9 +118,16 @@ a:hover{text-decoration: underline;}
 
                 <div class="sidepanel">
 					<div class="wrapper">
-						  <p id="gen"><h3>MSA - Enquêtes Multi-Sectorielles</h3></p>
-					</div>
-						
+						  
+						<div class="row">
+							<div  class="col-md-8">
+							<h3>MSA - Enquêtes Multi-Sectorielles</h3>
+							</div>
+							<div  class="col-md-4" align="right">
+							<h3a>Dernier actualisation: 08 juillet 2015</h3a>
+							</div>
+						</div>  
+											
 						<div class="row">
 							<div  class="col-md-4">
 								<div  class="pref" id="cccm" class="dc-chart">
@@ -155,7 +163,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							 <div  class="col-md-4">
 								<div  class="FCS_acceptable" id="cccm" class="dc-chart">
-								     <h4>Nombre de villages par pourcentage de la population avec un score SCA Pauvre ou Limite**</h4>
+								     <h4>Nombre de villages par pourcentage de la population avec un score SCA Acceptable**</h4>
 								</div>
 							</div>
 						</div>	  
@@ -177,12 +185,12 @@ a:hover{text-decoration: underline;}
 							</div>
 						</div>	  
 						<div class="row">
-							<div  class="col-md-9">
+							<div  class="col-md-8">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
 								  <h4>Nombre de MSA effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
 								</div>
 							</div>	
-							 <div  class="col-md-3">
+							 <div  class="col-md-4">
 								<div  class="year" id="cccm" class="dc-chart">
 								     <h4>Nombre de MSA effectuées par an</h4>
 								</div>
@@ -197,6 +205,7 @@ a:hover{text-decoration: underline;}
 					</div>
                 </div>
             </div>
+			
         </div>
     </div>
 
@@ -217,7 +226,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 
-d3.csv("data/RRM_MSA.csv", function(error,data) {
+d3.csv("data/RRM_MSA_08juillet2015.csv", function(error,data) {
 	 
      drawMarkerArea(data);
 });
@@ -254,10 +263,15 @@ function regroup(dim, cols) {
 
 function drawMarkerArea(data) {
 
-	var dateFormat = d3.time.format("%Y-%m");
-   	
-	data.forEach(function (d) {
-    d.DD  = dateFormat.parse(d.month);
+	var dateFormat = d3.time.format("%d.%m.%Y");
+    data.forEach(function (d) {
+	d.DD  = dateFormat.parse(d.startDate)
+	//d.year = d3.time.year(d.DD)
+	d.month= d3.time.month(d.DD)
+	});
+	
+	/*data.forEach(function (d) {
+    d.DD  = dateFormat.parse(d.startDate);
 	d.Individus_IDPs = +d.Individus_IDPs;
 	d.Menage_retournes = +d.Menage_retournes;
 	d.Menages_hote = +d.Menages_hote;
@@ -269,14 +283,14 @@ function drawMarkerArea(data) {
 	d.Score_Consommation_alimentaire = +d.Score_Consommation_alimentaire;
 	d.year = +d.year;
 
-});
+});*/
  
 
   var xf = crossfilter(data);
 
   var groupname = "marker-select";
 
-  var facilities = xf.dimension(function(d) { return d.geo; });
+  var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
   var facilitiesGroup = facilities.group();
   
   dc.leafletMarkerChart(".map",groupname)
@@ -292,7 +306,7 @@ function drawMarkerArea(data) {
 	  //.title(function (d) {return d.key + ": "+d.value+" individuals";})
     ;
 
-  var pref = xf.dimension(function(d) { return d['PREF_NOM']; });
+  var pref = xf.dimension(function(d) { return d.Prefecture; });
   var villsect = pref.group().reduceCount();
   
   dc.rowChart("#cccm .pref",groupname)
@@ -304,7 +318,7 @@ function drawMarkerArea(data) {
 		//	})
         .elasticX(true)
         .width(200)
-        .height(350)
+        .height(300)
         .renderLabel(true)
         .colors(['#58585A'])
 		.ordering(function (p) { return -p.value;})
@@ -312,8 +326,8 @@ function drawMarkerArea(data) {
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-  var prefec = xf.dimension(function(d) { return d['PREF_NOM']; });
-  var pop_pref = pref.group().reduceSum(function (d) { return d.Individus_déplacés; });
+  var prefec = xf.dimension(function(d) { return d.Prefecture; });
+  var pop_pref = pref.group().reduceSum(function (d) { return d.Individus_deplaces; });
   
   dc.rowChart("#cccm .prefpop",groupname)
         .dimension(prefec)
@@ -322,7 +336,7 @@ function drawMarkerArea(data) {
 		//.filter(function(d) { if (d !="NA") {return d;} })
         .elasticX(true)
         .width(200)
-        .height(350)
+        .height(300)
         .renderLabel(true)
         .colors(['#58585A'])
 		.ordering(function (p) { return -p.value;})
@@ -332,7 +346,7 @@ function drawMarkerArea(data) {
 
 		
 		
-  var ONGDim  = xf.dimension(function(d) { return d['Score_NFI']; });
+  var ONGDim  = xf.dimension(function(d) { return d.Score_NFI; });
   var ONGsect = ONGDim.group();
   
   var NONGsect = ONGDim.group().reduce(reduceAdd, reduceRemove, reduceInitial);
@@ -354,7 +368,18 @@ function drawMarkerArea(data) {
 		}
 
 	
-var choc = xf.dimension(function(d) { return d['Score_NFI']; });
+var choc = xf.dimension(function(d) {
+			if (d.Score_NFI < 3.5 )
+			  return "< 3.5"
+			else if (d.Score_NFI >= 3.5  & d.Score_NFI < 4.0 )
+			  return "3.5 - 3.9"  
+			else if (d.Score_NFI >= 4.0  & d.Score_NFI < 4.5 )
+			  return "4.0 - 4.4"    
+			else if (d.Score_NFI >= 4.5 )
+			  return "4.5 - 5.0"
+			else
+			  return "NA"   			
+			});  
 var chocDim = choc.group().reduceCount();
 
   dc.rowChart("#cccm .SCORE_NFI",groupname)
@@ -362,38 +387,60 @@ var chocDim = choc.group().reduceCount();
         .group(chocDim)
 		//.data(function(group) {return group.all().filter(function(kv) { return kv.key !=""; });})
         .width(200)
-        .height(350)
+        .height(300)
         .renderLabel(true)
-       // .ordering(function (p) { return -p.value;})
-        .colors(d3.scale.linear()
-			.domain([5,3])
-			.range(colorbrewer.RdYlGn[11])
+        //.ordering(function (p) { return -p.value;})
+        .colors(d3.scale.ordinal()
+			.domain([5,1])
+			.range(colorbrewer.OrRd[5])
 		)
         //.colorDomain([0,0])
 		.elasticX(true)
-        //.colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+        .x(d3.scale.ordinal().domain(["3.5 - 3.9","4.0 - 4.4","4.5 - 5.0","NA","< 3.5",]))
+        .xAxis().ticks(4).tickFormat(d3.format());
 		
-var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['X._score_de_Consommation_alimentaire_Pauvre']; });
+var Direct_Contractor_VoucherDim = xf.dimension(function(d) { 
+			if (d.X_score_de_Consommation_alimentaire_Pauvre <= 20 )
+			  return "0 - 20 %"
+			else if (d.X_score_de_Consommation_alimentaire_Pauvre > 20  & d.X_score_de_Consommation_alimentaire_Pauvre <= 40 )
+			  return "20 - 40 %"  
+			else if (d.X_score_de_Consommation_alimentaire_Pauvre > 40  & d.X_score_de_Consommation_alimentaire_Pauvre <= 60 )
+			  return "40 - 60 %"    
+			else if (d.X_score_de_Consommation_alimentaire_Pauvre > 60  & d.X_score_de_Consommation_alimentaire_Pauvre <= 80 )
+			  return "60 - 80 %"     
+			 else if (d.X_score_de_Consommation_alimentaire_Pauvre > 80 )
+			  return "> 80 %"
+			else
+			  return "NA"   			
+			});  
 var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCount();
 
   dc.rowChart("#cccm .FCS_poor",groupname)
         .dimension(Direct_Contractor_VoucherDim)
         .group(Direct_Contractor_Vouchergp)
-        .elasticX(true)
-        .width(200)
-        .height(170)
+		.width(200)
+        .height(200)
         .renderLabel(true)
-        //.ordering(function (p) { return -p.value;})
-       .colors(d3.scale.ordinal()
-			.domain(["0-20%", "20-40%", "40-60%","60-80%","80-100%"])
-			.range(colorbrewer.OrRd[5])
-			)
-        //.colorDomain([0,0])
-       //.colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+		.valueAccessor(function(d) { return d.value  })
+		.title(function(d) { return d.key + " (" + Math.floor(d.value ,0) + "%)"; })
+		.elasticX(true)
+		.xAxis()
+		.ticks(2).tickFormat(d3.format(""));	
 		
-var IntervDim = xf.dimension(function(d) { return d['X._score_de_Consommation_alimentaire_Limite']; });
+var IntervDim = xf.dimension(function(d) { 
+			if (d.X_score_de_Consommation_alimentaire_Limite <= 20 )
+			  return "0 - 20 %"
+			else if (d.X_score_de_Consommation_alimentaire_Limite > 20  & d.X_score_de_Consommation_alimentaire_Limite <= 40 )
+			  return "20 - 40 %"  
+			else if (d.X_score_de_Consommation_alimentaire_Limite > 40  & d.X_score_de_Consommation_alimentaire_Limite <= 60 )
+			  return "40 - 60 %"    
+			else if (d.X_score_de_Consommation_alimentaire_Limite > 60  & d.X_score_de_Consommation_alimentaire_Limite <= 80 )
+			  return "60 - 80 %"     
+			 else if (d.X_score_de_Consommation_alimentaire_Limite > 80 )
+			  return "> 80 %"
+			else
+			  return "NA"   			
+			}); 
 var Intervgp = IntervDim.group();
 
   dc.rowChart("#cccm .FCS_borderline",groupname)
@@ -401,19 +448,32 @@ var Intervgp = IntervDim.group();
         .group(Intervgp)
         .elasticX(true)
         .width(200)
-        .height(170)
-        .renderLabel(true)
+        .height(200)
+		.renderLabel(true)
       //.ordering(function (p) { return -p.value;})
-        .colors(d3.scale.ordinal()
-			.domain(["0-20%", "20-40%", "40-60%","60-80%","80-100%"])
-			.range(colorbrewer.OrRd[5])
-			)
+        //.colors(d3.scale.ordinal()
+			//.domain(["0-20%", "20-40%", "40-60%","60-80%","80-100%"])
+		//	.range(colorbrewer.OrRd[5])
+		//	)
       //.colors(d3.scale.category(["#3182bd","#6baed6","#6baed6","#9ecae1","#9ecae1","#c6dbef","#c6dbef"]))
 		.elasticX(true)
         //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var FCS_acc = xf.dimension(function(d) { return d['score_de_Consommation_alimentaire_PauvreBorder']; });
+var FCS_acc = xf.dimension(function(d) { 
+			if (d.X_score_de_Consommation_alimentaire_Acceptable <= 20 )
+			  return "0 - 20 %"
+			else if (d.X_score_de_Consommation_alimentaire_Acceptable > 20  & d.X_score_de_Consommation_alimentaire_Acceptable <= 40 )
+			  return "20 - 40 %"  
+			else if (d.X_score_de_Consommation_alimentaire_Acceptable > 40  & d.X_score_de_Consommation_alimentaire_Acceptable <= 60 )
+			  return "40 - 60 %"    
+			else if (d.X_score_de_Consommation_alimentaire_Acceptable > 60  & d.X_score_de_Consommation_alimentaire_Acceptable <= 80 )
+			  return "60 - 80 %"     
+			 else if (d.X_score_de_Consommation_alimentaire_Acceptable > 80 )
+			  return "> 80 %"
+			else 
+			  return "NA"   			
+			}); 
 var FCS_accGroup = FCS_acc.group();
 
   dc.rowChart("#cccm .FCS_acceptable",groupname)
@@ -421,7 +481,7 @@ var FCS_accGroup = FCS_acc.group();
         .group(FCS_accGroup)
         .elasticX(true)
         .width(200)
-        .height(170)
+        .height(200)
         .renderLabel(true)
         //.ordering(function (p) { return -p.value;})
         .colors(d3.scale.ordinal()
@@ -432,7 +492,20 @@ var FCS_accGroup = FCS_acc.group();
         //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
-var waterDim = xf.dimension(function(d) { return d['X._des_menages_avec_un_source_d.eau_potable_amelioree']; });
+var waterDim = xf.dimension(function(d) {
+			if (d.X_des_menages_avec_un_source_eau_potable_amelioree <= 20 )
+			  return "0 - 20 %"
+			else if (d.X_des_menages_avec_un_source_eau_potable_amelioree > 20  & d.X_des_menages_avec_un_source_eau_potable_amelioree <= 40 )
+			  return "20 - 40 %"  
+			else if (d.X_des_menages_avec_un_source_eau_potable_amelioree > 40  & d.X_des_menages_avec_un_source_eau_potable_amelioree <= 60 )
+			  return "40 - 60 %"    
+			else if (d.X_des_menages_avec_un_source_eau_potable_amelioree > 60  & d.X_des_menages_avec_un_source_eau_potable_amelioree <= 80 )
+			  return "60 - 80 %"     
+			 else if (d.X_des_menages_avec_un_source_eau_potable_amelioree > 80 )
+			  return "> 80 %"
+			else 
+			  return "NA"   			
+			}); 
 var waterDimGroup = waterDim.group().reduceCount();
 
   dc.rowChart("#cccm .water",groupname)
@@ -440,18 +513,31 @@ var waterDimGroup = waterDim.group().reduceCount();
         .group(waterDimGroup)
         .elasticX(true)
         .width(200)
-        .height(170)
+        .height(200)
         .renderLabel(true)
         //.ordering(function (p) { return -p.value;})
        .colors(d3.scale.ordinal()
-			.domain(["0-20%", "20-40%", "40-60%","60-80%","80-100%"])
+			//.domain(["0-20%", "20-40%", "40-60%","60-80%","80-100%"])
 			.range(colorbrewer.PuBu[5])
 			)
         //.colorDomain([0,0])
        //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
-var latrineDim = xf.dimension(function(d) { return d['X._des_menages_ayant_acces_a_une_latrine_hygienique']; });
+var latrineDim = xf.dimension(function(d) { 
+			if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique <= 20 )
+			  return "0 - 20 %"
+			else if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique > 20  & d.X_des_menages_ayant_acces_a_une_latrine_hygienique <= 40 )
+			  return "20 - 40 %"  
+			else if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique > 40  & d.X_des_menages_ayant_acces_a_une_latrine_hygienique <= 60 )
+			  return "40 - 60 %"    
+			else if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique > 60  & d.X_des_menages_ayant_acces_a_une_latrine_hygienique <= 80 )
+			  return "60 - 80 %"     
+			 else if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique > 80 )
+			  return "> 80 %"
+			else 
+			  return "NA"   			
+			}); 
 var latrineGP = latrineDim.group();
 
   dc.rowChart("#cccm .latrine",groupname)
@@ -459,7 +545,7 @@ var latrineGP = latrineDim.group();
         .group(latrineGP)
         .elasticX(true)
         .width(200)
-        .height(170)
+        .height(200)
         .renderLabel(true)
       //.ordering(function (p) { return -p.value;})
         .colors(d3.scale.ordinal()
@@ -471,7 +557,20 @@ var latrineGP = latrineDim.group();
         //.colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var shelterDim = xf.dimension(function(d) { return d['X._de_menages_vivant_ds_un_abris_en_dessous_des_standard']; });
+var shelterDim = xf.dimension(function(d) { 
+			if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard <= 20 )
+			  return "0 - 20 %"
+			else if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard > 20  & d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard <= 40 )
+			  return "20 - 40 %"  
+			else if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard > 40  & d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard <= 60 )
+			  return "40 - 60 %"    
+			else if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard > 60  & d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard <= 80 )
+			  return "60 - 80 %"     
+			 else if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard > 80 )
+			  return "> 80 %"
+			else 
+			  return "NA"   			
+			}); 
 var shelterGP = shelterDim.group();
 
   dc.rowChart("#cccm .abris",groupname)
@@ -479,7 +578,7 @@ var shelterGP = shelterDim.group();
         .group(shelterGP)
         .elasticX(true)
         .width(200)
-        .height(170)
+        .height(200)
         .renderLabel(true)
         //.ordering(function (p) { return -p.value;})
         .colors(d3.scale.ordinal()
@@ -491,29 +590,50 @@ var shelterGP = shelterDim.group();
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
  
- var yeargp  = xf.dimension(function(d) { return d['year']; });
+ /*var yeargp  = xf.dimension(function(d) { return d.year});
+			
+			
   var yeargroup = yeargp.group().reduceCount();
 
     dc.barChart("#cccm .year",groupname)
 		.dimension(yeargp)
 		.group(yeargroup)
-		.width(150)
-        .height(190)
-		.x(d3.scale.ordinal())
+		.width(200)
+        .height(200)
+		.xUnits(d3.time.month)
 		.margins({top: 10, right: 25, bottom: 25, left: 25})
-		.xUnits(dc.units.ordinal)
-		.brushOn(false)	
-		//.barPadding(0.1)	
-		//.outerPadding(0.05)
-		;
+		.xAxis()
+		.ticks(4)
+		//.tickFormat(d3.format("%Y"));*/
+		
+var yeargp  = xf.dimension(function(d) { return d.year; });
+			
+  var yeargroup = yeargp.group().reduceCount();
 
-var stdateDim = xf.dimension(function(d) {return d.DD});
+    dc.barChart("#cccm .year",groupname)
+		.dimension(yeargp)
+		.group(yeargroup)
+		.width(300)
+        .height(200)
+		.x(d3.scale.ordinal().domain([2014,2015]))
+		.xUnits(dc.units.ordinal)
+		.transitionDuration(500)
+		.centerBar(true)	
+		.gap(50)  // 65 = norm
+		.elasticY(true)
+		.xAxisLabel('Année')
+		.yAxisLabel('Nombre d’activités')
+		.xAxis().tickFormat(function (d) {
+        return d})
+		;		
+
+var stdateDim = xf.dimension(function(d) {return d.month});
 var stdategp = stdateDim.group();
 var times = function(d) {return d.DD};
 
  dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(550)
+		.width(500)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
@@ -521,11 +641,13 @@ var times = function(d) {return d.DD};
 	    .xUnits(d3.time.month)
 	    .elasticY(true)
 		.elasticX(true)
-		//.margins({top: 50, right: 50, bottom: 25, left: 40})
+		.margins({top: 10, right: 10, bottom: 30, left: 30})
 		.renderHorizontalGridLines(true)
 		.renderArea(true)
-		.dotRadius(5)
-		.xAxis().ticks(6)
+		.dotRadius(8)
+		
+		.yAxisLabel('Nombre d’activités')
+		.xAxis().ticks(8)
 		;
 
 $('#reset').on('click', function (){
