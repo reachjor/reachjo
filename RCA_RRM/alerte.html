@@ -258,19 +258,19 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 	  //.popup(function(d){return d['Partner']+":";})
     ;
 
- var popDispDim = xf.dimension(function(d) { return d["Pop_affectee.Deplaces"]; });
+ var popDispDim = xf.dimension(function(d) { return d["Pop_affectee_Deplaces"]; });
   var popDispGP = popDispDim.group(); 
   dc.pieChart("#cccm .popDispDIV",groupname).dimension(popDispDim).group(popDispGP).width(65).height(90).innerRadius(15).colors(popty);
   
-  var popReturDim = xf.dimension(function(d) { return d["Pop_affectee.Retours"]; });
+  var popReturDim = xf.dimension(function(d) { return d["Pop_affectee_Retours"]; });
   var popReturGP = popReturDim.group(); 
   dc.pieChart("#cccm .popReturDIV",groupname).dimension(popReturDim).group(popReturGP).width(65).height(90).innerRadius(17).colors(popty);
   
-  var popHotDim = xf.dimension(function(d) { return d["Pop_affectee.Communaute_hote"]; });
+  var popHotDim = xf.dimension(function(d) { return d["Pop_affectee_Communaute_hote"]; });
   var popHotGP = popHotDim.group(); 
   dc.pieChart("#cccm .popHotDIV",groupname).dimension(popHotDim).group(popHotGP).width(65).height(90).innerRadius(17).colors(popty);
     
-  var popAutrDim = xf.dimension(function(d) { return d["Pop_affectee.Autre"]; });
+  var popAutrDim = xf.dimension(function(d) { return d["Pop_affectee_Autre"]; });
   var popAutrGP = popAutrDim.group(); 
   dc.pieChart("#cccm .popAutrDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(90).innerRadius(17).colors(popty);
   
