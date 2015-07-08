@@ -30,7 +30,8 @@
 
 body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
-h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 10px 0 0 0;}
+h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 5px 0 0 0;}
+h3a{font-weight: bold; font-size: 12px; color: #fff;  margin: 20px 0 0 0;}
 h4{font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
 h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 h6{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 0px; line-height:10px}
@@ -116,7 +117,15 @@ a:hover{text-decoration: underline;}
              <div class="row" id="cccm">
                 <div  class="map" id="cccm"  > </div>
                 <div class="sidepanel">
-					<div class="wrapper"><p id="gen"><h3>Mission Exploratoire</h3></p>
+					<div class="wrapper">
+						<div class="row">
+							<div  class="col-md-8">
+							<h3>Mission Exploratoire</h3>
+							</div>
+							<div  class="col-md-4" align="right">
+							<h3a>Dernier actualisation: 08 juillet 2015</h3a>
+							</div>
+						</div>
 						<div class="row">
 							<div  class="col-md-4">
 								<div  class="pref" id="cccm" class="dc-chart"><h4>Préfecture</h4><h5>Nombre d'évaluations</h5/></div>
@@ -125,7 +134,7 @@ a:hover{text-decoration: underline;}
 								<div  class="choctype" id="cccm" class="dc-chart"><h4>Type de choc</h4><h5>par villages évalués</h5/></div>	
 							</div>
 							<div  class="col-md-4">
-								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de MEx effectuées par partenaires</h4><h5></h5/></div>
+								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de MEx effectuées</h4><h5>par partenaires</h5/></div>
 							</div>
 						</div>
 						<div class="row"><h4>Type de population affectée par village</br></br></h4>
@@ -147,7 +156,7 @@ a:hover{text-decoration: underline;}
 						</div>
 						<div class="row-fluid"><h4>Proposition d'action par villages évalués </br> </br></h4/>		
 							<div  class="col-md-2">					 
-									  <div class="pro_accDIV"  id="#cccm"  class="dc-chart"><h6>Plaidoyer acces sécuritaire</h6/></div>
+									  <div class="pro_accDIV"  id="#cccm"  class="dc-chart"><h6>Plaidoyer acces sécuritaire</br></br></h6/></div>
 							</div>
 							<div  class="col-md-2">
 									  <div class="protDIV" id="#cccm" class="dc-chart" ><h6>Monitoring </br>protection</br></br></h6/></div>
@@ -194,7 +203,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 
-d3.csv("data/RRM_MEX.csv", function(error,data) {
+d3.csv("data/RRM_MEX_08juillet2015.csv", function(error,data) {
      //drawMarkerSelect(data);
      drawMarkerArea(data);
 });
@@ -240,17 +249,20 @@ var popty = d3.scale.ordinal()
 function drawMarkerArea(data) {
 //function drawMarkerSelect(error,data) {
 
-	var dateFormat = d3.time.format("%Y-%m");
+	var dateFormat = d3.time.format("%d.%m.%Y");
     data.forEach(function (d) {
-    d.DD  = dateFormat.parse(d.month);
+	d.DD  = dateFormat.parse(d.startDate)
+	//d.year = d3.time.year(d.DD)
+	d.month= d3.time.month(d.DD)
 	});
+
  
 
   var xf = crossfilter(data);
 
   var groupname = "marker-select";
 
-  var facilities = xf.dimension(function(d) { return d.geo; });
+  var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
   var facilitiesGroup = facilities.group();
   
   dc.leafletMarkerChart(".map",groupname)
@@ -266,80 +278,91 @@ function drawMarkerArea(data) {
 	  .title(function (d) {return d.key + ": "+d.value+" individuals";})
     ;
 
-  var pro_accDIM = xf.dimension(function(d) { return d["Proposition_d.action.Plaidoyer_acces_securitaire"]; });
+  var pro_accDIM = xf.dimension(function(d) { return d["Proposition_Action_Plaidoyer_acces_securitaire"]; });
   var pro_accGroup = pro_accDIM.group();  
   
-  var protDim = xf.dimension(function(d) { return d["Proposition_d.action.Monitoring_protection"]; });
+  var protDim = xf.dimension(function(d) { return d["Proposition_Action_Monitoring_protection"]; });
   var protGP = protDim.group();  
   
-  var proMSADim = xf.dimension(function(d) { return d["Proposition_d.action.MSA_complete"]; });
+  var proMSADim = xf.dimension(function(d) { return d["Proposition_Action_MSAcomplete"]; });
   var proMSAGP = proMSADim.group();
   
-  var dispDim = xf.dimension(function(d) { return d["Proposition_d.action.Suivi_du_retour_des_déplacés"]; });
+  var dispDim = xf.dimension(function(d) { return d["Proposition_Action_Suivi_retour_deplaces"]; });
   var dispGP = dispDim.group();
 	
-  var pr_dirDim = xf.dimension(function(d) { return d["Proposition_d.action.Intervention.s._directe.s."]; });
+  var pr_dirDim = xf.dimension(function(d) { return d["Proposition_Action_Intervention_directe"]; });
   var pr_dirGP = pr_dirDim.group();
 
-  var pr_sectDim = xf.dimension(function(d) { return d["Proposition_d.action.Evaluation_sectorielle"]; });
+  var pr_sectDim = xf.dimension(function(d) { return d["Proposition_Action_Eval_sectorielle"]; });
   var pr_sectGP = pr_sectDim.group();
 
-  var pr_logDim = xf.dimension(function(d) { return d["Proposition_d.action.Rehabilitation_acces_logistique"]; });
+  var pr_logDim = xf.dimension(function(d) { return d["Proposition_Action_Rehabilitation_acces_log"]; });
   var pr_logGP = pr_logDim.group();
 
-  dc.pieChart("#cccm .pro_accDIV",groupname).dimension(pro_accDIM).group(pro_accGroup).width(75).height(90).innerRadius(20).colors(dummies);
-  dc.pieChart("#cccm .protDIV",groupname).dimension(protDim).group(protGP).width(75).height(90).innerRadius(20).colors(dummies);
-  dc.pieChart("#cccm .proMSADIV",groupname).dimension(proMSADim).group(proMSAGP).width(75).height(90).innerRadius(20).colors(dummies);
-  dc.pieChart("#cccm .dispDIV",groupname).dimension(dispDim).group(dispGP).width(75).height(90).innerRadius(20).colors(dummies);
-  dc.pieChart("#cccm .pr_dirDIV",groupname).dimension(pr_dirDim).group(pr_dirGP).width(75).height(90).innerRadius(20).colors(dummies);
-  dc.pieChart("#cccm .pr_sectDIV",groupname).dimension(pr_sectDim).group(pr_sectGP).width(75).height(90).innerRadius(20).colors(dummies);
-  dc.pieChart("#cccm .pr_logDIV",groupname).dimension(pr_logDim).group(pr_logGP).width(75).height(90).innerRadius(20).colors(dummies);
+  dc.pieChart("#cccm .pro_accDIV",groupname).dimension(pro_accDIM).group(pro_accGroup).width(65).height(80).innerRadius(10).colors(dummies);
+  dc.pieChart("#cccm .protDIV",groupname).dimension(protDim).group(protGP).width(65).height(80).innerRadius(10).colors(dummies);
+  dc.pieChart("#cccm .proMSADIV",groupname).dimension(proMSADim).group(proMSAGP).width(65).height(80).innerRadius(10).colors(dummies);
+  dc.pieChart("#cccm .dispDIV",groupname).dimension(dispDim).group(dispGP).width(65).height(80).innerRadius(10).colors(dummies);
+  dc.pieChart("#cccm .pr_dirDIV",groupname).dimension(pr_dirDim).group(pr_dirGP).width(65).height(80).innerRadius(10).colors(dummies);
+  dc.pieChart("#cccm .pr_sectDIV",groupname).dimension(pr_sectDim).group(pr_sectGP).width(65).height(80).innerRadius(10).colors(dummies);
+  dc.pieChart("#cccm .pr_logDIV",groupname).dimension(pr_logDim).group(pr_logGP).width(65).height(80).innerRadius(10).colors(dummies);
 	
-  var popDispDim = xf.dimension(function(d) { return d["Type_de_population.Deplaces"]; });
+  var popDispDim = xf.dimension(function(d) { return d["Type_pop_Deplaces"]; });
   var popDispGP = popDispDim.group(); 
-  dc.pieChart("#cccm .popDispDIV",groupname).dimension(popDispDim).group(popDispGP).width(65).height(90).innerRadius(15).colors(popty);
+  dc.pieChart("#cccm .popDispDIV",groupname).dimension(popDispDim).group(popDispGP).width(65).height(80).innerRadius(10).colors(popty);
   
-  var popReturDim = xf.dimension(function(d) { return d["Type_de_population.Retours"]; });
+  var popReturDim = xf.dimension(function(d) { return d["Type_pop_Retours"]; });
   var popReturGP = popReturDim.group(); 
-  dc.pieChart("#cccm .popReturDIV",groupname).dimension(popReturDim).group(popReturGP).width(65).height(90).innerRadius(17).colors(popty);
+  dc.pieChart("#cccm .popReturDIV",groupname).dimension(popReturDim).group(popReturGP).width(65).height(80).innerRadius(10).colors(popty);
   
-  var popHotDim = xf.dimension(function(d) { return d["Type_de_population.Communaute_hote"]; });
+  var popHotDim = xf.dimension(function(d) { return d["Type_pop_Communaute_hote"]; });
   var popHotGP = popHotDim.group(); 
-  dc.pieChart("#cccm .popHotDIV",groupname).dimension(popHotDim).group(popHotGP).width(65).height(90).innerRadius(17).colors(popty);
+  dc.pieChart("#cccm .popHotDIV",groupname).dimension(popHotDim).group(popHotGP).width(65).height(80).innerRadius(10).colors(popty);
   
-  var popRapDim = xf.dimension(function(d) { return d["Type_de_population.Repatriés"]; });
+  var popRapDim = xf.dimension(function(d) { return d["Type_pop_Repatries"]; });
   var popRapGP = popRapDim.group(); 
-  dc.pieChart("#cccm .popRapDIV",groupname).dimension(popRapDim).group(popRapGP).width(65).height(90).innerRadius(17).colors(popty);
+  dc.pieChart("#cccm .popRapDIV",groupname).dimension(popRapDim).group(popRapGP).width(65).height(80).innerRadius(10).colors(popty);
   
-  var popAutrDim = xf.dimension(function(d) { return d["Type_de_population.Autre"]; });
+  var popAutrDim = xf.dimension(function(d) { return d["Type_pop_Autre"]; });
   var popAutrGP = popAutrDim.group(); 
-  dc.pieChart("#cccm .popAutrDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(90).innerRadius(17).colors(popty);
+  dc.pieChart("#cccm .popAutrDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(80).innerRadius(10).colors(popty);
   	
-  var pref = xf.dimension(function(d) { return d['PREF_NOM']; });
+  var pref = xf.dimension(function(d) { return d['Prefecture']; });
   var villsect = pref.group().reduceCount();
   
   dc.rowChart("#cccm .pref",groupname)
         .dimension(pref)
         .group(villsect)
         .elasticX(true)
-        .width(200)
-        .height(250)
-        .renderLabel(true)
+        .width(250)
+        .height(280)
+		.renderLabel(true)
         .colors(['#58585A'])
 		.ordering(function (p) { return -p.value;})
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-  var ONGDim  = xf.dimension(function(d) { return d['Nature_choc']; });
+  var ONGDim  = xf.dimension(function(d) { 
+		if (d.Nature_Choc_Violence == "Oui" )
+			  return "Violence"
+			else if (d.Nature_Choc_Catastrophe_naturelle == "Oui")
+			  return "Catastrophe naturelle" 
+			else if (d.Nature_Choc_Autre == "Oui" )
+			  return "Autre"
+			else 
+			  return "NA"  
+			 
+			});  
+  
   var ONGsect = ONGDim.group().reduceCount();
 
   dc.rowChart("#cccm .choctype",groupname)
         .dimension(ONGDim)
         .group(ONGsect)
         .elasticX(true)
-        .width(200)
-        .height(150)
+        .width(250)
+        .height(200)
         .renderLabel(true)
         .ordering(function (p) { return -p.value;})
         .colors(['#CC3333'])
@@ -347,7 +370,7 @@ function drawMarkerArea(data) {
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var stdateDim = xf.dimension(function(d) {return d.DD});
+var stdateDim = xf.dimension(function(d) {return d.month});
 var stdategp = stdateDim.group();
 var times = function(d) {return d.DD};
 
@@ -402,14 +425,14 @@ var Intervgp = IntervDim.group().reduceCount();
 //        .colorAccessor(function(d, i){return 1;})
 //        .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['partnerName']; });
+var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['Partner']; });
 var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCount();
 
   dc.rowChart("#cccm .Partner",groupname)
         .dimension(Direct_Contractor_VoucherDim)
         .group(Direct_Contractor_Vouchergp)
         .elasticX(true)
-        .width(200)
+        .width(250)
         .height(200)
         .renderLabel(true)
         .ordering(function (p) { return -p.value;})
@@ -469,3 +492,4 @@ $(function() {
 
 
 </html>
+
