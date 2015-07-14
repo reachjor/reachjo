@@ -138,21 +138,34 @@ a:hover{text-decoration: underline;}
 							  <div  class="col-md-4">
 								<div  class="Partner" id="cccm" class="dc-chart"><h4>Partenaires</h4><h5>Nombre d'alertes reportées</h5></div>
 							  </div>
-							<div  class="col-md-6">
-							<div class="row"><h4>Type de population affectée par village</br></br></h4>
-								<div  class="col-md-3">
-									<div  class="popDispDIV" id="cccm" class="dc-chart"><h5>Déplacés:</br></br></h5></div>
-								</div>
-								<div  class="col-md-3">
-									<div  class="popReturDIV" id="cccm" class="dc-chart"><h5>Retournés:</br></br></h5></div>
-								</div>
-								<div  class="col-md-3">
-									<div  class="popHotDIV" id="cccm" class="dc-chart"><h5>Communauté d'accueil:</h6></div>
-								</div>
-								<div  class="col-md-3">
-									<div  class="popAutrDIV" id="cccm" class="dc-chart"><h5>Autre:</br></br></h5></div>			
-								</div>
-						</div>				
+							<div  class="col-md-4">
+									<div class="row"><h4>Type de population affectée par village</br></br></h4>
+											<div class="row">
+												<div  class="col-md-2"></div>
+												<div  class="col-md-4">
+													<div  class="popDispDIV" id="cccm" class="dc-chart"><h5>Déplacés:</br></br></h5></div>
+												</div>
+												<div  class="col-md-4">
+													<div  class="popReturDIV" id="cccm" class="dc-chart"><h5>Retournés:</br></br></h5></div>
+												</div>
+												<div  class="col-md-2"></div>
+											</div>
+											<div class="row">
+												<div  class="col-md-2"></div>
+												<div  class="col-md-4">
+													<div  class="popHotDIV" id="cccm" class="dc-chart"><h5>Communauté d'accueil:</h6></div>
+												</div>
+												<div  class="col-md-4">
+													<div  class="popAutrDIV" id="cccm" class="dc-chart"><h5>Autre:</br></br></h5></div>			
+												</div>
+												<div  class="col-md-2"></div>
+											</div>	
+										
+									</div>	
+							</div>	
+							<div  class="col-md-3">
+								<div  class="PopAffectee" id="cccm" class="dc-chart"><h4>Type de population affectée par alerte</h4><h5>Nombre d'alertes reportées</h5></div>
+							  </div>	
 						</div>	  
 						<div class="row">
 							<div  class="col-md-8">
@@ -260,19 +273,19 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 
  var popDispDim = xf.dimension(function(d) { return d["Pop_affectee_Deplaces"]; });
   var popDispGP = popDispDim.group(); 
-  dc.pieChart("#cccm .popDispDIV",groupname).dimension(popDispDim).group(popDispGP).width(65).height(90).innerRadius(15).colors(popty);
+  dc.pieChart("#cccm .popDispDIV",groupname).dimension(popDispDim).group(popDispGP).width(65).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#FF6600']));
   
   var popReturDim = xf.dimension(function(d) { return d["Pop_affectee_Retours"]; });
   var popReturGP = popReturDim.group(); 
-  dc.pieChart("#cccm .popReturDIV",groupname).dimension(popReturDim).group(popReturGP).width(65).height(90).innerRadius(17).colors(popty);
+  dc.pieChart("#cccm .popReturDIV",groupname).dimension(popReturDim).group(popReturGP).width(65).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#FF6600']));
   
   var popHotDim = xf.dimension(function(d) { return d["Pop_affectee_Communaute_hote"]; });
   var popHotGP = popHotDim.group(); 
-  dc.pieChart("#cccm .popHotDIV",groupname).dimension(popHotDim).group(popHotGP).width(65).height(90).innerRadius(17).colors(popty);
+  dc.pieChart("#cccm .popHotDIV",groupname).dimension(popHotDim).group(popHotGP).width(65).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#FF6600']));
     
   var popAutrDim = xf.dimension(function(d) { return d["Pop_affectee_Autre"]; });
   var popAutrGP = popAutrDim.group(); 
-  dc.pieChart("#cccm .popAutrDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(90).innerRadius(17).colors(popty);
+  dc.pieChart("#cccm .popAutrDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#FF6600']));
   
   var pref = xf.dimension(function(d) { return d['Prefecture']; });
   var villsect = pref.group().reduceCount();
@@ -285,13 +298,13 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .height(250)
         .renderLabel(true)
 		.margins({top: 0, right: 0, bottom: 0, left: 0})
-        .colors(['#999999'])
+        .colors(['#6B6B6B'])
 		.ordering(function (p) { return -p.value;})
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-  var ONGDim  = xf.dimension(function(d) { 
+  var ChocDim  = xf.dimension(function(d) { 
 		if (d.Nature_choc_Violences == "Oui" )
 			  return "Violence"
 			else if (d.Nature_choc_Catastrophe == "Oui")
@@ -299,14 +312,14 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 			else if (d.Nature_Choc_Autre == "Oui" )
 			  return "Autre"
 			else 
-			  return "NA"  
+			  return "Autre"  
 			 
 			});  
-  var ONGsect = ONGDim.group().reduceCount();
+  var Chocsect = ChocDim.group().reduceCount();
 
   dc.rowChart("#cccm .choctype",groupname)
-        .dimension(ONGDim)
-        .group(ONGsect)
+        .dimension(ChocDim)
+        .group(Chocsect)
         .elasticX(true)
         .width(200)
         .height(150)
@@ -317,43 +330,36 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
- /* var yeargp  = xf.dimension(function(d) { return d['year']; });
-  var yeargroup = yeargp.group().reduceCount();
+		
+		
+	 var PopAffDim  = xf.dimension(function(d) { 
+		if (d.Pop_affectee_Deplaces == "Oui" )
+			  return "Déplacés"
+			else if (d.Pop_affectee_Retours == "Oui")
+			  return "Retournés" 
+			else if (d.Pop_affectee_Communaute_hote == "Oui" )
+			  return "Communauté d'accueil"
+			else 
+			  return "Autre"  
+			 
+			});  
+  var PopAffsect = PopAffDim.group().reduceCount();
 
-  dc.barChart("#cccm .year",groupname)
-		.dimension(yeargp)
-		.group(yeargroup)
-		.width(150)
-        .height(210)
-		.x(d3.scale.ordinal())
-		.margins({top: 10, right: 25, bottom: 25, left: 25})
-		.xUnits(dc.units.ordinal)
-		.brushOn(false)	
-		//.barPadding(0.1)	
-		//.outerPadding(0.05)
-		;
-*/
-
-
- 
-var IntervDim = xf.dimension(function(d) { return d['pop_affect']; });
-var Intervgp = IntervDim.group().reduceCount();
-
-  dc.rowChart("#cccm .pop_affect",groupname)
-        .dimension(IntervDim)
-        .group(Intervgp)
+  dc.rowChart("#cccm .PopAffectee",groupname)
+        .dimension(PopAffDim)
+        .group(PopAffsect)
         .elasticX(true)
         .width(200)
-        .height(200)
+        .height(180)
         .renderLabel(true)
         .ordering(function (p) { return -p.value;})
-        .colors(['#0084A8'])
+        .colors(['#CC3333'])
         .colorDomain([0,0])
-		.elasticX(true)
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+        .xAxis().ticks(4).tickFormat(d3.format("s"));	
+		
 
-  var choc = xf.dimension(function(d) { 
+  var AccesH = xf.dimension(function(d) { 
 		if (d.Acces_humanitaire_Oui == "Oui" )
 			  return "Oui"
 			else if (d.Acces_humanitaire_Non_logistique == "Oui")
@@ -368,11 +374,11 @@ var Intervgp = IntervDim.group().reduceCount();
 			});  
   
   
-  var chocDim = choc.group().reduceCount();
+  var AccesHDim = AccesH.group().reduceCount();
 
   dc.rowChart("#cccm .acces",groupname)
-        .dimension(choc)
-        .group(chocDim)
+        .dimension(AccesH)
+        .group(AccesHDim)
 		//.data(function(group) {return group.all().filter(function(kv) { return kv.key !=""; });})
         .width(200)
         .height(150)
@@ -384,18 +390,18 @@ var Intervgp = IntervDim.group().reduceCount();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-var Direct_Contractor_VoucherDim = xf.dimension(function(d) { return d['Partner']; });
-var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCount();
+var PartnerDim = xf.dimension(function(d) { return d['Partner']; });
+var Partnergp = PartnerDim.group().reduceCount();
 
   dc.rowChart("#cccm .Partner",groupname)
-        .dimension(Direct_Contractor_VoucherDim)
-        .group(Direct_Contractor_Vouchergp)
+        .dimension(PartnerDim)
+        .group(Partnergp)
         .elasticX(true)
         .width(200)
         .height(200)
         .renderLabel(true)
         .ordering(function (p) { return -p.value;})
-        .colors(['#FFAA00'])
+        .colors(['#FF6600'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
@@ -406,7 +412,7 @@ var times = function(d) {return d.DD};
 
  dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(550)
+		.width(700)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
