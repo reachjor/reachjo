@@ -428,8 +428,8 @@ function drawMarkerArea(data) {
 			  return "Suivi du retour des déplacés"   
 			else if (d.Proposition_Action_Intervention_directe == "Oui" )
 			  return "Intervention(s) directe(s)"
-			else if (d.Proposition_Action_Pas_daction == "Oui" )
-			  return "Pas d'action"  
+			//else if (d.Proposition_Action_Pas_daction == "Oui" )
+			 // return "Pas d'action"  
 			else 
 			  return "Autre"  
 			 
@@ -461,8 +461,8 @@ function drawMarkerArea(data) {
 			  return "Intervention multiple (indisponibilité des équipes)"
 			else if (d.Delais_INT_Autre == "Oui")
 			  return "Autre" 
-			else 
-			  return "Pas de délais"  
+			//else 
+			 // return "Pas de délais"  
 			 }); 
 			
   var CauseIntsect = CauseIntDim.group().reduceCount();
