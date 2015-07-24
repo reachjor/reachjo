@@ -102,13 +102,15 @@ a:hover{text-decoration: underline;}
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités<span class="caret"></span></a>
 					  
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="reference_2014.html">Carte de référence 2014</a></li>
-							<li><a href="reference_2015.html">Carte de référence 2015</a></li>
-							<li><a href="alerte.html">Alertes</a></li>
-							<li><a href="mex.html">Missions exploratoires</a></li>
-							<li><a href="MSA.html">Enquêtes multi-sectorielles</a></li>
+							 <li><a href="alerte.html">Alertes</a></li>
+							<li><a href="mex.html">MEX, Missions exploratoires</a></li>
+							<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
 							<li><a href="inter.html">Interventions</a></li>
 							<li><a href="pdm.html">PDM</a></li>
+							<li><a href="pdm.html">Accès humanitaire</a></li>
+							<li><a href="pdm.html">Plaidoyer</a></li>
+							<li><a href="reference_2014.html">Carte de référence 2014</a></li>
+							<li><a href="reference_2015.html">Carte de référence 2015</a></li>
 					  </ul>
 					</li>
 					<li><a>Interventions</a></li>
@@ -137,17 +139,30 @@ a:hover{text-decoration: underline;}
 							<h3>Interventions</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a>Dernier actualisation: 08 juillet 2015</h3a>
+							<h3a>Dernier actualisation: 24 juillet 2015</h3a>
 							</div>
 						</div>	
-						 
+						 <div class="row">
+							<div  class="col-md-2">
+								<div  class="nombre" id="cccm" class="dc-chart"></div>
+							</div>
+						</div>
 						<div class="row">
 							<div  class="col-md-4">
-								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires WASH*</h4></div>
+								<div  class="inter" id="cccm" class="dc-chart"><h4>Nombre d'interventions </h4><h5>par préfecture</h5></div>
 							</div>
 							<div  class="col-md-4">
-								<div  class="prefNFI" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires NFI**</h4></div>
-							
+								<div  class="prefWASH" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires WASH* </h4><h5>par préfecture (k = 1000)</h5></div>
+							</div>
+							<div  class="col-md-4">
+								<div  class="prefNFI" id="cccm" class="dc-chart"><h4>Nombre d'individus bénéficiaires NFI**</h4><h5>par préfecture (k = 1000)</h5></div>
+						</div>	
+						 
+						<div class="row">	
+							<div  class="col-md-4">
+								<div  class="year" id="cccm" class="dc-barChart">
+								     <h4>Nombre d’interventions par an</h4>
+								</div>
 							</div>
 							<div  class="col-md-4">
 								<div  class="partner" id="cccm" class="pie-chart"><h4>Nombre d'intervention par organisation</h4></div>
@@ -162,11 +177,13 @@ a:hover{text-decoration: underline;}
 								
 								<div  class="savon" id="cccm" class="dc-chart"><h4>NFI** distribués</h4></div>
 								<div  class="couverture" id="cccm" class="dc-chart"></div>
+								<div  class="moustiquaire" id="cccm" class="dc-chart"></div>
 								<div  class="natte" id="cccm" class="dc-chart"></div>
 								<div  class="bidon" id="cccm" class="dc-chart"></div>
 								<div  class="bache" id="cccm" class="dc-chart"></div>
 								<div  class="seau" id="cccm" class="dc-chart"></div>
 								<div  class="kitcuis" id="cccm" class="dc-chart"></div>
+								<div  class="seau" id="cccm" class="dc-chart"></div>
 								<div  class="vetenf" id="cccm" class="dc-chart"></div>
 								<div  class="torche" id="cccm" class="dc-chart"></div>
 								<div  class="vetbebe" id="cccm" class="dc-chart"></div>				
@@ -188,21 +205,58 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 						</div>  
+						<div class="row">	  
+									<div  class="col-md-1">
+									   
+									</div>
+									<div  class="col-md-4">
+									   <div Class ="CauseIntNFI" id="cccm" class="dc-lineChart"><h4>Cause internes de délais Interventions NFI</h4><h5>Nombre de causes reportées</h5></div>
+									</div>
+									<div  class="col-md-2">
+									   
+									</div>
+								
+									<div  class="col-md-4">
+									   <div Class ="CauseExtNFI" id="cccm" class="dc-lineChart"><h4>Causes externes de délais Interventions NFI</h4><h5>Nombre de causes reportées</h5></div>
+									</div>
+									<div  class="col-md-1">
+									   
+									</div>
+						</div>	
+						<div class="row">	  
+									<div  class="col-md-1">
+									   
+									</div>
+									<div  class="col-md-4">
+									   <div Class ="CauseIntWASH" id="cccm" class="dc-lineChart"><h4>Cause internes de délais Interventions EAH</h4><h5>Nombre de causes reportées</h5></div>
+									</div>
+									<div  class="col-md-2">
+									   
+									</div>
+								
+									<div  class="col-md-4">
+									   <div Class ="CauseExtWASH" id="cccm" class="dc-lineChart"><h4>Causes externes de délais Interventions EAH</h4><h5>Nombre de causes reportées</h5></div>
+									</div>
+									<div  class="col-md-1">
+									   
+									</div>
+						</div>	
+						
 						<div class="row">
 							<div  class="col-md-8">
 							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
 								  <h4>Nombre d'interventions effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
 								</div>
 							</div>
-							<div  class="col-md-4">
+							<!--<div  class="col-md-4">
 								<div  class="year" id="cccm" class="dc-barChart">
 								     <h4>Nombre d’interventions par an</h4>
 								</div>
-							</div>
+							</div>-->
 						</div>
 						<div class="row">
 							<h5>*WASH: Eau, Hygiène et Assainissement; **NFI: Produits non-alimentaires</h5>	
-							<h5>***CBS: Mélange maïs-soja; ****CG: Comité de gestion </h5>							
+							<h5>***CBS: Mélange maïs-soja; ****CG: Comité de gestion </h5>		</br></br>					
 														
 						</div>
 					</div>
@@ -229,7 +283,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 
-d3.csv("data/RRM_Interventons_08juillet2015.csv", function(error,data) {
+d3.csv("data/RRM_Interventions.csv", function(error,data) {
      //drawMarkerSelect(data);
 	
      drawMarkerArea(data);
@@ -293,16 +347,194 @@ function drawMarkerArea(data) {
       //.title(function (d) {return d.locationName + ": "+d.Individus_bénéficiaires_NFI_total+" individuals";})
     ;
   
-  var partner = xf.dimension(function(d) { return d.Partner; });
-  var partnergp = partner.group();  
-  dc.pieChart("#cccm .partner",groupname)
-        .dimension(partner)
-        .group(partnergp)
-        .width(150)
-        .height(150)
-        .title(function (d) {return d.value+" interventions";})
-		.renderLabel(true)
-        ;
+		
+		//***************	
+
+	 var CauseIntNFIDim  = xf.dimension(function(d) { 
+			if (d.Delais_INT_NFI_Disponibilite == "Oui" )
+			  return "Disponibilité/mobilisation de resources"
+			else if (d.Delais_INT_NFI_Coordination_humanitaire == "Oui")
+			  return "Coordination humanitaire" 
+			 else if (d.Delais_INT_NFI_Defaillance_BD == "Oui" )
+			  return "Défaillance des base de données"   
+			else if (d.Delais_INT_NFI_Intervention_multiple == "Oui" )
+			  return "Intervention multiple (indisponibilité des équipes)"
+			else if (d.Delais_INT_NFI_Autre == "Oui")
+			  return "Autre" 
+			else if (d.Delais_INT_NFI_Pas_d_intervention == "Oui")
+			  return "Pas d'intervention"   
+			
+			 }); 
+			
+  var CauseIntsectNFI = CauseIntNFIDim.group().reduceCount();
+
+  dc.rowChart("#cccm .CauseIntNFI",groupname)
+        .dimension(CauseIntNFIDim)
+        .group(CauseIntsectNFI)
+        .elasticX(true)
+        .width(300)
+        .height(200)
+        .renderLabel(true)
+        .ordering(function (p) { return -p.value;})
+        .colors(['#CC3333'])
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(5).tickFormat(d3.format(""));	
+		
+		
+		
+		
+	var CauseEXTNFIDim  = xf.dimension(function(d) {
+			if (d.Delais_EXT_NFI_Necessite_reevaluer == "Oui" )
+			  return "Necessité de réévaluer"
+			else if (d.Delais_EXT_NFI_Acces_logistique == "Oui")
+			  return "Accès logistique" 
+			 else if (d.Delais_EXT_NFI_Suspension_logistique == "Oui" )
+			  return "Suspension logistique"   
+			else if (d.Delais_EXT_NFI_Acceptance_parties_prenantes == "Oui" )
+			  return "Acceptance par les parties prenantes"
+			else if (d.Delais_EXT_NFI_EquipeRRM_cible_pendant_MSA == "Oui")
+			  return "Equipe RRM ciblé ou touché par un incident pendant le MEX" 
+			 else if (d.Delais_EXT_NFI_Acces_securitaire == "Oui" )
+			  return "Accès sécuritaire"   
+			else if (d.Delais_EXT_NFI_Suspension_securitaire == "Oui" )
+			  return "Suspension sécuritaire"
+			else if (d.Delais_EXT_NFI_Autre == "Oui" )
+			  return "Autre"  
+			 else if (d.Delais_EXT_NFI_Pas_d_intervention == "Oui")
+			  return "Pas d'intervention"    
+			
+			}); 
+			
+  var CauseExtsectNFI = CauseEXTNFIDim.group().reduceCount();
+
+  dc.rowChart("#cccm .CauseExtNFI",groupname)
+        .dimension(CauseEXTNFIDim)
+        .group(CauseExtsectNFI)
+        .elasticX(true)
+        .width(250)
+        .height(200)
+        .renderLabel(true)
+        .ordering(function (p) { return -p.value;})
+        .colors(['#CC3333'])
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(5).tickFormat(d3.format(""));	
+		
+		
+	//************		
+		//***************	
+
+	 var CauseIntWASHDim  = xf.dimension(function(d) { 
+			if (d.Delais_INT_WASH_Disponibilite == "Oui" )
+			  return "Disponibilité/mobilisation de resources"
+			else if (d.Delais_INT_WASH_Coordination_humanitaire == "Oui")
+			  return "Coordination humanitaire" 
+			 else if (d.Delais_INT_WASH_Defaillance_BD == "Oui" )
+			  return "Défaillance des base de données"   
+			else if (d.Delais_INT_WASH_Intervention_multiple == "Oui" )
+			  return "Intervention multiple (indisponibilité des équipes)"
+			else if (d.Delais_INT_WASH_Autre == "Oui")
+			  return "Autre" 
+			else if (d.Delais_INT_WASHI_Pas_d_intervention == "Oui")
+			  return "Pas d'intervention"   
+			
+			 }); 
+			
+  var CauseIntsectWASH = CauseIntWASHDim.group().reduceCount();
+
+  dc.rowChart("#cccm .CauseIntWASH",groupname)
+        .dimension(CauseIntWASHDim)
+        .group(CauseIntsectWASH)
+        .elasticX(true)
+        .width(300)
+        .height(200)
+        .renderLabel(true)
+        .ordering(function (p) { return -p.value;})
+        .colors(['#0099FF'])
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(5).tickFormat(d3.format(""));	
+		
+		
+		
+		
+	var CauseEXTWASHDim  = xf.dimension(function(d) {
+			if (d.Delais_EXT_WASH_Necessite_reevaluer == "Oui" )
+			  return "Necessité de réévaluer"
+			else if (d.Delais_EXT_WASH_Acces_logistique == "Oui")
+			  return "Accès logistique" 
+			 else if (d.Delais_EXT_WASH_Suspension_logistique == "Oui" )
+			  return "Suspension logistique"   
+			else if (d.Delais_EXT_WASH_Acceptance_parties_prenantes == "Oui" )
+			  return "Acceptance par les parties prenantes"
+			else if (d.Delais_EXT_WASH_EquipeRRM_cible_pendant_MSA == "Oui")
+			  return "Equipe RRM ciblé ou touché par un incident pendant le MEX" 
+			 else if (d.Delais_EXT_WASH_Acces_securitaire == "Oui" )
+			  return "Accès sécuritaire"   
+			else if (d.Delais_EXT_WASH_Suspension_securitaire == "Oui" )
+			  return "Suspension sécuritaire"
+			else if (d.Delais_EXT_WASH_Autre == "Oui" )
+			  return "Autre"  
+			 else if (d.Delais_EXT_WASH_Pas_d_intervention == "Oui")
+			  return "Pas d'intervention"    
+			
+			}); 
+			
+  var CauseExtsectWASH = CauseEXTWASHDim.group().reduceCount();
+
+  dc.rowChart("#cccm .CauseExtWASH",groupname)
+        .dimension(CauseEXTWASHDim)
+        .group(CauseExtsectWASH)
+        .elasticX(true)
+        .width(250)
+        .height(200)
+        .renderLabel(true)
+        .ordering(function (p) { return -p.value;})
+        .colors(['#0099FF'])
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(5).tickFormat(d3.format(""));	
+		
+		
+	//************		
+		
+		
+		
+		var PartnerDim = xf.dimension(function(d) { return d['Partner']; });
+var Partnergp = PartnerDim.group().reduceCount();
+
+  dc.rowChart("#cccm .partner",groupname)
+        .dimension(PartnerDim)
+        .group(Partnergp)
+        .elasticX(true)
+        .width(250)
+        .height(200)
+        .renderLabel(true)
+        .ordering(function (p) { return -p.value;})
+        .colors(['#FF6600'])
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(4).tickFormat(d3.format("s"));
+
+		
+	//********	
+	var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
+	var nombre = pref1.group().reduceSum(function (d) { if (d.NFI_WASH == "Oui" )
+			  return 1; else return 1; });
+	 		  
+	dc.rowChart("#cccm .nombre",groupname)
+        .dimension(pref1)
+        .group(nombre)
+        .width(800)
+		.height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Nombre total d'interventions: "+d.value; })
+		.margins({top: 10, right: 5, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));	 
+			  
+	//********		
+		
   var interdim = xf.dimension(function(d) { 
 			if (d.NFI_WASH == "Oui" )
 			  return "NFI-WASH"
@@ -311,20 +543,23 @@ function drawMarkerArea(data) {
 			else if (d.WASH == "Oui" )
 			  return "WASH"    
 			else
-			  return "NA"   			
+			  return "NFI-WASH"   			
 			});   
   
   var intergp = interdim.group();  
-  dc.pieChart("#cccm .intertype",groupname)
+  dc.rowChart("#cccm .intertype",groupname)
         .dimension(interdim)
         .group(intergp)
-        .width(150)
-        .height(150)
+        .width(250)
+        .height(200)
         .title(function (d) {return d.value+" interventions";})
+		.colors(['#009933','#CC3333','#0066FF' ])
         .renderLabel(true)
+		.xAxis().ticks(4).tickFormat(d3.format(""));
         ;
   
   var pref = xf.dimension(function(d) { return d.Code_Prefecture; });
+
   var natte = pref.group().reduceSum(function (d) { return d.NFI_nattes_total; });
   var bache = pref.group().reduceSum(function (d) { return d.NFI_baches_total; });
   var couverture = pref.group().reduceSum(function (d) { return d.NFI_couvertures_total; });
@@ -335,14 +570,34 @@ function drawMarkerArea(data) {
   var vetenf = pref.group().reduceSum(function (d) { return d.NFI_vetements_enfants_total; });
   var vetbebe = pref.group().reduceSum(function (d) { return d.NFI_vetement_bebe; });
   var torche = pref.group().reduceSum(function (d) { return d.NFI_torche_total; });
-  
+  var moustiquaire = pref.group().reduceSum(function (d) { return d.NFI_moustiquaires_total; });
+
+	
+	dc.rowChart("#cccm .moustiquaire",groupname)
+        .dimension(pref)
+        .group(moustiquaire)
+        .width(200)
+        .height(30)
+        .colors(['#009933'])
+		.label(function(d) { return "Moustiquaires: "+d.value+" unités"; })
+		.margins({top: -0.2, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 1000]));  
+	dc.rowChart("#cccm .seau",groupname)
+        .dimension(pref)
+        .group(seau)
+        .width(200)
+        .height(30)
+        .colors(['#009933'])
+		.label(function(d) { return "Seaux: "+d.value+" unités"; })
+		.margins({top: -0.2, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 1000]));  	
 	dc.rowChart("#cccm .natte",groupname)
         .dimension(pref)
         .group(natte)
         .width(200)
         .height(30)
-        .colors(['#dfc27d'])
-		.label(function(d) { return "Natte: "+d.value; })
+        .colors(['#009933'])
+		.label(function(d) { return "Natte: "+d.value+" unités"; })
 		.margins({top: -0.2, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));  
 	dc.rowChart("#cccm .bache",groupname)
@@ -350,8 +605,8 @@ function drawMarkerArea(data) {
         .group(bache)
         .width(200)
         .height(30)
-        .colors(['#f5f5f5'])
-		.label(function(d) { return "Bâches: "+d.value; })
+        .colors(['#009933'])
+		.label(function(d) { return "Bâches: "+d.value+" unités"; })
 		.margins({top: -1, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));
     dc.rowChart("#cccm .couverture",groupname)
@@ -359,62 +614,62 @@ function drawMarkerArea(data) {
         .group(couverture)
         .width(200)
         .height(30)
-        .colors(['#bf812d'])
-		.label(function(d) { return "Couverture: "+d.value; })
+        .colors(['#009933'])
+		.label(function(d) { return "Couverture: "+d.value+" unités"; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));
-	    dc.rowChart("#cccm .savon",groupname)
+	dc.rowChart("#cccm .savon",groupname)
         .dimension(pref)
         .group(savon)
         .width(200)
         .height(30)
-        .colors(['#8c510a'])
-		.label(function(d) { return "Savons: "+d.value; })
+        .colors(['#009933'])
+		.label(function(d) { return "Savons: "+d.value+" unités"; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));
-	    dc.rowChart("#cccm .bidon",groupname)
+	dc.rowChart("#cccm .bidon",groupname)
         .dimension(pref)
         .group(bidon)
         .width(200)
         .height(30)
-        .colors(['#f6e8c3'])
-		.label(function(d) { return "Bidon: "+d.value; })
+        .colors(['#009933'])
+		.label(function(d) { return "Bidons: "+d.value+" unités"; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));
-	    dc.rowChart("#cccm .kitcuis",groupname)
+	dc.rowChart("#cccm .kitcuis",groupname)
         .dimension(pref)
         .group(kitcuis)
         .width(200)
         .height(30)
-        .colors(['#c7eae5'])
-		.label(function(d) { return "Kit cuisine: "+d.value; })
+        .colors(['#009933'])
+		.label(function(d) { return "Kit cuisine: "+d.value+" kits"; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));
-	  dc.rowChart("#cccm .vetenf",groupname)
+	dc.rowChart("#cccm .vetenf",groupname)
         .dimension(pref)
         .group(vetenf)
         .width(200)
         .height(30)
-        .colors(['#80cdc1'])
+        .colors(['#009933'])
 		.label(function(d) { return "Vêtements Enfant: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));
-	  dc.rowChart("#cccm .vetbebe",groupname)
+	dc.rowChart("#cccm .vetbebe",groupname)
         .dimension(pref)
         .group(vetbebe)
         .width(200)
         .height(30)
-        .colors(['#01665e'])
+        .colors(['#009933'])
 		.label(function(d) { return "Vêtements bébé: "+d.value; })
 		.margins({top: 0, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]));
-	  dc.rowChart("#cccm .torche",groupname)
+	dc.rowChart("#cccm .torche",groupname)
         .dimension(pref)
         .group(torche)
         .width(200)
         .height(30)
-        .colors(['#35978f'])
-		.label(function(d) { return "Torche: "+d.value; })
+        .colors(['#009933'])
+		.label(function(d) { return "Torche: "+d.value+" unités"; })
 		.margins({top: 0, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 1000]))
 		;
@@ -428,38 +683,38 @@ function drawMarkerArea(data) {
         .dimension(pref)
         .group(viplum)
         .width(200)
-        .height(30)
-        .colors(['#542788'])
-		.label(function(d) { return "Pâte énergétique: "+d.value; })
-		.margins({top: 0, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 25]));
+        .height(40)
+        .colors(['#993366'])
+		.label(function(d) { return "Pâte énergétique: "+d.value+" sachets"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 2]));
 	  dc.rowChart("#cccm .vihuile",groupname)
         .dimension(pref)
         .group(vihuile)
         .width(200)
-        .height(30)
-        .colors(['#8073ac'])
-		.label(function(d) { return "Huile 2L: "+d.value; })
-		.margins({top: 0, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 25]));
+        .height(40)
+        .colors(['#CC3399'])
+		.label(function(d) { return "Huile 2L: "+d.value+" unités"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 2]));
 	  dc.rowChart("#cccm .vicsb",groupname)
         .dimension(pref)
         .group(vicsb)
         .width(200)
-        .height(30)
-        .colors(['#b2abd2'])
-		.label(function(d) { return "CSB*** 12.5kg: "+d.value; })
-		.margins({top: 0, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 25]));
+        .height(40)
+        .colors(['#CC0099'])
+		.label(function(d) { return "CSB*** 12.5kg: "+d.value+" unités"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 2]));
 	  dc.rowChart("#cccm .viriz",groupname)
         .dimension(pref)
         .group(viriz)
         .width(200)
-        .height(30)
-        .colors(['#d8daeb'])
-		.label(function(d) { return "Riz 25kg: "+d.value; })
-		.margins({top: 0, right: 10, bottom: 0, left: 30})
-		.x(d3.scale.linear().domain([0, 25]))
+        .height(40)
+        .colors(['#CC00CC'])
+		.label(function(d) { return "Riz 25kg: "+d.value+" unités"; })
+		.margins({top: 10, right: 10, bottom: 0, left: 30})
+		.x(d3.scale.linear().domain([0, 2]))
   
   var sensib = pref.group().reduceSum(function (d) { return d.Sensibilisation_communaute_lavage_main; });
   var comgest = pref.group().reduceSum(function (d) { return d.comite_gestion_latrines; });
@@ -467,21 +722,21 @@ function drawMarkerArea(data) {
         .dimension(pref)
         .group(comgest)
         .width(200)
-        .height(30)
-        .colors(['#fdae61'])
+        .height(40)
+        .colors(['#3182bd'])
 		.label(function(d) { return "CG**** assainissement: "+d.value; })
-		.margins({top: 0, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 0.05]));
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.4]));
  
 	  dc.rowChart("#cccm .sensib",groupname)
         .dimension(pref)
         .group(sensib)
         .width(200)
-        .height(30)
-        .colors(['#fdae61'])
+        .height(40)
+        .colors(['#3182bd'])
 		.label(function(d) { return "Lavage des mains: "+d.value; })
-		.margins({top: 0, right: 10, bottom: 0, left: 30})
-		.x(d3.scale.linear().domain([0, 0.05]))
+		.margins({top: 5, right: 10, bottom: 0, left: 30})
+		.x(d3.scale.linear().domain([0, 0.4]))
 
   var latbloc = pref.group().reduceSum(function (d) { return d.Nb_blocs_latrines; });
   var lat = pref.group().reduceSum(function (d) { return d.nb_latrines_installees; });
@@ -490,20 +745,20 @@ function drawMarkerArea(data) {
         .dimension(pref)
         .group(latbloc)
         .width(200)
-        .height(30)
-        .colors(['#d6604d'])
+        .height(40)
+        .colors(['#3333FF'])
 		.label(function(d) { return "Bloc latrines: "+d.value; })
-		.margins({top: 0, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 0.5]));
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 1]));
 	  dc.rowChart("#cccm .lat",groupname)
         .dimension(pref)
         .group(lat)
         .width(200)
-        .height(30)
-        .colors(['#d6604d'])
+        .height(40)
+        .colors(['#3333FF'])
 		.label(function(d) { return "Latrines: "+d.value; })
-		.margins({top: 0, right: 10, bottom: 0, left: 30})
-		.x(d3.scale.linear().domain([0, 0.5]))
+		.margins({top: 5, right: 10, bottom: 0, left: 30})
+		.x(d3.scale.linear().domain([0, 1]))
 
 	var borehole = pref.group().reduceSum(function (d) { return d.rehabilitation_forage_source_eau; });
 	var gestion = pref.group().reduceSum(function (d) { return d.Redynamisation_comite_gestion_source_eau; });
@@ -511,22 +766,40 @@ function drawMarkerArea(data) {
         .dimension(pref)
         .group(borehole)
         .width(200)
-        .height(30)
-        .colors(['#4393c3'])
+        .height(40)
+        .colors(['#0099FF'])
 		.label(function(d) { return "Réhabilitation forages: "+d.value; })
-		.margins({top: 0, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 0.05]));
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.4]));
 	 dc.rowChart("#cccm .gestion",groupname)
         .dimension(pref)
         .group(gestion)
         .width(200)
-        .height(30)
-        .colors(['#4393c3'])
+        .height(40)
+        .colors(['#0099FF'])
 		.label(function(d) { return "Formations CG eau: "+d.value; })
-		.margins({top: 0, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 0.05]));
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.4]));
   
-		
+	
+	 var prefecture = xf.dimension(function(d) { return d.Prefecture; });
+     var prefecturesect = prefecture.group().reduceCount();
+  
+	  dc.rowChart("#cccm .inter",groupname)
+			.dimension(prefecture)
+			.group(prefecturesect)
+			.elasticX(true)
+			.width(300)
+			.height(350)
+			.renderLabel(true)
+			.colors(['#58585A'])
+			.ordering(function (p) { return -p.value;})
+			.colorDomain([0,0])
+			.colorAccessor(function(d, i){return 1;})
+			.xAxis().ticks(4).tickFormat(d3.format("s"));
+			
+			// TOTAL_individus_beneficiaires
+	
   var prefec = xf.dimension(function(d) { return d.Prefecture; });
   var pop_NFI = prefec.group().reduceSum(function (d) { return d.TOTAL_individus_beneficiaires_NFI; });
   var pop_WASH = prefec.group().reduceSum(function (d) { return d.TOTAL_individus_beneficiaires_WASH; });
@@ -535,25 +808,28 @@ function drawMarkerArea(data) {
         .dimension(prefec)
         .group(pop_WASH)
 		.elasticX(true)
-        .width(200)
+        .width(300)
         .height(350)
+		.elasticX(true)
         .renderLabel(true)
         .colors(['#3182bd'])
 		.ordering(function (p) { return -p.value;})
         .xAxis().ticks(4).tickFormat(d3.format("s"))
-		//.title(function (d) {return d.value+" individuals";})
+		
 		;  
 		
 	dc.rowChart("#cccm .prefNFI",groupname)
         .dimension(prefec)
         .group(pop_NFI)
 		.elasticX(true)
-        .width(200)
+        .width(300)
         .height(350)
         .renderLabel(true)
 		.ordering(function (p) { return -p.value;})
 		.colors(["#31a354"])
         .xAxis().ticks(4).tickFormat(d3.format("s"));
+		
+		//***************
  
 
 var yeargp  = xf.dimension(function(d) { return d.year; });
@@ -650,4 +926,3 @@ $(function() {
 
 
 </html>
-
