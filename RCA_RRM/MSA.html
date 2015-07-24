@@ -89,13 +89,15 @@ a:hover{text-decoration: underline;}
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
 			  
                <ul class="dropdown-menu" role="menu">
-                <li><a href="reference_2014.html">Carte de référence 2014</a></li>
-                <li><a href="reference_2015.html">Carte de référence 2015</a></li>
-				<li><a href="alerte.html">Alertes</a></li>
-                <li><a href="mex.html">Missions exploratoires</a></li>
-                <li><a href="MSA.html">Enquêtes multi-sectorielles</a></li>
-                <li><a href="inter.html">Interventions</a></li>
-                <li><a href="pdm.html">PDM</a></li>
+					 <li><a href="alerte.html">Alertes</a></li>
+					<li><a href="mex.html">MEX, Missions exploratoires</a></li>
+					<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
+					<li><a href="inter.html">Interventions</a></li>
+					<li><a href="pdm.html">PDM</a></li>
+					<li><a href="pdm.html">Accès humanitaire</a></li>
+					<li><a href="pdm.html">Plaidoyer</a></li>
+					<li><a href="reference_2014.html">Carte de référence 2014</a></li>
+					<li><a href="reference_2015.html">Carte de référence 2015</a></li>
               </ul>
             </li>
 			<li><a>MSA</a></li>
@@ -124,9 +126,14 @@ a:hover{text-decoration: underline;}
 							<h3>MSA - Enquêtes Multi-Sectorielles</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a>Dernier actualisation: 08 juillet 2015</h3a>
+							<h3a>Dernier actualisation: 24 juillet 2015</h3a>
 							</div>
 						</div>  
+						<div class="row">
+							<div  class="col-md-2">
+								<div  class="nombre" id="cccm" class="dc-chart"></div>
+							</div>
+						</div>
 											
 						<div class="row">
 							<div  class="col-md-4">
@@ -137,25 +144,29 @@ a:hover{text-decoration: underline;}
 							
 							<div  class="col-md-4">
 								<div  class="prefpop" id="cccm" class="dc-chart">
-										<h4>IDPs affectés</h4><h5>par préfecture</h5>
+										<h4>IDPs affectés</h4><h5>par préfecture (k = 1000)</h5>
 								</div>
 								
 							</div>
-							
-							 <div  class="col-md-4">
+							<div  class="col-md-4">
+								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de MSA effectuées</h4><h5>par partenaires</h5/></div>
+							</div>
+							 
+						</div>
+						<div class="row">
+							<div  class="col-md-4">
+								<div  class="year" id="cccm" class="dc-chart">
+								     <h4>Nombre de MSA effectuées par an</h4>
+								</div>
+							</div>
+							<div  class="col-md-4">
+								<div  class="Status" id="cccm" class="dc-chart"><h4>Nombre de MSA par status </h4></div>
+							</div>
+							<div  class="col-md-4">
 								<div  class="SCORE_NFI" id="cccm" class="dc-chart">
 								  <h4>Score NFI moyen par village</h4>
 								</div>
 								
-							</div>
-						</div>
-						<div class="row">
-							
-							<div  class="col-md-6">
-								<div  class="Status" id="cccm" class="dc-chart"><h4>Nombre de MSA par status </h4></div>
-							</div>
-							<div  class="col-md-6">
-								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de MSA effectuées</h4><h5>par partenaires</h5/></div>
 							</div>
 						</div>
 						
@@ -253,16 +264,12 @@ a:hover{text-decoration: underline;}
 								  <h4>Nombre de MSA effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
 								</div>
 							</div>	
-							 <div  class="col-md-4">
-								<div  class="year" id="cccm" class="dc-chart">
-								     <h4>Nombre de MSA effectuées par an</h4>
-								</div>
-							</div>
+							 
 						</div>
 						<div class="row">
 							 <div  class="col-md-12">
 							 <h5>* Score NFI: score basé sur la possession des principaux produits non alimentaires, un score élevé indique un déficit de ces principaux produits</h5>	
-							<h5>** SCA ou Score de consommation alimentaire est un index composite basé sur la diversité de l'alimentation, la fréquence d'absorption et l'apport nutritionnel des différents groupes alimentaires. Cet index est divisé en trois groupes (pauvre, limite et acceptable)</h5>
+							<h5>** SCA ou Score de consommation alimentaire est un index composite basé sur la diversité de l'alimentation, la fréquence d'absorption et l'apport nutritionnel des différents groupes alimentaires. Cet index est divisé en trois groupes (pauvre, limite et acceptable)</h5></br></br>
 							</div>
 						</div>
 					</div>
@@ -289,7 +296,7 @@ a:hover{text-decoration: underline;}
 
 /*     Markers      */
 
-d3.csv("data/RRM_MSA_08juillet2015.csv", function(error,data) {
+d3.csv("data/RRM_MSA.csv", function(error,data) {
 	 
      drawMarkerArea(data);
 });
@@ -366,7 +373,7 @@ function drawMarkerArea(data) {
 		//	return group.all().filter(function(kv) { return kv.key !="NA"; });
 		//	})
         .elasticX(true)
-        .width(200)
+        .width(300)
         .height(300)
         .renderLabel(true)
         .colors(['#58585A'])
@@ -384,7 +391,7 @@ function drawMarkerArea(data) {
 		//.filter("NA")
 		//.filter(function(d) { if (d !="NA") {return d;} })
         .elasticX(true)
-        .width(200)
+        .width(300)
         .height(300)
         .renderLabel(true)
         .colors(['#58585A'])
@@ -478,7 +485,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .group(ScoreNFIDim)
 		//.data(function(group) {return group.all().filter(function(kv) { return kv.key !=""; });})
         .width(200)
-        .height(300)
+        .height(250)
         .renderLabel(true)
         //.ordering(function (p) { return p.value;})
 		.colors(['#ff9999','#ff3333','#cc0000','#800000', ])
@@ -493,6 +500,24 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 	
 	//*************	
 	
+	//********	
+	var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
+	var nombre = pref1.group().reduceSum(function (d) { if (d.Status_Complete == "Oui" )
+			  return 1; else return 1; });
+	 		  
+	dc.rowChart("#cccm .nombre",groupname)
+        .dimension(pref1)
+        .group(nombre)
+        .width(800)
+		.height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Nombre total de MSA: "+d.value; })
+		.margins({top: 10, right: 5, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.25]));	 
+			  
+	//********	
+
+	
 	var StatusDim  = xf.dimension(function(d) { 
 		if (d.Status_Complete == "Oui" )
 			  return "Complété"
@@ -505,7 +530,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 			else if (d.Status_Annule == "Oui" )
 			  return "Annnulé"
 			else 
-			  return "Autre"  
+			  return "Complété"  
 			 
 			});  
   var Statussect = StatusDim.group().reduceCount();
@@ -514,8 +539,10 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 		.dimension(StatusDim)
         .group(Statussect)
 		.width(400)
-        .height(200)
-		.x(d3.scale.ordinal().domain(["Complété","Prévu","En cours","En attente","Annnulé","Autre"]))
+        .height(220)
+		.x(d3.scale.ordinal().domain(["Complété","Prévu","En cours","En attente","Annnulé"]))
+		.colors(['#398E1D','#ff3333','#cc0000','#800000', ])
+		.colorAccessor(function(d, i){return 2;})
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
 		.centerBar(true)	
@@ -574,7 +601,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 			  return "Défaillance des base de données"   
 			else if (d.Delai_INT_Intervention_multiple == "Oui" )
 			  return "Intervention multiple (indisponibilité des équipes)"
-			else if (d.DelaisINT_Autre == "Oui")
+			else if (d.Delais_INT_Autre == "Oui")
 			  return "Autre" 
 			  
 			
@@ -644,7 +671,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .group(Partnergp)
         .elasticX(true)
         .width(250)
-        .height(200)
+        .height(300)
         .renderLabel(true)
         .ordering(function (p) { return -p.value;})
         .colors(['#FF6600'])
@@ -886,8 +913,9 @@ var yeargp  = xf.dimension(function(d) { return d.year; });
 		.dimension(yeargp)
 		.group(yeargroup)
 		.width(300)
-        .height(200)
+        .height(220)
 		.x(d3.scale.ordinal().domain([2014,2015]))
+		
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
 		.centerBar(true)	
