@@ -33,7 +33,8 @@ body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color
 h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
 h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 5px 0 0 0;}
 h3a{font-weight: bold; font-size: 12px; color: #fff;  margin: 20px 0 0 0;}
-h4{font-size: 11px; color: #000; margin: 10px 0 0 10px;line-height:14px}
+h4a {   color:#505050; font-size: 12px; margin: 5px 0 0 0;}
+h4{font-weight: bold; font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
 h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
 p{margin: 8px 0 20px 0; line-height: 18px;}
 a, a:visited{color: #397DB8; text-decoration: none;}
@@ -100,7 +101,7 @@ a:hover{text-decoration: underline;}
 					<li><a href="reference_2015.html">Carte de référence 2015</a></li>
               </ul>
             </li>
-			<li><a>MSA</a></li>
+			<li><a href="index.html">Acceuil</a></li>
 			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -128,7 +129,12 @@ a:hover{text-decoration: underline;}
 							<div  class="col-md-4" align="right">
 							<h3a>Dernier actualisation: 24 juillet 2015</h3a>
 							</div>
-						</div>  
+						</div> 
+						<div class="row">
+							<div  class="col-md-12" align="justify">
+							<h4a>Bienvenue sur la page du tableau de bord interactif RRM. Cliquez sur les différents éléments pour sélectionner les informations qui vous intéressent.<br> Pour revenir au début et réinitialiser les filtres, cliquez sur <b>« Réinitialiser »</b>. </h4a>
+							</div>
+						</div> 		
 						<div class="row">
 							<div  class="col-md-2">
 								<div  class="nombre" id="cccm" class="dc-chart"></div>
@@ -154,17 +160,17 @@ a:hover{text-decoration: underline;}
 							 
 						</div>
 						<div class="row">
-							<div  class="col-md-4">
+							<div  class="col-md-3">
 								<div  class="year" id="cccm" class="dc-chart">
 								     <h4>Nombre de MSA effectuées par an</h4>
 								</div>
 							</div>
-							<div  class="col-md-4">
+							<div  class="col-md-5">
 								<div  class="Status" id="cccm" class="dc-chart"><h4>Nombre de MSA par status </h4></div>
 							</div>
 							<div  class="col-md-4">
 								<div  class="SCORE_NFI" id="cccm" class="dc-chart">
-								  <h4>Score NFI moyen par village</h4>
+								  <h4>Score NFI moyen par village</h4><h5>Nombre de Villages</h5>
 								</div>
 								
 							</div>
@@ -247,13 +253,28 @@ a:hover{text-decoration: underline;}
 						 </div>	
 						<div class="row">	  
 								
-									<div  class="col-md-7">
-									   <div Class ="CauseInt" id="cccm" class="dc-lineChart"><h4>Cause internes de délais</h4><h5>Nombre de causes reportées</h5></div>
+									<div  class="col-md-6">
+										   <div Class ="CauseInt1" id="cccm" class="dc-chart"><h4>Cause internes de délais</h4><h5>Nombre de causes reportées</h5></div>
+										    <div  class="CauseInt2" id="cccm" class="dc-chart"></div>
+											<div  class="CauseInt3" id="cccm" class="dc-chart"></div>
+											<div  class="CauseInt4" id="cccm" class="dc-chart"></div>
+											<div  class="CauseInt5" id="cccm" class="dc-chart"></div>
+											<div  class="CauseInt6" id="cccm" class="dc-chart"></div>
 									</div>
 								
 								
-									<div  class="col-md-5">
-									   <div Class ="CauseExt" id="cccm" class="dc-lineChart"><h4>Causes externes de délais</h4><h5>Nombre de causes reportées</h5></div>
+									<div  class="col-md-6">
+										   <div Class ="CauseExt1" id="cccm" class="dc-chart"><h4>Causes externes de délais</h4><h5>Nombre de causes reportées</h5></div>
+										   <div  class="CauseExt2" id="cccm" class="dc-chart"></div>
+											<div  class="CauseExt3" id="cccm" class="dc-chart"></div>
+											<div  class="CauseExt4" id="cccm" class="dc-chart"></div>
+											<div  class="CauseExt5" id="cccm" class="dc-chart"></div>
+											<div  class="CauseExt6" id="cccm" class="dc-chart"></div>
+											<div  class="CauseExt7" id="cccm" class="dc-chart"></div>
+											<div  class="CauseExt8" id="cccm" class="dc-chart"></div>
+											<div  class="CauseExt9" id="cccm" class="dc-chart"></div>
+														
+							
 									</div>
 								
 						</div>	
@@ -530,7 +551,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 			else if (d.Status_Annule == "Oui" )
 			  return "Annnulé"
 			else 
-			  return "Complété"  
+			  return "Sans status"  
 			 
 			});  
   var Statussect = StatusDim.group().reduceCount();
@@ -538,15 +559,16 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 	dc.barChart("#cccm .Status",groupname)
 		.dimension(StatusDim)
         .group(Statussect)
-		.width(400)
+		.width(450)
         .height(220)
-		.x(d3.scale.ordinal().domain(["Complété","Prévu","En cours","En attente","Annnulé"]))
+		.x(d3.scale.ordinal().domain(["Complété","Prévu","En cours","En attente","Annnulé","Sans status"]))
 		.colors(['#398E1D','#ff3333','#cc0000','#800000', ])
 		.colorAccessor(function(d, i){return 2;})
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
 		.centerBar(true)	
-		.gap(10)  // 65 = norm
+		.gap(10
+)  // 65 = norm
 		.elasticY(true)
 		//.xAxisLabel('Status')
 		.yAxisLabel('Nombre d’activités')
@@ -591,19 +613,22 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(5).tickFormat(d3.format(""));		
 	//***************	
-
+/*
 	 var CauseIntDim  = xf.dimension(function(d) { 
-			if (d.Delai_INT_Disponibilite == "Oui" )
-			  return "Disponibilité/mobilisation de resources"
+			if (d.Delais_INT_Disponibilite == "Oui" )
+			  return "Disponibilité-mobilisation de resources"
 			else if (d.Delai_INT_Coordination_humanitaire == "Oui")
 			  return "Coordination humanitaire" 
-			 else if (d.Delai_INT_Defaillance_BD == "Oui" )
+			 else if (d.Delais_INT_Defaillance_BD == "Oui" )
 			  return "Défaillance des base de données"   
-			else if (d.Delai_INT_Intervention_multiple == "Oui" )
+			else if (d.Delais_INT_Intervention_multiple == "Oui" )
 			  return "Intervention multiple (indisponibilité des équipes)"
 			else if (d.Delais_INT_Autre == "Oui")
 			  return "Autre" 
-			  
+			else if (d.Delais_INT_NA == "Oui")
+			  return "NA"   
+			else 
+			  return "NAX"    
 			
 			 }); 
 			
@@ -620,27 +645,98 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .colors(['#CC3333'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
+        .xAxis().ticks(5).tickFormat(d3.format("s"));	*/
 		
+	var pref2 = xf.dimension(function(d) { return d.Code_Prefecture; });
 		
+		var INT_Disponibilite = pref2.group().reduceSum(function (d) { if (d.Delais_INT_Disponibilite == "Oui" )
+			  return 1; else return 0; });
+	    var INT_Coordination_humanitaire = pref2.group().reduceSum(function (d) { if (d.Delais_INT_Coordination_humanitaire == "Oui" )
+			  return 1; else return 0; });
+	    var INT_Defaillance_BD = pref2.group().reduceSum(function (d) { if (d.Delai_INT_Defaillance_BD == "Oui" )
+			  return 1; else return 0; });
+	    var INT_Intervention_multiple = pref2.group().reduceSum(function (d) { if (d.Delais_INT_Intervention_multiple == "Oui" )
+			  return 1; else return 0; }); 	 
+		var INT_NA = pref2.group().reduceSum(function (d) { if (d.Delais_INT_NA == "Oui" )
+			  return 1; else return 0; }); 
+	    var INT_Autre = pref2.group().reduceSum(function (d) { if (d.Delais_INT_Autre == "Oui" )
+			  return 1; else return 0; });
+	 
+
+  	    dc.rowChart("#cccm .CauseInt1",groupname)
+        .dimension(pref2)
+        .group(INT_Disponibilite)
+        .width(400)
+        .height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Disponibilité de ressources: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseInt2",groupname)
+        .dimension(pref2)
+        .group(INT_Coordination_humanitaire)
+        .width(400)
+        .height(50)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Coordination humanitaire: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseInt3",groupname)
+        .dimension(pref2)
+        .group(INT_Defaillance_BD)
+        .width(400)
+        .height(50)
+        .colors(['#FF6600'])
+		.label(function(d) { return "DéfaillanceBD: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseInt4",groupname)
+        .dimension(pref2)
+        .group(INT_Intervention_multiple)
+        .width(400)
+        .height(50)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Intervention multiple: "+d.value; })
+		.margins({top: 10, right: 10, bottom: 0, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseInt5",groupname)
+        .dimension(pref2)
+        .group(INT_Autre)
+        .width(400)
+        .height(50)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Autre: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	 dc.rowChart("#cccm .CauseInt6",groupname)
+        .dimension(pref2)
+        .group(INT_NA)
+        .width(400)
+        .height(50)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Pas de délais: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	 
+	
 		
-		
+	/*	
 	var CauseEXTDim  = xf.dimension(function(d) {
-			if (d.Delai_EXT_Necessite_reevaluer == "Oui" )
+			if (d.Delais_EXT_Necessite_reevaluer == "Oui" )
 			  return "Necessité de réévaluer"
-			else if (d.Delai_EXT_Acces_logistique == "Oui")
+			else if (d.Delais_EXT_Acces_logistique == "Oui")
 			  return "Accès logistique" 
 			 else if (d.Delai_EXT_Suspension_logistique == "Oui" )
 			  return "Suspension logistique"   
-			else if (d.Delai_EXT_Acceptance_parties_prenantes == "Oui" )
+			else if (d.Delais_EXT_Acceptance_parties_prenantes == "Oui" )
 			  return "Acceptance par les parties prenantes"
 			else if (d.Delais_EXT_EquipeRRM_cible_pendant_MSA == "Oui")
 			  return "Equipe RRM ciblé ou touché par un incident pendant le MEX" 
-			 else if (d.Delai_EXT_Acces_securitaire == "Oui" )
+			 else if (d.Delais_EXT_Acces_securitaire == "Oui" )
 			  return "Accès sécuritaire"   
-			else if (d.Delai_EXT_Suspension_securitaire == "Oui" )
+			else if (d.Delais_EXT_Suspension_securitaire == "Oui" )
 			  return "Suspension sécuritaire"
-			else if (d.Delai_EXT_Autre == "Oui" )
+			else if (d.Delais_EXT_Autre == "Oui" )
 			  return "Autre"  
 			
 			}); 
@@ -658,10 +754,115 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .colors(['#CC3333'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
+        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
 		
 		
 	//************	
+		//var pref2 = xf.dimension(function(d) { return d.Code_Prefecture; });
+		
+		var EXT_Necessite_reevaluer = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_Necessite_reevaluer == "Oui" )
+			  return 1; else return 0; });
+	    var EXT_Acces_logistique = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_Acces_logistique == "Oui" )
+			  return 1; else return 0; });
+	    var EXT_Suspension_logistique = pref2.group().reduceSum(function (d) { if (d.Delai_EXT_Suspension_logistique == "Oui" )
+			  return 1; else return 0; });
+	    var EXT_Acceptance_parties_prenantes = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_Acceptance_parties_prenantes == "Oui" )
+			  return 1; else return 0; }); 	 
+		var EXT_EquipeRRM_cible_pendant_MSA = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_EquipeRRM_cible_pendant_MSA == "Oui" )
+			  return 1; else return 0; }); 
+	    var EXT_Acces_securitaire = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_Acces_securitaire == "Oui" )
+			  return 1; else return 0; });
+	    var EXT_Suspension_securitaire = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_Suspension_securitaire == "Oui" )
+			  return 1; else return 0; });
+	    var EXT_Autre = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_Autre == "Oui" )
+			  return 1; else return 0; }); 	 
+		var EXT_NA = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_NA == "Oui" )
+			  return 1; else return 0; }); 
+
+  	    dc.rowChart("#cccm .CauseExt1",groupname)
+        .dimension(pref2)
+        .group(EXT_Necessite_reevaluer)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Necessité re-évaluer: "+d.value; })
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseExt2",groupname)
+        .dimension(pref2)
+        .group(EXT_Acces_logistique)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Accès logistique: "+d.value; })
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseExt3",groupname)
+        .dimension(pref2)
+        .group(EXT_Suspension_logistique)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Suspension logistique: "+d.value; })
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseExt4",groupname)
+        .dimension(pref2)
+        .group(EXT_Acceptance_parties_prenantes)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Acceptance parties prenantes: "+d.value; })
+		.margins({top: 5, right: 10, bottom: 0, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	 dc.rowChart("#cccm .CauseExt5",groupname)
+        .dimension(pref2)
+        .group(EXT_EquipeRRM_cible_pendant_MSA)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "EquipeRRM ciblé pendant MSA: "+d.value; })
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseExt6",groupname)
+        .dimension(pref2)
+        .group(EXT_Acces_securitaire)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Acces sécuritaire: "+d.value; })
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseExt7",groupname)
+        .dimension(pref2)
+        .group(EXT_Suspension_securitaire)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Suspension sécuritaire: "+d.value; })
+		.margins({top: 5, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	  dc.rowChart("#cccm .CauseExt8",groupname)
+        .dimension(pref2)
+        .group(EXT_Autre)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Autre: "+d.value; })
+		.margins({top: 5, right: 10, bottom: 0, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+	dc.rowChart("#cccm .CauseExt9",groupname)
+        .dimension(pref2)
+        .group(EXT_NA)
+        .width(400)
+        .height(33)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Pas de délais: "+d.value; })
+		.margins({top: 5, right: 10, bottom: 0, left: 30})
+		.x(d3.scale.linear().domain([0, 0.1]));
+		
+		
+		//************
 	
 	var PartnerDim = xf.dimension(function(d) { return d['Partner']; });
 var Partnergp = PartnerDim.group().reduceCount();
@@ -699,7 +900,7 @@ var Partnergp = PartnerDim.group().reduceCount();
 		
 		
 var Direct_Contractor_VoucherDim = xf.dimension(function(d) { 
-			if (d.X_score_de_Consommation_alimentaire_Pauvre <= 20 )
+			if (d.X_score_de_Consommation_alimentaire_Pauvre > 0  & d.X_score_de_Consommation_alimentaire_Pauvre <= 20 )
 			  return "0 - 20 %"
 			else if (d.X_score_de_Consommation_alimentaire_Pauvre > 20  & d.X_score_de_Consommation_alimentaire_Pauvre <= 40 )
 			  return "20 - 40 %"  
@@ -727,7 +928,7 @@ var Direct_Contractor_Vouchergp = Direct_Contractor_VoucherDim.group().reduceCou
 		.ticks(2).tickFormat(d3.format(""));	
 		
 var IntervDim = xf.dimension(function(d) { 
-			if (d.X_score_de_Consommation_alimentaire_Limite <= 20 )
+			if (d.X_score_de_Consommation_alimentaire_Limite > 0 &  d.X_score_de_Consommation_alimentaire_Limite <= 40)
 			  return "0 - 20 %"
 			else if (d.X_score_de_Consommation_alimentaire_Limite > 20  & d.X_score_de_Consommation_alimentaire_Limite <= 40 )
 			  return "20 - 40 %"  
@@ -760,7 +961,7 @@ var Intervgp = IntervDim.group();
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 var FCS_acc = xf.dimension(function(d) { 
-			if (d.X_score_de_Consommation_alimentaire_Acceptable <= 20 )
+			if (d.X_score_de_Consommation_alimentaire_Acceptable > 0 & d.X_score_de_Consommation_alimentaire_Acceptable <= 20)
 			  return "0 - 20 %"
 			else if (d.X_score_de_Consommation_alimentaire_Acceptable > 20  & d.X_score_de_Consommation_alimentaire_Acceptable <= 40 )
 			  return "20 - 40 %"  
@@ -792,7 +993,7 @@ var FCS_accGroup = FCS_acc.group();
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
 var waterDim = xf.dimension(function(d) {
-			if (d.X_des_menages_avec_un_source_eau_potable_amelioree <= 20 )
+			if (d.X_des_menages_avec_un_source_eau_potable_amelioree > 0 & d.X_des_menages_avec_un_source_eau_potable_amelioree <= 20)
 			  return "0 - 20 %"
 			else if (d.X_des_menages_avec_un_source_eau_potable_amelioree > 20  & d.X_des_menages_avec_un_source_eau_potable_amelioree <= 40 )
 			  return "20 - 40 %"  
@@ -824,7 +1025,7 @@ var waterDimGroup = waterDim.group().reduceCount();
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 		
 var latrineDim = xf.dimension(function(d) { 
-			if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique <= 20 )
+			if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique > 0 & d.X_des_menages_ayant_acces_a_une_latrine_hygienique <= 20 )
 			  return "0 - 20 %"
 			else if (d.X_des_menages_ayant_acces_a_une_latrine_hygienique > 20  & d.X_des_menages_ayant_acces_a_une_latrine_hygienique <= 40 )
 			  return "20 - 40 %"  
@@ -857,7 +1058,7 @@ var latrineGP = latrineDim.group();
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 var shelterDim = xf.dimension(function(d) { 
-			if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard <= 20 )
+			if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard > 0 & d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard <= 20)
 			  return "0 - 20 %"
 			else if (d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard > 20  & d.X_de_menages_vivant_ds_un_abris_en_dessous_des_standard <= 40 )
 			  return "20 - 40 %"  
