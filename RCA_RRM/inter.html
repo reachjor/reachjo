@@ -195,11 +195,11 @@ a:hover{text-decoration: underline;}
 								<div  class="vetbebe" id="cccm" class="dc-chart"></div>				
 							</div>
 							<div  class="col-md-4">	
-								<div  class="sensib" id="cccm" class="dc-chart"><h4>Sessions de sensibilisation à l’hygiène </h4></div>
+								<div  class="sensib" id="cccm" class="dc-chart"><h4>Activités WASH  </h4></div>
 								<div  class="comgest" id="cccm" class="dc-chart"></div>
-								<div  class="latbloc" id="cccm" class="dc-chart"><h4>Intervention asssainissement</h4></div>
+								<div  class="latbloc" id="cccm" class="dc-chart"></div>
 								<div  class="lat" id="cccm" class="dc-chart"></div>
-								<div  class="borehole" id="cccm" class="dc-chart"><h4>Intervention eau</h4></div>
+								<div  class="borehole" id="cccm" class="dc-chart"></div>
 								<div  class="gestion" id="cccm" class="dc-chart"></div>
 							</div>
 							<div  class="col-md-4">
@@ -727,7 +727,7 @@ var Partnergp = PartnerDim.group().reduceCount();
     dc.rowChart("#cccm .comgest",groupname)
         .dimension(pref)
         .group(comgest)
-        .width(200)
+        .width(250)
         .height(40)
         .colors(['#3182bd'])
 		.label(function(d) { return "Comité de Gestion assainissement: "+d.value; })
@@ -737,7 +737,7 @@ var Partnergp = PartnerDim.group().reduceCount();
 	  dc.rowChart("#cccm .sensib",groupname)
         .dimension(pref)
         .group(sensib)
-        .width(200)
+        .width(250)
         .height(40)
         .colors(['#3182bd'])
 		.label(function(d) { return "Lavage des mains: "+d.value; })
@@ -750,19 +750,19 @@ var Partnergp = PartnerDim.group().reduceCount();
 	  dc.rowChart("#cccm .latbloc",groupname)
         .dimension(pref)
         .group(latbloc)
-        .width(200)
+        .width(250)
         .height(40)
         .colors(['#3333FF'])
-		.label(function(d) { return "Bloc latrines: "+d.value; })
+		.label(function(d) { return "Construction blocs  de latrines: "+d.value; })
 		.margins({top: 5, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 1]));
 	  dc.rowChart("#cccm .lat",groupname)
         .dimension(pref)
         .group(lat)
-        .width(200)
+        .width(250)
         .height(40)
         .colors(['#3333FF'])
-		.label(function(d) { return "Latrines: "+d.value; })
+		.label(function(d) { return "Construction de latrines: "+d.value; })
 		.margins({top: 5, right: 10, bottom: 0, left: 30})
 		.x(d3.scale.linear().domain([0, 1]));
 
@@ -771,7 +771,7 @@ var Partnergp = PartnerDim.group().reduceCount();
     dc.rowChart("#cccm .borehole",groupname)
         .dimension(pref)
         .group(borehole)
-        .width(200)
+        .width(250)
         .height(40)
         .colors(['#0099FF'])
 		.label(function(d) { return "Réhabilitation forages: "+d.value; })
@@ -780,10 +780,10 @@ var Partnergp = PartnerDim.group().reduceCount();
 	 dc.rowChart("#cccm .gestion",groupname)
         .dimension(pref)
         .group(gestion)
-        .width(200)
+        .width(250)
         .height(40)
         .colors(['#0099FF'])
-		.label(function(d) { return "Formations CG eau: "+d.value; })
+		.label(function(d) { return "Formations Comité de Gestion eau: "+d.value; })
 		.margins({top: 5, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.4]));
   
@@ -866,7 +866,7 @@ var times = function(d) {return d.DD};
 
  dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(500)
+		.width(600)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
