@@ -262,22 +262,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
       .filterByArea(true)
 	  //.popup(function(d){return d['Partner']+":";})
     ;
-	
-	 var facilities1 = xf.dimension(function(d) { return (d.Latitude+0.5)","+(d.Longitude+0.5); });
-  var facilities1Group = facilities.group();
-  
-  dc.leafletMarkerChart(".map",groupname)
-      .dimension(facilities1)
-      .group(facilities1Group)
-      .width(900)
-      //.height(300)
-      .center([6.6,19.90])
-      .zoom(6)
-      .cluster(false)
-      .renderPopup(true)
-      .filterByArea(true)
-	  //.popup(function(d){return d['Partner']+":";})
-    ;
+
 	var pref = xf.dimension(function(d) { return d['Prefecture']; });
   var villsect = pref.group().reduceCount();
   
