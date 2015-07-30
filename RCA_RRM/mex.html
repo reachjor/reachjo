@@ -92,8 +92,8 @@ a:hover{text-decoration: underline;}
 			  
                 <ul class="dropdown-menu" role="menu">
 					<li><a href="alerte.html">Alertes</a></li>
-					<li><a href="mex.html">MEX, Missions exploratoires</a></li>
-					<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
+					<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+					<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
 					<li><a href="inter.html">Interventions</a></li>
 					<li><a href="pdm.html">PDM</a></li>
 					<li><a href="acceshum.html">Accès humanitaire</a></li>
@@ -103,7 +103,7 @@ a:hover{text-decoration: underline;}
               </ul>
             </li>
 			<li><a href="index.html">Acceuil</a></li>
-			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
+			<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -128,7 +128,7 @@ a:hover{text-decoration: underline;}
 						</div> 			-->
 						<div class="row">
 							<div  class="col-md-8">
-							<h3>Mission Exploratoire</h3>
+							<h3>MEX - Missions Exploratoires)</h3>
 							</div>
 							<div  class="col-md-4" align="right">
 							<h3a>Dernier actualisation: 24 juillet 2015</h3a>
@@ -165,7 +165,7 @@ a:hover{text-decoration: underline;}
 								<div  class="Status" id="cccm" class="dc-chart"><h4>Nombre de MEX par status </h4></div>
 							</div>-->
 							<div  class="col-md-7">
-									<div class="row"><h4>Type de population affectée par village</br></br></h4>
+									<div class="row"><h4>Type de population affectée</br></br></h4>
 											<div class="row">
 												
 												<div  class="col-md-4">
@@ -193,12 +193,12 @@ a:hover{text-decoration: underline;}
 									</div>	
 							</div>	
 							<div  class="col-md-4">
-								<div  class="PopAffectee" id="cccm" class="dc-chart"><h4>Type de population affectée par alerte</h4><h5>Nombre d'alertes reportées</h5></br></div>
+								<div  class="PopAffectee" id="cccm" class="dc-chart"><h4>Type de population affectée</h4><h5>Nombre d'alertes reportées</h5></br></div>
 							  </div>
 						
 						</div>
 						<div class="row">
-								<div class="col-md-7"><h4>Proposition d'action par villages évalués </br> </br></h4/>	
+								<div class="col-md-7"><h4>Proposition d'action</br> </br></h4/>	
 										<div class="row-fluid">
 											<div  class="col-md-4">
 													  <div class="proMSADIV" id="#cccm" class="dc-chart"  ><h6>MSA </br>complete</br></br></h6/></div>
@@ -235,10 +235,10 @@ a:hover{text-decoration: underline;}
 								</div>
 							
 								<div  class="col-md-5">
-										<div  class="PropAction" id="cccm" class="dc-chart"><h4>Proposition d'action par type</h4><h5>Nombre de propositions reportées</h5></br></div>
+										<div  class="PropAction" id="cccm" class="dc-chart"><h4>Proposition d'action</h4><h5>Nombre de propositions reportées</h5></br></div>
 								</div>
 						 </div>	
-						<div class="row">	  
+						<!--<div class="row">	  
 								
 									<div  class="col-md-7">
 									   <div Class ="CauseInt" id="cccm" class="dc-lineChart"><h4>Cause internes de délais</h4><h5>Nombre de causes reportées</h5></div>
@@ -249,7 +249,7 @@ a:hover{text-decoration: underline;}
 									   <div Class ="CauseExt" id="cccm" class="dc-lineChart"><h4>Causes externes de délais</h4><h5>Nombre de causes reportées</h5></div>
 									</div>
 								
-						</div>		
+						</div>	-->	
 								
 						<div class="row">
 							<div  class="col-md-12">
@@ -682,7 +682,7 @@ function drawMarkerArea(data) {
 		*/
 		
 		//**********	
-  
+  /*
 	 var CauseIntDim  = xf.dimension(function(d) { 
 			if (d.Delais_INT_Disponibilité_resources == "Oui" )
 			  return "Disponibilité/mobilisation de resources"
@@ -748,7 +748,7 @@ function drawMarkerArea(data) {
         .colors(['#CC3333'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
+        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
   
   	
   var pref = xf.dimension(function(d) { return d['Prefecture']; });

@@ -104,8 +104,8 @@ a:hover{text-decoration: underline;}
 					  
 						<ul class="dropdown-menu" role="menu">
 							 <li><a href="alerte.html">Alertes</a></li>
-							<li><a href="mex.html">MEX, Missions exploratoires</a></li>
-							<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
+							<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+					<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
 							<li><a href="inter.html">Interventions</a></li>
 							<li><a href="pdm.html">PDM</a></li>
 							<li><a href="acceshum.html">Accès humanitaire</a></li>
@@ -115,7 +115,7 @@ a:hover{text-decoration: underline;}
 					  </ul>
 					</li>
 					<li><a href="index.html">Acceuil</a></li>
-					<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
+					<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"></li>	
@@ -171,7 +171,7 @@ a:hover{text-decoration: underline;}
 								</div>
 							</div>
 							<div  class="col-md-4">
-								<div  class="partner" id="cccm" class="pie-chart"><h4>Nombre d'intervention par organisation</h4></div>
+								<div  class="partner" id="cccm" class="pie-chart"><h4>Nombre d'interventions par organisation</h4></div>
 							</div>
 							<div  class="col-md-4">
 								<div  class="intertype" id="cccm" class="pie-chart"><h4>Type d'intervention</h4></div>
@@ -195,7 +195,7 @@ a:hover{text-decoration: underline;}
 								<div  class="vetbebe" id="cccm" class="dc-chart"></div>				
 							</div>
 							<div  class="col-md-4">	
-								<div  class="sensib" id="cccm" class="dc-chart"><h4>Intervention sensibilisation hygiène</h4></div>
+								<div  class="sensib" id="cccm" class="dc-chart"><h4>Sessions de sensibilisation à l’hygiène </h4></div>
 								<div  class="comgest" id="cccm" class="dc-chart"></div>
 								<div  class="latbloc" id="cccm" class="dc-chart"><h4>Intervention asssainissement</h4></div>
 								<div  class="lat" id="cccm" class="dc-chart"></div>
@@ -211,7 +211,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 						</div>  
-						<div class="row">	  
+						<!--<div class="row">	  
 									<div  class="col-md-1">
 									   
 									</div>
@@ -246,7 +246,7 @@ a:hover{text-decoration: underline;}
 									<div  class="col-md-1">
 									   
 									</div>
-						</div>	
+						</div>	-->
 						
 						<div class="row">
 							<div  class="col-md-8">
@@ -356,7 +356,7 @@ function drawMarkerArea(data) {
 		
 		//***************	
 
-	 var CauseIntNFIDim  = xf.dimension(function(d) { 
+/*	 var CauseIntNFIDim  = xf.dimension(function(d) { 
 			if (d.Delais_INT_NFI_Disponibilite == "Oui" )
 			  return "Disponibilité/mobilisation de resources"
 			else if (d.Delais_INT_NFI_Coordination_humanitaire == "Oui")
@@ -425,13 +425,13 @@ function drawMarkerArea(data) {
         .colors(['#CC3333'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
+        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
 		
 		
 	//************		
 		//***************	
 
-	 var CauseIntWASHDim  = xf.dimension(function(d) { 
+	/* var CauseIntWASHDim  = xf.dimension(function(d) { 
 			if (d.Delais_INT_WASH_Disponibilite == "Oui" )
 			  return "Disponibilité/mobilisation de resources"
 			else if (d.Delais_INT_WASH_Coordination_humanitaire == "Oui")
@@ -500,7 +500,7 @@ function drawMarkerArea(data) {
         .colors(['#0099FF'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
+        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
 		
 		
 	//************		
@@ -730,7 +730,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .width(200)
         .height(40)
         .colors(['#3182bd'])
-		.label(function(d) { return "CG**** assainissement: "+d.value; })
+		.label(function(d) { return "Comité de Gestion assainissement: "+d.value; })
 		.margins({top: 5, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.4]));
  

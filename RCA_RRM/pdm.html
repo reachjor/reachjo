@@ -86,8 +86,8 @@ a:hover{text-decoration: underline;}
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
 						 <li><a href="alerte.html">Alertes</a></li>
-						<li><a href="mex.html">MEX, Missions exploratoires</a></li>
-						<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
+						<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+					<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
 						<li><a href="inter.html">Interventions</a></li>
 						<li><a href="pdm.html">PDM</a></li>
 						<li><a href="acceshum.html">Accès humanitaire</a></li>
@@ -97,7 +97,7 @@ a:hover{text-decoration: underline;}
               </ul>
             </li>
 			<li><a href="index.html">Acceuil</a></li>
-			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
+			<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -143,12 +143,15 @@ a:hover{text-decoration: underline;}
 							<div  class="col-md-4">
 								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de MSA effectuées</h4><h5>par partenaires</h5/></div>
 							</div>
-							 <div  class="col-md-4">
-								<div  class="Status" id="cccm" class="dc-chart"><h4>Status PDM</h4><h5>Nombre d'évaluations</h5></div>
+							<div  class="col-md-4">
+								<div  class="intertype" id="cccm" class="dc-chart"><h4>Nombre d'évaluations</h4><h5> Par type d'intervention</h5></div>								
 							</div>
+							<!-- <div  class="col-md-4">
+								<div  class="Status" id="cccm" class="dc-chart"><h4>Status PDM</h4><h5>Nombre d'évaluations</h5></div>
+							</div>-->
 						</div>
 						
-						<div class="row">
+						<!--<div class="row">
 							
 							
 							<div  class="col-md-4">
@@ -161,7 +164,7 @@ a:hover{text-decoration: underline;}
 							<div  class="col-md-4">
 								   <div Class ="CauseExt" id="cccm" class="dc-lineChart"><h4>Causes externes de délais</h4><h5>Nombre de causes reportées</h5></div>
 							</div>
-						</div>
+						</div>-->
 						
 						 <div class="row">
 							<div  class="col-md-1"></div>
@@ -171,27 +174,27 @@ a:hover{text-decoration: underline;}
 						</div>
 							  
 						<div class="row">
-							<div  class="col-md-2">
+							<!--<div  class="col-md-2">
 							   <div  class="ATemps" id="cccm" class="dc-chart"><h4>Délais de distribution</h4><h5>Moyenne</h5></div>
 								<div  class="TropTard" id="cccm" class="dc-chart"></div>
 								<div  class="TropTot" id="cccm" class="dc-chart"></div>
 								
-							</div>
-							<div  class="col-md-3">
+							</div>-->
+							<div  class="col-md-4">
 							   <div  class="s1" id="cccm" class="dc-chart"><h4>Satisfaction global</h4><h5>Moyenne</h5></div>
 								<div  class="s2" id="cccm" class="dc-chart"></div>
 								<div  class="s3" id="cccm" class="dc-chart"></div>
 								<div  class="s4" id="cccm" class="dc-chart"></div>
 							</div>
 						
-							<div  class="col-md-3">
+							<div  class="col-md-4">
 							    <div  class="nattes" id="cccm" class="dc-chart"><h4>Satisfait de la qualité</br>des produits</h4><h5>Moyenne</h5></div>
 								<div  class="couvertures" id="cccm" class="dc-chart"></div>
 								<div  class="baches" id="cccm" class="dc-chart"></div>
 								<div  class="kitscuisine" id="cccm" class="dc-chart"></div>
 								<div  class="seaux" id="cccm" class="dc-chart"></div>
 							</div>
-							<div  class="col-md-3">
+							<div  class="col-md-4">
 							    <div  class="nattes1" id="cccm" class="dc-chart"><h4>Satisfait de la quantité</br>des produits</h4><h5>Moyenne</h5></div>
 								<div  class="couvertures1" id="cccm" class="dc-chart"></div>
 								<div  class="baches1" id="cccm" class="dc-chart"></div>
@@ -340,17 +343,17 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 		.xAxis().ticks(4).tickFormat(d3.format(""));
         ;	
 
-	var StatusDim  = xf.dimension(function(d) { 
+	/*var StatusDim  = xf.dimension(function(d) { 
 		if (d.Statut_PDM_Complete == "Oui" )
 			  return "Complété"
 			else if (d.Statut_PDM_Prevu == "Oui")
 			  return "Prévu" 
-			/* else if (d.Statut_PDM_En_cours == "Oui" )
+			 else if (d.Statut_PDM_En_cours == "Oui" )
 			  return "En cours"   
 			else if (d.Statut_PDM_En_attente == "Oui" )
 			  return "En attente"
 			else if (d.Statut_PDM_Annule == "Oui" )
-			  return "Annnulé"*/
+			  return "Annnulé"
 			else 
 			  return "Autre"  
 			 
@@ -372,9 +375,9 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 		.yAxisLabel('Nombre d’évaluations')
 		.xAxis().tickFormat(function (d) {
         return d})
-		;
+		;*/
   //********	
-	 var CauseIntDim  = xf.dimension(function(d) { 
+	 /*var CauseIntDim  = xf.dimension(function(d) { 
 			if (d.Delais_INT_Disponibilite == "Oui" )
 			  return "Disponibilité/mobilisation de resources"
 			else if (d.Delais_INT_Coordination_humanitaire == "Oui")
@@ -422,15 +425,15 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 			 else if (d.Delais_EXT_Acces_securitaire == "Oui" )
 			  return "Accès sécuritaire"   
 			else if (d.Delais_EXT_Suspension_securitaire == "Oui" )
-			  return "Suspension sécuritaire"*/
+			  return "Suspension sécuritaire"
 			if (d.Delais_EXT_Pas_de_delais == "Oui" )
 			  return "Pas de délais"  
 			 else 
 			  return "Autre"   
 			
-			}); 
+			}); */
 			
-  var CauseEXTsect = CauseEXTDim.group().reduceCount();
+  /*var CauseEXTsect = CauseEXTDim.group().reduceCount();
 
   dc.rowChart("#cccm .CauseExt",groupname)
         .dimension(CauseEXTDim)
@@ -443,11 +446,11 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .colors(['#CC3333'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
+        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
 		
 	//********
 	var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
-	var viplum = pref1.group().reduceSum(function (d) { return Math.round(d.Delais_distribution_ATemps / 10); });
+	/*var viplum = pref1.group().reduceSum(function (d) { return Math.round(d.Delais_distribution_ATemps / 10); });
 	var vihuile = pref1.group().reduceSum(function (d) { return Math.round(d.Delais_distribution_TropTot / 10); });
 	var vicsb = pref1.group().reduceSum(function (d) { return Math.round(d.Delais_distribution_TropTard / 10); });
 	
@@ -478,7 +481,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .colors(['#FF9900'])
 		.label(function(d) { return "Trop tard: "+d.value+" %"; })
 		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .7]));
+		.x(d3.scale.linear().domain([0, .7]));*/
 	 
 		
 		//********Satisfaction global

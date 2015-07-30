@@ -91,8 +91,8 @@ a:hover{text-decoration: underline;}
 			  
                <ul class="dropdown-menu" role="menu">
 					 <li><a href="alerte.html">Alertes</a></li>
-					<li><a href="mex.html">MEX, Missions exploratoires</a></li>
-					<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
+					<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+					<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
 					<li><a href="inter.html">Interventions</a></li>
 					<li><a href="pdm.html">PDM</a></li>
 					<li><a href="acceshum.html">Accès humanitaire</a></li>
@@ -102,7 +102,7 @@ a:hover{text-decoration: underline;}
               </ul>
             </li>
 			<li><a href="index.html">Acceuil</a></li>
-			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
+			<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -124,7 +124,7 @@ a:hover{text-decoration: underline;}
 						  
 						<div class="row">
 							<div  class="col-md-8">
-							<h3>MSA - Enquêtes Multi-Sectorielles</h3>
+							<h3>MSA - Evaluations Multisectorielles </h3>
 							</div>
 							<div  class="col-md-4" align="right">
 							<h3a>Dernier actualisation: 24 juillet 2015</h3a>
@@ -160,13 +160,14 @@ a:hover{text-decoration: underline;}
 							 
 						</div>
 						<div class="row">
-							<div  class="col-md-3">
+							<div  class="col-md-1"></div>
+							<div  class="col-md-4">
 								<div  class="year" id="cccm" class="dc-chart">
 								     <h4>Nombre de MSA effectuées par an</h4>
 								</div>
 							</div>
-							<div  class="col-md-5">
-								<div  class="Status" id="cccm" class="dc-chart"><h4>Nombre de MSA par status </h4></div>
+							<div  class="col-md-1">
+								<!--<div  class="Status" id="cccm" class="dc-chart"><h4>Nombre de MSA par status </h4></div>-->
 							</div>
 							<div  class="col-md-4">
 								<div  class="SCORE_NFI" id="cccm" class="dc-chart">
@@ -212,7 +213,7 @@ a:hover{text-decoration: underline;}
 							</div>
 						</div>	
 						<div class="row">
-								<div class="col-md-8"><h4>Proposition d'action par villages évalués </br> </br></h4/>	
+								<div class="col-md-7"><h4>Proposition d'action</br> </br></h4/>	
 										<div class="row-fluid">
 											<div  class="col-md-4">
 													  <div class="proMSADIV" id="#cccm" class="dc-chart"  ><h6>Intervention</br>NFI</br></h6/></div>
@@ -247,11 +248,20 @@ a:hover{text-decoration: underline;}
 											</div>-->
 										</div>	
 								</div>
-								<div  class="col-md-4">
-										<div  class="PropAction" id="cccm" class="dc-chart"><h4>Proposition d'action par type</h4><h5>Nombre de propositions reportées</h5></br></div>
+								<div  class="col-md-5">
+											<div  class="PropAction" id="cccm" class="dc-chart"><h4>Proposition d'action</h4><h5>Nombre de propositions reportées</h5></br></div>
+											<div Class ="PropAction1" id="cccm" class="dc-chart"></div>
+										    <div  class="PropAction2" id="cccm" class="dc-chart"></div>
+											<div  class="PropAction3" id="cccm" class="dc-chart"></div>
+											<div  class="PropAction4" id="cccm" class="dc-chart"></div>
+											<div  class="PropAction5" id="cccm" class="dc-chart"></div>
+											<div  class="PropAction6" id="cccm" class="dc-chart"></div>
+											<div  class="PropAction7" id="cccm" class="dc-chart"></div>
+											<div  class="PropAction8" id="cccm" class="dc-chart"></div>
+											
 								</div>
 						 </div>	
-						<div class="row">	  
+						<!--<div class="row">	  
 								
 									<div  class="col-md-6">
 										   <div Class ="CauseInt1" id="cccm" class="dc-chart"><h4>Cause internes de délais</h4><h5>Nombre de causes reportées</h5></div>
@@ -277,7 +287,7 @@ a:hover{text-decoration: underline;}
 							
 									</div>
 								
-						</div>	
+						</div>	-->
 						
 						<div class="row">
 							<div  class="col-md-8">
@@ -505,8 +515,8 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .dimension(ScoreNFI)
         .group(ScoreNFIDim)
 		//.data(function(group) {return group.all().filter(function(kv) { return kv.key !=""; });})
-        .width(200)
-        .height(250)
+        .width(300)
+        .height(200)
         .renderLabel(true)
         //.ordering(function (p) { return p.value;})
 		.colors(['#ff9999','#ff3333','#cc0000','#800000', ])
@@ -539,7 +549,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 	//********	
 
 	
-	var StatusDim  = xf.dimension(function(d) { 
+	/*var StatusDim  = xf.dimension(function(d) { 
 		if (d.Status_Complete == "Oui" )
 			  return "Complété"
 			else if (d.Status_Prevu == "Oui")
@@ -574,8 +584,103 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
 		.yAxisLabel('Nombre d’activités')
 		.xAxis().tickFormat(function (d) {
         return d})
-		;	
-	//*************	
+		;	*/
+	//*************	Recommandation
+		
+	
+	var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
+	var Intervention_NFI = pref1.group().reduceSum(function (d) { if (d.Recommandation_Intervention_NFI == "Oui" )
+			  return 1; else return 0; });
+	var  Intervention_EAH = pref1.group().reduceSum(function (d) { if (d.Recommandation_Intervention_EAH == "Oui" )
+			  return 1; else return 0; });
+	var  Pas_intervention= pref1.group().reduceSum(function (d) { if (d.Recommandation_Pas_intervention == "Oui" )
+			  return 1; else return 0; });
+	var  Intervention_Sante= pref1.group().reduceSum(function (d) { if (d.Recommandation_Intervention_Sante == "Oui" )
+			  return 1; else return 0; });
+	var  Intervention_Protection= pref1.group().reduceSum(function (d) { if (d.Recommandation_Intervention_Protection == "Oui" )
+			  return 1; else return 0; });
+	var  Securite_Alimentaire= pref1.group().reduceSum(function (d) { if (d.Recommandation_Securite_Alimentaire == "Oui" )
+			  return 1; else return 0; });
+	var  Intervention_Education= pref1.group().reduceSum(function (d) { if (d.Recommandation_Intervention_Education == "Oui" )
+			  return 1; else return 0; });
+	var  Intervention_Logistique= pref1.group().reduceSum(function (d) { if (d.Recommandation_Intervention_Logistique == "Oui" )
+			  return 1; else return 0; });
+	 
+  	  dc.rowChart("#cccm .PropAction",groupname)
+        .dimension(pref1)
+        .group(Intervention_NFI)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Intervention Abris/NFI: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	  dc.rowChart("#cccm .PropAction1",groupname)
+        .dimension(pref1)
+        .group(Intervention_EAH)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Intervention EAH: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	  dc.rowChart("#cccm .PropAction2",groupname)
+        .dimension(pref1)
+        .group(Pas_intervention)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Pas d'intervention: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	  dc.rowChart("#cccm .PropAction3",groupname)
+        .dimension(pref1)
+        .group(Intervention_Sante)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Intervention Santé/Nutrition: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	  dc.rowChart("#cccm .PropAction4",groupname)
+        .dimension(pref1)
+        .group(Intervention_Protection)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Intervention Protection: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	  dc.rowChart("#cccm .PropAction5",groupname)
+        .dimension(pref1)
+        .group(Securite_Alimentaire)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Securité Alimentaire: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	   dc.rowChart("#cccm .PropAction6",groupname)
+        .dimension(pref1)
+        .group(Intervention_Education)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Intervention Education: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	  dc.rowChart("#cccm .PropAction7",groupname)
+        .dimension(pref1)
+        .group(Intervention_Logistique)
+        .width(300)
+        .height(50)
+        .colors(['#CC3333'])
+		.label(function(d) { return "Intervention Logistique: "+d.value; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.3]));
+	  	
+	
+	/*
 	var PropActionDim  = xf.dimension(function(d) {
 			if (d.Recommandation_Intervention_NFI == "Oui" )
 			  return "Intervention Abris/NFI"
@@ -611,7 +716,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .colors(['#398E1D'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));		
+        .xAxis().ticks(5).tickFormat(d3.format(""));		*/
 	//***************	
 /*
 	 var CauseIntDim  = xf.dimension(function(d) { 
@@ -647,7 +752,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(5).tickFormat(d3.format("s"));	*/
 		
-	var pref2 = xf.dimension(function(d) { return d.Code_Prefecture; });
+	/*var pref2 = xf.dimension(function(d) { return d.Code_Prefecture; });
 		
 		var INT_Disponibilite = pref2.group().reduceSum(function (d) { if (d.Delais_INT_Disponibilite == "Oui" )
 			  return 1; else return 0; });
@@ -716,49 +821,13 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .colors(['#FF6600'])
 		.label(function(d) { return "Pas de délais: "+d.value; })
 		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 0.1]));
+		.x(d3.scale.linear().domain([0, 0.1]));*/
 	 
 	
 		
-	/*	
-	var CauseEXTDim  = xf.dimension(function(d) {
-			if (d.Delais_EXT_Necessite_reevaluer == "Oui" )
-			  return "Necessité de réévaluer"
-			else if (d.Delais_EXT_Acces_logistique == "Oui")
-			  return "Accès logistique" 
-			 else if (d.Delai_EXT_Suspension_logistique == "Oui" )
-			  return "Suspension logistique"   
-			else if (d.Delais_EXT_Acceptance_parties_prenantes == "Oui" )
-			  return "Acceptance par les parties prenantes"
-			else if (d.Delais_EXT_EquipeRRM_cible_pendant_MSA == "Oui")
-			  return "Equipe RRM ciblé ou touché par un incident pendant le MEX" 
-			 else if (d.Delais_EXT_Acces_securitaire == "Oui" )
-			  return "Accès sécuritaire"   
-			else if (d.Delais_EXT_Suspension_securitaire == "Oui" )
-			  return "Suspension sécuritaire"
-			else if (d.Delais_EXT_Autre == "Oui" )
-			  return "Autre"  
-			
-			}); 
-			
-  var CauseEXTsect = CauseEXTDim.group().reduceCount();
-
-  dc.rowChart("#cccm .CauseExt",groupname)
-        .dimension(CauseEXTDim)
-        .group(CauseEXTsect)
-        .elasticX(true)
-        .width(250)
-        .height(200)
-        .renderLabel(true)
-        .ordering(function (p) { return -p.value;})
-        .colors(['#CC3333'])
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
-		
 		
 	//************	
-		//var pref2 = xf.dimension(function(d) { return d.Code_Prefecture; });
+		/*var pref2 = xf.dimension(function(d) { return d.Code_Prefecture; });
 		
 		var EXT_Necessite_reevaluer = pref2.group().reduceSum(function (d) { if (d.Delais_EXT_Necessite_reevaluer == "Oui" )
 			  return 1; else return 0; });
@@ -859,7 +928,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .colors(['#CC3333'])
 		.label(function(d) { return "Pas de délais: "+d.value; })
 		.margins({top: 5, right: 10, bottom: 0, left: 30})
-		.x(d3.scale.linear().domain([0, 0.1]));
+		.x(d3.scale.linear().domain([0, 0.1]));*/
 		
 		
 		//************
@@ -882,21 +951,6 @@ var Partnergp = PartnerDim.group().reduceCount();
 		
 		//************	
 
-	
-  var PropActionsect = PropActionDim.group().reduceCount();
-
-  dc.rowChart("#cccm .PropAction",groupname)
-        .dimension(PropActionDim)
-        .group(PropActionsect)
-        .elasticX(true)
-        .width(300)
-        .height(300)
-        .renderLabel(true)
-        .ordering(function (p) { return -p.value;})
-        .colors(['#398E1D'])
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));			
 		
 		
 var Direct_Contractor_VoucherDim = xf.dimension(function(d) { 

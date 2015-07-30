@@ -88,8 +88,8 @@ a:hover{text-decoration: underline;}
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
 					<li><a href="alerte.html">Alertes</a></li>
-					<li><a href="mex.html">MEX, Missions exploratoires</a></li>
-					<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
+					<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+					<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
 					<li><a href="inter.html">Interventions</a></li>
 					<li><a href="pdm.html">PDM</a></li>
 					<li><a href="acceshum.html">Accès humanitaire</a></li>
@@ -99,7 +99,7 @@ a:hover{text-decoration: underline;}
               </ul>
             </li>
 			<li><a href="index.html">Acceuil</a></li>
-			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
+			<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -154,9 +154,9 @@ a:hover{text-decoration: underline;}
 							
 						</div>
 						 <div class="row">
-							 <div  class="col-md-4">
-								<div  class="acces" id="cccm" class="dc-chart"><h4>Accès humanitaire</h4><h5>Nombre d'alertes</h5></div>
-							</div>  
+							 <div  class="col-md-2">
+								<!--<div  class="acces" id="cccm" class="dc-chart"><h4>Accès humanitaire</h4><h5>Nombre d'alertes</h5></div> -->
+							</div> 
 							<div  class="col-md-4">
 									<div class="row"><h4>Type de population affectée par village</h4><h5>Nombre d'alertes reportées</h5></br>
 											<div class="row">
@@ -449,7 +449,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .xAxis().ticks(4).tickFormat(d3.format("s"));	*/
 		
 
-  var AccesH = xf.dimension(function(d) { 
+ /* var AccesH = xf.dimension(function(d) { 
 		if (d.Acces_humanitaire_Oui == "Oui" )
 			  return "Oui"
 			else if (d.Acces_humanitaire_Non_logistique == "Oui")
@@ -478,7 +478,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .colorDomain([0,0])
 		.elasticX(true)
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+        .xAxis().ticks(4).tickFormat(d3.format("s"));*/
 
 var PartnerDim = xf.dimension(function(d) { return d['Partner']; });
 var Partnergp = PartnerDim.group().reduceCount();

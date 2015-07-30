@@ -86,8 +86,8 @@ a:hover{text-decoration: underline;}
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
 					 <li><a href="alerte.html">Alertes</a></li>
-					<li><a href="mex.html">MEX, Missions exploratoires</a></li>
-					<li><a href="MSA.html">MSA, Enquêtes multi-sectorielles</a></li>
+					<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+					<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
 					<li><a href="inter.html">Interventions</a></li>
 					<li><a href="pdm.html">PDM</a></li>
 					<li><a href="acceshum.html">Accès humanitaire</a></li>
@@ -97,7 +97,7 @@ a:hover{text-decoration: underline;}
               </ul>
             </li>
 			<li><a href="index.html">Acceuil</a></li>
-			<li><a class="reset" id="reset" href="#">Réinitialiser</a></li>
+			<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -141,7 +141,7 @@ a:hover{text-decoration: underline;}
 								</div>
 							</div>
 							<div  class="col-md-4">
-								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de Problèmes d'accès</br>humanitaire informés</h4><h5>par partenaires</h5/></div>
+								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de problèmes d'accès</br>humanitaire informés</h4><h5>par zone de partenaire</h5/></div>
 							</div>
 							 <div  class="col-md-4">
 								<div  class="Status" id="cccm" class="dc-chart"><h4>Problèmes d'accès</br>humanitaire informés</h4><h5>Nombre</h5></div>
@@ -263,6 +263,21 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 	  //.popup(function(d){return d['Partner']+":";})
     ;
 	
+	 var facilities1 = xf.dimension(function(d) { return (d.Latitude+0.5)","+(d.Longitude+0.5); });
+  var facilities1Group = facilities.group();
+  
+  dc.leafletMarkerChart(".map",groupname)
+      .dimension(facilities1)
+      .group(facilities1Group)
+      .width(900)
+      //.height(300)
+      .center([6.6,19.90])
+      .zoom(6)
+      .cluster(false)
+      .renderPopup(true)
+      .filterByArea(true)
+	  //.popup(function(d){return d['Partner']+":";})
+    ;
 	var pref = xf.dimension(function(d) { return d['Prefecture']; });
   var villsect = pref.group().reduceCount();
   
