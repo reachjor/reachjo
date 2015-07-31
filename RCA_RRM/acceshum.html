@@ -149,14 +149,29 @@ a:hover{text-decoration: underline;}
 						</div>
 						
 						<div class="row">
-							
-							
+							<div  class="col-md-6"><h4>Type</h4><h5>nombre</h5></br>
+									
+												<div  class="col-md-3">
+													<div  class="Logistique" id="cccm" class="dc-chart"><h5>Logistique:</br></br></h5></div>
+												</div>
+												<div  class="col-md-3">
+													<div  class="Securitaire" id="cccm" class="dc-chart"><h5>Securitaire:</br></br></h5></div>
+												</div>
+												<div  class="col-md-3">
+													<div  class="Logistique_securitaire" id="cccm" class="dc-chart"><h5>Logistique - securitaire:</h6></div>
+												</div>
+									
+							</div>
 							<div  class="col-md-4">
-							   <div  class="Log" id="cccm" class="dc-chart"><h4>Type</h4><h5>nombre</h5></div>
+							   <div  class="Log" id="cccm" class="dc-chart"></div>
 								<div  class="Sec" id="cccm" class="dc-chart"></div>
 								<div  class="LogSec" id="cccm" class="dc-chart"></div>
 								
 							</div>
+							
+						</div>
+						
+						<div class="row">	
 							<div  class="col-md-8">
 								<div Class ="start_dates" id="cccm" class="dc-lineChart"><h4>Nombre de problèmes  reportés</h4><h5>Selectionner le graphique pour filtrer par date</h5>	</div>
 							</div>	
@@ -188,6 +203,7 @@ a:hover{text-decoration: underline;}
 	<<script type="text/javascript"  src="js/esri-leaflet.js"></script>
     <script type="text/javascript" src="js/leaflet.markercluster.js"></script>
     <script type="text/javascript" src="js/dc.leaflet_acces.js"></script>
+	<script type="text/javascript" src="js/dc.leaflet_acces1.js"></script>
 
 <script type="text/javascript">
 
@@ -247,8 +263,8 @@ var dateFormat = d3.time.format("%d.%m.%Y");
   
   
 
-  var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
-  var facilitiesGroup = facilities.group();
+   var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
+ var facilitiesGroup = facilities.group();
   
   dc.leafletMarkerChart(".map",groupname)
       .dimension(facilities)
@@ -259,10 +275,22 @@ var dateFormat = d3.time.format("%d.%m.%Y");
       .zoom(6)
       .cluster(false)
       .renderPopup(true)
-      .filterByArea(true)
-	  //.popup(function(d){return d['Partner']+":";})
-    ;
+      .filterByArea(true);
 
+ /*var facilities1 = xf.dimension(function(d) { return d.Latitude*2+","+d.Longitude; });
+ var facilities1Group = facilities1.group();
+  
+ dc.leafletMarkerChart1(".map",groupname)
+      .dimension(facilities1)
+      .group(facilities1Group)
+      .width(900)
+      //.height(300)
+      .center([6.6,19.90])
+      .zoom(6)
+      .cluster(false)
+      .renderPopup(true)
+      .filterByArea(true);*/
+	
 	var pref = xf.dimension(function(d) { return d['Prefecture']; });
   var villsect = pref.group().reduceCount();
   
@@ -327,6 +355,21 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.xAxis().tickFormat(function (d) {
         return d})
 		;
+  
+  //*****
+  
+  var Logistique = xf.dimension(function(d) { return d.Logistique; });
+  var LogistiqueGP = Logistique.group(); 
+  dc.pieChart("#cccm .Logistique",groupname).dimension(Logistique).group(LogistiqueGP).width(65).height(70).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#CC3333']));
+  
+  var Securitaire = xf.dimension(function(d) { return d.Securitaire; });
+  var SecuritaireGP = Securitaire.group(); 
+  dc.pieChart("#cccm .Securitaire",groupname).dimension(Securitaire).group(SecuritaireGP).width(65).height(70).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#CC3333']));
+  
+  var Logistique_securitaire = xf.dimension(function(d) { return d.Logistique_securitaire; });
+  var Logistique_securitaireGP = Logistique_securitaire.group(); 
+  dc.pieChart("#cccm .Logistique_securitaire",groupname).dimension(Logistique_securitaire).group(Logistique_securitaireGP).width(65).height(70).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#CC3333']));
+  
   
 		
 	//********
