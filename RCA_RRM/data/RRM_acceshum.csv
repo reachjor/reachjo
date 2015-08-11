@@ -1,28 +1,29 @@
-SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,year,Logistique,Securitaire,Logistique_securitaire,En_cours,Cloture,Code_Prefecture,Prefecture,Code_SousPrefecture,SousPrefecture,CodeCommune,Commune,CodeArrondissement,Arrondissement,Longitude,Latitude
-1430335779,27.05.2015,27.05.2015,27.05.2015,DRC,Ngarba,,Non,Oui,Non,Non,Oui,,Bamingui-Bangoran,,Ndele,,Dar El Kouti,,,20.496477,9.203859
-1980301528,29.05.2015,05.03.2015,05.03.2015,SI,Mbres,,Non,Oui,Non,Non,Oui,,Nana-Gribizi,,Mbres,,Mbres,,,19.799937,6.667027
-585076654,05.05.2015,25.03.2015,25.03.2015,ACF,Kouki,,Non,Non,Oui,Non,Oui,,Ouham,,Nana-Bakassa,,Nana-Bakassa,,,17.309082,7.166343
-8831598,22.07.2015,22.07.2015,22.07.2015,ACF,Baboua,,Non,Oui,Non,Oui,Non,,Nana-Mambere,,Baboua,,Baboua,,,14.832919,5.806589
-1915495549,22.07.2015,22.07.2015,22.07.2015,DRC,Bolgue,,Non,Oui,Non,Oui,Non,,Ouham,,Markounda,,Nana Markounda,,,17.005704,7.273226
-500250200,15.07.2015,15.07.2015,15.07.2015,PU-AMI,N'dÃ©lÃ©,,Non,Oui,Non,Oui,Non,,Bamingui-Bangoran,,Ndele,,,,,20.653056,8.409167
-1301933772,15.07.2015,15.07.2015,15.07.2015,ACTED,Daba,,Non,Oui,Non,Oui,Non,,Haute-Kotto,,Bria,,Daba Nydou,,,22.4211,6.357161
-203355751,08.07.2015,08.07.2015,08.07.2015,ACF,BodÃ©,,Non,Oui,Non,Oui,Non,,Ouham,,Batangafo,,Batangafo,,,17.428594,7.171736
-1829115813,13.07.2015,01.07.2015,01.07.2015,ACTED,Bria,,Non,Oui,Non,Oui,Non,,Haute-Kotto,,Bria,,Samba-Boungou,,,21.991405,6.537415
-150555631,25.06.2015,17.06.2015,17.06.2015,ACF,MarzÃ©,,Non,Oui,Non,Oui,Non,,Ouham,,Bouca,,,,,18.778981,6.847689
-1235466409,03.06.2015,03.06.2015,03.06.2015,DRC,Bokaioua,,Non,Oui,Non,Oui,Non,,Ouham,,Kabo,,Ouaki,,,18.538442,7.279787
-1279047575,03.06.2015,03.06.2015,03.06.2015,DRC,Mbada,,Non,Oui,Non,Oui,Non,,Ouham,,Bouca,,Lady Gbawi,,,18.562368,6.865547
-1838633379,03.06.2015,03.06.2015,03.06.2015,DRC,Bepikasse 1,,Non,Oui,Non,Oui,Non,,Ouham Pende,,Paoua,,Mia-Pende,,,16.638503,7.604638
-433817422,20.05.2015,20.05.2015,20.05.2015,ACF,Petit-Kounde,,Non,Oui,Non,Oui,Non,,Nana-Mambere,,Baboua,,Kounde,,,14.546685,5.913248
-1550786452,07.05.2015,06.05.2015,06.05.2015,SI,Yagarandji,,Non,Oui,Non,Oui,Non,,Nana-Gribizi,,Kaga-Bandoro,,Ndenga,,,19.175784,6.841398
-888813746,05.05.2015,03.02.2015,03.02.2015,SI,Kabo,,Non,Oui,Non,Oui,Non,,Ouham,,Kabo,,Sido,,,18.623028,7.688983
-803089134,21.05.2015,20.05.2015,20.05.2015,ACTED,Derbissaka,,Non,Non,Oui,Oui,Non,,Mbomou,,Rafai,,Rafai,,,24.847812,5.774286
-305674227,15.05.2015,13.05.2015,13.05.2015,PU-AMI,Bamingui,,Non,Non,Oui,Oui,Non,,Bamingui-Bangoran,,Bamingui,,Vassako,,,20.179799,7.530107
-1010129817,29.05.2015,08.04.2015,08.04.2015,ACF,Koui,,Non,Non,Oui,Oui,Non,,Ouham Pende,,Koui,,Koui,,,15.453221,6.951955
-1363236238,05.05.2015,08.04.2015,08.04.2015,ACTED,Lihoto,,Non,Non,Oui,Oui,Non,,Ouaka,,Kouango,,Azengue-Mindou,,,20.15837,5.312277
-1499778853,05.05.2015,04.03.2015,04.03.2015,ACF,Sanguere 3,,Non,Non,Oui,Oui,Non,,Ouham Pende,,Koui,,Koui,,,15.337074,6.966833
-1852679522,05.05.2015,04.02.2015,04.02.2015,PU-AMI,Amada Gaza,,Non,Non,Oui,Oui,Non,,Mambere-Kadei,,Amada-Gaza,,,,,15.209111,4.768658
-138127090,25.06.2015,24.06.2015,24.06.2015,PU-AMI,Nola,,Oui,Non,Non,Oui,Non,,Sangha-Mbaere,,Nola,,Nola,,,16.04494,3.524026
-1696121099,15.06.2015,10.06.2015,10.06.2015,PU-AMI,Boy bale,,Oui,Non,Non,Oui,Non,,Mambere-Kadei,,Gadzi,,Mbali,,,16.757124,5.225732
-1797756935,07.05.2015,06.05.2015,06.05.2015,PU-AMI,Boy bale,,Oui,Non,Non,Oui,Non,,Mambere-Kadei,,Gadzi,,Mbali,,,16.757124,5.225732
-1958893135,07.05.2015,06.05.2015,06.05.2015,PU-AMI,Gadzi,,Oui,Non,Non,Oui,Non,,Mambere-Kadei,,Gadzi,,Topia,,,16.704898,4.779685
-993316766,07.05.2015,15.04.2015,15.04.2015,PU-AMI,Dilapoko,,Oui,Non,Non,Oui,Non,,Mambere-Kadei,,Gamboula,,Basse-Boumne,,,15.09166,4.36372
+SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,year,Logistique,Securitaire,Logistique_securitaire,En_cours,Cloture,Code_Prefecture,SousPrefecture,Code_SousPrefecture,Prefecture,CodeCommune,Commune,CodeArrondissement,Arrondissement,Longitude,Latitude
+1488405176,29.07.2015,29.07.2015,29.07.2015,DRC,Bedoua 1,,Non,Oui,Non,Oui,Non,,Paoua,,Ouham Pende,,Mia-Pende,,,16.458098,7.602153
+8831598,22.07.2015,22.07.2015,22.07.2015,ACF,Baboua,,Non,Oui,Non,Oui,Non,,Baboua,,Nana-Mambere,,Baboua,,,14.832919,5.806589
+1915495549,22.07.2015,22.07.2015,22.07.2015,DRC,Bolgue,,Non,Oui,Non,Oui,Non,,Markounda,,Ouham,,Nana Markounda,,,17.005704,7.273226
+500250200,15.07.2015,15.07.2015,15.07.2015,PU-AMI,N'délé,,Non,Oui,Non,Oui,Non,,Ndele,,Bamingui-Bangoran,,,,,20.653056,8.409167
+1301933772,15.07.2015,15.07.2015,15.07.2015,ACTED,Daba,,Non,Oui,Non,Oui,Non,,Bria,,Haute-Kotto,,Daba Nydou,,,22.4211,6.357161
+203355751,08.07.2015,08.07.2015,08.07.2015,ACF,Bodé,,Non,Oui,Non,Oui,Non,,Batangafo,,Ouham,,Batangafo,,,17.428594,7.171736
+1829115813,13.07.2015,01.07.2015,01.07.2015,ACTED,Bria,,Non,Oui,Non,Oui,Non,,Bria,,Haute-Kotto,,Samba-Boungou,,,21.991405,6.537415
+150555631,25.06.2015,17.06.2015,17.06.2015,ACF,Marzé,,Non,Oui,Non,Oui,Non,,Bouca,,Ouham,,,,,18.778981,6.847689
+1235466409,03.06.2015,03.06.2015,03.06.2015,DRC,Bokaioua,,Non,Oui,Non,Oui,Non,,Kabo,,Ouham,,Ouaki,,,18.538442,7.279787
+1279047575,03.06.2015,03.06.2015,03.06.2015,DRC,Mbada,,Non,Oui,Non,Oui,Non,,Bouca,,Ouham,,Lady Gbawi,,,18.562368,6.865547
+1838633379,03.06.2015,03.06.2015,03.06.2015,DRC,Bepikasse 1,,Non,Oui,Non,Oui,Non,,Paoua,,Ouham Pende,,Mia-Pende,,,16.638503,7.604638
+1430335779,27.05.2015,27.05.2015,27.05.2015,DRC,Ngarba,,Non,Oui,Non,Non,Oui,,Ndele,,Bamingui-Bangoran,,Dar El Kouti,,,20.496477,9.203859
+433817422,20.05.2015,20.05.2015,20.05.2015,ACF,Petit-Kounde,,Non,Oui,Non,Oui,Non,,Baboua,,Nana-Mambere,,Kounde,,,14.546685,5.913248
+1550786452,07.05.2015,06.05.2015,06.05.2015,SI,Yagarandji,,Non,Oui,Non,Oui,Non,,Kaga-Bandoro,,Nana-Gribizi,,Ndenga,,,19.175784,6.841398
+1980301528,29.05.2015,05.03.2015,05.03.2015,SI,Mbres,,Non,Oui,Non,Non,Oui,,Mbres,,Nana-Gribizi,,Mbres,,,19.799937,6.667027
+888813746,05.05.2015,03.02.2015,03.02.2015,SI,Kabo,,Non,Oui,Non,Oui,Non,,Kabo,,Ouham,,Sido,,,18.623028,7.688983
+138127090,25.06.2015,24.06.2015,24.06.2015,PU-AMI,Nola,,Oui,Non,Non,Oui,Non,,Nola,,Sangha-Mbaere,,Nola,,,16.04494,3.524026
+1696121099,15.06.2015,10.06.2015,10.06.2015,PU-AMI,Boy bale,,Oui,Non,Non,Oui,Non,,Gadzi,,Mambere-Kadei,,Mbali,,,16.757124,5.225732
+803089134,21.05.2015,20.05.2015,20.05.2015,ACTED,Derbissaka,,Oui,Oui,Oui,Oui,Non,,Rafai,,Mbomou,,Rafai,,,24.847812,5.774286
+305674227,15.05.2015,13.05.2015,13.05.2015,PU-AMI,Bamingui,,Oui,Oui,Oui,Oui,Non,,Bamingui,,Bamingui-Bangoran,,Vassako,,,20.179799,7.530107
+1797756935,07.05.2015,06.05.2015,06.05.2015,PU-AMI,Boy bale,,Oui,Non,Non,Oui,Non,,Gadzi,,Mambere-Kadei,,Mbali,,,16.757124,5.225732
+1958893135,07.05.2015,06.05.2015,06.05.2015,PU-AMI,Gadzi,,Oui,Non,Non,Oui,Non,,Gadzi,,Mambere-Kadei,,Topia,,,16.704898,4.779685
+993316766,07.05.2015,15.04.2015,15.04.2015,PU-AMI,Dilapoko,,Oui,Non,Non,Oui,Non,,Gamboula,,Mambere-Kadei,,Basse-Boumne,,,15.09166,4.36372
+1010129817,29.05.2015,08.04.2015,08.04.2015,ACF,Koui,,Oui,Oui,Oui,Oui,Non,,Koui,,Ouham Pende,,Koui,,,15.453221,6.951955
+1363236238,05.05.2015,08.04.2015,08.04.2015,ACTED,Lihoto,,Oui,Oui,Oui,Oui,Non,,Kouango,,Ouaka,,Azengue-Mindou,,,20.15837,5.312277
+585076654,05.05.2015,25.03.2015,25.03.2015,ACF,Kouki,,Oui,Oui,Oui,Non,Oui,,Nana-Bakassa,,Ouham,,Nana-Bakassa,,,17.309082,7.166343
+1499778853,05.05.2015,04.03.2015,04.03.2015,ACF,Sanguere 3,,Oui,Oui,Oui,Oui,Non,,Koui,,Ouham Pende,,Koui,,,15.337074,6.966833
+1852679522,05.05.2015,04.02.2015,04.02.2015,PU-AMI,Amada Gaza,,Oui,Oui,Oui,Oui,Non,,Amada-Gaza,,Mambere-Kadei,,,,,15.209111,4.768658
