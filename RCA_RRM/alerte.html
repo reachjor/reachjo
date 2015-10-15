@@ -123,7 +123,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 28 août 2015</h3a>
+							<h3a><br>Dernière actualisation: 15 octobre 2015</h3a>
 							</div>
 						</div> 	
 						<div class="row">
@@ -323,11 +323,11 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
   var ChocDim  = xf.dimension(function(d) { 
-		if (d.Nature_choc_Violences == "Oui" )
+		if (d.Nature_choc == "Violences" )
 			  return "Violence"
-			else if (d.Nature_choc_Catastrophe == "Oui")
+			else if (d.Nature_choc == "Catastrophe naturelle")
 			  return "Catastrophe naturelle" 
-			else if (d.Nature_Choc_Autre == "Oui" )
+			else if (d.Nature_Choc == "Autre" )
 			  return "Autre"
 			else 
 			  return "Autre"  
