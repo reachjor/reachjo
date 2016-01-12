@@ -4,13 +4,13 @@
 	
     <meta http-equiv="content-type" content="text/html; charset=UTF8">
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
-    <title>RRM RCA - 2014</title>
+    <title>RRM RCA - 2016</title>
 	
      <!-- Load Leaflet from CDN-->
 	<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
-	<script type="text/javascript" src="js/RRM_2015.js"></script>
+	<script type="text/javascript" src="js/RRM_2016.js"></script>
 	<script src="js/jquery-1.11.1.js"></script>
 	<script src="js/bootstrap.js"></script>
 	 
@@ -26,13 +26,13 @@
 	
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
  	<script type="text/javascript"  src="js/esri-leaflet.js"></script>
-	
+		
 	 <link rel="stylesheet" href="js/easyPrint.css"/>
     <script src="js/jQuery.print.js"></script>
     <script src="js/leaflet.easyPrint.js"></script>
-	
 
     <style>
+	
  </style>	  
     </style>
 </head>
@@ -52,7 +52,7 @@
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
+             <ul class="dropdown-menu" role="menu">
 							 <li><a href="alerte.html">Alertes</a></li>
 							<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
 							<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
@@ -62,11 +62,10 @@
 							<li><a href="plaidoyer.html">Plaidoyer</a></li>
 							<li><a href="reference_2014.html">Carte de référence 2014</a></li>
 							<li><a href="reference_2015.html">Carte de référence 2015</a></li>
-							<li><a href="reference_2015.html">Carte de référence 2016</a></li>
 					  </ul>
             </li>
-			<li><a>Carte de référence 2014</a></li>
-			<li><a href="index.html">Acceuil</a></li>
+				<li><a>Carte de référence 2016</a></li>
+				<li><a href="index.html">Acceuil</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -88,8 +87,7 @@
  
 	var dateyear =d3.time.format("%Y")
 	
-	
-		
+
 	var LeafIcon = L.Icon.extend({
 				options: {
 					iconSize:     [25, 25],
@@ -122,7 +120,7 @@
 		+ '<br/><b>Date debut: </b>' + feature.properties.startDate 
 		+ '<br/><b>Date fin: </b>' + feature.properties.endDate 
 		+ '<br/><b>ONG: </b>' + feature.properties.partnerName
-		+ '<br/><b>Incident ID: </b>' + feature.properties.indicators.AlerteID
+		
         : '<b></b>')
 		)};
   
@@ -142,7 +140,6 @@
 	var shade = L.esri.basemapLayer("ShadedRelief");
 	var grey = L.esri.basemapLayer("DarkGray");
 	
-	
         var layer01 = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 
             attribution: 'Tiles &copy; <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -153,21 +150,16 @@
         });
 
    
-	
-	
-	
-	
-	
-	
-	function getColor_2014(d) {
-			return d == "ACF"  ? '#0467b5' :
-			       d == "ACTED"  ? '#0f3a63' :
-    			   d == "IRC"  ? '#868478' :
-				   d == "DRC"  ? '#ecff5c' :
-				   d == "PU AMI"  ? '#53a653' :
-				   d == "SOLIDARITES" ? '#b31b16' :
-				    d == "Non couvert"  ? '#ffffff' :
-									'#ffffff';
+	function getColor_2015(d) {
+			return d == "ACF"  ? '#ff6600' :
+				   d == "ACF veille humanitaire"  ? '#ffcc66' :
+			       d == "ACTED"  ? '#0033cc' :
+			       d == "PU AMI"  ? '#006600' :
+				   d == "PU AMI veille humanitaire"  ? '#ccff99' :
+				   d == "SI" ? '#800000' :
+				   d == "SI veille humanitaire" ? '#ff9980' :
+				   d == "Zone non couverte" ? '#ffffff':
+									'#FFEDA0';
 		}
 
 	
@@ -181,23 +173,19 @@
 			};
 	}
 
-	function couverture_2014(feature) {
+	function couverture_2015(feature) {
 		return {
 			weight:0,
 			opacity: 0.9,
 			color: 'white',
 			dashArray: '3',
-			fillOpacity: 0.3,
-			fillColor: getColor_2014(feature.properties.PREF_NOM)
+			fillOpacity: 0.5,
+			fillColor: getColor_2015(feature.properties.RRM_2016)
 			};
 	}
 
 
-	
-	
-
-	
-	var MSA_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
+	var MSA_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -208,14 +196,14 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
 	});
 
 
 	
-	var inter_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
+	var inter_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -226,14 +214,14 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
-	}).addTo(map);
+	});
 	
 	
 	
-	var mex_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
+	var mex_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -244,7 +232,7 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
 	});
@@ -252,7 +240,7 @@
 	
 	
 
-	var alerte_2014 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
+	var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -263,33 +251,33 @@
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2014);
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
     		    },
 	onEachFeature:popUp
-	});
+	}).addTo(map);
 
-	var  area_ngo = L.geoJson(area, {
-			style: couverture_2014
+
+	var  area_ngo2015 = L.geoJson(RRM_2016, {
+			style: couverture_2015
 	}).addTo(map);
 
 	
+		
 	var legend1 = L.control({position: 'bottomleft'});
 		legend1.onAdd = function (map) {
-	
+				
 			var div = L.DomUtil.create('div', 'info legend'),
-				grades = ["ACF","ACTED","IRC","DRC" ,"PU AMI","SOLIDARITES","Non couvert"],
+				grades = ["ACF","ACF veille humanitaire","ACTED","PU AMI","PU AMI veille humanitaire","SI","SI veille humanitaire","Zone non couverte"],
 				labels = [],
 				from, to;
-			for (var i = 0; i < 7; i++) {
+			for (var i = 0; i < 8; i++) {
 				from = grades[i];
 				labels.push(
-					'<i style="background:' + getColor_2014(from) + '"></i> ' + from);
+					'<i style="background:' + getColor_2015(from) + '"></i> ' + from);
 			}
-			div.innerHTML = '<b>Couverture RRM 2014</b><br/>'+labels.join('<br>');
+			div.innerHTML = '<b>Couverture RRM 2015</b><br/>'+labels.join('<br>');
 			return div;
 		};
-		
-	
 	legend1.addTo(map);
 	
 var  prefectures = L.geoJson(pref, {
@@ -308,21 +296,20 @@ var baseMaps = {
 		"Carte foncée":grey		
         };
 
-
 var groupedOverlays = {
 	"Admistrative": {
 			"Préfectures":prefectures	   
 		  },
 	"Chocs": {
-			"Incidents reportés 2014":alerte_2014
+			"Alertes reportés 2015":alerte_2015
 		 },
 	"Couverture RRM": {
-		   "Couverture ONG 2014":area_ngo
+		   "Couverture ONG 2015":area_ngo2015
 		 },
     "Activité RRM": {
-			"Missions exploratoires 2014":mex_2014,
-			"MSA 2014":MSA_2014,
-			"Interventions RRM 2014":inter_2014
+			"Missions exploratoires 2015":mex_2015,
+			"MSA 2015":MSA_2015,
+			"Interventions RRM 2015":inter_2015
 		 }
 	};
 
@@ -334,7 +321,7 @@ L.control.scale({position:'bottomright'}).addTo(map);
 
 map.on('overlayadd', function (eventLayer) {
     // Switch to the  legend...
-    if (eventLayer.name === 'Couverture ONG 2014') {
+    if (eventLayer.name === 'Couverture ONG 2015') {
         legend1.addTo(map);
     }
 	
@@ -342,10 +329,11 @@ map.on('overlayadd', function (eventLayer) {
 
 map.on('overlayremove', function (eventLayer) {
     // Switch to the  legend...
-    if (eventLayer.name === 'Couverture ONG 2014') {
+    if (eventLayer.name === 'Couverture ONG 2015') {
         map.removeControl(legend1);
     }
 });
+
 
 L.easyPrint().addTo(map)
 
