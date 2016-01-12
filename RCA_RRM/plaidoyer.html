@@ -94,6 +94,7 @@ a:hover{text-decoration: underline;}
 				<li><a href="plaidoyer.html">Plaidoyer</a></li>
 				<li><a href="reference_2014.html">Carte de référence 2014</a></li>
                 <li><a href="reference_2015.html">Carte de référence 2015</a></li>
+				<li><a href="reference_2016.html">Carte de référence 2016</a></li>
               </ul>
             </li>
 			<li><a href="index.html">Acceuil</a></li>
@@ -531,6 +532,24 @@ var Partnergp = PartnerDim.group().reduceCount();
 	
 		
 		//***************	
+		
+		/*	var pref = xf.dimension(function(d) { return d['Prefecture']; });
+			var logis = xf.dimension(function(d) { return d['Logistique']; });
+			var logistiquedim = pref.group().reduceCount();
+  
+  dc.rowChart("#cccm .logistique",groupname)
+        .dimension(logis)
+        .group(pref)
+        .elasticX(true)
+        .width(200)
+        .height(250)
+        .renderLabel(true)
+		.margins({top: 0, right: 10, bottom: 20, left: 30})
+        .colors(['#6B6B6B'])
+		.ordering(function (p) { return -p.value;})
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(4).tickFormat(d3.format("s"));*/
 		
 		
 		
