@@ -166,7 +166,7 @@
 				   d == "DRC"  ? '#ecff5c' :
 				   d == "PU AMI"  ? '#53a653' :
 				   d == "SOLIDARITES" ? '#b31b16' :
-				    d == "Non couvert"  ? '#ffffff' :
+				    d == "Zone non couverte"  ? '#ffffff' :
 									'#ffffff';
 		}
 
@@ -187,7 +187,7 @@
 			opacity: 0.9,
 			color: 'white',
 			dashArray: '3',
-			fillOpacity: 0.3,
+			fillOpacity: 0.5,
 			fillColor: getColor_2014(feature.properties.PREF_NOM)
 			};
 	}
@@ -277,7 +277,7 @@
 		legend1.onAdd = function (map) {
 	
 			var div = L.DomUtil.create('div', 'info legend'),
-				grades = ["ACF","ACTED","IRC","DRC" ,"PU AMI","SOLIDARITES","Non couvert"],
+				grades = ["ACF","ACTED","IRC","DRC" ,"PU AMI","SOLIDARITES","Zone non couverte"],
 				labels = [],
 				from, to;
 			for (var i = 0; i < 7; i++) {
