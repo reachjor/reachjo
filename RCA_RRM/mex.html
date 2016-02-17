@@ -132,7 +132,7 @@ a:hover{text-decoration: underline;}
 							<h3>MEX - Missions Exploratoires</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a><br>Dernière actualisation: 12 janvier 2016</h3a>
+							<h3a><br>Dernière actualisation: 15 février 2016</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -497,114 +497,10 @@ function drawMarkerArea(data) {
         .colors(['#FF6600'])
 		.label(function(d) { return "Nombre total de MEX: "+d.value; })
 		.margins({top: 10, right: 5, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 0.2]));	 
+		.x(d3.scale.linear().domain([0, 0.3]));	 
 			  
 	//********	
-	/*
-	var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });		  
 	
-  	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	    dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	    dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));		*/
-		
-		
-		//**********
 		
 	 var PropActionDim  = xf.dimension(function(d) { 
 			if (d.Proposition_Action_MSAcomplete == "Oui" )
@@ -644,112 +540,7 @@ function drawMarkerArea(data) {
         .xAxis().ticks(5).tickFormat(d3.format(""));	
 		
 	//*****************	
-/*
-	ar pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	var  = pref1.group().reduceSum(function (d) { if (d. == "Oui" )
-			  return 1; else return 0; });
-	
-  	    dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .",groupname)
-        .dimension(pref1)
-        .group()
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return ": "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-		*/
-		
-		//**********	
-  /*
-	 var CauseIntDim  = xf.dimension(function(d) { 
-			if (d.Delais_INT_Disponibilité_resources == "Oui" )
-			  return "Disponibilité/mobilisation de resources"
-			else if (d.Delais_INT_Coordination_humanitaire == "Oui")
-			  return "Coordination humanitaire" 
-			 else if (d.Delais_INT_Defaillance_BD == "Oui" )
-			  return "Défaillance des base de données"   
-			else if (d.Delais_INT_Intervention_multiple == "Oui" )
-			  return "Intervention multiple (indisponibilité des équipes)"
-			else if (d.Delais_INT_Autre == "Oui")
-			  return "Autre" 
-			
-			 }); 
-			
-  var CauseIntsect = CauseIntDim.group().reduceCount();
 
-  dc.rowChart("#cccm .CauseInt",groupname)
-        .dimension(CauseIntDim)
-        .group(CauseIntsect)
-        .elasticX(true)
-        .width(300)
-        .height(200)
-        .renderLabel(true)
-        .ordering(function (p) { return -p.value;})
-        .colors(['#CC3333'])
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
-		
-		
-		
-		
-	var CauseEXTDim  = xf.dimension(function(d) {
-			if (d.Delais_EXT_Necessite_reevaluer == "Oui" )
-			  return "Necessité de réévaluer"
-			else if (d.Delais_EXT_Acces_logistique == "Oui")
-			  return "Accès logistique" 
-			 else if (d.Delais_EXT_Suspension_logistique == "Oui" )
-			  return "Suspension logistique"   
-			else if (d.Delais_EXT_Acceptance_parties_prenantes == "Oui" )
-			  return "Acceptance par les parties prenantes"
-			else if (d.Delais_EXT_EquipeRRM_cible_pendant_MEX == "Oui")
-			  return "Equipe RRM ciblé ou touché par un incident pendant le MEX" 
-			 else if (d.Delais_EXT_Acces_securitaire == "Oui" )
-			  return "Accès sécuritaire"   
-			else if (d.Delais_EXT_Suspension_securitaire == "Oui" )
-			  return "Suspension sécuritaire"
-			else if (d.Delais_EXT_Autre == "Oui" )
-			  return "Autre"  
-			
-			}); 
-			
-  var CauseEXTsect = CauseEXTDim.group().reduceCount();
-
-  dc.rowChart("#cccm .CauseExt",groupname)
-        .dimension(CauseEXTDim)
-        .group(CauseEXTsect)
-        .elasticX(true)
-        .width(250)
-        .height(200)
-        .renderLabel(true)
-        .ordering(function (p) { return -p.value;})
-        .colors(['#CC3333'])
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
   
   	
   var pref = xf.dimension(function(d) { return d['Prefecture']; });
@@ -801,7 +592,7 @@ var times = function(d) {return d.DD};
 
  dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(650)
+		.width(750)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
@@ -811,7 +602,7 @@ var times = function(d) {return d.DD};
 		.elasticX(true)
 		.renderArea(true)
 		.dotRadius(5)
-		.xAxis().ticks(6)
+		.xAxis().ticks(9)
 		;
 		//.yAxis().ticks(4)
 		//.xAxis().ticks(10);

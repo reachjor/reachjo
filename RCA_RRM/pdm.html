@@ -122,7 +122,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 12 janvier 2016</h3a>
+							<h3a><br>Dernière actualisation: 15 février 2016</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -534,7 +534,7 @@ var Partnergp = PartnerDim.group().reduceCount();
 
 	dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(500)
+		.width(700)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
@@ -545,7 +545,7 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.margins({top: 10, right: 10, bottom: 30, left: 30})
 		.renderHorizontalGridLines(true)
 		.renderArea(true)
-		.dotRadius(8)
+		.dotRadius(12)
 		
 		.yAxisLabel('Nombre d’activités')
 		.xAxis().ticks(8)

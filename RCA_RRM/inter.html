@@ -141,7 +141,7 @@ a:hover{text-decoration: underline;}
 							<h3>Interventions</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a><br>Dernière actualisation: 12 janvier 2016</h3a>
+							<h3a><br>Dernière actualisation: 15 février 2016</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -329,7 +329,7 @@ function regroup(dim, cols) {
 function drawMarkerArea(data) {
 	var dateFormat = d3.time.format("%d.%m.%Y");
     data.forEach(function (d) {
-	d.DD  = dateFormat.parse(d.startDate)
+	d.DD  = dateFormat.parse(d.endDate)
 	//d.year = d3.time.year(d.DD)
 	d.month= d3.time.month(d.DD)
 	});
@@ -697,11 +697,11 @@ var yeargp  = xf.dimension(function(d) { return d.year; });
 		.group(yeargroup)
 		.width(300)
         .height(200)
-		.x(d3.scale.ordinal().domain([2014,2015]))
+		.x(d3.scale.ordinal().domain([2014,2015,2016]))
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
 		.centerBar(true)	
-		.gap(50)  // 65 = norm
+		.gap(30)  // 65 = norm
 		.elasticY(true)
 		.xAxisLabel('Année')
 		.yAxisLabel('Nombre d’activités')
@@ -716,7 +716,7 @@ var times = function(d) {return d.DD};
 
  dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(600)
+		.width(700)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
@@ -730,7 +730,7 @@ var times = function(d) {return d.DD};
 		.dotRadius(8)
 		
 		.yAxisLabel('Nombre d’activités')
-		.xAxis().ticks(8)
+		.xAxis().ticks(12)
 		;
 
 $('#reset').on('click', function (){
