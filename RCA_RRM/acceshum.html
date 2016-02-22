@@ -1,74 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+	
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
     <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
-    <title>RRM RCA - Accès</title>
+    <title>RRM RCA - 2016</title>
 	
-	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
+     <!-- Load Leaflet from CDN-->
+	<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+	
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
-
-    <!-- Bootstrap -->
+	<script type="text/javascript" src="js/RRM_2016.js"></script>
+	<script type="text/javascript" src="js/access_hum.js"></script>
+	<script type="text/javascript" src="js/axes_access_hum.js"></script>
 	
-	<script src="js/html5.js"></script>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	 
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <script src="leaflet/leaflet-src.js"></script>
+		
+	<script src="js/leaflet.groupedlayercontrol.js"></script>
+	<link rel="stylesheet" href="css/leaflet.groupedlayercontrol.css" />
 	
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-    <link type="text/css" href="css/leaflet.css" rel="stylesheet"/>
-    <link type="text/css" href="css/leaflet.markercluster.css" rel="stylesheet"/>
+	<script src="js/leaflet.ajax.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/dc.css">
-    <!-- Add IntroJs styles  -->
-    <link rel="stylesheet" type="text/css" href="css/introjs.css">
-    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+ 	<script type="text/javascript"  src="js/esri-leaflet.js"></script>
+		
+	 <link rel="stylesheet" href="js/easyPrint.css"/>
+    <script src="js/jQuery.print.js"></script>
+    <script src="js/leaflet.easyPrint.js"></script>
 
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<style>
-/* Change the styles below in order to customize your template */
-
-body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
-h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
-h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 5px 0 0 0;}
-h3a{font-weight: bold; font-size: 12px; color: #fff;  margin: 20px 0 0 0;}
-h4a {   color:#505050; font-size: 12px; margin: 5px 0 0 0;}
-h4{font-weight: bold; font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
-h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
-p{margin: 8px 0 20px 0; line-height: 18px;}
-a, a:visited{color: #397DB8; text-decoration: none;}
-a:hover{text-decoration: underline;}
-
-.wrapper{display: block; margin: 0px 0 0 0; padding: 4px 30px 0 30px;}
-
-.map{background-color:#eee; position: absolute; top: 50px; left: 0; bottom: 0; width: 50%; *height:100%;}
-.sidepanel{background-color:#b6b6b6; position: absolute; top: 50px; right: 0;  bottom: 0; width: 50%; *height: 100%; overflow: auto}
-
-.context{font-family: Helvetica, Arial; font-size: 13px; color: #999; padding: 10px 0 0 0;}
-.subheader{border-bottom: 1px solid #ddd;}
-.footer{border-top: 1px solid #ddd; margin-top: 30px;}
-.titleBlock{text-align: right;
-/* Here are the styles that makes the template responsive*/
-@media only screen and (max-width: 768px) {
-  .map{position: inherit; height: 400px; width: 100%; display: block;}
-  .sidepanel{position: inherit; width: 100%;}
-}
-@media only screen and (max-width: 480px) {
-  .map {height: 300px;}
-}
-.bar rect {
-  shape-rendering: crispEdges;
-}
-.bar text {
-  text-anchor: end;
-}
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-</style>
+    <style>
+	
+ </style>	  
+    </style>
 </head>
- <body>
+<body>
   <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -84,21 +55,21 @@ a:hover{text-decoration: underline;}
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-					 <li><a href="alerte.html">Alertes</a></li>
-					<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
-					<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
-					<li><a href="inter.html">Interventions</a></li>
-					<li><a href="pdm.html">PDM</a></li>
-					<li><a href="acceshum.html">Accès humanitaire</a></li>
-					<li><a href="plaidoyer.html">Plaidoyer</a></li>
-					<li><a href="reference_2014.html">Carte de référence 2014</a></li>
-					<li><a href="reference_2015.html">Carte de référence 2015</a></li>
-					<li><a href="reference_2016.html">Carte de référence 2016</a></li>
-              </ul>
+             <ul class="dropdown-menu" role="menu">
+							 <li><a href="alerte.html">Alertes</a></li>
+							<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+							<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
+							<li><a href="inter.html">Interventions</a></li>
+							<li><a href="pdm.html">PDM</a></li>
+							<li><a href="acceshum.html">Accès humanitaire</a></li>
+							<li><a href="plaidoyer.html">Plaidoyer</a></li>
+							<li><a href="reference_2014.html">Carte de référence 2014</a></li>
+							<li><a href="reference_2015.html">Carte de référence 2015</a></li>
+							<li><a href="reference_2016.html">Carte de référence 2016</a></li>
+					  </ul>
             </li>
-			<li><a href="index.html">Acceuil</a></li>
-			<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
+				<li><a>Carte de référence 2016</a></li>
+				<li><a href="index.html">Acceuil</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
@@ -111,401 +82,295 @@ a:hover{text-decoration: underline;}
       </div>
     </nav>   
 	
-   <div style="display: block;"  id="dashboard">
-             <div class="row" id="cccm">
-                <div  class="map" id="cccm"></div>
-                <div class="sidepanel">
-					<div class="wrapper">
-						<div class="row">
-							<div  class="col-md-7">
-							<h3>Problèmes d'accès d'accès humanitaire</h3>
-							</div>
-							
-							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 15 octobre 2015</h3a>
-							</div>
-						</div>
-						<div class="row">
-							<div  class="col-md-12" align="justify">
-							<h4a><br>Bienvenue sur la page du tableau de bord interactif RRM. Cliquez sur les différents éléments pour sélectionner les informations qui vous intéressent.<br> Pour revenir au début et réinitialiser les filtres, cliquez sur <b>« Réinitialiser »</b>. </h4a>
-							</div>
-						</div> 	
-						<div class="row">
-							<div  class="col-md-2">
-								<div  class="nombre" id="cccm" class="dc-chart"></div>
-							</div>
-						</div>
-						<div class="row">
-							<div  class="col-md-4">
-								<div  class="pref" id="cccm" class="dc-chart">
-								  <h4>Préfecture</h4><h5>Nombre d'alertes</h5>
-								</div>
-							</div>
-							<div  class="col-md-4">
-								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de problèmes d'accès</br>humanitaire informés</h4><h5>par zone de partenaire</h5/></div>
-							</div>
-							 <div  class="col-md-4">
-								<div  class="Status" id="cccm" class="dc-chart"><h4>Problèmes d'accès</br>humanitaire informés</h4><h5>Nombre</h5></div>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div  class="col-md-6"><h4>Type</h4><h5>nombre</h5></br>
-									
-												<div  class="col-md-3">
-													<div  class="Logistique" id="cccm" class="dc-chart"><h5>Logistique:</br></br></h5></div>
-												</div>
-												<div  class="col-md-3">
-													<div  class="Securitaire" id="cccm" class="dc-chart"><h5>Securitaire:</br></br></h5></div>
-												</div>
-												<div  class="col-md-3">
-													<div  class="Logistique_securitaire" id="cccm" class="dc-chart"><h5>Logistique - securitaire:</h6></div>
-												</div>
-									
-							</div>
-							<div  class="col-md-4">
-							   <div  class="Log" id="cccm" class="dc-chart"></div>
-								<div  class="Sec" id="cccm" class="dc-chart"></div>
-								<div  class="LogSec" id="cccm" class="dc-chart"></div>
-								
-							</div>
-							
-						</div>
-						
-						<div class="row">	
-							<div  class="col-md-8">
-								<div Class ="start_dates" id="cccm" class="dc-lineChart"><h4>Nombre d'incidents reportés</h4><h5>Selectionner le graphique pour filtrer par date</h5>	</div>
-							</div>	
-						</div>
-						
-						 <div class="row">
-							<div  class="col-md-3">
-							
-							 </div>	
-								
-							
-						</div>
-							  
-						
-					</div>
-                </div>
-            </div>
-        </div>
-    </div>
+ 
+ 
+<div id="map"></div>
 
-    <script type="text/javascript" src="js/intro.js"></script>
-    <script type="text/javascript" src="js/d3_002.js"></script>
-    <script type="text/javascript" src="js/d3.js"></script>
-    <script type="text/javascript" src="js/crossfilter.js"></script>
-    <script type="text/javascript" src="js/dc.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
-<!--maps-->
-    <script type="text/javascript" src="js/leaflet.js"></script>
-	<<script type="text/javascript"  src="js/esri-leaflet.js"></script>
-    <script type="text/javascript" src="js/leaflet.markercluster.js"></script>
-    <script type="text/javascript" src="js/dc.leaflet_acces.js"></script>
-	<script type="text/javascript" src="js/dc.leaflet_acces1.js"></script>
+ <script>
+ 
+ 
+	var dateyear =d3.time.format("%Y")
+	
 
-<script type="text/javascript">
+	var LeafIcon = L.Icon.extend({
+				options: {
+					iconSize:     [25, 25],
+					iconAnchor:   [0, 0],
+					}
+			});
 
-/*     Markers      */
+	var LeafIconMSA = L.Icon.extend({
+				options: {
+					iconSize:     [25, 23],
+					iconAnchor:   [0, 0],
+					}
+			});
 
-d3.csv("data/RRM_acceshum.csv", function(error,data) {
-     //drawMarkerSelect(data);
-     drawMarkerArea(data);
-});
+	var symb_choc = new LeafIcon({iconUrl: 'image/choc.png'});
+	//var symb_dist = new LeafIcon({iconUrl: 'image/distrib.png'});
+	//var symb_msa = new LeafIconMSA({iconUrl: 'image/MSA.png'});
+	//var symb_mex = new LeafIconMSA({iconUrl: 'image/MEx.png'});
+	var map = L.map('map',{
+		  fullscreenControl: true,
+		  fullscreenControlOptions: {
+			position: 'topleft'
+		  }
+		  }).setView([6.6,19.90], 7);
+	
+	function popUp(features, layer) {
+		layer.bindPopup(
+		'<h3>'+features.properties.AxeDeplace+ '</h3>' +  (features ?
+        '<b>Axe: </b>' + features.properties.AxeDeplace 
+		+ '<br/><b>Secu: </b>' + features.properties.Secu
+		
+        : '<b></b>')
+		)};
+  
+	var base = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		});
+		
+	var inset = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		});
 
+	sat="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+	var satt = new L.TileLayer(sat);
+	var topo = L.esri.basemapLayer("Topographic");
+	var natgeo = L.esri.basemapLayer("NationalGeographic");
+	var ocean = L.esri.basemapLayer("Oceans");
+	var shade = L.esri.basemapLayer("ShadedRelief");
+	var grey = L.esri.basemapLayer("DarkGray");
+	
+        var layer01 = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 
-function regroup(dim, cols) {
-    var _groupAll = dim.groupAll().reduce(
-        function(p, v) { // add
-            cols.forEach(function(c) {
-                p[c] += v[c];
-            });
-            return p;
-        },
-        function(p, v) { // remove
-            cols.forEach(function(c) {
-                p[c] -= v[c];
-            });
-            return p;
-        },
-        function() { // init
-            var p = {};
-            cols.forEach(function(c) {
-                p[c] = 0;
-            });
-            return p;
+            attribution: 'Tiles &copy; <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var layer02 = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; Map Data <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
-    return {
-        all: function() {
-            // or _.pairs, anything to turn the object into an array
-            return d3.map(_groupAll.value()).entries();
-        }
-    };
-}
 
-var popty = d3.scale.ordinal()
-     .domain(["Non","Oui"])
-     .range(["#afa3a4","#ff972f"]);
-	 
-function drawMarkerArea(data) {
-//function drawMarkerSelect(error,data) {
-var dateFormat = d3.time.format("%d.%m.%Y");
-    data.forEach(function (d) {
-	d.DD  = dateFormat.parse(d.startDate)
-	d.month= d3.time.month(d.DD)
-	});
- 
+   
+	function getColor_2015(d) {
+			return d == "Axe"  ? '#E54143' :
+					
+			      
+									'#464749';
+		}
 
-  var xf = crossfilter(data);
-
-  var groupname = "marker-select";
-  
-  
-
-   var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
- var facilitiesGroup = facilities.group();
-  
-  dc.leafletMarkerChart(".map",groupname)
-      .dimension(facilities)
-      .group(facilitiesGroup)
-      .width(900)
-      //.height(300)
-      .center([6.6,19.90])
-      .zoom(6)
-      .cluster(false)
-      .renderPopup(true)
-      .filterByArea(true);
-
- /*var facilities1 = xf.dimension(function(d) { return d.Latitude*2+","+d.Longitude; });
- var facilities1Group = facilities1.group();
-  
- dc.leafletMarkerChart1(".map",groupname)
-      .dimension(facilities1)
-      .group(facilities1Group)
-      .width(900)
-      //.height(300)
-      .center([6.6,19.90])
-      .zoom(6)
-      .cluster(false)
-      .renderPopup(true)
-      .filterByArea(true);*/
 	
-	var pref = xf.dimension(function(d) { return d['Prefecture']; });
-  var villsect = pref.group().reduceCount();
-  
-  dc.rowChart("#cccm .pref",groupname)
-        .dimension(pref)
-        .group(villsect)
-        .elasticX(true)
-        .width(200)
-        .height(250)
-        .renderLabel(true)
-		.margins({top: 0, right: 10, bottom: 20, left: 30})
-        .colors(['#6B6B6B'])
-		.ordering(function (p) { return -p.value;})
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
-		
-		
-	var PartnerDim = xf.dimension(function(d) { return d['Partner']; });
-var Partnergp = PartnerDim.group().reduceCount();
+	function style(feature) {
+		return {
+			weight:1,
+			opacity: 0.9,
+			color: 'black',
+			dashArray: '3',
+			fillOpacity: 0
+			};
+	}
 
-  dc.rowChart("#cccm .Partner",groupname)
-        .dimension(PartnerDim)
-        .group(Partnergp)
-        .elasticX(true)
-        .width(250)
-        .height(200)
-        .renderLabel(true)
-        .ordering(function (p) { return -p.value;})
-        .colors(['#FF6600'])
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));	
-		
+	function style1(feature) {
+		return {
+			weight:1,
+			opacity: 0.9,
+			color: 'gray',
+			dashArray: '3',
+			fillOpacity: 0.5,
+			fillColor:'red'
+			};
+	}
+	
+	function style2(feature) {
+		return {
+			weight:5,
+			opacity: 1,
+			color: 'red',
+			fillOpacity: 1,
+			fillColor:'red'
+			};
+	}
+	/*function couverture_2015(feature) {
+		return {
+			weight:0,
+			opacity: 0.9,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.5,
+			fillColor: getColor_2015(feature.properties.RRM_2016)
+			};
+	}*/
 
-        ;	
 
-	var StatusDim  = xf.dimension(function(d) { 
-		if (d.En_cours == "Oui" )
-			  return "En cours"
-			else if (d.Cloture == "Oui")
-			  return "Clôturé" 
-			else 
-			  return "Autre"  
+	/*var MSA_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_msa,
+			   opacity:0.9
+			 });
 			 
-			});  
-  var Statussect = StatusDim.group().reduceCount();
-  
-	dc.barChart("#cccm .Status",groupname)
-		.dimension(StatusDim)
-        .group(Statussect)
-		.width(300)
-        .height(200)
-		.x(d3.scale.ordinal().domain(["Clôturé","En cours",]))
-		.xUnits(dc.units.ordinal)
-		.transitionDuration(500)
-		.centerBar(true)	
-		.gap(20)  // 65 = norm
-		.elasticY(true)
-		//.xAxisLabel('Status')
-		//.yAxisLabel('Nombre d’évaluations')
-		.xAxis().tickFormat(function (d) {
-        return d})
-		;
-  
-  //*****
-  
-  var Logistique = xf.dimension(function(d) { return d.Logistique; });
-  var LogistiqueGP = Logistique.group(); 
-  dc.pieChart("#cccm .Logistique",groupname).dimension(Logistique).group(LogistiqueGP).width(65).height(70).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#CC3333']));
-  
-  var Securitaire = xf.dimension(function(d) { return d.Securitaire; });
-  var SecuritaireGP = Securitaire.group(); 
-  dc.pieChart("#cccm .Securitaire",groupname).dimension(Securitaire).group(SecuritaireGP).width(65).height(70).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#CC3333']));
-  
-  var Logistique_securitaire = xf.dimension(function(d) { return d.Logistique_securitaire; });
-  var Logistique_securitaireGP = Logistique_securitaire.group(); 
-  dc.pieChart("#cccm .Logistique_securitaire",groupname).dimension(Logistique_securitaire).group(Logistique_securitaireGP).width(65).height(70).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#CC3333']));
-  
-  
-		
-	//********
-	var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
-	var Log = pref1.group().reduceSum(function (d) { if (d.Logistique == "Oui" )
-			  return 1; else return 0; });
-	var Sec = pref1.group().reduceSum(function (d) { if (d.Securitaire == "Oui" )
-			  return 1; else return 0; });
-	var LogSec = pref1.group().reduceSum(function (d) { if (d.Logistique_securitaire == "Oui" )
-			  return 1; else return 0; });
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		    },
+	onEachFeature:popUp
+	});
+
+
 	
-  	    dc.rowChart("#cccm .Log",groupname)
-        .dimension(pref1)
-        .group(Log)
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return "Logistique: "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .Sec",groupname)
-        .dimension(pref1)
-        .group(Sec)
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return "Securitaire: "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	  dc.rowChart("#cccm .LogSec",groupname)
-        .dimension(pref1)
-        .group(LogSec)
-        .width(300)
-        .height(50)
-        .colors(['#CC3333'])
-		.label(function(d) { return "Logistique-Securitaire: "+d.value; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, .1]));
-	 
-		
-		//***************	
-		
-		/*	var pref = xf.dimension(function(d) { return d['Prefecture']; });
-			var logis = xf.dimension(function(d) { return d['Logistique']; });
-			var logistiquedim = pref.group().reduceCount();
-  
-  dc.rowChart("#cccm .logistique",groupname)
-        .dimension(logis)
-        .group(pref)
-        .elasticX(true)
-        .width(200)
-        .height(250)
-        .renderLabel(true)
-		.margins({top: 0, right: 10, bottom: 20, left: 30})
-        .colors(['#6B6B6B'])
-		.ordering(function (p) { return -p.value;})
-        .colorDomain([0,0])
-        .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));*/
-		
-		
-		
+	var inter_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_dist,
+			   opacity:0.9
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		    },
+	onEachFeature:popUp
+	});
 	
-	var stdateDim = xf.dimension(function(d) {return d.month});
-	var stdategp = stdateDim.group();
-	var times = function(d) {return d.DD};
+	
+	
+	var mex_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_mex,
+			   opacity:0.9
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		    },
+	onEachFeature:popUp
+	});*/
+	
+	
+	var  axes = L.geoJson(axes, {
+			style: style1,
+			
+	}).addTo(map);	
+	
+	var  eje = L.geoJson(eje, {
+			style: style2,
+			
+	
+	onEachFeature:popUp,
+			
+	}).addTo(map);	
 
-	dc.lineChart("#cccm .start_dates",groupname)
-		.height(200)
-		.width(500)
-        .dimension(stdateDim)
-		.group(stdategp)
-		.x(d3.time.scale())
-	    .round(d3.time.month.round)
-	    .xUnits(d3.time.month)
-	    .elasticY(true)
-		.elasticX(true)
-		.margins({top: 10, right: 10, bottom: 30, left: 30})
-		.renderHorizontalGridLines(true)
-		.renderArea(true)
-		.dotRadius(8)
+	var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_choc,
+			   opacity:0.5
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) !==2014);
+    		    },
+	onEachFeature:popUp
+	}).addTo(map);
+
+
+	/*var  area_ngo2015 = L.geoJson(RRM_2016, {
+			style: couverture_2015
+	}).addTo(map);*/
+
+	
 		
-		.yAxisLabel('Nombre d’incidents')
-		.xAxis().ticks(8)
-		;
- 
+	var legend1 = L.control({position: 'bottomleft'});
+		legend1.onAdd = function (map) {
+				
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = ["Axe","Route","Alertes",],
+				labels = [],
+				from, to;
+			for (var i = 0; i < 2; i++) {
+				from = grades[i];
+				labels.push(
+					'<i style="background:' + getColor_2015(from) + '"></i> ' + from);
+			}
+			div.innerHTML = '<b>Couverture RRM 2016</b><br/>'+labels.join('<br>');
+			return div;
+		};
+	legend1.addTo(map);
+	
+/*var  prefectures = L.geoJson(pref, {
+			style: style,
+	}).addTo(map);*/
+	
+
+	
+//var miniMap = new L.Control.MiniMap(inset,{ toggleDisplay: true }).addTo(map);
 
 
-$('#reset').on('click', function (){
-  dc.filterAll(groupname);
-  dc.redrawAll(groupname);
-  return false;
-})
+var baseMaps = {
+        "Basemap":base,
+		"Image Sattelite":satt,
+		"Open Street Map Humanitaire":layer01,
+		"NationalGeographic":natgeo,
+		"Topographique":topo,
+		"Carte foncée":grey		
+        };
+
+var groupedOverlays = {
+	/*"Admistrative": {
+			"Préfectures":prefectures	   
+		  },*/
+	/*"Chocs": {
+			"Alertes reportés 2015":alerte_2015
+		 },*/
+	"axes": {
+			"Acces humanitaire":eje,
+			"Axes":axes
+		 },	 
+	/*"Couverture RRM": {
+		   "Couverture ONG 2015":area_ngo2015
+		 },
+    "Activité RRM": {
+			"Missions exploratoires 2015":mex_2015,
+			"MSA 2015":MSA_2015,
+			"Interventions RRM 2015":inter_2015
+		 }*/
+	};
+
+layersControl = L.control.groupedLayers(baseMaps, groupedOverlays);
+
+map.addControl(layersControl);
+
+L.control.scale({position:'bottomright'}).addTo(map);
+
+map.on('overlayadd', function (eventLayer) {
+    // Switch to the  legend...
+    if (eventLayer.name === 'Couverture ONG 2015') {
+        legend1.addTo(map);
+    }
+	
+});
+
+map.on('overlayremove', function (eventLayer) {
+    // Switch to the  legend...
+    if (eventLayer.name === 'Couverture ONG 2015') {
+        map.removeControl(legend1);
+    }
+});
 
 
-  dc.renderAll(groupname);
-}
+L.easyPrint().addTo(map)
 
-  
 </script>
-
- <script src="js/bootstrap.js"></script>
-<!-- Custom Theme JavaScript -->
-<script>
-// Closes the sidebar menu
-$("#menu-close").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
-
-// Opens the sidebar menu
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
-
-// Scrolls to the selected menu item on the page
-$(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
-    });
-});
-</script>
-
 </body>
-
-
 </html>
