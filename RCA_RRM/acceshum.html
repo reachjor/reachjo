@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="js/RRM_2016.js"></script>
 	<script type="text/javascript" src="js/access_hum.js"></script>
 	<script type="text/javascript" src="js/axes_access_hum.js"></script>
+	<script type="text/javascript" src="js/points_access_hum.js"></script>
 	
 	<script src="js/jquery-1.11.1.js"></script>
 	<script src="js/bootstrap.js"></script>
@@ -68,7 +69,7 @@
 							<li><a href="reference_2016.html">Carte de référence 2016</a></li>
 					  </ul>
             </li>
-				<li><a>Carte de référence 2016</a></li>
+				<li><a>Accès humanitaire</a></li>
 				<li><a href="index.html">Acceuil</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -116,13 +117,25 @@
 			position: 'topleft'
 		  }
 		  }).setView([6.6,19.90], 7);
-	
+		  
+		 
 	function popUp(features, layer) {
 		layer.bindPopup(
-		'<h3>'+features.properties.AxeDeplace+ '</h3>' +  (features ?
-        '<b>Axe: </b>' + features.properties.AxeDeplace 
-		+ '<br/><b>Secu: </b>' + features.properties.Secu
-		
+		'<h3>'+features.properties.Localité+ '</h3>' +  (features ?
+        '<b>Préfecture: </b>' + features.properties.Préfectur 
+		+ '<br/><b>Sous-Préfecture: </b>' + features.properties.Sous_Préf
+		+ '<br/><b>Nature problème: </b>' + features.properties.Nature_pro
+		+ '<br/><b>Statut: </b>' + features.properties.Statut
+		+ '<br/><b>Partenaire: </b>' + features.properties.Partenaire
+		+ '<br/><br/>' + features.properties.D1
+		+ '<br/>' + features.properties.D2
+		+ '<br/>' + features.properties.D3
+		+ '<br/>' + features.properties.D4
+		+ '<br/>' + features.properties.D5
+		+ '<br/>' + features.properties.D6
+		+ '<br/>' + features.properties.D7
+		+ '<br/>' + features.properties.D8
+		+ '<br/>' + features.properties.D9
         : '<b></b>')
 		)};
   
@@ -141,6 +154,14 @@
 	var ocean = L.esri.basemapLayer("Oceans");
 	var shade = L.esri.basemapLayer("ShadedRelief");
 	var grey = L.esri.basemapLayer("DarkGray");
+	
+	var _icon = function(d,map) {
+    return new L.Icon.Default({
+		iconUrl: 'image/camion.png',
+		iconSize:     [20, 20],
+		shadowSize:   [5, 5],
+		iconAnchor:   [10, 10],});
+  };
 	
         var layer01 = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 
@@ -181,6 +202,8 @@
 			};
 	}
 	
+	
+	
 	function style2(feature) {
 		return {
 			weight:5,
@@ -189,6 +212,16 @@
 			fillOpacity: 1,
 			fillColor:'red'
 			};
+	}		
+	function style3(feature) {
+		return {
+		iconUrl: 'image/camion.png',
+		iconSize:     [20, 20],
+		shadowSize:   [5, 5],
+		iconAnchor:   [10, 10],
+			
+			};		
+			
 	}
 	/*function couverture_2015(feature) {
 		return {
@@ -255,6 +288,13 @@
 	});*/
 	
 	
+	
+	var  localites = L.geoJson(localites, {
+			style: style3,
+			onEachFeature:popUp,
+			
+	}).addTo(map);	
+	
 	var  axes = L.geoJson(axes, {
 			style: style1,
 			
@@ -264,11 +304,11 @@
 			style: style2,
 			
 	
-	onEachFeature:popUp,
+	
 			
 	}).addTo(map);	
 
-	var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
+	/*var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
@@ -282,7 +322,7 @@
     		        return (dateyear(new Date(feature.properties.startDate)) !==2014);
     		    },
 	onEachFeature:popUp
-	}).addTo(map);
+	}).addTo(map);*/
 
 
 	/*var  area_ngo2015 = L.geoJson(RRM_2016, {
@@ -291,7 +331,7 @@
 
 	
 		
-	var legend1 = L.control({position: 'bottomleft'});
+	/*var legend1 = L.control({position: 'bottomleft'});
 		legend1.onAdd = function (map) {
 				
 			var div = L.DomUtil.create('div', 'info legend'),
@@ -306,7 +346,7 @@
 			div.innerHTML = '<b>Couverture RRM 2016</b><br/>'+labels.join('<br>');
 			return div;
 		};
-	legend1.addTo(map);
+	legend1.addTo(map);*/
 	
 /*var  prefectures = L.geoJson(pref, {
 			style: style,
@@ -335,7 +375,8 @@ var groupedOverlays = {
 		 },*/
 	"axes": {
 			"Acces humanitaire":eje,
-			"Axes":axes
+			//"Axes":axes,
+			//"Localités":localites
 		 },	 
 	/*"Couverture RRM": {
 		   "Couverture ONG 2015":area_ngo2015
