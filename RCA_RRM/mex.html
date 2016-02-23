@@ -194,8 +194,13 @@ a:hover{text-decoration: underline;}
 									</div>	
 							</div>	
 							<div  class="col-md-4">
-								<div  class="PopAffectee" id="cccm" class="dc-chart"><h4>Type de population affectée</h4><h5>Nombre d'alertes reportées</h5></br></div>
-							  </div>
+								
+								<div  class="deplaces" id="cccm" class="dc-chart"><h4>Type de population affectée par alerte</h4><h5>Nombre d'alertes reportées</h5></div>
+								<div  class="retournes" id="cccm" class="dc-chart"></div>
+								<div  class="accueil" id="cccm" class="dc-chart"></div>
+								<div  class="autre" id="cccm" class="dc-chart"></div>
+																			
+							</div>
 						
 						</div>
 						<div class="row">
@@ -415,7 +420,63 @@ function drawMarkerArea(data) {
   dc.pieChart("#cccm .popAutreDIV",groupname).dimension(popAutrDim).group(popAutrGP).width(65).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#FF6600']));
   
   
-   var PopAffDim  = xf.dimension(function(d) { 
+  //*******
+
+			  
+			  
+		var pref = xf.dimension(function(d) { return d.CodePrefecture; });
+
+  var popdeplace = pref.group().reduceSum(function (d) { if (d.Type_pop_Deplaces == "Oui" )
+			  return 1; else return 0; });
+  var popretourne = pref.group().reduceSum(function (d) { if (d.Type_pop_Retours == "Oui" )
+			  return 1;else return 0;  });
+  var popaccueil = pref.group().reduceSum(function (d) { if (d.Type_pop_Communaute_hote == "Oui" )
+			  return 1;else return 0;  });
+  var popautre = pref.group().reduceSum(function (d) { if (d.Type_pop_Autre == "Oui" )
+			  return 1; else return 0; });
+ 
+
+	
+	dc.rowChart("#cccm .deplaces",groupname)
+        .dimension(pref)
+        .group(popdeplace)
+        .width(300)
+        .height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Deplacés: "+d.value+""; })
+		.margins({top: 10, right: 5, bottom: -1, left: 10})
+		.x(d3.scale.linear().domain([0, .5]));  
+	dc.rowChart("#cccm .retournes",groupname)
+        .dimension(pref)
+        .group(popretourne)
+        .width(300)
+        .height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Retournés: "+d.value+""; })
+		.margins({top: 10, right: 5, bottom: -1, left: 10})
+		.x(d3.scale.linear().domain([0, .5]));  	
+	dc.rowChart("#cccm .accueil",groupname)
+        .dimension(pref)
+        .group(popaccueil)
+        .width(300)
+        .height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Communaute hôte: "+d.value+""; })
+		.margins({top: 10, right: 5, bottom: -1, left: 10})
+		.x(d3.scale.linear().domain([0, .5]));  
+	dc.rowChart("#cccm .autre",groupname)
+        .dimension(pref)
+        .group(popautre)
+        .width(300)
+        .height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Autres: "+d.value+""; })
+		.margins({top: 10, right: 5, bottom: -1, left: 10})
+		.x(d3.scale.linear().domain([0, .5]));
+		
+	//********	
+  
+   /*var PopAffDim  = xf.dimension(function(d) { 
 		if (d.Type_pop_Deplaces == "Oui" )
 			  return "Déplacés"
 			else if (d.Type_pop_Retours == "Oui")
@@ -428,7 +489,9 @@ function drawMarkerArea(data) {
 			else 
 			  return "Autre"  
 			 
-			});  
+			}); 
+
+			
   var PopAffsect = PopAffDim.group().reduceCount();
 
   dc.rowChart("#cccm .PopAffectee",groupname)
@@ -442,7 +505,7 @@ function drawMarkerArea(data) {
         .colors(['#CC3333'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(5).tickFormat(d3.format(""));	
+        .xAxis().ticks(5).tickFormat(d3.format(""));	*/
 	
 	var TestDim  = xf.dimension(function(d) { 
 		if (d.Statut_MEX_Complete == "Oui" )
