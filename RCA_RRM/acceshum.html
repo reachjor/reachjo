@@ -11,14 +11,15 @@
 	
 	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
 	<script type="text/javascript" src="js/RRM_2016.js"></script>
-	<script type="text/javascript" src="js/access_hum.js"></script>
+	<!--<script type="text/javascript" src="js/access_hum.js"></script>-->
 	<script type="text/javascript" src="js/axes_access_hum.js"></script>
 	<script type="text/javascript" src="js/points_access_hum.js"></script>
+	<script type="text/javascript" src="js/access_hum.js"></script>
 	
 	<script src="js/jquery-1.11.1.js"></script>
 	<script src="js/bootstrap.js"></script>
 	 
-    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
     <script src="leaflet/leaflet-src.js"></script>
 		
 	<script src="js/leaflet.groupedlayercontrol.js"></script>
@@ -95,6 +96,7 @@
 
 	var LeafIcon = L.Icon.extend({
 				options: {
+					iconUrl: 'image/camion.png',
 					iconSize:     [25, 25],
 					iconAnchor:   [0, 0],
 					}
@@ -102,7 +104,8 @@
 
 	var LeafIconMSA = L.Icon.extend({
 				options: {
-					iconSize:     [25, 23],
+				iconUrl: 'image/camion.png',
+					iconSize:     [25, 25],
 					iconAnchor:   [0, 0],
 					}
 			});
@@ -116,7 +119,7 @@
 		  fullscreenControlOptions: {
 			position: 'topleft'
 		  }
-		  }).setView([6.6,19.90], 7);
+		  }).setView([6.6,19.90], 6);
 		  
 		 
 	function popUp(features, layer) {
@@ -155,13 +158,6 @@
 	var shade = L.esri.basemapLayer("ShadedRelief");
 	var grey = L.esri.basemapLayer("DarkGray");
 	
-	var _icon = function(d,map) {
-    return new L.Icon.Default({
-		iconUrl: 'image/camion.png',
-		iconSize:     [20, 20],
-		shadowSize:   [5, 5],
-		iconAnchor:   [10, 10],});
-  };
 	
         var layer01 = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 
@@ -223,16 +219,7 @@
 			};		
 			
 	}
-	/*function couverture_2015(feature) {
-		return {
-			weight:0,
-			opacity: 0.9,
-			color: 'white',
-			dashArray: '3',
-			fillOpacity: 0.5,
-			fillColor: getColor_2015(feature.properties.RRM_2016)
-			};
-	}*/
+
 
 
 	/*var MSA_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
@@ -253,47 +240,38 @@
 
 
 	
-	var inter_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
-	{
-	dataType:"json",
-	pointToLayer: function (feature, latlng) {
-			return L.marker(latlng, {
-			   icon: symb_dist,
-			   opacity:0.9
-			 });
-			 
-			 },
-	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
-    		    },
-	onEachFeature:popUp
-	});
-	
-	
-	
-	var mex_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
-	{
-	dataType:"json",
-	pointToLayer: function (feature, latlng) {
-			return L.marker(latlng, {
-			   icon: symb_mex,
-			   opacity:0.9
-			 });
-			 
-			 },
-	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
-    		    },
-	onEachFeature:popUp
-	});*/
+*/
+	var _icon = L.icon({
+		iconUrl: 'image/camion.png',
+		iconSize:     [120, 120],
+		shadowSize:   [5, 5],
+		iconAnchor:   [10, 10],});
 	
 	
 	
 	var  localites = L.geoJson(localites, {
-			style: style3,
+			pointToLayer: function(feature, latlng) {
+   var smallIcon = L.icon({
+                      iconSize: [20, 20],
+                      iconAnchor: [13, 20],
+                      popupAnchor:  [1, -20],
+                      iconUrl: 'image/camion.png'
+   });
+
+   return L.marker(latlng, {icon: smallIcon});},
+   
+   filter: function(feature, layer) {
+    		        return (feature.properties.Nature_pro !=="");
+    		    },
+
 			onEachFeature:popUp,
 			
+			
 	}).addTo(map);	
+	
+
+	
+	
 	
 	var  axes = L.geoJson(axes, {
 			style: style1,
@@ -304,25 +282,24 @@
 			style: style2,
 			
 	
-	
 			
 	}).addTo(map);	
 
-	/*var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
+	var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
 	{
 	dataType:"json",
 	pointToLayer: function (feature, latlng) {
 			return L.marker(latlng, {
 			   icon: symb_choc,
-			   opacity:0.5
+			   opacity:0.3
 			 });
 			 
 			 },
 	filter: function(feature, layer) {
-    		        return (dateyear(new Date(feature.properties.startDate)) !==2014);
+    		        return (dateyear(new Date(feature.properties.startDate)) >2013);
     		    },
 	onEachFeature:popUp
-	}).addTo(map);*/
+	}).addTo(map);
 
 
 	/*var  area_ngo2015 = L.geoJson(RRM_2016, {
@@ -374,9 +351,10 @@ var groupedOverlays = {
 			"Alertes reportés 2015":alerte_2015
 		 },*/
 	"axes": {
-			"Acces humanitaire":eje,
-			//"Axes":axes,
-			//"Localités":localites
+			"Axes":eje,
+			"Routes":axes,
+			"Accèes humanitaire":localites,
+			
 		 },	 
 	/*"Couverture RRM": {
 		   "Couverture ONG 2015":area_ngo2015
