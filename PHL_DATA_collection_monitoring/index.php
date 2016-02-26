@@ -1,3 +1,9 @@
+<?php
+
+$password = "unicef"; 
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <head>
@@ -21,8 +27,15 @@
 
 </head>
 
+<?php 
+// If password is valid let the user get access
+if (isset($_POST["password"]) && ($_POST["password"]=="$password")) {
+?>
+<!-- START OF HIDDEN HTML - PLACE YOUR CONTENT HERE -->
 
-<body>
+
+
+<body id="page-top" class="index">
   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
@@ -65,7 +78,8 @@
       <p id="title"><h3>Phillipines PhAST Endline - Data Collection Monitoring</h3></p>
             <div class="row" id="cccm">
                 <div class="col-md-10">
-                 <br><a class="reset btn btn-primary btn-sm" id="reset" href="#">Reset All</a>
+                 <br><a class="reset btn btn-primary btn-sm" id="reset" href="#">Reset All</a>&nbsp;&nbsp;<a class="reset btn btn-primary btn-sm" id="data" href="data/PHL_PHAST_HH.csv">Download the Data</a><br><br>
+            
 
                     </div>
 
@@ -453,8 +467,8 @@ function drawMarkerArea(data) {
       .center([11.234180,124])
       .zoom(8)
       .cluster(true)
-      .renderPopup(false)
-      .filterByArea(false)
+      .renderPopup(true)
+      .filterByArea(true)
       //.clusterObject({ maxClusterRadius: 40, disableClusteringAtZoom:10,spiderfyOnMaxZoom: false,showCoverageOnHover: false})
     ;
 	
@@ -741,7 +755,20 @@ $(function() {
 });
 </script>
 
-</body>
 
+<!-- END OF HIDDEN HTML -->
+<?php 
+}
+else
+{
+// Wrong password or no password entered display this message
+if (isset($_POST['password']) || $password == "") {
+  print "<p align=\"center\"><font color=\"red\"><b>Incorrect Password</b><br>Please enter the correct password</font></p>";}
+  print "<form method=\"post\"><p align=\"center\">Please enter your password for access<br>";
+  print "<input name=\"password\" type=\"password\" size=\"25\" maxlength=\"10\"><input value=\"Login\" type=\"submit\"></p></form>";
+}
+?>
+
+</body>
 
 </html>
