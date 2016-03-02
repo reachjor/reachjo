@@ -461,7 +461,7 @@ function drawMarkerArea(data) {
 		 // var pr_AutreDim = xf.dimension(function(d) { return d["Proposition_Action_Autre"]; });
 		  //var pr_AutreGP = pr_AutreDim.group();
 
-		  dc.pieChart("#cccm .Rec_Abris_NFI_DIV",groupname).dimension(Rec_Abris_NFI_DIM).group(Rec_Abris_NFI_Group).width(60).height(80).innerRadius(15).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_Abris_NFI_DIV",groupname).dimension(Rec_Abris_NFI_DIM).group(Rec_Abris_NFI_Group).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
 		  dc.pieChart("#cccm .Rec_WASH_DIV",groupname).dimension(Rec_WASH_Dim).group(Rec_WASH_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
 		  dc.pieChart("#cccm .Rec_pas_inter_DIV",groupname).dimension(Rec_pas_inter_Dim).group(Rec_pas_inter_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
 		  dc.pieChart("#cccm .Rec_sante_DIV",groupname).dimension(Rec_sante_Dim).group(Rec_sante_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
