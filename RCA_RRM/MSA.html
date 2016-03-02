@@ -40,7 +40,7 @@ p{margin: 8px 0 20px 0; line-height: 18px;}
 a, a:visited{color: #397DB8; text-decoration: none;}
 a:hover{text-decoration: underline;}
 
-.wrapper{display: block; margin: 0px 0 0 0; padding: 4px 30px 0 30px;}
+.wrapper{Rec_sante_lay: block; margin: 0px 0 0 0; padding: 4px 30px 0 30px;}
 
 .map{background-color:#eee; position: absolute; top: 50px; left: 0; bottom: 0; width: 50%; *height:100%;}
 .sidepanel{background-color:#b6b6b6; position: absolute; top: 50px; right: 0;  bottom: 0; width: 50%; *height: 100%; overflow: auto}
@@ -51,7 +51,7 @@ a:hover{text-decoration: underline;}
 .titleBlock{text-align: right;
 /* Here are the styles that makes the template responsive*/
 @media only screen and (max-width: 768px) {
-  .map{position: inherit; height: 400px; width: 100%; display: block;}
+  .map{position: inherit; height: 400px; width: 100%; Rec_sante_lay: block;}
   .sidepanel{position: inherit; width: 100%;}
 }
 @media only screen and (max-width: 480px) {
@@ -116,7 +116,7 @@ a:hover{text-decoration: underline;}
       </div>
     </nav>   
 	
-   <div style="display: block;"  id="dashboard">
+   <div style="Rec_sante_lay: block;"  id="dashboard">
              <div class="row" id="cccm">
                 <div  class="map" id="cccm"  > </div>
 
@@ -217,32 +217,32 @@ a:hover{text-decoration: underline;}
 								<div class="col-md-7"><h4>Proposition d'action</br> </br></h4/>	
 										<div class="row-fluid">
 											<div  class="col-md-4">
-													  <div class="proMSADIV" id="#cccm" class="dc-chart"  ><h6>Intervention</br>NFI</br></h6/></div>
+													  <div class="Rec_Abris_NFI_DIV" id="#cccm" class="dc-chart"  ><h6>Intervention</br>NFI</br></h6/></div>
 											</div>
 											<div  class="col-md-4">
-													  <div class="pr_dirDIV" id="#cccm" class="dc-chart"  ><h6>Intervention</br>WASH</br></h6/></div>
+													  <div class="Rec_WASH_DIV" id="#cccm" class="dc-chart"  ><h6>Intervention</br>WASH</br></h6/></div>
 											</div>
 											<div  class="col-md-4">					 
-													  <div class="pro_accDIV"  id="#cccm"  class="dc-chart"><h6>Pas d'intervention</br></br></h6/></div>
+													  <div class="Rec_pas_inter_DIV"  id="#cccm"  class="dc-chart"><h6>Pas d'intervention</br></br></h6/></div>
 											</div>
 										</div>
 										<div class="row-fluid">	
 											<div  class="col-md-4">
-													  <div class="protDIV" id="#cccm" class="dc-chart" ><h6>Intervention</br>protection</br></h6/></div>
+													  <div class="Rec_prot_DIV" id="#cccm" class="dc-chart" ><h6>Intervention</br>Protection</br></h6/></div>
 											</div>
 											<div  class="col-md-4">
-													  <div class="dispDIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Santé/Nutrition</br></h6/></div>
+													  <div class="Rec_sante_DIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Santé/Nutrition</br></h6/></div>
 											</div>
 											<div  class="col-md-4">
-													  <div class="pr_sectDIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Securité Alimentaire</br></h6/></div>
+													  <div class="Rec_sec_alim_DIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Securité Alimentaire</br></h6/></div>
 											</div>
 										</div>	
 										<div class="row-fluid">
 											<div  class="col-md-4">
-													  <div class="pr_logDIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Education</br></h6/></div>
+													  <div class="Rec_educ_DIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Education</br></h6/></div>
 											</div>
 											<div  class="col-md-4">
-													  <div class="pr_PasActionDIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Logistique</br></h6/></div>
+													  <div class="Rec_log_DIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Logistique</br></h6/></div>
 											</div>
 											<!--<div  class="col-md-4">
 													  <div class="pr_AutreDIV" id="#cccm" class="dc-chart"><h6>Intervention</br>Logistique</br><</h6/></div>
@@ -432,43 +432,43 @@ function drawMarkerArea(data) {
         .colorAccessor(function(d, i){return 1;})
         .xAxis().ticks(4).tickFormat(d3.format("s"));
 
-		//************ Recommandation_Intervention_NFI,Recommandation_Intervention_EAH,Recommandation_Pas_intervention,Recommandation_Intervention_Sante,Recommandation_Intervention_Protection,Recommandation_Securite_Alimentaire,Recommandation_Intervention_Education,Recommandation_Intervention_Logistique
+		//************ Recommandation_Intervention_NFI,Recommandation_Intervention_EAH,Recommandation_Pas_intervention,Recommandation_Intervention_Sante,Recommandation_Intervention_Rec_WASH_ection,Recommandation_Securite_Alimentaire,Recommandation_Intervention_Education,Recommandation_Intervention_Logistique
 		
-		  var pro_accDIM = xf.dimension(function(d) { return d["Recommandation_Intervention_NFI"]; });
-		  var pro_accGroup = pro_accDIM.group();  
+		  var Rec_Abris_NFI_DIM = xf.dimension(function(d) { return d["Recommandation_Intervention_NFI"]; });
+		  var Rec_Abris_NFI_Group = Rec_Abris_NFI_DIM.group();  
 		  
-		  var protDim = xf.dimension(function(d) { return d["Recommandation_Intervention_EAH"]; });
-		  var protGP = protDim.group();  
+		  var Rec_WASH_Dim = xf.dimension(function(d) { return d["Recommandation_Intervention_EAH"]; });
+		  var Rec_WASH_GP = Rec_WASH_Dim.group();  
 		  
-		  var proMSADim = xf.dimension(function(d) { return d["Recommandation_Pas_intervention"]; });
-		  var proMSAGP = proMSADim.group();
+		  var Rec_pas_inter_Dim = xf.dimension(function(d) { return d["Recommandation_Pas_intervention"]; });
+		  var Rec_pas_inter_GP = Rec_pas_inter_Dim.group();
 		  
-		  var dispDim = xf.dimension(function(d) { return d["Recommandation_Intervention_Sante"]; });
-		  var dispGP = dispDim.group();
+		  var Rec_sante_Dim = xf.dimension(function(d) { return d["Recommandation_Intervention_Sante"]; });
+		  var Rec_sante_GP = Rec_sante_Dim.group();
 			
-		  var pr_dirDim = xf.dimension(function(d) { return d["Recommandation_Intervention_Protection"]; });
-		  var pr_dirGP = pr_dirDim.group();
+		  var Rec_prot_Dim = xf.dimension(function(d) { return d["Recommandation_Intervention_Protection"]; });
+		  var Rec_prot_GP = Rec_prot_Dim.group();
 
-		  var pr_sectDim = xf.dimension(function(d) { return d["Recommandation_Securite_Alimentaire"]; });
-		  var pr_sectGP = pr_sectDim.group();
+		  var Rec_sec_alim_Dim = xf.dimension(function(d) { return d["Recommandation_Securite_Alimentaire"]; });
+		  var Rec_sec_alim_GP = Rec_sec_alim_Dim.group();
 
-		  var pr_logDim = xf.dimension(function(d) { return d["Recommandation_Intervention_Education"]; });
-		  var pr_logGP = pr_logDim.group();
+		  var Rec_educ_Dim = xf.dimension(function(d) { return d["Recommandation_Intervention_Education"]; });
+		  var Rec_educ_GP = Rec_educ_Dim.group();
 		  
-		  var pr_PasActionDim = xf.dimension(function(d) { return d["Recommandation_Intervention_Logistique"]; });
-		  var pr_PasActionGP = pr_PasActionDim.group();
+		  var Rec_log_Dim = xf.dimension(function(d) { return d["Recommandation_Intervention_Logistique"]; });
+		  var Rec_log_GP = Rec_log_Dim.group();
 
 		 // var pr_AutreDim = xf.dimension(function(d) { return d["Proposition_Action_Autre"]; });
 		  //var pr_AutreGP = pr_AutreDim.group();
 
-		  dc.pieChart("#cccm .pro_accDIV",groupname).dimension(pro_accDIM).group(pro_accGroup).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
-		  dc.pieChart("#cccm .protDIV",groupname).dimension(protDim).group(protGP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
-		  dc.pieChart("#cccm .proMSADIV",groupname).dimension(proMSADim).group(proMSAGP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
-		  dc.pieChart("#cccm .dispDIV",groupname).dimension(dispDim).group(dispGP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
-		  dc.pieChart("#cccm .pr_dirDIV",groupname).dimension(pr_dirDim).group(pr_dirGP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
-		  dc.pieChart("#cccm .pr_sectDIV",groupname).dimension(pr_sectDim).group(pr_sectGP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
-		  dc.pieChart("#cccm .pr_logDIV",groupname).dimension(pr_logDim).group(pr_logGP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
-		  dc.pieChart("#cccm .pr_PasActionDIV",groupname).dimension(pr_PasActionDim).group(pr_PasActionGP).width(65).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_Abris_NFI_DIV",groupname).dimension(Rec_Abris_NFI_DIM).group(Rec_Abris_NFI_Group).width(60).height(80).innerRadius(15).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_WASH_DIV",groupname).dimension(Rec_WASH_Dim).group(Rec_WASH_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_pas_inter_DIV",groupname).dimension(Rec_pas_inter_Dim).group(Rec_pas_inter_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_sante_DIV",groupname).dimension(Rec_sante_Dim).group(Rec_sante_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_prot_DIV",groupname).dimension(Rec_prot_Dim).group(Rec_prot_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_sec_alim_DIV",groupname).dimension(Rec_sec_alim_Dim).group(Rec_sec_alim_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_educ_DIV",groupname).dimension(Rec_educ_Dim).group(Rec_educ_GP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
+		  dc.pieChart("#cccm .Rec_log_DIV",groupname).dimension(Rec_log_Dim).group(Rec_log_GP).width(65).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
 		  //dc.pieChart("#cccm .pr_AutreDIV",groupname).dimension(pr_AutreDim).group(pr_AutreGP).width(60).height(80).innerRadius(10).colors(d3.scale.ordinal().range(  [ '#999999', '#3182bd']));
 	
 			//************
@@ -611,7 +611,7 @@ var ScoreNFIDim = ScoreNFI.group().reduceCount();
         .width(300)
         .height(50)
         .colors(['#CC3333'])
-		.label(function(d) { return "Intervention Protection: "+d.value; })
+		.label(function(d) { return "Intervention Rec_WASH_ection: "+d.value; })
 		.margins({top: 10, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.3]));
 	  dc.rowChart("#cccm .PropAction5",groupname)
