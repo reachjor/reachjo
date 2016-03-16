@@ -15,7 +15,6 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 5582296,26.03.2015,13.02.2015,13.02.2015,PU-AMI,Ore,,PU_ORE_20150213,2015,Février,1,50,250,Violences,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Gamboula,,Mambere-Kadei,,,,Basse-Boumne,15.082169,4.364897
 669751996,03.03.2015,13.02.2015,13.02.2015,PU-AMI,Dilapoko,,PU_DIL_20150213,2015,Février,1,35,200,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Gamboula,,Mambere-Kadei,,,,Basse-Boumne,15.091660,4.363720
 1417911225,26.03.2015,13.02.2015,13.02.2015,PU-AMI,Amada Gaza,,PU_AMA_20150213,2015,Février,1,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Amada-Gaza,,Mambere-Kadei,,,,,15.209111,4.768658
-951466354,26.02.2015,18.11.2014,17.02.2015,ACF,Bogbatoyo,,ACF_BOG_20141118,2015,Février,1,100,500,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Bouar,,Nana-Mambere,,,,Herman-Brousse,15.605226,6.299334
 1318087270,03.03.2015,17.02.2015,17.02.2015,ACTED,Mobaye - gp Mangbango,,ACTED_MOB_20150217,2015,Février,,558,4469,Violences,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,,Mobaye,,Basse-Kotto,,,,Mobaye,21.176833,4.319708
 820870656,24.03.2015,18.02.2015,18.02.2015,ACF,Gbabiro,,ACF_GBA_20150218,2015,Février,1,300,60,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Bossangoa,,Ouham,,,,Ben Zambe,17.697580,6.849218
 1749632908,03.03.2015,20.02.2015,20.02.2015,ACF,Bofire,,ACF_GBB_20150220,2015,Février,3,243,1215,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Bossangoa,,Ouham,,,,Ben Zambe,17.766026,6.718610
@@ -27,14 +26,12 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 1008409191,26.02.2015,25.02.2015,25.02.2015,DRC,Sanguere 3,,DRC_SAN_20150225,2015,Février,1,0,0,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,,Koui,,Ouham Pende,,,,Koui,15.337074,6.966833
 2134449430,02.04.2015,25.02.2015,25.02.2015,DRC,Bokambaye 1,,DRC_BOK_20150225,2015,Février,8,1128,9024,Violences,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Kabo,,Ouham,,,,Ouaki,18.481154,7.305997
 1647061525,14.04.2015,27.02.2015,27.02.2015,ACTED,Derbissaka,,ACTED_DER_20150227,2015,Février,1,350,1750,Violences,Non,Oui,Non,Non,Non,Oui,Non,Non,Oui,Non,,Rafai,,Mbomou,,,,Rafai,24.847812,5.774286
-1190891277,06.04.2015,16.12.2014,28.02.2015,SI,Grivaï,,SI_MBR_20141216,2015,Février,1,525,3150,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Grivai-Pamia,19.437234,7.064233
 2146681476,20.03.2015,02.03.2015,02.03.2015,DRC,Mbada,,DRC_MBA_20150302,2015,Mars,1,273,1248,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Bouca,,Ouham,,,,Lady Gbawi,18.562368,6.865547
 1339015537,26.03.2015,03.03.2015,03.03.2015,PU-AMI,Nao,,PU_NAO_20150303,2015,Mars,1,20,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Berberati,,Mambere-Kadei,,,,Ouakanga,15.318057,4.526812
 2041379947,24.03.2015,12.02.2015,05.03.2015,DRC,Bebingui,,DRC_BEB_20150212,2015,Mars,1,207,900,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Paoua,,Ouham Pende,,,,Mia-Pende,16.526000,7.814075
 367573177,19.03.2015,05.03.2015,05.03.2015,ACF,Kaboro,,ACF_KAB_20150305,2015,Mars,1,120,559,Violences,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Non,,Nana-Bakassa,,Ouham,,,,Nana-Bakassa,17.529444,6.970833
 892270109,20.03.2015,05.03.2015,05.03.2015,ACTED,Agoumar,,ACTED_AGO_20150305,2015,Mars,,610,3050,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,,Rafai,,Mbomou,,,,Rafai,23.917023,4.993979
 1085341919,20.03.2015,05.03.2015,05.03.2015,ACTED,Ngoulinga,,ACTED_NGO_20150305,2015,Mars,,,95,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Grimari,,Ouaka,,,,Grimari,20.069115,5.709005
-2028524849,02.04.2015,16.12.2014,08.03.2015,ACF,Bondiba,,ACF_BON_20141216,2015,Mars,1,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Baboua,,Nana-Mambere,,,,Baboua,14.794725,5.535135
 996289601,26.02.2015,13.01.2015,09.03.2015,SI,Kabo,,SI_KAB_20150113,2015,Mars,1,352,1765,Autre,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,,Kabo,,Ouham,,,,Sido,18.629944,7.697565
 306076340,20.03.2015,08.03.2015,12.03.2015,ACTED,Andjikapa,,ACTED_AND_20150308,2015,Mars,1,41,204,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Zangba,,Basse-Kotto,,,,,20.750833,4.744444
 441603790,26.03.2015,12.03.2015,12.03.2015,ACTED,Goussoubanda,,ACTED_GOU_20150312,2015,Mars,,85,410,Violences,Oui,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,,Bambari,,Ouaka,,,,Pladama-Ouaka,20.559548,5.895595
@@ -149,7 +146,7 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 363502615,19.10.2015,20.08.2015,28.08.2015,ACTED,Awatche,,ACT_AWA_20150820,2015,Août,,4000,20000,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Bambari,,Ouaka,,,,Pladama-Ouaka,20.508512,5.630318
 1007492566,24.08.2015,28.08.2015,28.08.2015,ACTED,Bambari,,ACT_BAM_20150828,2015,Août,,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Bambari,,Ouaka,,,,Bambari,20.654183,5.764845
 148241053,01.09.2015,29.08.2015,30.08.2015,ACTED,Kpadou,,ACTED_KPA_20150829,2015,Août,5,184,920,Autre,Non,Non,Oui,Non,Non,Non,Oui,Non,Oui,Oui,,Kembe,,Basse-Kotto,,,,Mboui,21.375632,4.531658
-293957742,15.09.2015,04.09.2015,06.09.2015,ACTED,Bangao,,ACT_BAN_20150904,2015,Août,,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Kouango,,Ouaka,,,,Azengue-Mindou,20.178450,5.271880
+293957742,15.09.2015,04.09.2015,06.09.2015,ACTED,Bangao,,ACT_BAN_20150904,2015,Septembre,,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Kouango,,Ouaka,,,,Azengue-Mindou,20.178450,5.271880
 1349460814,20.10.2015,05.09.2015,06.09.2015,ACTED,Walago,,ACT_WAL_20150905,2015,Septembre,,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Zangba,,Basse-Kotto,,,,Yabongo,20.695000,4.623000
 1037287338,08.09.2015,04.09.2015,07.09.2015,ACF,Mala,,ACF_MAL_20150904,2015,Septembre,5,138,828,Violences,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Non,,Mala,,Kemo,,,,Mala,19.509564,6.110160
 1682735958,15.09.2015,08.09.2015,10.09.2015,ACTED,Manoeuvre,,ACT_MAN_20150908,2015,Septembre,,36,180,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Zangba,,Basse-Kotto,,,,Yabongo,20.752234,4.433675
@@ -159,19 +156,19 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 1596665262,19.10.2015,24.09.2015,25.09.2015,ACTED,Bianga,,ACT_BIA_20150924,2015,Septembre,,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Kouango,,Ouaka,,,,Kouango,20.400000,4.830000
 650987229,15.09.2015,03.09.2015,26.09.2015,ACTED,Gbakoro,,ACT_GBA_20150903,2015,Septembre,,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Zangba,,Basse-Kotto,,,,Yabongo,20.600900,4.569990
 129794558,09.12.2015,28.09.2015,28.09.2015,ACTED,Bambari,,ACT_BAM_20150928,2015,Septembre,,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bambari,,Ouaka,,,,Bambari,20.667172,5.751444
-1641177811,14.10.2015,08.09.2015,09.10.2015,PU-AMI,Krakoma,,PU_KRA_20150909,2015,Septembre,2,130,650,Autre,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Ndele,,Bamingui-Bangoran,,,,Mbolo-Pata,21.281930,8.101935
-1401255514,20.10.2015,10.10.2015,11.10.2015,ACTED,Kouango,,ACT_KOU_20151010,2015,Septembre,,,,Violences,Oui,Non,Non,Non,Non,Non,Non,Oui,Oui,Oui,,Kouango,,Ouaka,,,,Kouango,19.973610,4.992821
-241535666,03.11.2015,14.10.2015,16.10.2015,ACTED,Kouango,,ACT_KOU_20151014,2015,Septembre,2,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Kouango,,Ouaka,,,,Kouango,19.973610,4.992821
-1018794876,14.09.2015,02.09.2015,21.10.2015,PU-AMI,Amada Gaza,,PU_AMA_20150902,2015,Septembre,3,513,2565,Violences,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Amada-Gaza,,Mambere-Kadei,,,,,15.209111,4.768658
-1232480986,08.09.2015,03.09.2015,21.10.2015,PU-AMI,Komasssa,,PU_KOM_20150903,2015,Septembre,2,300,1500,Autre,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Nola,,Sangha-Mbaere,,,,Nola,15.875968,3.654226
+1641177811,14.10.2015,08.09.2015,09.10.2015,PU-AMI,Krakoma,,PU_KRA_20150909,2015,Octobre,2,130,650,Autre,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Ndele,,Bamingui-Bangoran,,,,Mbolo-Pata,21.281930,8.101935
+1401255514,20.10.2015,10.10.2015,11.10.2015,ACTED,Kouango,,ACT_KOU_20151010,2015,Octobre,,,,Violences,Oui,Non,Non,Non,Non,Non,Non,Oui,Oui,Oui,,Kouango,,Ouaka,,,,Kouango,19.973610,4.992821
+241535666,03.11.2015,14.10.2015,16.10.2015,ACTED,Kouango,,ACT_KOU_20151014,2015,Octobre,2,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Kouango,,Ouaka,,,,Kouango,19.973610,4.992821
+1018794876,14.09.2015,02.09.2015,21.10.2015,PU-AMI,Amada Gaza,,PU_AMA_20150902,2015,Octobre,3,513,2565,Violences,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Amada-Gaza,,Mambere-Kadei,,,,,15.209111,4.768658
+1232480986,08.09.2015,03.09.2015,21.10.2015,PU-AMI,Komasssa,,PU_KOM_20150903,2015,Octobre,2,300,1500,Autre,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Nola,,Sangha-Mbaere,,,,Nola,15.875968,3.654226
 904954687,05.11.2015,23.10.2015,23.10.2015,ACF,Marali,,ACF_MAR_20151023,2015,Octobre,1,73,365,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Bouca,,Ouham,,,,,18.404156,6.036561
 2066545920,29.10.2015,27.10.2015,28.10.2015,SI,Kaga-Bandoro,,SI_KGA_20151027 ,2015,Octobre,1,,,Autre,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.185733,6.992369
 1031292972,05.11.2015,27.10.2015,30.10.2015,ACF,Boali,,ACF_BOA_20151030,2015,Octobre,1,204,1019,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,,Boali,,Ombella M'Poko,,,,Boali,18.208689,4.686586
-107718072,16.11.2015,31.10.2015,02.11.2015,ACTED,Gbakoro,,ACT_GBA_20151031,2015,Octobre,20,844,4220,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Zangba,,Basse-Kotto,,,,Yabongo,20.600900,4.569990
-778175813,05.11.2015,02.11.2015,03.11.2015,ACTED,Obo,,ACT_OBO_20151102,2015,Octobre,2,157,785,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Obo,,Haut-Mbomou,,,,Obo,26.488725,5.387019
-123514297,09.11.2015,05.11.2015,06.11.2015,PU-AMI,Nola,,PU_NOL_20151106,2015,Octobre,2,,,Catastrophe naturelle,Non,Non,Oui,Non,Oui,Oui,Non,Non,Oui,Oui,,Nola,,Sangha-Mbaere,,,,Nola,16.044940,3.524026
-832615349,16.11.2015,06.11.2015,07.11.2015,ACTED,Awatche,,ACT_AWA_20151106,2015,Octobre,,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Bambari,,Ouaka,,,,Pladama-Ouaka,20.508512,5.630318
-191534297,20.11.2015,07.11.2015,10.11.2015,ACTED,Béma,,ACT_BEM_20151107,2015,Octobre,,74,366,Catastrophe naturelle,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Ouango,,Mbomou,,,,Ouango,22.442181,4.142042
+107718072,16.11.2015,31.10.2015,02.11.2015,ACTED,Gbakoro,,ACT_GBA_20151031,2015,Novembre,20,844,4220,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Zangba,,Basse-Kotto,,,,Yabongo,20.600900,4.569990
+778175813,05.11.2015,02.11.2015,03.11.2015,ACTED,Obo,,ACT_OBO_20151102,2015,Novembre,2,157,785,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Obo,,Haut-Mbomou,,,,Obo,26.488725,5.387019
+123514297,09.11.2015,05.11.2015,06.11.2015,PU-AMI,Nola,,PU_NOL_20151106,2015,Novembre,2,,,Catastrophe naturelle,Non,Non,Oui,Non,Oui,Oui,Non,Non,Oui,Oui,,Nola,,Sangha-Mbaere,,,,Nola,16.044940,3.524026
+832615349,16.11.2015,06.11.2015,07.11.2015,ACTED,Awatche,,ACT_AWA_20151106,2015,Novembre,,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Bambari,,Ouaka,,,,Pladama-Ouaka,20.508512,5.630318
+191534297,20.11.2015,07.11.2015,10.11.2015,ACTED,Béma,,ACT_BEM_20151107,2015,Novembre,,74,366,Catastrophe naturelle,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Ouango,,Mbomou,,,,Ouango,22.442181,4.142042
 1221327230,16.11.2015,09.11.2015,10.11.2015,ACTED,Bambari,,ACT_BAM_20151109,2015,Novembre,,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bambari,,Ouaka,,,,Bambari,20.667172,5.751444
 1418331303,17.11.2015,12.11.2015,12.11.2015,ACF,Bedambou,,ACF_BED_20151112,2015,Novembre,1,205,1023,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Dekoa,,Kemo,,,,Tilo,19.326138,6.269261
 24038135,16.11.2015,11.11.2015,13.11.2015,ACTED,Ngakobo,,ACT_NGA_20151111,2015,Novembre,1,50,253,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Bambari,,Ouaka,,,,Ngougbia,20.730846,5.339652
@@ -187,16 +184,16 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 1869478070,08.12.2015,23.11.2015,23.11.2015,ACF,Bocaranga,,ACF_BOC_20151123,2015,Novembre,4,624,3120,Violences,Oui,Non,Non,Non,Non,Non,Oui,Oui,Oui,Oui,,Koui,,Ouham Pende,,,,Koui,15.359947,6.580138
 732336893,02.12.2015,24.11.2015,24.11.2015,SI,Mbali,,SI_MBA_20151124,2015,Novembre,1,200,1001,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Batangafo,,Ouham,,,,Bede,17.683236,7.217256
 427862879,12.01.2016,29.11.2015,29.11.2015,ACTED,Ndoro,,ACT_NDO_20151129,2015,Novembre,4,317,2000,Violences,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Kouango,,Ouaka,,,,,20.392742,5.141333
-809092554,04.11.2015,01.11.2015,01.12.2015,PU-AMI,Adoumindou,,PU_ADO_20151104,2015,Novembre,4,298,1489,Violences,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,,Bamingui,,Bamingui-Bangoran,,,,Vassako,20.611689,8.278108
-1703520161,14.07.2015,10.07.2015,04.12.2015,ACF,Ndengou,,ACF_NDE_20150710,2015,Novembre,8,800,4000,Violences,Non,Oui,Oui,Non,Oui,Non,Non,Non,Oui,Non,,Ndjoukou,,Kemo,,,,Galabadja,19.797664,5.119656
-1817905070,11.11.2015,06.11.2015,16.12.2015,PU-AMI,Miamani,,PU_MIA_20151106,2015,Novembre,,,,Autre,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,,Ndele,,Bamingui-Bangoran,,,,Dar El Kouti,20.000353,8.754661
-22934908,28.12.2015,20.12.2015,20.12.2015,ACF,Sangare lim,,ACF_SAN_20151221,2015,Novembre,5,134,800,Violences,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Koui,,Ouham Pende,,,,Koui,15.358343,6.950599
-1117658815,28.12.2015,20.12.2015,20.12.2015,ACF,Belge,,ACF_BOH_20151220,2015,Novembre,6,150,800,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bocaranga,,Ouham Pende,,,,Loura,15.798240,7.060915
+809092554,04.11.2015,01.11.2015,01.12.2015,PU-AMI,Adoumindou,,PU_ADO_20151104,2015,Décembre,4,298,1489,Violences,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,,Bamingui,,Bamingui-Bangoran,,,,Vassako,20.611689,8.278108
+1703520161,14.07.2015,10.07.2015,04.12.2015,ACF,Ndengou,,ACF_NDE_20150710,2015,Décembre,8,800,4000,Violences,Non,Oui,Oui,Non,Oui,Non,Non,Non,Oui,Non,,Ndjoukou,,Kemo,,,,Galabadja,19.797664,5.119656
+1817905070,11.11.2015,06.11.2015,16.12.2015,PU-AMI,Miamani,,PU_MIA_20151106,2015,Décembre,,,,Autre,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,,Ndele,,Bamingui-Bangoran,,,,Dar El Kouti,20.000353,8.754661
+22934908,28.12.2015,20.12.2015,20.12.2015,ACF,Sangare lim,,ACF_SAN_20151221,2015,Décembre,5,134,800,Violences,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Koui,,Ouham Pende,,,,Koui,15.358343,6.950599
+1117658815,28.12.2015,20.12.2015,20.12.2015,ACF,Belge,,ACF_BOH_20151220,2015,Décembre,6,150,800,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bocaranga,,Ouham Pende,,,,Loura,15.798240,7.060915
 1535349980,09.02.2016,30.12.2015,30.12.2015,ACTED,Bambari,,ACT_BAM_20151230,2015,Décembre,1,1420,7100,Catastrophe naturelle,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Bambari,,Ouaka,,,,Bambari,20.667172,5.751444
-577514276,12.01.2016,04.01.2016,04.01.2016,ACTED,Bangassou,,ACT_BAN_20160104,2015,Décembre,,,11,Autre,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Bangassou,,Mbomou,,,,,22.822237,4.740092
-1606354454,08.01.2016,04.01.2016,04.01.2016,SI,Kambakota,,SI_KAM_20160108,2015,Décembre,5,,,Violences,Oui,Non,Oui,Non,Non,Oui,Oui,Non,Oui,Oui,,Batangafo,,Ouham,,,,,17.861828,7.168890
-2100273016,12.01.2016,10.01.2016,10.01.2016,ACTED,Bambari,,ACT_BAM_20160110,2015,Décembre,5,500,2500,Catastrophe naturelle,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bambari,,Ouaka,,,,Bambari,20.667172,5.751444
-1483008452,19.01.2016,12.01.2016,12.01.2016,PU-AMI,Mbandjifolo,,PU_MBA_20160112,2015,Décembre,1,280,2324,Autre,Oui,Oui,Oui,Non,Oui,Non,Non,Non,Non,Oui,,Dede-Mokouba,,Mambere-Kadei,,,,,15.255556,4.075833
+577514276,12.01.2016,04.01.2016,04.01.2016,ACTED,Bangassou,,ACT_BAN_20160104,2016,janvier,,,11,Autre,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Bangassou,,Mbomou,,,,,22.822237,4.740092
+1606354454,08.01.2016,04.01.2016,04.01.2016,SI,Kambakota,,SI_KAM_20160108,2016,janvier,5,,,Violences,Oui,Non,Oui,Non,Non,Oui,Oui,Non,Oui,Oui,,Batangafo,,Ouham,,,,,17.861828,7.168890
+2100273016,12.01.2016,10.01.2016,10.01.2016,ACTED,Bambari,,ACT_BAM_20160110,2016,janvier,5,500,2500,Catastrophe naturelle,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bambari,,Ouaka,,,,Bambari,20.667172,5.751444
+1483008452,19.01.2016,12.01.2016,12.01.2016,PU-AMI,Mbandjifolo,,PU_MBA_20160112,2016,janvier,1,280,2324,Autre,Oui,Oui,Oui,Non,Oui,Non,Non,Non,Non,Oui,,Dede-Mokouba,,Mambere-Kadei,,,,,15.255556,4.075833
 80552975,15.01.2016,24.07.2015,15.01.2016,ACF,Bouca,,ACF_GBA_20150724,2016,janvier,3,457,2289,Violences,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,,Bouca,,Ouham,,,,Bouca Bobo,18.279259,6.502576
 271494050,21.01.2016,19.01.2016,19.01.2016,ACTED,Kpokpo,,ACT_KPO_20160119,2016,janvier,6,,,Violences,Oui,Non,Non,Non,Non,Oui,Oui,Non,Oui,Oui,,Yalinga,,Haute-Kotto,,,,Yalinga,22.602780,6.336714
 1145344283,21.01.2016,19.01.2016,19.01.2016,ACTED,Tambourah,,ACT_TAM_20160119,2016,janvier,1,70,350,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Zemio,,Haut-Mbomou,,,,Zemio,25.219842,5.175730
@@ -207,20 +204,32 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 554677387,01.02.2016,25.01.2016,25.01.2016,ACTED,Liwa,,ACT_LIW_20160125,2016,janvier,2,80,400,Violences,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bambari,,Ouaka,,,,Ngougbia,20.687470,5.681776
 1213619783,19.01.2016,12.01.2016,27.01.2016,PU-AMI,Dédé Makbouba,,PU_DED_20160112,2016,janvier,3,22,106,Autre,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Non,,Dede-Mokouba,,Mambere-Kadei,,,,,15.242819,3.916667
 1308062642,02.02.2016,31.01.2016,31.01.2016,ACTED,Bégoué,,ACT_BEG_20160131,2016,janvier,1,24,120,Violences,Oui,Non,Non,Non,Oui,Non,Oui,Non,Oui,Oui,,Zemio,,Haut-Mbomou,,,,Zemio,25.243000,5.224000
-1917734762,02.02.2016,01.02.2016,01.02.2016,PU-AMI,Pata,,PU_PAT_20160201,2016,février,2,460,2300,Autre,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Ndele,,Bamingui-Bangoran,,,,Mbolo-Pata,21.404942,8.057525
+968209457,08.03.2016,30.01.2016,01.02.2016,ACF,Koui,,ACF_SA2_20160130,2016,février,1,205,410,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Koui,,Ouham Pende,,,,Koui,15.453221,6.951955
 48416426,08.02.2016,03.02.2016,03.02.2016,ACTED,Mabo,,ACT_MAB_20160203,2016,février,,400,2000,Violences,Oui,Non,Non,Non,Oui,Non,Oui,Non,Oui,Oui,,Gambo,,Mbomou,,,,Gambo,22.533842,4.666018
 893065251,03.02.2016,03.02.2016,03.02.2016,SI,Grivaï,,SI_GRI_20160129,2016,février,,,7480,Autre,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Kaga-Bandoro,,Nana-Gribizi,,,,Grivai-Pamia,19.437234,7.064233
 1147204605,03.02.2016,03.02.2016,03.02.2016,SI,Farazala,,SI_FAR_20160129,2016,février,,,,Autre,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Kabo,,Ouham,,,,Ouaki,18.747848,7.383994
 1404436494,03.02.2016,03.02.2016,03.02.2016,SI,Mbres,,SI_MBR_20160129,2016,février,,,,Autre,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Mbres,,Nana-Gribizi,,,,Mbres,19.799937,6.667027
-2017099074,04.02.2016,11.01.2016,04.02.2016,ACF,Baba-yamsa,,ACF_Bab_20160111,2016,février,1,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bouar,,Nana-Mambere,,,,Niem-Yelewa,15.037000,6.693000
-1416899614,04.02.2016,30.01.2016,04.02.2016,ACF,Sangoldoro,,ACF_San_20160130,2016,février,1,205,410,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Koui,,Ouham Pende,,,,Koui,15.293645,6.779093
+2017099074,04.02.2016,11.01.2016,04.02.2016,ACF,Safou,,ACF_Bab_20160111,2016,février,1,,,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bouar,,Nana-Mambere,,,,Niem-Yelewa,14.999187,6.553593
+1416899614,04.02.2016,30.01.2016,04.02.2016,ACF,Bocaranga,,ACF_San_20160130,2016,février,1,205,410,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Koui,,Ouham Pende,,,,Koui,15.638319,6.996461
 1526649362,09.02.2016,06.02.2016,06.02.2016,ACTED,Kpabo,,ACT_KPA_20160206,2016,février,2,38,190,Catastrophe naturelle,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Obo,,Haut-Mbomou,,,,Mboki,25.839000,5.331000
 1862741766,09.02.2016,08.02.2016,08.02.2016,ACTED,Niakari,,ACT_NIA_20160208,2016,février,2,650,3250,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,,Bangassou,,Mbomou,,,,Sayo Niakari,22.753196,4.838819
+1320820901,23.02.2016,02.02.2016,10.02.2016,PU-AMI,Boganangone,,PU_BOG_20160202,2016,février,2,510,2550,Autre,Non,Oui,Oui,Non,Oui,Non,Non,Non,Oui,Non,,Boganangone,,Lobaye,,,,Boganangone,17.198067,4.695853
+1806620022,23.02.2016,02.02.2016,10.02.2016,PU-AMI,Mballa,,PU_MBA_20160202,2016,février,2,280,1401,Autre,Oui,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,,Ndele,,Bamingui-Bangoran,,,,Mbolo-Pata,20.861520,7.919522
 248079247,16.02.2016,10.02.2016,10.02.2016,ACTED,Koubou,,ACT_KOU_20160210,2016,février,1,33,150,Violences,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Obo,,Haut-Mbomou,,,,Obo,26.537658,5.324874
+269567087,08.03.2016,08.02.2016,11.02.2016,ACF,Bozakon,,ACF_Boz_20160208,2016,février,2,124,620,Violences,Oui,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bouca,,Ouham,,,,Lady Gbawi,18.504728,6.952119
 201415885,12.02.2016,04.02.2016,12.02.2016,ACF,Korakouri,,ACF_Kor_20160204,2016,février,1,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Nana-Bakassa,,Ouham,,,,Nana-Bakassa,17.490750,6.876346
-1597146417,12.02.2016,11.02.2016,12.02.2016,ACF,Gbakora,,ACF_Gba_20160211,2016,février,1,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Bossangoa,,Ouham,,,,Koro-M'poko,17.440966,6.074727
-168008509,14.10.2015,23.09.2015,17.02.2016,SI,Ouandago 4,,SI_OUA_20150923,2016,février,1,187,1304,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Nana-Outa,18.842700,7.262246
-1948767363,25.11.2015,24.09.2015,17.02.2016,SI,Lakouetene,,SI_MBR_20150924,2016,février,9,469,2345,Violences,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Mbres,,Nana-Gribizi,,,,Mbres,19.821494,6.609372
-1641251093,05.11.2015,01.11.2015,17.02.2016,SI,Bodjomo,,SI_BOD_20151101,2016,février,4,,,Autre,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,,Markounda,,Ouham,,,,Nana Markounda,17.136638,7.418152
-995947852,19.11.2015,10.11.2015,17.02.2016,SI,Batangafo,,SI_BAT_20151110,2016,février,,845,4225,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Batangafo,,Ouham,,,,Batangafo,18.285135,7.300987
+1597146417,12.02.2016,11.02.2016,12.02.2016,ACF,Gbakora,,ACF_Gba_20160211,,février,1,,,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Bossangoa,,Ouham,,,,Koro-M'poko,17.440966,6.074727
+168008509,14.10.2015,23.09.2015,17.02.2016,SI,Ouandago 4,,SI_OUA_20150923,2015,février,1,187,1304,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Nana-Outa,18.842700,7.262246
+1948767363,25.11.2015,24.09.2015,17.02.2016,SI,Lakouetene,,SI_MBR_20150924,2015,février,9,469,2345,Violences,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Mbres,,Nana-Gribizi,,,,Mbres,19.821494,6.609372
+1641251093,05.11.2015,01.11.2015,17.02.2016,SI,Bodjomo,,SI_BOD_20151101,2015,février,4,,,Autre,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,,Markounda,,Ouham,,,,Nana Markounda,17.136638,7.418152
+995947852,19.11.2015,10.11.2015,17.02.2016,SI,Batangafo,,SI_BAT_20151110,2015,février,,845,4225,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,,Batangafo,,Ouham,,,,Batangafo,18.285135,7.300987
 739716977,01.02.2016,28.01.2016,17.02.2016,SI,Botto,,SI_BOT_20160121,2016,février,6,,,Violences,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Botto,19.100667,6.975222
+1321643473,23.02.2016,17.02.2016,17.02.2016,PU-AMI,Amada Gaza,,PU_GBA_20160217,,février,1,190,950,Autre,Oui,Oui,Oui,Non,Oui,Non,Non,Non,Oui,Oui,,Amada-Gaza,,Mambere-Kadei,,,,,15.209111,4.768658
+470308826,23.02.2016,21.02.2016,22.02.2016,ACF,Koba,,ACF_Kob_20160223,,février,1,369,74,Violences,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Sibut,,Kemo,,,,Ngoumbele,19.147596,5.987078
+702487442,23.02.2016,21.02.2016,22.02.2016,ACF,Kanguere,,ACF_Kan_20160223,,février,1,62,311,Violences,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Sibut,,Kemo,,,,Ngoumbele,19.147118,5.958406
+979276043,23.02.2016,21.02.2016,23.02.2016,ACF,Ndongue,,ACF_Ndo_20160223,,février,2,160,800,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bouar,,Nana-Mambere,,,,Zotoua-Bangarem,15.600002,5.628799
+1917734762,02.02.2016,01.02.2016,24.02.2016,PU-AMI,Pata,,PU_PAT_20160201,2016,février,2,460,2300,Autre,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Non,,Ndele,,Bamingui-Bangoran,,,,Mbolo-Pata,21.404942,8.057525
+188584840,07.03.2016,03.03.2016,05.03.2016,ACF,Bolongofio,,ACF_Bol_20160303,,mars,1,16,81,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Nana-Bakassa,,Ouham,,,,Nana-Bakassa,17.468049,6.804646
+632906285,08.03.2016,05.03.2016,05.03.2016,ACTED,Tabane,,ACT_TAB_20160305,,mars,1,120,1500,Violences,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,,Zemio,,Haut-Mbomou,,,,Zemio,24.939847,5.103722
+417111446,07.03.2016,26.02.2016,07.03.2016,ACF,Bombere-Kota,,ACF_Bom_20160216,,mars,1,74,373,Violences,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Bossangoa,,Ouham,,,,Ben Zambe,17.548962,6.914322
+63311891,08.03.2016,03.03.2016,07.03.2016,ACF,Ndali,,ACF_B02_20160303,,mars,1,44,220,Violences,Oui,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,,Nana-Bakassa,,Ouham,,,,Nana-Bakassa,17.299074,6.951541
