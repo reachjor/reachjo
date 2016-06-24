@@ -124,7 +124,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 18 mai 2016</h3a>
+							<h3a><br>Dernière actualisation: 24 juin 2016</h3a>
 							</div>
 						</div> 	
 						<div class="row">
@@ -142,7 +142,7 @@ a:hover{text-decoration: underline;}
 						</div>
 						<div class="row">
 							<div  class="col-md-4">
-								<div  class="pref" id="cccm" class="dc-chart">
+								<div  class="pref" id="cccm" class="dc-chart" style='margin-left: 20px'>
 								  <h4>Préfecture</h4><h5>Nombre d'alertes</h5>
 								</div>
 							</div>
@@ -155,9 +155,11 @@ a:hover{text-decoration: underline;}
 							
 						</div>
 						 <div class="row">
-							 <div  class="col-md-2">
-								<!--<div  class="acces" id="cccm" class="dc-chart"><h4>Accès humanitaire</h4><h5>Nombre d'alertes</h5></div> -->
-							</div> 
+							<div  class="col-md-4">
+								<div  class="year" id="cccm" class="dc-chart" style='margin-left: 20px'>
+								     <h4>Nombre d'alertes reçuées par an</h4>
+								</div>
+							</div>
 							<div  class="col-md-4">
 									<div class="row"><h4>Type de population affectée par village</h4><h5>Nombre d'alertes reportées</h5></br>
 											<div class="row">
@@ -193,7 +195,7 @@ a:hover{text-decoration: underline;}
 						</div>	  
 						<div class="row">
 							<div  class="col-md-8">
-							   <div Class ="start_dates" id="cccm" class="dc-lineChart"><h4>Nombre d'alertes reportées</h4><h5>Selectionner le graphique pour filtrer par date</h5></br></br></div>
+							   <div Class ="start_dates" id="cccm" class="dc-lineChart" style='margin-left: 20px'><h4>Nombre d'alertes reportées</h4><h5>Selectionner le graphique pour filtrer par date</h5></br></br></div>
 							</div>
 							 
 						</div>
@@ -314,7 +316,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
         .group(villsect)
         .elasticX(true)
         .width(200)
-        .height(250)
+        .height(300)
         .renderLabel(true)
 		.margins({top: 0, right: 10, bottom: 20, left: 30})
         .colors(['#6B6B6B'])
@@ -369,7 +371,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 	dc.rowChart("#cccm .deplaces",groupname)
         .dimension(pref)
         .group(popdeplace)
-        .width(300)
+        .width(200)
         .height(40)
         .colors(['#FF6600'])
 		.label(function(d) { return "Deplacés: "+d.value+""; })
@@ -378,7 +380,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 	dc.rowChart("#cccm .retournes",groupname)
         .dimension(pref)
         .group(popretourne)
-        .width(300)
+        .width(200)
         .height(40)
         .colors(['#FF6600'])
 		.label(function(d) { return "Retournés: "+d.value+""; })
@@ -387,7 +389,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 	dc.rowChart("#cccm .accueil",groupname)
         .dimension(pref)
         .group(popaccueil)
-        .width(300)
+        .width(200)
         .height(40)
         .colors(['#FF6600'])
 		.label(function(d) { return "Communaute hôte: "+d.value+""; })
@@ -396,7 +398,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 	dc.rowChart("#cccm .autre",groupname)
         .dimension(pref)
         .group(popautre)
-        .width(300)
+        .width(200)
         .height(40)
         .colors(['#FF6600'])
 		.label(function(d) { return "Autres: "+d.value+""; })
@@ -447,7 +449,7 @@ var times = function(d) {return d.DD};
 
  dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(800)
+		.width(850)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
@@ -462,6 +464,29 @@ var times = function(d) {return d.DD};
 		.xAxis().ticks(9)
 		;		
 
+		
+var yeargp  = xf.dimension(function(d) { return d.year; });
+			
+  var yeargroup = yeargp.group().reduceCount();
+
+    dc.barChart("#cccm .year",groupname)
+		.dimension(yeargp)
+		.group(yeargroup)
+		.width(300)
+        .height(220)
+		.x(d3.scale.ordinal().domain([2014,2015,2016]))
+		
+		.xUnits(dc.units.ordinal)
+		.transitionDuration(500)
+		.centerBar(true)	
+		.gap(30)  // 65 = norm
+		.elasticY(true)
+		.xAxisLabel('Année')
+		.yAxisLabel('Nombre d’activités')
+		.xAxis().tickFormat(function (d) {
+        return d})
+		;		
+		
 
 $('#reset').on('click', function (){
   dc.filterAll(groupname);

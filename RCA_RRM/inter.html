@@ -141,7 +141,7 @@ a:hover{text-decoration: underline;}
 							<h3>Interventions</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a><br>Dernière actualisation: 18 mai 2016</h3a>
+							<h3a><br>Dernière actualisation: 24 juin 2016</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -371,7 +371,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .colors(['#FF6600'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+        .xAxis().ticks(4).tickFormat(d3.format(""));
 
 		
 	//********	
@@ -646,13 +646,13 @@ var Partnergp = PartnerDim.group().reduceCount();
 			.group(prefecturesect)
 			.elasticX(true)
 			.width(300)
-			.height(350)
+			.height(300)
 			.renderLabel(true)
 			.colors(['#58585A'])
 			.ordering(function (p) { return -p.value;})
 			.colorDomain([0,0])
 			.colorAccessor(function(d, i){return 1;})
-			.xAxis().ticks(4).tickFormat(d3.format("s"));
+			.xAxis().ticks(4).tickFormat(d3.format(""));
 			
 			// TOTAL_individus_beneficiaires
 	
@@ -665,12 +665,12 @@ var Partnergp = PartnerDim.group().reduceCount();
         .group(pop_WASH)
 		.elasticX(true)
         .width(300)
-        .height(350)
+        .height(300)
 		.elasticX(true)
         .renderLabel(true)
         .colors(['#3182bd'])
 		.ordering(function (p) { return -p.value;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"))
+        .xAxis().ticks(4).tickFormat(d3.format(""))
 		
 		;  
 		
@@ -679,7 +679,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .group(pop_NFI)
 		.elasticX(true)
         .width(300)
-        .height(350)
+        .height(300)
         .renderLabel(true)
 		.ordering(function (p) { return -p.value;})
 		.colors(["#31a354"])

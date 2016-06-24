@@ -52,7 +52,7 @@
 }
 
 .dc-chart .axis text {
-    font: 9px sans-serif;
+    font: 8px sans-serif;
 }
 
 .dc-chart .grid-line {
@@ -195,9 +195,10 @@
 
 .dc-chart g.row text {
     fill: white;
-    font-size: 10px;
+    font-size: 11px;
+	font-weight: bold;
     cursor: pointer;
-	text-shadow: 1px 1px 1px black;
+	text-shadow: 2px 2px 2px black;
 }
 
 .dc-legend {

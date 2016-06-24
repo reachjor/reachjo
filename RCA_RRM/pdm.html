@@ -122,7 +122,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 18 mai 2016</h3a>
+							<h3a><br>Dernière actualisation: 24 juin 2016</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -210,6 +210,11 @@ a:hover{text-decoration: underline;}
 								  <h4>Nombre de PDM effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
 								</div>
 							</div>	
+							 
+						</div>
+						<div class="row">
+							
+							</br>	</br>	</br>	
 							 
 						</div>
 					</div>
@@ -319,7 +324,7 @@ var dateFormat = d3.time.format("%d.%m.%Y");
 		.ordering(function (p) { return -p.value;})
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+        .xAxis().ticks(4).tickFormat(d3.format(""));
 		
 	  var interdim = xf.dimension(function(d) { 
 			if (d.NFI_WASH == "NFI_WASH" )
@@ -418,7 +423,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .colors(['#FF6600'])
         .colorDomain([0,0])
         .colorAccessor(function(d, i){return 1;})
-        .xAxis().ticks(4).tickFormat(d3.format("s"));
+        .xAxis().ticks(4).tickFormat(d3.format(""));
 		
 	//************	
 	
@@ -534,7 +539,7 @@ var Partnergp = PartnerDim.group().reduceCount();
 
 	dc.lineChart("#cccm .start_dates",groupname)
 		.height(200)
-		.width(700)
+		.width(750)
         .dimension(stdateDim)
 		.group(stdategp)
 		.x(d3.time.scale())
@@ -545,7 +550,7 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.margins({top: 10, right: 10, bottom: 30, left: 30})
 		.renderHorizontalGridLines(true)
 		.renderArea(true)
-		.dotRadius(12)
+		.dotRadius(42)
 		
 		.yAxisLabel('Nombre d’activités')
 		.xAxis().ticks(8)
