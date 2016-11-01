@@ -141,7 +141,7 @@ a:hover{text-decoration: underline;}
 							<h3>Interventions</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a><br>Dernière actualisation: 14 septembre 2016</h3a>
+							<h3a><br>Dernière actualisation: 30 octobre 2016</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -541,7 +541,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .width(200)
         .height(40)
         .colors(['#993366'])
-		.label(function(d) { return "Pâte énergétique: "+d.value+" sachets"; })
+		.label(function(d) { return "Pâte: "+d.value+" sachets"; })
 		.margins({top: 10, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 2]));
 	  dc.rowChart("#cccm .vihuile",groupname)
@@ -580,7 +580,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .width(250)
         .height(40)
         .colors(['#3182bd'])
-		.label(function(d) { return "Comité de Gestion assainissement: "+d.value; })
+		.label(function(d) { return "Com. Gestion assainissement: "+d.value; })
 		.margins({top: 5, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.4]));
  
@@ -633,7 +633,7 @@ var Partnergp = PartnerDim.group().reduceCount();
         .width(250)
         .height(40)
         .colors(['#0099FF'])
-		.label(function(d) { return "Formations Comité de Gestion eau: "+d.value; })
+		.label(function(d) { return "Formations Com. Gestion eau: "+d.value; })
 		.margins({top: 5, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, 0.4]));
   
