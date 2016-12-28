@@ -141,7 +141,7 @@ a:hover{text-decoration: underline;}
 							<h3>Interventions</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a><br>Dernière actualisation: 30 octobre 2016</h3a>
+							<h3a><br>Dernière actualisation: 28 décembre 2016</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -205,10 +205,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							<div  class="col-md-4">
 								
-								<div  class="viplum" id="cccm" class="dc-chart"><h4>Vivres distribués</h4></div>
-								<div  class="vihuile" id="cccm" class="dc-chart"></div>
-								<div  class="vicsb" id="cccm" class="dc-chart"></div>
-								<div  class="viriz" id="cccm" class="dc-chart"></div>
+							
 							</div>
 							
 						</div>  
@@ -530,47 +527,9 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.x(d3.scale.linear().domain([0, 1000]))
 		;
 	 
-  var viplum = pref.group().reduceSum(function (d) { return d.Vivres_PlumpySup; });
-  var vihuile = pref.group().reduceSum(function (d) { return d.Vivres_Huile2L; });
-  var vicsb = pref.group().reduceSum(function (d) { return d.Vivres_CSB_12Kg; });
-  var viriz = pref.group().reduceSum(function (d) { return d.Vivres_Riz_25kg; });	 
+   
 
-  	    dc.rowChart("#cccm .viplum",groupname)
-        .dimension(pref)
-        .group(viplum)
-        .width(200)
-        .height(40)
-        .colors(['#993366'])
-		.label(function(d) { return "Pâte: "+d.value+" sachets"; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 2]));
-	  dc.rowChart("#cccm .vihuile",groupname)
-        .dimension(pref)
-        .group(vihuile)
-        .width(200)
-        .height(40)
-        .colors(['#CC3399'])
-		.label(function(d) { return "Huile 2L: "+d.value+" unités"; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 2]));
-	  dc.rowChart("#cccm .vicsb",groupname)
-        .dimension(pref)
-        .group(vicsb)
-        .width(200)
-        .height(40)
-        .colors(['#CC0099'])
-		.label(function(d) { return "CSB*** 12.5kg: "+d.value+" unités"; })
-		.margins({top: 10, right: 10, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 2]));
-	  dc.rowChart("#cccm .viriz",groupname)
-        .dimension(pref)
-        .group(viriz)
-        .width(200)
-        .height(40)
-        .colors(['#CC00CC'])
-		.label(function(d) { return "Riz 25kg: "+d.value+" unités"; })
-		.margins({top: 10, right: 10, bottom: 0, left: 30})
-		.x(d3.scale.linear().domain([0, 2]));
+  	   
   
   var sensib = pref.group().reduceSum(function (d) { return d.Sensibilisation_communaute_lavage_main; });
   var comgest = pref.group().reduceSum(function (d) { return d.comite_gestion_latrines; });
