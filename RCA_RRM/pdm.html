@@ -122,7 +122,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 28 décembre 2016</h3a>
+							<h3a><br>Dernière actualisation: 12 mai 2017</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -181,12 +181,12 @@ a:hover{text-decoration: underline;}
 								<div  class="TropTot" id="cccm" class="dc-chart"></div>
 								
 							</div>-->
-							<div  class="col-md-4">
+							<!--<div  class="col-md-4">
 							   <div  class="s1" id="cccm" class="dc-chart"><h4>Satisfaction global</h4><h5>Moyenne</h5></div>
 								<div  class="s2" id="cccm" class="dc-chart"></div>
 								<div  class="s3" id="cccm" class="dc-chart"></div>
 								<div  class="s4" id="cccm" class="dc-chart"></div>
-							</div>
+							</div>-->
 						
 							<div  class="col-md-4">
 							    <div  class="nattes" id="cccm" class="dc-chart"><h4>Satisfait de la qualité</br>des produits</h4><h5>Moyenne</h5></div>
@@ -364,8 +364,8 @@ var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
 		.x(d3.scale.linear().domain([0, 0.15]));	 
 			 
 	
-	var s1 = pref1.group().reduceSum(function (d) { return Math.round(d.completement_satisfait / 50); });
-	var s2 = pref1.group().reduceSum(function (d) { return Math.round(d.moyennement_satisfait / 46); });
+	var s1 = pref1.group().reduceSum(function (d) { return Math.round(d.satisfaction_globale_qualite / 50); });
+	var s2 = pref1.group().reduceSum(function (d) { return Math.round(d.satisfaction_globale_quantite / 46); });
 	var s3 = pref1.group().reduceSum(function (d) { return Math.round(d.peu_satisfait /28); });
 	var s4 = pref1.group().reduceSum(function (d) { return Math.round(d.Pas_du_tout_satisfait / 13); });
 	
@@ -427,10 +427,10 @@ var Partnergp = PartnerDim.group().reduceCount();
 		
 	//************	
 	
-	var nattes = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_nattes / 39); });
-	var couvertures = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_couvertures / 45); });
-	var baches = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_baches / 39); });
-	var kitscuisine = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_kits_cuisine / 26); });
+	var nattes = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_nattes / 48); });
+	var couvertures = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_couvertures / 54); });
+	var baches = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_baches / 48); });
+	var kitscuisine = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_kits_cuisine / 35); });
 	var seaux = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_seaux / 16); });
 	
 
@@ -480,11 +480,11 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.margins({top: 10, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, .6]));	
 		
-	var nattes1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_nattes / 42); });
-	var couvertures1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_couvertures / 46); });
-	var baches1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_baches / 39); });
-	var kitscuisine1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_kits_cuisine / 27); });
-	var seaux1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_seaux / 11); });
+	var nattes1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_nattes / 50); });
+	var couvertures1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_couvertures / 36); });
+	var baches1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_baches / 48); });
+	var kitscuisine1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_kits_cuisine / 36); });
+	var seaux1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_seaux / 16); });
 	
 
   	  dc.rowChart("#cccm .nattes1",groupname)
