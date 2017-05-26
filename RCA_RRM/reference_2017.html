@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr">
+<head>
+	
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <title>RRM RCA - 2017</title>
+	
+     <!-- Load Leaflet from CDN-->
+	<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
+	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
+	<script type="text/javascript" src="js/RRM_2017.js"></script>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	 
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <script src="leaflet/leaflet-src.js"></script>
+		
+	<script src="js/leaflet.groupedlayercontrol.js"></script>
+	<link rel="stylesheet" href="css/leaflet.groupedlayercontrol.css" />
+	
+	<script src="js/leaflet.ajax.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+ 	<script type="text/javascript"  src="js/esri-leaflet.js"></script>
+		
+	 <link rel="stylesheet" href="js/easyPrint.css"/>
+    <script src="js/jQuery.print.js"></script>
+    <script src="js/leaflet.easyPrint.js"></script>
+
+    <style>
+	
+ </style>	  
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">RRM République Centrafricaine</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="alerte.html">Alertes</a></li>
+							<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+							<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
+							<li><a href="inter.html">Interventions</a></li>
+							<li><a href="pdm.html">PDM</a></li>
+							<!--<li><a href="acceshum.html">Accès humanitaire</a></li>
+							<li><a href="plaidoyer.html">Plaidoyer</a></li>-->
+							<li><a href="reference_2014.html">Carte de référence 2014</a></li>
+							<li><a href="reference_2015.html">Carte de référence 2015</a></li>
+							<li><a href="reference_2016.html">Carte de référence 2016</a></li>
+							<!--<li><a href="reference_2017.html">Carte de référence 2017</a></li>-->
+						</ul>
+            </li>
+				<li><a>Carte de référence 2017</a></li>
+				<li><a href="index.html">Acceuil</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
+			<li><a> </a></li>
+			<li style="top:7px"><img src="image/rrm.png" width="129" height="37"style="border-width:0px;"><li>	
+			<li><a> </a></li>
+			<li style="top:12px"><img src="image/REACH_logo.png" width="129" height="29"style="border-width:0px;"><li>					
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>   
+	
+ 
+ 
+<div id="map"></div>
+
+ <script>
+ 
+ 
+	var dateyear =d3.time.format("%Y")
+	
+
+	var LeafIcon = L.Icon.extend({
+				options: {
+					iconSize:     [25, 25],
+					iconAnchor:   [0, 0],
+					}
+			});
+
+	var LeafIconMSA = L.Icon.extend({
+				options: {
+					iconSize:     [25, 23],
+					iconAnchor:   [0, 0],
+					}
+			});
+
+	var symb_choc = new LeafIcon({iconUrl: 'image/choc.png'});
+	var symb_dist = new LeafIcon({iconUrl: 'image/distrib.png'});
+	var symb_msa = new LeafIconMSA({iconUrl: 'image/MSA.png'});
+	var symb_mex = new LeafIconMSA({iconUrl: 'image/MEx.png'});
+	var map = L.map('map',{
+		  fullscreenControl: true,
+		  fullscreenControlOptions: {
+			position: 'topleft'
+		  }
+		  }).setView([6.6,19.90], 7);
+	
+	function popUp(feature, layer) {
+		layer.bindPopup(
+		'<h3>'+feature.properties.activityName+ '</h3>' +  (feature ?
+        '<b>Ville: </b>' + feature.properties.locationName 
+		+ '<br/><b>Date debut: </b>' + feature.properties.startDate 
+		+ '<br/><b>Date fin: </b>' + feature.properties.endDate 
+		+ '<br/><b>ONG: </b>' + feature.properties.partnerName
+		
+        : '<b></b>')
+		)};
+  
+	var base = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		});
+		
+	var inset = L.tileLayer('http://otile2.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		});
+
+	sat="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+	var satt = new L.TileLayer(sat);
+	var topo = L.esri.basemapLayer("Topographic");
+	var natgeo = L.esri.basemapLayer("NationalGeographic");
+	var ocean = L.esri.basemapLayer("Oceans");
+	var shade = L.esri.basemapLayer("ShadedRelief");
+	var grey = L.esri.basemapLayer("DarkGray");
+	
+        var layer01 = new L.TileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+
+            attribution: 'Tiles &copy; <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var layer02 = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; Map Data <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+   
+	function getColor_2017(d) {
+			return d == "ACF"  ? '#ff9933' :
+				   d == "ACF veille humanitaire"  ? '#ffcc66' :
+			       d == "ACTED"  ? '#0033cc' :
+			       d == "ACTED veille humanitaire"  ? '#0099ff' :
+				   d == "SI" ? '#ff3333' :
+				   d == "SI veille humanitaire" ? '#ff8080' :
+				   d == "Zone non couverte" ? '#ffffff':
+									'#ffffff';
+		}
+
+	
+	function style(feature) {
+		return {
+			weight:1,
+			opacity: 0.9,
+			color: 'black',
+			dashArray: '3',
+			fillOpacity: 0
+			};
+	}
+
+	function couverture_2017(feature) {
+		return {
+			weight:0,
+			opacity: 0.9,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.5,
+			fillColor: getColor_2017(feature.properties.RRM_2017)
+			};
+	}
+
+
+	/*var MSA_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16230",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_msa,
+			   opacity:0.9
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		    },
+	onEachFeature:popUp
+	});
+
+
+	
+	var inter_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=13327",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_dist,
+			   opacity:0.9
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		    },
+	onEachFeature:popUp
+	});
+	
+	
+	
+	var mex_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16227",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_mex,
+			   opacity:0.9
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		    },
+	onEachFeature:popUp
+	});
+	
+	
+	
+
+	var alerte_2015 = new L.geoJson.ajax("http://www.activityinfo.org/resources/sites/points?activity=16228",
+	{
+	dataType:"json",
+	pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {
+			   icon: symb_choc,
+			   opacity:0.9
+			 });
+			 
+			 },
+	filter: function(feature, layer) {
+    		        return (dateyear(new Date(feature.properties.startDate)) ==2015);
+    		    },
+	onEachFeature:popUp
+	}).addTo(map);*/
+
+
+	var  area_ngo2017 = L.geoJson(RRM_2017, {
+			style: couverture_2017
+	}).addTo(map);
+
+	
+		
+	var legend1 = L.control({position: 'bottomleft'});
+		legend1.onAdd = function (map) {
+				
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = ["ACF","ACF veille humanitaire","ACTED","ACTED veille humanitaire","SI","SI veille humanitaire","Zone non couverte"],
+				labels = [],
+				from, to;
+			for (var i = 0; i < 8; i++) {
+				from = grades[i];
+				labels.push(
+					'<i style="background:' + getColor_2017(from) + '"></i> ' + from);
+			}
+			div.innerHTML = '<b>Couverture RRM 2017</b><br/>'+labels.join('<br>');
+			return div;
+		};
+	legend1.addTo(map);
+	
+var  prefectures = L.geoJson(pref, {
+			style: style,
+	}).addTo(map);
+	
+//var miniMap = new L.Control.MiniMap(inset,{ toggleDisplay: true }).addTo(map);
+
+
+var baseMaps = {
+        "Basemap":base,
+		"Image Sattelite":satt,
+		"Open Street Map Humanitaire":layer01,
+		"NationalGeographic":natgeo,
+		"Topographique":topo,
+		"Carte foncée":grey		
+        };
+
+var groupedOverlays = {
+	"Admistrative": {
+			"Préfectures":prefectures	   
+		  },
+	/*"Chocs": {
+			"Alertes reportés 2015":alerte_2015
+		 },*/
+	"Couverture RRM": {
+		   "Couverture ONG 2015":area_ngo2017
+		 },
+    /*"Activité RRM": {
+			"Missions exploratoires 2015":mex_2015,
+			"MSA 2015":MSA_2015,
+			"Interventions RRM 2015":inter_2015
+		 }*/
+	};
+
+layersControl = L.control.groupedLayers(baseMaps, groupedOverlays);
+
+map.addControl(layersControl);
+
+L.control.scale({position:'bottomright'}).addTo(map);
+
+map.on('overlayadd', function (eventLayer) {
+    // Switch to the  legend...
+    if (eventLayer.name === 'Couverture ONG 2017') {
+        legend1.addTo(map);
+    }
+	
+});
+
+map.on('overlayremove', function (eventLayer) {
+    // Switch to the  legend...
+    if (eventLayer.name === 'Couverture ONG 2015') {
+        map.removeControl(legend1);
+    }
+});
+
+
+L.easyPrint().addTo(map)
+
+</script>
+</body>
+</html>
