@@ -123,7 +123,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 12 mai 2017</h3a>
+							<h3a><br>Dernière actualisation: 19 juillet 2017</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -176,18 +176,11 @@ a:hover{text-decoration: underline;}
 						</div>
 							  
 						<div class="row">
-							<!--<div  class="col-md-2">
-							   <div  class="ATemps" id="cccm" class="dc-chart"><h4>Délais de distribution</h4><h5>Moyenne</h5></div>
-								<div  class="TropTard" id="cccm" class="dc-chart"></div>
-								<div  class="TropTot" id="cccm" class="dc-chart"></div>
-								
-							</div>-->
-							<!--<div  class="col-md-4">
-							   <div  class="s1" id="cccm" class="dc-chart"><h4>Satisfaction global</h4><h5>Moyenne</h5></div>
-								<div  class="s2" id="cccm" class="dc-chart"></div>
-								<div  class="s3" id="cccm" class="dc-chart"></div>
-								<div  class="s4" id="cccm" class="dc-chart"></div>
-							</div>-->
+							<div  class="col-md-4">
+								<div  class="year" id="cccm" class="dc-chart" style='margin-left: 20px'>
+								     <h4>Nombre d'alertes reçuées par an</h4>
+								</div>
+							</div>
 						
 							<div  class="col-md-4">
 							    <div  class="nattes" id="cccm" class="dc-chart"><h4>Satisfait de la qualité</br>des produits</h4><h5>Moyenne</h5></div>
@@ -557,7 +550,27 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.xAxis().ticks(8)
 		;
  
+var yeargp  = xf.dimension(function(d) { return d.year; });
+			
+  var yeargroup = yeargp.group().reduceCount();
 
+    dc.barChart("#cccm .year",groupname)
+		.dimension(yeargp)
+		.group(yeargroup)
+		.width(300)
+        .height(300)
+		.x(d3.scale.ordinal().domain([2015,2016,2017]))
+		
+		.xUnits(dc.units.ordinal)
+		.transitionDuration(500)
+		.centerBar(true)	
+		.gap(30)  // 65 = norm
+		.elasticY(true)
+		.xAxisLabel('Année')
+		.yAxisLabel('Nombre d’activités')
+		.xAxis().tickFormat(function (d) {
+        return d})
+		;		
 
 $('#reset').on('click', function (){
   dc.filterAll(groupname);
