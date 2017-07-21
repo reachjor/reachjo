@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <head>
@@ -622,3 +623,616 @@ $(function() {
 
 
 </html>
+=======
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <title>RRM RCA - PDM</title>
+	
+	<script type="text/javascript" src="js/RRM_RCA_area_intervention.js"></script>
+	<script type="text/javascript" src="js/RRM_RCA_admin1.js"></script>
+
+    <!-- Bootstrap -->
+	
+	<script src="js/html5.js"></script>
+	
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" href="css/leaflet.css" rel="stylesheet"/>
+    <link type="text/css" href="css/leaflet.markercluster.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="css/dc.css">
+    <!-- Add IntroJs styles  -->
+    <link rel="stylesheet" type="text/css" href="css/introjs.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<style>
+/* Change the styles below in order to customize your template */
+
+body{font-family: Helvetica, Arial; font-weight: regular; font-size: 15px; color: #555; background-color: #FFF; margin: 0;}
+h1{font-weight: bold; font-size: 31px; letter-spacing: -1px; color: #333; line-height: 33px;}
+h3{font-weight: bold; font-size: 20px; color: #fff; text-transform: uppercase; margin: 5px 0 0 0;}
+h3a{font-weight: bold; font-size: 12px; color: #fff;  margin: 20px 0 0 0;}
+h4a {   color:#505050; font-size: 12px; margin: 5px 0 0 0;}
+h4{font-weight: bold; font-size: 12px; color: #000; margin: 10px 0 0 10px;line-height:14px}
+h5{font-size: 10px;font-style:italic; color: #000; margin: 0px 0px 0px 10px; line-height:10px}
+p{margin: 8px 0 20px 0; line-height: 18px;}
+a, a:visited{color: #397DB8; text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+.wrapper{display: block; margin: 0px 0 0 0; padding: 4px 30px 0 30px;}
+
+.map{background-color:#eee; position: absolute; top: 50px; left: 0; bottom: 0; width: 50%; *height:100%;}
+.sidepanel{background-color:#b6b6b6; position: absolute; top: 50px; right: 0;  bottom: 0; width: 50%; *height: 100%; overflow: auto}
+
+.context{font-family: Helvetica, Arial; font-size: 13px; color: #999; padding: 10px 0 0 0;}
+.subheader{border-bottom: 1px solid #ddd;}
+.footer{border-top: 1px solid #ddd; margin-top: 30px;}
+.titleBlock{text-align: right;
+/* Here are the styles that makes the template responsive*/
+@media only screen and (max-width: 768px) {
+  .map{position: inherit; height: 400px; width: 100%; display: block;}
+  .sidepanel{position: inherit; width: 100%;}
+}
+@media only screen and (max-width: 480px) {
+  .map {height: 300px;}
+}
+.bar rect {
+  shape-rendering: crispEdges;
+}
+.bar text {
+  text-anchor: end;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+</style>
+</head>
+ <body>
+  <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">RRM République Centrafricaine</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Type d'activités <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+						 <li><a href="alerte.html">Alertes</a></li>
+						<li><a href="mex.html">MEX (Missions Exploratoires)</a></li>
+						<li><a href="MSA.html">MSA (Evaluations Multisectorielles)</a></li>
+						<li><a href="inter.html">Interventions</a></li>
+						<!--<li><a href="pdm.html">PDM</a></li>-->
+						<!--<li><a href="acceshum.html">Accès humanitaire</a></li>
+						<li><a href="plaidoyer.html">Plaidoyer</a></li>-->
+						<li><a href="reference_2014.html">Carte de référence 2014</a></li>
+						<li><a href="reference_2015.html">Carte de référence 2015</a></li>
+						<li><a href="reference_2016.html">Carte de référence 2016</a></li>
+						<li><a href="reference_2017.html">Carte de référence 2017</a></li>
+              </ul>
+            </li>
+			<li><a href="index.html">Acceuil</a></li>
+			<li><a class="reset" id="reset" href="#"><button>Réinitialiser</button></a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			<li style="top:12px"><img src="image/unicef-logo.png" width="125" height="25"style="border-width:0px;"><li>	
+			<li><a> </a></li>
+			<li style="top:7px"><img src="image/rrm.png" width="129" height="37"style="border-width:0px;"><li>	
+			<li><a> </a></li>
+			<li style="top:12px"><img src="image/REACH_logo.png" width="129" height="29"style="border-width:0px;"><li>					
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>   
+	
+   <div style="display: block;"  id="dashboard">
+             <div class="row" id="cccm">
+                <div  class="map" id="cccm"></div>
+                <div class="sidepanel">
+					<div class="wrapper">
+						<div class="row">
+							<div  class="col-md-7">
+							<h3>PDM réalisés</h3>
+							</div>
+							
+							<div  class="col-md-5" align="right">
+							<h3a><br>Dernière actualisation: 12 mai 2017</h3a>
+							</div>
+						</div>
+						<div class="row">
+							<div  class="col-md-12" align="justify">
+							<h4a><br>Bienvenue sur la page du tableau de bord interactif RRM. Cliquez sur les différents éléments pour sélectionner les informations qui vous intéressent.<br> Pour revenir au début et réinitialiser les filtres, cliquez sur <b>« Réinitialiser »</b>. </h4a>
+							</div>
+						</div> 	
+						<div class="row">
+							<div  class="col-md-12">
+								<div  class="nombre" id="cccm" class="dc-chart"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div  class="col-md-4">
+								<div  class="pref" id="cccm" class="dc-chart">
+								  <h4>Préfecture</h4><h5>Nombre d'alertes</h5>
+								</div>
+							</div>
+							<div  class="col-md-4">
+								<div  class="Partner" id="cccm" class="dc-chart"><h4>Nombre de MSA effectuées</h4><h5>par partenaires</h5/></div>
+							</div>
+							<div  class="col-md-4">
+								<div  class="intertype" id="cccm" class="dc-chart"><h4>Nombre d'évaluations</h4><h5> Par type d'intervention</h5></div>								
+							</div>
+							<!-- <div  class="col-md-4">
+								<div  class="Status" id="cccm" class="dc-chart"><h4>Status PDM</h4><h5>Nombre d'évaluations</h5></div>
+							</div>-->
+						</div>
+						
+						<!--<div class="row">
+							
+							
+							<div  class="col-md-4">
+								<div  class="intertype" id="cccm" class="dc-chart"><h4>Nombre d'évaluations</h4><h5> Par type d'intervention</h5></div>								
+							</div>
+							 <div  class="col-md-4">
+									<div Class ="CauseInt" id="cccm" class="dc-lineChart"><h4>Cause internes de délais</h4><h5>Nombre de causes reportées</h5></div>
+							</div>
+								
+							<div  class="col-md-4">
+								   <div Class ="CauseExt" id="cccm" class="dc-lineChart"><h4>Causes externes de délais</h4><h5>Nombre de causes reportées</h5></div>
+							</div>
+						</div>-->
+						
+						 <div class="row">
+							<div  class="col-md-1"></div>
+							 
+							<div  class="col-md-1"></div>	
+							
+						</div>
+							  
+						<div class="row">
+							<!--<div  class="col-md-2">
+							   <div  class="ATemps" id="cccm" class="dc-chart"><h4>Délais de distribution</h4><h5>Moyenne</h5></div>
+								<div  class="TropTard" id="cccm" class="dc-chart"></div>
+								<div  class="TropTot" id="cccm" class="dc-chart"></div>
+								
+							</div>-->
+							<!--<div  class="col-md-4">
+							   <div  class="s1" id="cccm" class="dc-chart"><h4>Satisfaction global</h4><h5>Moyenne</h5></div>
+								<div  class="s2" id="cccm" class="dc-chart"></div>
+								<div  class="s3" id="cccm" class="dc-chart"></div>
+								<div  class="s4" id="cccm" class="dc-chart"></div>
+							</div>-->
+						
+							<div  class="col-md-4">
+							    <div  class="nattes" id="cccm" class="dc-chart"><h4>Satisfait de la qualité</br>des produits</h4><h5>Moyenne</h5></div>
+								<div  class="couvertures" id="cccm" class="dc-chart"></div>
+								<div  class="baches" id="cccm" class="dc-chart"></div>
+								<div  class="kitscuisine" id="cccm" class="dc-chart"></div>
+								<div  class="seaux" id="cccm" class="dc-chart"></div>
+							</div>
+							<div  class="col-md-4">
+							    <div  class="nattes1" id="cccm" class="dc-chart"><h4>Satisfait de la quantité</br>des produits</h4><h5>Moyenne</h5></div>
+								<div  class="couvertures1" id="cccm" class="dc-chart"></div>
+								<div  class="baches1" id="cccm" class="dc-chart"></div>
+								<div  class="kitscuisine1" id="cccm" class="dc-chart"></div>
+								<div  class="seaux1" id="cccm" class="dc-chart"></div>
+							</div>
+						
+						</div>
+						<div class="row">
+							<div  class="col-md-8">
+							   <div Class ="start_dates" id="cccm" class="dc-lineChart">
+								  <h4>Nombre de PDM effectuées</h4><h5>Selectionner le graphique pour filtrer par date</h5>
+								</div>
+							</div>	
+							 
+						</div>
+						<div class="row">
+							
+							</br>	</br>	</br>	
+							 
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/intro.js"></script>
+    <script type="text/javascript" src="js/d3_002.js"></script>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/crossfilter.js"></script>
+    <script type="text/javascript" src="js/dc.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+<!--maps-->
+    <script type="text/javascript" src="js/leaflet.js"></script>
+	<<script type="text/javascript"  src="js/esri-leaflet.js"></script>
+    <script type="text/javascript" src="js/leaflet.markercluster.js"></script>
+    <script type="text/javascript" src="js/dc.leaflet_pdm.js"></script>
+
+<script type="text/javascript">
+
+/*     Markers      */
+
+d3.csv("data/RRM_PDM.csv", function(error,data) {
+     //drawMarkerSelect(data);
+     drawMarkerArea(data);
+});
+
+
+function regroup(dim, cols) {
+    var _groupAll = dim.groupAll().reduce(
+        function(p, v) { // add
+            cols.forEach(function(c) {
+                p[c] += v[c];
+            });
+            return p;
+        },
+        function(p, v) { // remove
+            cols.forEach(function(c) {
+                p[c] -= v[c];
+            });
+            return p;
+        },
+        function() { // init
+            var p = {};
+            cols.forEach(function(c) {
+                p[c] = 0;
+            });
+            return p;
+        });
+    return {
+        all: function() {
+            // or _.pairs, anything to turn the object into an array
+            return d3.map(_groupAll.value()).entries();
+        }
+    };
+}
+
+var popty = d3.scale.ordinal()
+     .domain(["Non","Oui"])
+     .range(["#afa3a4","#ff972f"]);
+	 
+function drawMarkerArea(data) {
+//function drawMarkerSelect(error,data) {
+var dateFormat = d3.time.format("%d.%m.%Y");
+    data.forEach(function (d) {
+	d.DD  = dateFormat.parse(d.startDate)
+	d.month= d3.time.month(d.DD)
+	});
+ 
+
+  var xf = crossfilter(data);
+
+  var groupname = "marker-select";
+  
+  
+
+  var facilities = xf.dimension(function(d) { return d.Latitude+","+d.Longitude; });
+  var facilitiesGroup = facilities.group();
+  
+  dc.leafletMarkerChart(".map",groupname)
+      .dimension(facilities)
+      .group(facilitiesGroup)
+      .width(900)
+      //.height(300)
+      .center([6.6,19.90])
+      .zoom(6)
+      .cluster(false)
+      .renderPopup(true)
+      .filterByArea(true)
+	  //.popup(function(d){return d['Partner']+":";})
+    ;
+	
+	var pref = xf.dimension(function(d) { return d['Prefecture']; });
+  var villsect = pref.group().reduceCount();
+  
+  dc.rowChart("#cccm.pref",groupname)
+        .dimension(pref)
+        .group(villsect)
+        .elasticX(true)
+        .width(200)
+        .height(250)
+        .renderLabel(true)
+		.margins({top: 0, right: 10, bottom: 20, left: 30})
+        .colors(['#6B6B6B'])
+		.ordering(function (p) { return -p.value;})
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(4).tickFormat(d3.format(""));
+		
+	  var interdim = xf.dimension(function(d) { 
+			if (d.NFI_WASH == "NFI_WASH" )
+			  return "NFI-WASH"
+			else if (d.NFI_WASH == "NFI" )
+			  return "NFI"  
+			else if (d.NFI_WASH == "WASH" )
+			  return "WASH"    
+			else
+			  return "NFI-WASH"   			
+			});   
+  
+  var intergp = interdim.group();  
+  dc.rowChart("#cccm .intertype",groupname)
+        .dimension(interdim)
+        .group(intergp)
+        .width(250)
+        .height(200)
+        .title(function (d) {return d.value+" interventions";})
+		.colors(['#009933','#CC3333','#0066FF' ])
+        .renderLabel(true)
+		.xAxis().ticks(4).tickFormat(d3.format(""));
+        ;	
+
+var pref1 = xf.dimension(function(d) { return d.Code_Prefecture; });
+	var nombre = pref1.group().reduceSum(function (d) { if (d.NFI_WASH == "NFI" )
+			  return 1; else return 1; });
+	 		  
+	dc.rowChart("#cccm.nombre",groupname)
+        .dimension(pref1)
+        .group(nombre)
+        .width(600)
+		.height(40)
+        .colors(['#FF6600'])
+		.label(function(d) { return "Nombre total de PDMs: "+d.value; })
+		.margins({top: 10, right: 5, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, 0.15]));	 
+			 
+	
+	var s1 = pref1.group().reduceSum(function (d) { return Math.round(d.satisfaction_globale_qualite / 50); });
+	var s2 = pref1.group().reduceSum(function (d) { return Math.round(d.satisfaction_globale_quantite / 46); });
+	var s3 = pref1.group().reduceSum(function (d) { return Math.round(d.peu_satisfait /28); });
+	var s4 = pref1.group().reduceSum(function (d) { return Math.round(d.Pas_du_tout_satisfait / 13); });
+	
+
+  	    dc.rowChart("#cccm .s1",groupname)
+        .dimension(pref1)
+        .group(s1)
+        .width(200)
+        .height(50)
+        .colors(['#8F47B2'])
+		.label(function(d) { return "Completement satisfait: "+d.value+" %" ; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .5]));
+	  dc.rowChart("#cccm .s2",groupname)
+        .dimension(pref1)
+        .group(s2)
+        .width(200)
+        .height(50)
+        .colors(['#8F47B2'])
+		.label(function(d) { return "Moyennement satisfait: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .5]));
+	  dc.rowChart("#cccm .s3",groupname)
+        .dimension(pref1)
+        .group(s3)
+        .width(200)
+        .height(50)
+        .colors(['#8F47B2'])
+		.label(function(d) { return "Peu satisfait: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .5]));
+	  dc.rowChart("#cccm .s4",groupname)
+        .dimension(pref1)
+        .group(s4)
+        .width(200)
+        .height(50)
+        .colors(['#8F47B2'])
+		.label(function(d) { return "Pas du tout satisfait: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .5]));	
+		
+		//************	
+	
+	var PartnerDim = xf.dimension(function(d) { return d['Partner']; });
+var Partnergp = PartnerDim.group().reduceCount();
+
+  dc.rowChart("#cccm .Partner",groupname)
+        .dimension(PartnerDim)
+        .group(Partnergp)
+        .elasticX(true)
+        .width(250)
+        .height(200)
+        .renderLabel(true)
+        .ordering(function (p) { return -p.value;})
+        .colors(['#FF6600'])
+        .colorDomain([0,0])
+        .colorAccessor(function(d, i){return 1;})
+        .xAxis().ticks(4).tickFormat(d3.format(""));
+		
+	//************	
+	
+	var nattes = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_nattes / 48); });
+	var couvertures = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_couvertures / 54); });
+	var baches = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_baches / 48); });
+	var kitscuisine = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_kits_cuisine / 35); });
+	var seaux = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_seaux / 16); });
+	
+
+  	  dc.rowChart("#cccm .nattes",groupname)
+        .dimension(pref1)
+        .group(nattes)
+        .width(200)
+        .height(50)
+        .colors(['#3399FF'])
+		.label(function(d) { return "Nattes: "+d.value+" %" ; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));
+	  dc.rowChart("#cccm .couvertures",groupname)
+        .dimension(pref1)
+        .group(couvertures)
+        .width(200)
+        .height(50)
+        .colors(['#3399FF'])
+		.label(function(d) { return "Couvertures: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));
+	  dc.rowChart("#cccm .baches",groupname)
+        .dimension(pref1)
+        .group(baches)
+        .width(200)
+        .height(50)
+        .colors(['#3399FF'])
+		.label(function(d) { return "Baches: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));
+	  dc.rowChart("#cccm .kitscuisine",groupname)
+        .dimension(pref1)
+        .group(kitscuisine)
+        .width(200)
+        .height(50)
+        .colors(['#3399FF'])
+		.label(function(d) { return "Kits de cuisine: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));	
+	  dc.rowChart("#cccm .seaux",groupname)
+        .dimension(pref1)
+        .group(seaux)
+        .width(200)
+        .height(50)
+        .colors(['#3399FF'])
+		.label(function(d) { return "Seaux: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));	
+		
+	var nattes1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_nattes / 50); });
+	var couvertures1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_couvertures / 36); });
+	var baches1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_baches / 48); });
+	var kitscuisine1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_kits_cuisine / 36); });
+	var seaux1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_seaux / 16); });
+	
+
+  	  dc.rowChart("#cccm .nattes1",groupname)
+        .dimension(pref1)
+        .group(nattes1)
+        .width(200)
+        .height(50)
+        .colors(['#CC0066'])
+		.label(function(d) { return "Nattes: "+d.value+" %" ; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));
+	  dc.rowChart("#cccm .couvertures1",groupname)
+        .dimension(pref1)
+        .group(couvertures1)
+        .width(200)
+        .height(50)
+        .colors(['#CC0066'])
+		.label(function(d) { return "Couvertures: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));
+	  dc.rowChart("#cccm .baches1",groupname)
+        .dimension(pref1)
+        .group(baches1)
+        .width(200)
+        .height(50)
+        .colors(['#CC0066'])
+		.label(function(d) { return "Baches: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));
+	  dc.rowChart("#cccm .kitscuisine1",groupname)
+        .dimension(pref1)
+        .group(kitscuisine1)
+        .width(200)
+        .height(50)
+        .colors(['#CC0066'])
+		.label(function(d) { return "Kits de cuisine: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));	
+	  dc.rowChart("#cccm .seaux1",groupname)
+        .dimension(pref1)
+        .group(seaux1)
+        .width(200)
+        .height(50)
+        .colors(['#CC0066'])
+		.label(function(d) { return "Seaux: "+d.value+" %"; })
+		.margins({top: 10, right: 10, bottom: -1, left: 30})
+		.x(d3.scale.linear().domain([0, .6]));		
+	
+	var stdateDim = xf.dimension(function(d) {return d.month});
+	var stdategp = stdateDim.group();
+	var times = function(d) {return d.DD};
+
+	dc.lineChart("#cccm .start_dates",groupname)
+		.height(200)
+		.width(750)
+        .dimension(stdateDim)
+		.group(stdategp)
+		.x(d3.time.scale())
+	    .round(d3.time.month.round)
+	    .xUnits(d3.time.month)
+	    .elasticY(true)
+		.elasticX(true)
+		.margins({top: 10, right: 10, bottom: 30, left: 30})
+		.renderHorizontalGridLines(true)
+		.renderArea(true)
+		.dotRadius(42)
+		
+		.yAxisLabel('Nombre d’activités')
+		.xAxis().ticks(8)
+		;
+ 
+
+
+$('#reset').on('click', function (){
+  dc.filterAll(groupname);
+  dc.redrawAll(groupname);
+  return false;
+})
+
+
+  dc.renderAll(groupname);
+}
+
+  
+</script>
+
+ <script src="js/bootstrap.js"></script>
+<!-- Custom Theme JavaScript -->
+<script>
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>
+
+</body>
+
+
+</html>
+>>>>>>> origin/master
