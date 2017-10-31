@@ -1,19 +1,53 @@
 SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,month,Nb_localites_affectes,Pop_affectee_menages,Pop_affectee_individus,Nature_choc,Type_alerte,Pop_affectee_Deplaces,Pop_affectee_Retours,Pop_affectee_Communaute_hote,Pop_affectee_Autre,Alerte_en_cours,Code_SousPrefecture,SousPrefecture,Code_Prefecture,Prefecture,Code_Arrondissement,Arrondissement,Code_Commune,Commune,Longitude,Latitude
-1982453843,12.07.2017,11.07.2017,12.07.2017,ACF,Ngaoundaye,,ACF_NGA_20170712,2017,,2,,,Violences,Alerte simple,Oui,Non,Non,Non,Oui,,Ngaoundaye,,Ouham Pende,,,,Mbili,15.258225,6.985813
-1566212669,10.07.2017,07.07.2017,10.07.2017,ACF,Paoua,,ACF_PAO_20170707,2017,,4,,,Violences,Alerte simple,Oui,Non,Non,Non,Oui,,Paoua,,Ouham Pende,,,,Paoua,16.434175,7.245206
-1685735242,27.06.2017,29.06.2017,09.07.2017,ACF,Sangare lim,,ACF_SAN_20170627,2017,,,,,Violences,Alerte simple,Non,Oui,Oui,Non,Oui,,Koui,,Ouham Pende,,,,Koui,15.358343,6.950599
-269868838,30.06.2017,29.06.2017,29.06.2017,SI,Kpokpo,,SI_KPO_20170629,2017,,5,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Oui,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.152826,7.015249
-181633467,04.07.2017,28.06.2017,07.07.2017,ACTED,Zemio,,ACT_ZEM_20170628,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Oui,,Zemio,,Haut-Mbomou,,,,Zemio,25.129423,5.024257
-271288186,11.07.2017,28.06.2017,30.06.2017,ACTED,Pavica 3,,ACT_PAV_20170630,2017,,,,3000,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Alindao,,Basse-Kotto,,,,Guiligui,21.315326,4.939969
-2048587392,27.06.2017,28.06.2017,29.06.2017,ACF,Dekoa,,ACF_DEK_20170623,2017,,,,,Violences,Alerte simple,Non,Oui,Non,Non,Oui,,Dekoa,,Kemo,,,,Dekoa,19.09329,6.318409
-1311897789,27.06.2017,27.06.2017,29.06.2017,ACF,Ndim,,ACF_NDI_20170623,2017,,,,,Violences,Alerte simple,Oui,Non,Non,Non,Oui,,Ngaoundaye,,Ouham Pende,,,,Dilouki,15.769,7.254
-598291227,11.07.2017,26.06.2017,11.07.2017,ACTED,Obo,,ACT_OBO_20170711,2017,,2,322,1500,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Obo,,Haut-Mbomou,,,,Obo,26.494639,5.403851
+2105875614,25.10.2017,24.10.2017,24.10.2017,SI,Saragba-Borokota,,SI_SAR_20171024,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Oui,Oui,,Batangafo,,Ouham,,,,Batangafo,18.231168,7.321402
+671093890,19.10.2017,18.10.2017,18.10.2017,ACTED,Alindao,,ACT_ALI_20171018,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Alindao,,Basse-Kotto,,,,Alindao,21.214987,5.042049
+1409704509,19.10.2017,17.10.2017,17.10.2017,ACTED,Pombolo,,ACT_POM_20171018,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Gambo,,Mbomou,,,,Gambo,22.002106,4.680385
+132977350,16.10.2017,13.10.2017,13.10.2017,ACTED,Kembe,,ACT_KEM_20171013,2017,,3,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Kembe,,Basse-Kotto,,,,Kembe,21.890037,4.614079
+1801487599,10.10.2017,29.09.2017,30.09.2017,ACTED,Amani,,ACT_AMA_20171003,2017,,4,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Oui,,Gambo,,Mbomou,,,,Gambo,21.980192,4.652996
+1078763910,26.09.2017,24.09.2017,24.09.2017,ACF,Bocaranga,,ACF_BOC_20170924,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Koui,,Ouham Pende,,,,Koui,15.638319,6.996461
+1020172676,26.09.2017,20.09.2017,20.09.2017,ACTED,Kembe,,ACT_KEM_20170925,2017,,2,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Kembe,,Basse-Kotto,,,,Kembe,21.890037,4.614079
+1506578710,19.09.2017,19.09.2017,19.09.2017,SI,Ngonikira,,SI_NGO_20170919,2017,,8,63,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Kabo,,Ouham,,,,Ouaki,18.516644,7.571903
+1440631132,14.09.2017,13.09.2017,13.09.2017,SI,Kabo,,SI_KAB_20170913,2017,,4,759,,Catastrophe naturelle,Alerte simple,Non,Oui,Oui,Oui,Oui,,Kabo,,Ouham,,,,Sido,18.629944,7.697565
+1942898942,12.09.2017,12.09.2017,12.09.2017,ACF,Bouca,,ACF_BOU_20170912,2017,,,,,Violences,Alerte situation instable,Oui,Non,Oui,Non,Non,,Bouca,,Ouham,,,,Bouca Bobo,18.279259,6.502576
+1190067719,19.09.2017,11.09.2017,14.09.2017,ACTED,Nzéleté,,ACT_KAB_20170919,2017,,4,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Oui,,Alindao,,Basse-Kotto,,,,Bangui-Kette,21.02753,5.087301
+423714236,11.09.2017,10.09.2017,10.09.2017,ACF,Vakap,,ACF_VAK_20170910,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Bouar,,Nana-Mambere,,,,Herman-Brousse,15.542249,6.160218
+728268639,31.08.2017,31.08.2017,31.08.2017,ACF,Niem,,ACF_NIE_20170831,2017,,5,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Oui,,Bouar,,Nana-Mambere,,,,Niem-Yelewa,15.230062,6.198608
+1961541683,16.09.2017,31.08.2017,31.08.2017,ACF,Ngaoundaye 2,,ACF_NGA_20170831,2017,,1,831,4154,Violences,Alerte simple,Non,Oui,Non,Non,Non,,Ngaoundaye,,Ouham Pende,,,,Lim,15.547281,7.480367
+1285677995,05.09.2017,28.08.2017,29.08.2017,ACTED,Pombolo,,ACT_POM_20170904,2017,,1,150,800,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Gambo,,Mbomou,,,,Gambo,22.002106,4.680385
+1563716664,29.08.2017,27.08.2017,27.08.2017,ACF,Sanguere 3,,ACF_SGR_20170827,2017,,3,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Koui,,Ouham Pende,,,,Koui,15.337074,6.966833
+1963251195,05.09.2017,24.08.2017,02.09.2017,ACTED,Kongbo,,ACT_KON_20170905,2017,,1,1150,6300,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Alindao,,Basse-Kotto,,,,Bakou,21.36464,4.772754
+1469759074,23.08.2017,23.08.2017,23.08.2017,ACF,Begon,,ACF_YEL_20170823,2017,,2,,,Violences,Alerte situation instable,Non,Non,Non,Oui,Non,,Bouar,,Nana-Mambere,,,,Niem-Yelewa,15.28393,6.307396
+1190659165,21.08.2017,18.08.2017,18.08.2017,ACTED,Kadjema,,ACT_KAD_20170818,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Oui,,Obo,,Haut-Mbomou,,,,Obo,26.186135,5.247928
+1662846233,21.08.2017,17.08.2017,17.08.2017,ACTED,Zemio,,ACT_ZEM_20170817,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Zemio,,Haut-Mbomou,,,,Zemio,25.129423,5.024257
+373134892,10.08.2017,09.08.2017,09.08.2017,ACTED,Béma,,ACT_BEM_20170808,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Ouango,,Mbomou,,,,Ouango,22.442181,4.142042
+1945431530,10.08.2017,09.08.2017,09.08.2017,ACTED,Ouango,,ACT_OUA_20170808,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Gambo,,Mbomou,,,,Ngandou,22.079844,4.318443
+1814440663,08.08.2017,03.08.2017,15.08.2017,ACTED,Gambo,,ACT_GAM_20170804,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Gambo,,Mbomou,,,,Gambo,22.27093,4.654362
+860739263,08.08.2017,03.08.2017,08.08.2017,ACTED,Bangassou-Nzakaba,,ACT_BAN_20170804,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Zemio,,Haut-Mbomou,,,,Zemio,25.182846,5.202966
+551438335,02.08.2017,02.08.2017,02.08.2017,SI,Farazala,,SI_FAR_20170802,2017,,6,150,,Autre,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Kabo,,Ouham,,,,Ouaki,18.747848,7.383994
+535243745,02.08.2017,01.08.2017,02.08.2017,ACF,Boria,,ACF_BOR_20170801,2017,,1,160,800,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Nangha Boguila,,Ouham,,,,Nangha Boguila,16.840836,7.184125
+25342802,01.08.2017,31.07.2017,31.07.2017,SI,Batangafo,,SI_BAT_20170731,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Batangafo,,Ouham,,,,Batangafo,18.285135,7.300987
+1313353467,01.08.2017,23.07.2017,24.07.2017,ACTED,Assa,,ACT_ASS_20170726,2017,,1,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Bossangoa,,Ouham,,,,Ndoro Mboli,17.313288,6.747506
+698275041,24.07.2017,16.07.2017,20.07.2017,ACTED,Kongbo,,ACT_NGA_20170722,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Alindao,,Basse-Kotto,,,,Bakou,21.36464,4.772754
+463495991,19.07.2017,15.07.2017,22.07.2017,ACTED,Dembia,,ACT_DEM_20170718,2017,,1,204,688,Violences,Alerte situation instable,Oui,Non,Non,Non,Oui,,Rafai,,Mbomou,,,,Rafai,24.463914,5.102711
+507406725,17.07.2017,13.07.2017,13.07.2017,SI,Mbres,,SI_MAR_20170713,2017,,1,,,Violences,Alerte situation instable,Oui,Oui,Non,Non,Non,,Mbres,,Nana-Gribizi,,,,Mbres,19.799937,6.667027
+1982453843,12.07.2017,11.07.2017,12.07.2017,ACF,Ngaoundaye,,ACF_NGA_20170712,2017,,2,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Ngaoundaye,,Ouham Pende,,,,Mbili,15.258225,6.985813
+948812819,01.08.2017,11.07.2017,11.07.2017,ACF,Ndim,,ACF_NDI_20170711,2017,,3,80,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Ngaoundaye,,Ouham Pende,,,,Dilouki,15.769,7.254
+1566212669,10.07.2017,07.07.2017,10.07.2017,ACF,Paoua,,ACF_PAO_20170707,2017,,4,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Paoua,,Ouham Pende,,,,Paoua,16.434175,7.245206
+1681485054,01.09.2017,03.07.2017,07.07.2017,ACTED,Niakari,,ACT_NIA_20170714,2017,,2,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Bangassou,,Mbomou,,,,Sayo Niakari,22.753196,4.838819
+1685735242,27.06.2017,29.06.2017,10.07.2017,ACF,Sangare lim,,ACF_SAN_20170627,2017,,,,,Violences,Alerte simple,Non,Oui,Oui,Non,Non,,Koui,,Ouham Pende,,,,Koui,15.358343,6.950599
+269868838,30.06.2017,29.06.2017,29.06.2017,SI,Kpokpo,,SI_KPO_20170629,2017,,5,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.152826,7.015249
+181633467,04.07.2017,28.06.2017,07.07.2017,ACTED,Zemio,,ACT_ZEM_20170628,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Zemio,,Haut-Mbomou,,,,Zemio,25.129423,5.024257
+271288186,11.07.2017,28.06.2017,30.06.2017,ACTED,Pavica 3,,ACT_PAV_20170630,2017,,,,3000,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Alindao,,Basse-Kotto,,,,Guiligui,21.315326,4.939969
+2048587392,27.06.2017,28.06.2017,29.06.2017,ACF,Dekoa,,ACF_DEK_20170623,2017,,,,,Violences,Alerte simple,Non,Oui,Non,Non,Non,,Dekoa,,Kemo,,,,Dekoa,19.09329,6.318409
+598291227,11.07.2017,26.06.2017,11.07.2017,ACTED,Obo,,ACT_OBO_20170711,2017,,2,322,1500,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Obo,,Haut-Mbomou,,,,Obo,26.494639,5.403851
+1311897789,27.06.2017,23.06.2017,29.06.2017,ACF,Ndim,,ACF_NDI_20170623,2017,,,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Ngaoundaye,,Ouham Pende,,,,Dilouki,15.769,7.254
+51584213,07.08.2017,23.06.2017,23.06.2017,ACF,Liby Wongo,,ACF_FER_20170623,2017,,2,,,Violences,Alerte simple,Oui,Oui,Non,Non,Non,,Damara,,Ombella M'Poko,,,,Damara,18.950966,5.247985
 1000179089,04.07.2017,21.06.2017,22.06.2017,ACTED,Tabane,,ACT_TAB_20170621,2017,,2,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Zemio,,Haut-Mbomou,,,,Zemio,24.939847,5.103722
-2110201693,12.06.2017,11.06.2017,12.06.2017,ACTED,Nzako,,ACT_BAK_20170612,2017,,2,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Oui,,Bakouma,,Mbomou,,,,Bakouma,22.864256,6.137611
+2110201693,12.06.2017,11.06.2017,12.06.2017,ACTED,Nzako,,ACT_BAK_20170612,2017,,2,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Bakouma,,Mbomou,,,,Bakouma,22.864256,6.137611
 1040448851,04.07.2017,08.06.2017,16.06.2017,ACTED,Bangassou,,ACT_BAN_20170608,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Bangassou,,Mbomou,,,,,22.822237,4.740092
-379956063,12.06.2017,06.06.2017,12.06.2017,ACTED,Bakouma,,ACT_NZA_20170606,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Non,Non,Oui,Non,Oui,,Bakouma,,Mbomou,,,,Bakouma,22.78416,5.711727
-163860224,23.05.2017,20.05.2017,23.05.2017,ACF,Boguila,,ACF_BOG_20170523,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Oui,,Nangha Boguila,,Ouham,,,,Nangha Boguila,16.839951,7.185734
-1219019476,30.05.2017,17.05.2017,07.06.2017,ACTED,Gbadalao,,ACT_GBA_20170520,2017,,,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Oui,,Mobaye,,Basse-Kotto,,,,Mbeima,21.142696,4.674225
+379956063,12.06.2017,06.06.2017,12.06.2017,ACTED,Bakouma,,ACT_NZA_20170606,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Non,Non,Oui,Non,Non,,Bakouma,,Mbomou,,,,Bakouma,22.78416,5.711727
+163860224,23.05.2017,20.05.2017,23.05.2017,ACF,Boguila,,ACF_BOG_20170523,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Nangha Boguila,,Ouham,,,,Nangha Boguila,16.839951,7.185734
+1219019476,30.05.2017,17.05.2017,07.06.2017,ACTED,Gbadalao,,ACT_GBA_20170520,2017,,,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Mobaye,,Basse-Kotto,,,,Mbeima,21.142696,4.674225
 1781448066,30.05.2017,17.05.2017,18.05.2017,ACTED,Banangui,,ACT_BAN_20170518,2017,,1,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Zemio,,Haut-Mbomou,,,,Zemio,25.23299,5.550962
 2093000115,18.05.2017,17.05.2017,18.05.2017,ACF,Touloulou,,ACF_TOU_20170518,2017,,1,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Ngaoundaye,,Ouham Pende,,,,Yeme,15.835278,7.256286
 156568911,24.05.2017,17.05.2017,17.05.2017,ACTED,Bria,,ACT_BRI_20170517,2017,,1,,42000,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Bria,,Haute-Kotto,,,,Samba-Boungou,21.991405,6.537415
@@ -21,27 +55,27 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 115566068,09.05.2017,08.05.2017,09.05.2017,ACTED,Alindao,,ACT_ALI_20170509,2017,,1,4000,20000,Violences,Alerte avec blocage sécuritaire,Oui,Non,Oui,Non,Non,,Alindao,,Basse-Kotto,,,,Alindao,21.214987,5.042049
 1340081074,05.05.2017,05.05.2017,05.05.2017,ACTED,Mboki,,ACT_MBO_20170504,2017,,1,40,200,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Obo,,Haut-Mbomou,,,,Mboki,25.938216,5.309614
 1772112227,05.05.2017,03.05.2017,03.05.2017,ACTED,Fode,,ACT_FOD_20170503 ,2017,,1,160,800,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Bakouma,,Mbomou,,,,Bakouma,23.312988,5.483439
-1183904896,04.05.2017,02.05.2017,03.05.2017,ACF,Niem,,ACF_NIE_20170502,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Oui,,Bouar,,Nana-Mambere,,,,Niem-Yelewa,15.230062,6.198608
-1656536958,03.05.2017,02.05.2017,02.05.2017,SI,Molo,,SI_MOL_20170502,2017,,1,100,,Autre,Alerte avec blocage sécuritaire,Non,Oui,Non,Non,Oui,,Kabo,,Ouham,,,,Sido,18.755926,8.234618
+1183904896,04.05.2017,02.05.2017,03.05.2017,ACF,Niem,,ACF_NIE_20170502,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Bouar,,Nana-Mambere,,,,Niem-Yelewa,15.230062,6.198608
+1656536958,03.05.2017,02.05.2017,02.05.2017,SI,Molo,,SI_MOL_20170502,2017,,1,100,,Autre,Alerte avec blocage sécuritaire,Non,Oui,Non,Non,Non,,Kabo,,Ouham,,,,Sido,18.755926,8.234618
 1948966728,05.05.2017,02.05.2017,02.05.2017,ACTED,Zoubingui,,ACT_ZOU_20170503,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Ippy,,Ouaka,,,,Baidou-Ngoumbourou,21.11655,6.078
-317264003,08.05.2017,26.04.2017,04.07.2017,ACTED,Dimbi,,ACT_DIM_20170426,2017,,2,290,1450,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Kembe,,Basse-Kotto,,,,Kembe,21.72028,4.624735
+317264003,08.05.2017,26.04.2017,04.07.2017,ACTED,Dimbi,,ACT_DIM_20170426,2017,,2,290,1450,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Kembe,,Basse-Kotto,,,,Kembe,21.72028,4.624735
 431176178,02.05.2017,26.04.2017,27.04.2017,ACF,Bozoro,,ACF_BOZ_20170426,2017,,1,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Kabo,,Ouham,,,,Ouaki,18.720756,7.252404
 512843673,02.05.2017,26.04.2017,26.04.2017,ACF,Boyali,,ACF_BOY_20170426,2017,,2,,,Catastrophe naturelle,Alerte simple,Non,Non,Oui,Non,Non,,Bossembele,,Ombella M'Poko,,,,La Mbi,17.582762,4.846472
-1464764698,26.04.2017,25.04.2017,26.04.2017,ACF,Markounda,,ACF_MAR_20170425,2017,,1,,,Violences,Alerte simple,Non,Oui,Non,Non,Oui,,Markounda,,Ouham,,,,Nana Markounda,16.966936,7.61732
-2065385480,10.05.2017,25.04.2017,25.04.2017,SI,Gribinguie 2,Site M'bela,SI_MBE_20170425,2017,,1,100,500,Autre,Alerte simple,Oui,Oui,Non,Non,Oui,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.19667,7.003611
+1464764698,26.04.2017,25.04.2017,26.04.2017,ACF,Markounda,,ACF_MAR_20170425,2017,,1,,,Violences,Alerte simple,Non,Oui,Non,Non,Non,,Markounda,,Ouham,,,,Nana Markounda,16.966936,7.61732
+2065385480,10.05.2017,25.04.2017,25.04.2017,SI,Gribinguie 2,Site M'bela,SI_MBE_20170425,2017,,1,100,500,Autre,Alerte simple,Oui,Oui,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.19667,7.003611
 1712101833,24.04.2017,24.04.2017,24.04.2017,SI,Kassai,,SI_KAS_20170424,2017,,3,330,990,Violences,Alerte avec blocage sécuritaire,Non,Oui,Non,Non,Oui,,Batangafo,,Ouham,,,,Bede,17.69232,7.205488
 1965586642,21.04.2017,18.04.2017,18.04.2017,SI,Botto 1,,SI_ZEF_20170418,2017,,2,500,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Botto,19.107922,6.973822
 1693979497,18.04.2017,08.04.2017,08.04.2017,ACTED,Pavika,,ACT_PAV_20170408,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Alindao,,Basse-Kotto,,,,Guiligui,21.333952,4.909962
 2038244626,18.04.2017,05.04.2017,06.04.2017,ACF,Bondiba,,ACF_BON_20170406,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Baboua,,Nana-Mambere,,,,Baboua,14.794725,5.535135
-302269206,11.04.2017,05.04.2017,05.04.2017,SI,Kaga-Bandoro,,SI_KAG_20170405,2017,,1,2000,6000,Catastrophe naturelle,Alerte simple,Oui,Non,Non,Non,Oui,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.185733,6.992369
-1872649903,04.04.2017,04.04.2017,04.04.2017,ACF,Ngaoundaye,,ACF_Nga_20170404,2017,,2,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Ngaoundaye,,Ouham Pende,,,,Mbili,15.258225,6.985813
-449829296,04.04.2017,30.03.2017,03.04.2017,ACF,Koui,,ACF_Kou_20170330,2017,,1,1500,7500,Violences,Alerte simple,Oui,Oui,Non,Non,Oui,,Koui,,Ouham Pende,,,,Koui,15.453221,6.951955
-937623326,04.04.2017,30.03.2017,01.04.2017,ACF,Makounzi Wali,,ACF_Mak_20170330,2017,,1,,,Violences,Alerte simple,Non,Oui,Non,Non,Oui,,Koui,,Ouham Pende,,,,Koui,15.094831,6.78566
+302269206,11.04.2017,05.04.2017,05.04.2017,SI,Kaga-Bandoro,,SI_KAG_20170405,2017,,1,2000,6000,Catastrophe naturelle,Alerte simple,Oui,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.185733,6.992369
+1872649903,04.04.2017,04.04.2017,04.04.2017,ACF,Ngaoundaye,,ACF_Nga_20170404,2017,,2,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Ngaoundaye,,Ouham Pende,,,,Mbili,15.258225,6.985813
+449829296,04.04.2017,30.03.2017,03.04.2017,ACF,Koui,,ACF_Kou_20170330,2017,,1,1500,7500,Violences,Alerte simple,Oui,Oui,Non,Non,Non,,Koui,,Ouham Pende,,,,Koui,15.453221,6.951955
+937623326,04.04.2017,30.03.2017,01.04.2017,ACF,Makounzi Wali,,ACF_Mak_20170330,2017,,1,,,Violences,Alerte simple,Non,Oui,Non,Non,Non,,Koui,,Ouham Pende,,,,Koui,15.094831,6.78566
 2062987652,09.05.2017,30.03.2017,31.03.2017,ACF,Dékoa,,ACF_Dek_20170330,2017,,1,36,187,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Dekoa,,Kemo,,,,Dekoa,19.118972,6.518772
-737938536,04.04.2017,29.03.2017,29.03.2017,ACTED,Ngassa 2,,ACT_KOL_20170331,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Oui,,Mingala,,Basse-Kotto,,,,Kotto,21.888534,5.228093
+571884194,07.04.2017,30.03.2017,30.03.2017,SI,Sindi,,SI_SIN_20170328,2017,,,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Grivai-Pamia,19.220786,7.091999
+737938536,04.04.2017,29.03.2017,29.03.2017,ACTED,Ngassa 2,,ACT_KOL_20170331,2017,,1,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Mingala,,Basse-Kotto,,,,Kotto,21.888534,5.228093
 644023511,04.04.2017,28.03.2017,03.04.2017,ACF,Poungbe,,ACF_Pou_20170328,2017,,1,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Paoua,,Ouham Pende,,,,Banh,16.478043,7.0984
 303281565,04.04.2017,28.03.2017,28.03.2017,ACF,Baboua,,ACF_Ngi_20170328,2017,,3,,,Violences,Alerte avec blocage sécuritaire,Oui,Non,Non,Non,Non,,Baboua,,Nana-Mambere,,,,Baboua,14.832919,5.806589
-571884194,07.04.2017,28.03.2017,28.03.2017,SI,Sindi,,SI_SIN_20170329,2017,,,,,Violences,Alerte simple,Oui,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Grivai-Pamia,19.220786,7.091999
 1507009273,28.03.2017,24.03.2017,24.03.2017,ACTED,Bria,,ACT_BRI_20170324,2017,,1,150,600,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Bria,,Haute-Kotto,,,,Samba-Boungou,21.991405,6.537415
 902361011,28.03.2017,22.03.2017,22.03.2017,SI,Ouogo Centre,Ouogo Centre,SI_PAR_20170322,2017,,2,800,4000,Autre,Alerte situation instable,Non,Oui,Non,Non,Oui,,Batangafo,,Ouham,,,,Bakassa,17.762112,7.53957
 538932361,25.04.2017,20.03.2017,12.04.2017,ACTED,Alindao,,ACT_ALI_20170418,2017,,27,864,4666,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Alindao,,Basse-Kotto,,,,Alindao,21.214987,5.042049
@@ -66,9 +100,9 @@ SiteId,DateCreated,startDate,endDate,Partner,OCHA_village_v2,Axe,AlerteID,year,m
 396696636,07.02.2017,03.02.2017,03.02.2017,ACTED,Bougoua,,ACT_BOU_20170203,2017,,3,,,Catastrophe naturelle,,Oui,Non,Non,Non,Non,,Bambari,,Ouaka,,,,Ngougbia,20.701274,5.703956
 915591388,15.02.2017,01.02.2017,01.02.2017,SI,Kaga-Bandoro,,SI_KAG_20170201,2017,,1,778,3890,Autre,,Oui,Non,Non,Non,Non,,Kaga-Bandoro,,Nana-Gribizi,,,,Kaga-Bandoro,19.185733,6.992369
 808246628,02.02.2017,31.01.2017,31.01.2017,ACTED,Ngakobo,,ACT_NGA_20170131,2017,,1,,,Violences,,Oui,Non,Non,Non,Non,,Bambari,,Ouaka,,,,Ngougbia,20.730846,5.339652
-894392746,21.02.2017,28.01.2017,02.02.2017,ACF,Degaulle,Degaulle,ACF_Boc_20170202,2017,,1,,,Violences,Alerte situation instable,Non,Non,Oui,Non,Oui,,Koui,,Ouham Pende,,,,Koui,15.449854,6.936024
+894392746,21.02.2017,28.01.2017,02.02.2017,ACF,Degaulle,Degaulle,ACF_Boc_20170202,2017,,1,,,Violences,Alerte situation instable,Non,Non,Oui,Non,Non,,Koui,,Ouham Pende,,,,Koui,15.449854,6.936024
 1250598156,31.01.2017,28.01.2017,28.01.2017,ACTED,Bangassou,,ACT_BAN_20170128,2017,,1,,,Catastrophe naturelle,,Non,Non,Non,Oui,Non,,Bangassou,,Mbomou,,,,,22.822237,4.740092
-1447433446,21.02.2017,27.01.2017,29.01.2017,ACF,Bambia 1,Bambia 1,ACF_Son_20170127,2017,,1,100,478,Violences,,Non,Non,Oui,Non,Non,,Bouca,,Ouham,,,,Bouca Bobo,18.33531,6.559873
+1447433446,21.02.2017,27.01.2017,29.01.2017,ACF,Bambia 1,Bambia 1,ACF_SON_20170127,2017,,1,100,478,Violences,Alerte simple,Non,Non,Oui,Non,Non,,Bouca,,Ouham,,,,Bouca Bobo,18.33531,6.559873
 1472207541,07.02.2017,26.01.2017,26.01.2017,SI,Kabo,,SI_KAB_20170126,2017,,1,170,850,Catastrophe naturelle,Alerte simple,Oui,Oui,Oui,Non,Non,,Kabo,,Ouham,,,,Sido,18.623028,7.688983
 840461932,21.02.2017,15.01.2017,16.01.2017,ACF,Bikanga,,ACF_Bik_20170115,2017,,1,,,Violences,Alerte situation instable,Oui,Non,Non,Non,Non,,Koui,,Ouham Pende,,,,Koui,15.449697,6.961539
 337678738,16.01.2017,15.01.2017,15.01.2017,ACTED,Bégoué,,ACT_DAN_20170115,2017,,3,,,Violences,,Non,Non,Non,Oui,Non,,Zemio,,Haut-Mbomou,,,,Zemio,25.243,5.224
