@@ -134,7 +134,7 @@ a:hover{text-decoration: underline;}
 							<h3>MEX - Missions Exploratoires</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a><br>Dernière actualisation: 22 décembre 2017</h3a>
+							<h3a><br>Dernière actualisation: 15 août 2018</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -555,7 +555,7 @@ function drawMarkerArea(data) {
 		;*/
   //********	
 	var pref1 = xf.dimension(function(d) { return d.CodePrefecture; });
-	var nombre = pref1.group().reduceSum(function (d) { if (d.Statut_MEX_Complete == "Oui" )
+	var nombre = pref1.group().reduceSum(function (d) { if (d.CodePrefecture == "" )
 			  return 1; else return 1; });
 	 		  
 	dc.rowChart("#cccm .nombre",groupname)
@@ -567,7 +567,7 @@ function drawMarkerArea(data) {
         .colors(['#FF6600'])
 		.label(function(d) { return "Nombre total de MEX: "+d.value; })
 		.margins({top: 10, right: 5, bottom: -1, left: 30})
-		.x(d3.scale.linear().domain([0, 0.3]));	 
+		.x(d3.scale.linear().domain([0, 0.5]));	 
 			  
 	//********	
 	
@@ -720,7 +720,7 @@ var yeargp  = xf.dimension(function(d) { return d.year; });
 		.group(yeargroup)
 		.width(300)
         .height(220)
-		.x(d3.scale.ordinal().domain([2014,2015,2016,2017]))
+		.x(d3.scale.ordinal().domain([2014,2015,2016,2017,2018]))
 		
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
