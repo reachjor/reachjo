@@ -124,7 +124,7 @@ a:hover{text-decoration: underline;}
 							</div>
 							
 							<div  class="col-md-5" align="right">
-							<h3a><br>Dernière actualisation: 15 août 2018</h3a>
+							<h3a><br>Dernière actualisation: 27 mai 2019</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -422,11 +422,11 @@ var Partnergp = PartnerDim.group().reduceCount();
 		
 	//************	
 	
-	var nattes = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_nattes / 48); });
-	var couvertures = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_couvertures / 54); });
-	var baches = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_baches / 48); });
-	var kitscuisine = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_kits_cuisine / 35); });
-	var seaux = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_seaux / 16); });
+	var nattes = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_nattes / 88); });
+	var couvertures = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_couvertures / 91); });
+	var baches = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_baches / 85); });
+	var kitscuisine = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_kits_cuisine / 71); });
+	var seaux = pref1.group().reduceSum(function (d) { return Math.round(d.qualite_seaux / 57); });
 	
 
   	  dc.rowChart("#cccm .nattes",groupname)
@@ -475,11 +475,11 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.margins({top: 10, right: 10, bottom: -1, left: 30})
 		.x(d3.scale.linear().domain([0, .6]));	
 		
-	var nattes1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_nattes / 50); });
-	var couvertures1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_couvertures / 36); });
-	var baches1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_baches / 48); });
-	var kitscuisine1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_kits_cuisine / 36); });
-	var seaux1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_seaux / 16); });
+	var nattes1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_nattes / 88); });
+	var couvertures1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_couvertures /92); });
+	var baches1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_baches / 84); });
+	var kitscuisine1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_kits_cuisine / 68); });
+	var seaux1 = pref1.group().reduceSum(function (d) { return Math.round(d.quantite_seaux / 53); });
 	
 
   	  dc.rowChart("#cccm .nattes1",groupname)
@@ -560,7 +560,7 @@ var yeargp  = xf.dimension(function(d) { return d.year; });
 		.group(yeargroup)
 		.width(300)
         .height(300)
-		.x(d3.scale.ordinal().domain([2015,2016,2017,2018]))
+		.x(d3.scale.ordinal().domain([2015,2016,2017,2018,2019]))
 		
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
