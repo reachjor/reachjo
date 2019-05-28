@@ -134,7 +134,7 @@ a:hover{text-decoration: underline;}
 							<h3>MEX - Missions Exploratoires</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-							<h3a><br>Dernière actualisation: 15 août 2018</h3a>
+							<h3a><br>Dernière actualisation: 27 mai 2019</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -428,10 +428,11 @@ function drawMarkerArea(data) {
   
   
   //*******
-
+var pref = xf.dimension(function(d) {if (d.Prefecture == "Bangui" )
+			  return 1; else return 1; });
 			  
 			  
-		var pref = xf.dimension(function(d) { return d.CodePrefecture; });
+		
 
   var popdeplace = pref.group().reduceSum(function (d) { if (d.Type_pop_Deplaces == "Oui" )
 			  return 1; else return 0; });
@@ -554,12 +555,14 @@ function drawMarkerArea(data) {
         return d})
 		;*/
   //********	
-	var pref1 = xf.dimension(function(d) { return d.CodePrefecture; });
-	var nombre = pref1.group().reduceSum(function (d) { if (d.CodePrefecture == "" )
+  
+  var nombre = pref.group().reduceSum(function (d) { if (d.Nature_choc_Violences == "Oui" )
 			  return 1; else return 1; });
+	
+	
 	 		  
 	dc.rowChart("#cccm .nombre",groupname)
-        .dimension(pref1)
+        .dimension(pref)
         .group(nombre)
         .width(800)
 		.height(40)
@@ -720,7 +723,7 @@ var yeargp  = xf.dimension(function(d) { return d.year; });
 		.group(yeargroup)
 		.width(300)
         .height(220)
-		.x(d3.scale.ordinal().domain([2014,2015,2016,2017,2018]))
+		.x(d3.scale.ordinal().domain([2014,2015,2016,2017,2018,2019]))
 		
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
