@@ -1,27 +1,43 @@
 AlerteID,DateCreated,startDate,endDate,Partner,year,Nb_localites_affectes,Pop_affectee_menages,Pop_affectee_individus,Nature_Choc_Violence,Nature_Choc_Catastrophe_naturelle,Nature_Choc_Autre,Type_pop_Deplaces,Type_pop_Communaute_hote,Type_pop_Retours,Type_pop_Repatries,Type_pop_Autre,Proposition_Action_MSAcomplete,Proposition_Action_Eval_sectorielle,Proposition_Action_Monitoring_protection,Proposition_Action_Rehabilitation_acces_log,Proposition_Action_Plaidoyer_acces_securitaire,Proposition_Action_Suivi_retour_deplaces,Proposition_Action_Intervention_directe,Proposition_Action_Pas_daction,Proposition_Action_Autre,OCHA_village_v3,Prefecture,SousPrefecture,Commune,Longitude,Latitude
+ACT_BAM_20191204,18.02.2020,14.01.2020,15.01.2020,ACTED,2020,1,184,917,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Bambouti,Haut-Mbomou,Bambouti,Lili,27.2052,5.401
+ACF_DEK_20200207,13.02.2020,08.02.2020,08.02.2020,ACF,2020,12,700,3500,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Oui,Deko Mbimbi,Kemo,Ndjoukou,Galabadja,19.610495,5.15066
+SOL_KAB_20191030,10.01.2020,05.11.2019,06.11.2019,SI,2019,8,321,1563,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Roboringa,Ouham,Kabo,Ouaki,18.493546,7.534639
+SOL_KAK_20191218,06.01.2020,20.12.2019,21.12.2019,SI,2019,3,2873,14365,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Kako,Nana-Gribizi,Kaga-Bandoro,Ndenga,19.326345,6.714396
+ACT_MBR_20191226,30.12.2019,19.12.2019,20.12.2019,ACTED,2019,31,3026,15145,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Kopia,Ouaka,Bambari,Haute Baidou,21.3585,5.8156
+SOL_NZI_20191030,03.12.2019,01.11.2019,01.11.2019,SI,2019,10,1175,6634,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Zinga,Lobaye,Mongoumba,Mongoumba,18.581499,3.7138
+ACT_MOB_20191025,03.12.2019,07.11.2019,07.11.2019,ACTED,2019,3,46,230,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Satema,Basse-Kotto,Satema,Kotto-Oubangui,21.683701,4.3064
+ACT_GOU_20191007,29.10.2019,16.10.2019,16.10.2019,ACTED,2019,1,737,3679,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Goubali,Ouaka,Bambari,Danga-Gboudou,21.069099,5.8811
+ACT_NDA_20190925,10.10.2019,24.09.2019,24.09.2019,ACTED,2019,1,17,111,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Ndanda,Mbomou,Bakouma,Bakouma,22.353201,5.2228
+ACT_DIM_20190725,29.07.2019,05.07.2019,05.07.2019,ACTED,2019,1,2450,12250,Non,Non,Oui,Oui,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Dimbi,Basse-Kotto,Kembe,Kembe,21.725927,4.623641
+ACF_KOU_20190628,06.07.2019,26.06.2019,27.06.2019,ACF,2019,1,600,3000,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Kounde,Nana-Mambere,Baboua,Kounde,14.634,6.1074
+ACF_ALI_20190629,06.07.2019,27.06.2019,28.06.2019,ACF,2019,2,300,1500,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Alim 2,Nana-Mambere,Baboua,Kounde,14.6443,6.017
+ACT_NDI_20190620,28.06.2019,09.06.2019,09.06.2019,ACTED,2019,1,53,269,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Kendja,Basse-Kotto,Kembe,Kembe,21.819401,4.61
+SOL_NGO_20190611,18.06.2019,11.06.2019,11.06.2019,SI,2019,3,32,160,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Ngounzende,Nana-Gribizi,Kaga-Bandoro,Grivai-Pamia,19.303699,7.027
+SOL_BOL_20190521,05.06.2019,25.05.2019,25.05.2019,SI,2019,5,1000,5000,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Bolhom 1,Ouham,Batangafo,Ouassi,18.323984,7.217051
+ACT_MOB_20190509,29.05.2019,09.05.2019,09.05.2019,ACTED,2019,3,92,460,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Mobaye,Basse-Kotto,Mobaye,Mobaye,21.179085,4.325058
 SOL_NGO_20190327,19.04.2019,28.03.2019,28.03.2019,SI,2019,1,1,52,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Ngoumourou,Nana-Gribizi,Kaga-Bandoro,Nana-Outa,18.977051,7.151212
-ACF_KEL_20190322,18.04.2019,02.04.2019,03.04.2019,ACF,2019,1,317,1585,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Kella Doukou,Nana-Mambere,Bouar,Herman-Brousse,15.531150,6.137952
-ACT_LIO_20190226,29.03.2019,13.04.2019,14.04.2019,ACTED,2019,2,1200,6000,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Lihoto,Ouaka,Kouango,Azengue-Mindou,20.158400,5.312300
-ACF_NDO_20190306,22.03.2019,12.03.2019,16.03.2019,ACF,2019,1,81,401,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Ndoumbou,Ouham,Bouca,Ouham Fafa,17.973320,6.827492
-ACT_POU_20190221,14.03.2019,02.03.2019,03.03.2019,ACTED,2019,2,1736,8333,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Mbo-Pouloubou,Basse-Kotto,Mingala,Kotto,21.639299,5.126200
+ACF_KEL_20190322,18.04.2019,02.04.2019,03.04.2019,ACF,2019,1,317,1585,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Kella Doukou,Nana-Mambere,Bouar,Herman-Brousse,15.53115,6.137952
+ACT_LIO_20190226,29.03.2019,13.04.2019,14.04.2019,ACTED,2019,2,1200,6000,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Lihoto,Ouaka,Kouango,Azengue-Mindou,20.1584,5.3123
+ACF_NDO_20190306,22.03.2019,12.03.2019,16.03.2019,ACF,2019,1,81,401,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Ndoumbou,Ouham,Bouca,Ouham Fafa,17.97332,6.827492
+ACT_POU_20190221,14.03.2019,02.03.2019,03.03.2019,ACTED,2019,2,1736,8333,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Mbo-Pouloubou,Basse-Kotto,Mingala,Kotto,21.639299,5.1262
 ACF_KOZ_20190201,20.02.2019,14.02.2019,14.02.2019,ACF,2019,7,47,233,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Kozoro 1,Ouham,Bouca,Lady Gbawi,18.510538,6.833325
-ACF_YEL_20181110,19.02.2019,15.11.2018,15.11.2018,ACF,2019,5,240,1220,Oui,Non,Non,Non,Oui,Oui,Oui,Non,Oui,Non,Oui,Non,Non,Oui,Non,Non,Oui,Sabewa,Nana-Mambere,Bouar,Niem-Yelewa,14.982600,6.668000
-ACF_BOG_20190207,18.02.2019,07.02.2019,07.02.2019,ACF,2019,2,1157,5875,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Boyali,Nana-Mambere,Baoro,Yoro-Samba Bougoulou,15.988400,5.320100
-ACF_BOK_20190109,30.01.2019,25.01.2019,25.01.2019,ACF,2019,5,305,1526,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Bokayan,Ouham Pende,Bozoum,Birvan-Bole,15.851600,6.117600
-SOL_BAM_20190122,29.01.2019,25.01.2019,25.01.2019,SI,2019,1,500,2500,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Oui,Non,Non,Non,Bamatara,Nana-Gribizi,Kaga-Bandoro,Botto,19.050800,7.004700
+ACF_YEL_20181110,19.02.2019,15.11.2018,15.11.2018,ACF,2019,5,240,1220,Oui,Non,Non,Non,Oui,Oui,Oui,Non,Oui,Non,Oui,Non,Non,Oui,Non,Non,Oui,Sabewa,Nana-Mambere,Bouar,Niem-Yelewa,14.9826,6.668
+ACF_BOG_20190207,18.02.2019,07.02.2019,07.02.2019,ACF,2019,2,1157,5875,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Boyali,Nana-Mambere,Baoro,Yoro-Samba Bougoulou,15.9884,5.3201
+ACF_BOK_20190109,30.01.2019,25.01.2019,25.01.2019,ACF,2019,5,305,1526,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Bokayan,Ouham Pende,Bozoum,Birvan-Bole,15.8516,6.1176
+SOL_BAM_20190122,29.01.2019,25.01.2019,25.01.2019,SI,2019,1,500,2500,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Oui,Non,Non,Non,Bamatara,Nana-Gribizi,Kaga-Bandoro,Botto,19.0508,7.0047
 SOL_KAW_20190111,28.01.2019,15.01.2019,17.01.2019,SI,2019,3,1573,7865,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Ouin,Ouham,Batangafo,Hama,18.138737,7.255638
-SOL_SCI_20180810,28.01.2019,16.01.2019,18.01.2019,SI,2019,3,379,1895,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Morobanda 1,Nana-Gribizi,Mbres,Mbres,19.826799,6.543100
-ACF_MBO_20190111,25.01.2019,23.01.2019,23.01.2019,ACF,2019,2,166,830,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Oui,Mbormon,Nana-Mambere,Baoro,Bawi Tedoa,16.180300,5.611300
-ACF_AMA _20181004,21.01.2019,26.12.2018,30.12.2018,ACF,2019,19,408,2800,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Gbambia,Mambere-Kadei,Amada-Gaza,Haute-Boumbe,15.195600,4.772100
-ACF_AMA _20181004,12.01.2019,26.12.2018,30.12.2018,ACF,2019,1,1132,6422,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Bobayoko,Mambere-Kadei,Amada-Gaza,Haute-Boumbe,15.195600,4.772100
-ACT_BAN_20181102,21.12.2018,15.12.2018,15.12.2018,ACTED,2018,1,2064,10320,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Djema,Haut-Mbomou,Djema,Djema,25.233000,5.551000
+SOL_SCI_20180810,28.01.2019,16.01.2019,18.01.2019,SI,2019,3,379,1895,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Morobanda 1,Nana-Gribizi,Mbres,Mbres,19.826799,6.5431
+ACF_MBO_20190111,25.01.2019,23.01.2019,23.01.2019,ACF,2019,2,166,830,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Oui,Mbormon,Nana-Mambere,Baoro,Bawi Tedoa,16.1803,5.6113
+ACF_AMA _20181004,21.01.2019,26.12.2018,30.12.2018,ACF,2019,19,408,2800,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Gbambia,Mambere-Kadei,Amada-Gaza,Haute-Boumbe,15.1956,4.7721
+ACF_AMA _20181004,12.01.2019,26.12.2018,30.12.2018,ACF,2019,1,1132,6422,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Bobayoko,Mambere-Kadei,Amada-Gaza,Haute-Boumbe,15.1956,4.7721
+ACT_BAN_20181102,21.12.2018,15.12.2018,15.12.2018,ACTED,2018,1,2064,10320,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Djema,Haut-Mbomou,Djema,Djema,25.233,5.551
 ACF_BOY_20181018,03.12.2018,22.11.2018,22.11.2018,ACF,2018,4,95,475,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Boya,Ouham,Bouca,Lady Gbawi,18.543842,6.932089
-ACT_BAN_20181102,22.11.2018,20.11.2018,21.11.2018,ACTED,2018,1,26,101,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Zemio,Haut-Mbomou,Zemio,Zemio,25.233000,5.551000
+ACT_BAN_20181102,22.11.2018,20.11.2018,21.11.2018,ACTED,2018,1,26,101,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Zemio,Haut-Mbomou,Zemio,Zemio,25.233,5.551
 ACF_BOU_20181104,13.11.2018,07.11.2018,07.11.2018,ACF,2018,3,98,490,Oui,Non,Non,Oui,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Lady,Ouham,Bouca,Lady Gbawi,18.277344,6.509991
 ACT_NGB_20180917,30.10.2018,24.10.2018,27.10.2018,ACTED,2018,4,42,140,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Ndengou,Kemo,Ndjoukou,Galabadja,20.226322,4.916235
-ACT_MAR_20180915,30.10.2018,25.10.2018,27.10.2018,ACTED,2018,2,55,283,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Kedjia 1,Ouaka,Kouango,Kouango,20.603001,4.661100
+ACT_MAR_20180915,30.10.2018,25.10.2018,27.10.2018,ACTED,2018,2,55,283,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Kedjia 1,Ouaka,Kouango,Kouango,20.603001,4.6611
 ACF_KOU _20180727,27.08.2018,04.08.2018,04.08.2018,ACF,2018,2,600,3000,Oui,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Non,Non,Oui,Oui,Non,Oui,Bocaranga,Ouham Pende,Bocaranga,Bocaranga,15.434181,6.939197
-ACF_NAS _20180816,27.08.2018,12.08.2018,12.08.2018,ACF,2018,1,400,2000,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Nassole,Mambere-Kadei,Berberati,Ouakanga,15.375200,4.258500
+ACF_NAS _20180816,27.08.2018,12.08.2018,12.08.2018,ACF,2018,1,400,2000,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Nassole,Mambere-Kadei,Berberati,Ouakanga,15.3752,4.2585
 SOL_MBI_20180612,01.08.2018,23.07.2018,23.07.2018,SI,2018,1,342,1711,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Mbata,Nana-Gribizi,Kaga-Bandoro,Ndenga,19.44882,6.672326
 SOL_KAB_20180716,01.08.2018,16.07.2018,16.07.2018,SI,2018,3,113,647,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Oui,Oui,Non,Oui,Non,Oui,Kabo,Ouham,Kabo,Sido,18.62994,7.697565
 ACT_BAM_20180609,21.06.2018,19.06.2018,19.06.2018,ACTED,2018,1,46,230,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Samba,Ouaka,Bambari,Pladama-Ouaka,20.45759,5.571883
@@ -34,14 +50,14 @@ ACT_TAG_20180321,04.05.2018,27.04.2018,27.04.2018,ACTED,2018,1,200,1000,Oui,Non,
 ACF_BOS_20180424,01.05.2018,25.04.2018,27.04.2018,ACF,2018,5,395,1974,Non,Non,Oui,Non,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bossabina 2,Ouham Pende,Koui,Koui,15.467452,6.935204
 ACF_BOK_20180416,20.04.2018,18.04.2018,18.04.2018,ACF,2018,1,108,545,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Bokayan,Ouham Pende,Bozoum,Birvan-Bole,15.851621,6.117573
 ACF_BOK_20180408,16.04.2018,09.04.2018,11.04.2018,ACF,2018,1,109,546,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Bokombissi,Ouham Pende,Bocaranga,Loura,15.956109,7.049204
-ACT_TAG_20180321,10.04.2018,09.04.2018,09.04.2018,ACTED,2018,1,1417,7085,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Oui,Oui,Non,Non,Gpt Tagbara,Ouaka,Bambari,Danga-Gboudou,21.162894,5.933953
 ACF_TOU_20180408,11.04.2018,08.04.2018,08.04.2018,ACF,2018,1,674,3370,Non,Non,Oui,Oui,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Touloulou,Ouham Pende,Ngaoundaye,Yeme,15.83527,7.2562862
+ACT_TAG_20180321,10.04.2018,09.04.2018,09.04.2018,ACTED,2018,1,1417,7085,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Oui,Oui,Non,Non,Gpt Tagbara,Ouaka,Bambari,Danga-Gboudou,21.162894,5.933953
 ACT_RAF_20180326,04.04.2018,23.03.2018,26.03.2018,ACTED,2018,1,1151,5754,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Oui,Rafai,Mbomou,Rafai,Rafai,23.933396,4.969394
 ACF_MBO_20180105,29.01.2018,22.01.2018,22.01.2018,ACF,2018,1,965,4825,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Nzoro-Mboum,Ouham Pende,Ngaoundaye,Dilouki,15.74641,7.348058
 ACT_BOY_20180112,19.01.2018,12.01.2018,12.01.2018,ACTED,2018,3,42,244,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Oui,Non,Oui,Boyo,Ouaka,Ippy,Yengou,21.36978,6.061313
-SOL_CHU_20171117,11.11.2017,17.11.2017,22.11.2017,SI,2017,1,53,265,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Chute Nana,Nana-Gribizi,Kaga-Bandoro,Ndenga,19.135,6.921111
 ACT_ALI_20171018,16.11.2017,05.11.2017,05.11.2017,ACTED,2017,3,320,1285,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Alindao,Basse-Kotto,Alindao,Alindao,21.214987,5.042049
 ACT_ALI_20171018,16.11.2017,05.11.2017,05.11.2017,ACTED,2017,3,18,62,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Alindao,Basse-Kotto,Alindao,Alindao,21.214987,5.042049
+SOL_CHU_20171117,11.11.2017,17.11.2017,22.11.2017,SI,2017,1,53,265,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Chute Nana,Nana-Gribizi,Kaga-Bandoro,Ndenga,19.135,6.921111
 ACF_BOC_20170924,20.10.2017,06.10.2017,06.10.2017,ACF,2017,2,474,2368,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Letele,Ouham Pende,Ngaoundaye,Dilouki,15.700572,7.128089
 ACF_BOC_20170924,20.10.2017,06.10.2017,06.10.2017,ACF,2017,2,410,2053,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Letele,Ouham Pende,Ngaoundaye,Dilouki,15.700572,7.128089
 ACF_NIE_20170831,20.10.2017,28.09.2017,29.09.2017,ACF,2017,2,364,1790,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Beloko,Nana-Mambere,Baboua,Baboua,14.608811,5.939709
@@ -52,10 +68,10 @@ ACF_NGA_20170712,11.09.2017,28.08.2017,28.08.2017,ACF,2017,4,831,4154,Oui,Non,No
 ACF_NGA_20170712,11.09.2017,28.08.2017,28.08.2017,ACF,2017,4,450,2250,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Mboum,Ouham Pende,Ngaoundaye,Lim,15.750639,7.361575
 ACF_BOR_20170801,12.08.2017,03.08.2017,03.08.2017,ACF,2017,3,345,1724,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Boguila 1,Ouham,Nangha Boguila,Nangha Boguila,16.924204,7.13285
 ACT_NIA_20170714,08.08.2017,14.07.2017,15.07.2017,ACTED,2017,4,60,300,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Niakari,Mbomou,Bangassou,Sayo Niakari,22.753196,4.838819
+ACF_NDI_20170623,07.08.2017,28.06.2017,28.06.2017,ACF,2017,3,156,784,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Ndim,Ouham Pende,Ngaoundaye,Dilouki,15.769,7.254
 ACF_FER_20170623,01.08.2017,04.07.2017,05.07.2017,ACF,2017,3,1045,5217,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Galafondo,Kemo,Ndjoukou,Galafondo,19.131241,5.490426
 ACF_DEK_20170623,12.07.2017,01.07.2017,03.07.2017,ACF,2017,1,95,478,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Damara,Ombella M'Poko,Damara,Damara,18.700459,4.957568
 ACF_SAN_20170627,12.07.2017,29.06.2017,01.07.2017,ACF,2017,18,1122,5611,Oui,Non,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Sangare lim,Ouham Pende,Koui,Koui,15.358343,6.950599
-ACF_NDI_20170623,07.08.2017,28.06.2017,28.06.2017,ACF,2017,3,156,784,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Ndim,Ouham Pende,Ngaoundaye,Dilouki,15.769,7.254
 ACF_BOG_20170523,13.06.2017,30.05.2017,02.06.2017,ACF,2017,4,110,550,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Boguila,Mambere-Kadei,Carnot,Carnot,15.950901,5.075341
 SI_KAS_20170424,03.05.2017,27.04.2017,30.04.2017,SI,2017,3,234,1404,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Oui,Non,Non,Kassai,Ouham,Batangafo,Bede,17.69232,7.205488
 ACF_BOZ_20170426,02.05.2017,27.04.2017,28.04.2017,ACF,2017,1,484,1094,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Bouca,Ouham,Bouca,Bouca Bobo,18.279259,6.502576
@@ -63,8 +79,8 @@ SI_ZEF_20170418,24.04.2017,19.04.2017,21.04.2017,SI,2017,4,543,2270,Oui,Non,Non,
 ACF_BON_20170406,24.04.2017,14.04.2017,15.04.2017,ACF,2017,1,37,211,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Baboua,Nana-Mambere,Baboua,Baboua,14.832919,5.806589
 ACF_Ngi_20170328,24.04.2017,12.04.2017,14.04.2017,ACF,2017,1,24,123,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Abba,Nana-Mambere,Bouar,Niem-Yelewa,14.937201,6.630632
 ACT_KOL_20170331,18.04.2017,09.04.2017,09.04.2017,ACTED,2017,1,72,24,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Danda 1,Ouaka,Kouango,Kouango,20.195592,4.930766
+ACF_Dek_20170330,11.04.2017,30.03.2017,03.04.2017,ACF,2017,1,36,187,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,DÃ©koa,Kemo,Dekoa,Dekoa,19.118972,6.518772
 ACT_BAK_20170326,10.04.2017,04.04.2017,05.04.2017,ACTED,2017,5,64,350,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Bakouma,Mbomou,Bakouma,Bakouma,22.78416,5.711727
-ACF_Dek_20170330,11.04.2017,30.03.2017,03.04.2017,ACF,2017,1,36,187,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Dékoa,Kemo,Dekoa,Dekoa,19.118972,6.518772
 SI_SIN_20170328,07.04.2017,30.03.2017,30.03.2017,SI,2017,5,200,1000,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Sindi,Nana-Gribizi,Kaga-Bandoro,Grivai-Pamia,19.220786,7.091999
 ACF_Mak_20170330,04.04.2017,30.03.2017,04.04.2017,ACF,2017,1,800,4000,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Makounzi Wali,Ouham Pende,Koui,Koui,15.094831,6.78566
 ACF_Kou_20170330,04.04.2017,30.03.2017,03.04.2017,ACF,2017,1,1500,7500,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Koui,Ouham Pende,Koui,Koui,15.453221,6.951955
@@ -75,60 +91,62 @@ ACT_VOU_20170212,21.02.2017,11.02.2017,11.02.2017,ACTED,2017,1,700,2500,Non,Non,
 ACF_Son_20170127,21.02.2017,28.01.2017,31.01.2017,ACF,2017,1,100,478,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bambia 1,Ouham,Bouca,Bouca Bobo,18.33531,6.559873
 ACT_ZAC_20161220,23.01.2017,27.12.2016,27.12.2016,ACTED,2016,2,60,130,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Zacko 8,Haute-Kotto,Yalinga,Yalinga,22.834408,6.285185
 ACT_KON_20161219,23.01.2017,27.12.2016,27.12.2016,ACTED,2016,1,290,1465,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Kono,Mbomou,Bakouma,Bakouma,22.834436,6.005426
-ACT_NDA_20161206,15.12.2016,13.12.2016,13.12.2016,ACTED,2016,4,105,525,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Togo,Ouaka,Bambari,Pladama-Ouaka,20.57274,5.880615
 SI_BEK_20161205,20.12.2016,07.12.2016,09.12.2016,SI,2016,6,372,1568,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Bekondja,Ouham,Kabo,Sido,17.976794,7.938928
+ACT_NDA_20161206,15.12.2016,13.12.2016,13.12.2016,ACTED,2016,4,105,525,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Togo,Ouaka,Bambari,Pladama-Ouaka,20.57274,5.880615
 ACT_BRI_20161121,05.12.2016,30.11.2016,02.12.2016,ACTED,2016,1,1661,8303,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Oui,Oui,Non,Oui,Non,Non,Non,Oui,Bria,Haute-Kotto,Bria,Samba-Boungou,21.991405,6.537415
 ACT_GOL_20161026,23.11.2016,18.11.2016,18.11.2016,ACTED,2016,0,26,145,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Golomanda,Ouaka,Ippy,Ippy,21.12385,6.483222
 ACT_MAN_20161106,23.11.2016,17.11.2016,17.11.2016,ACTED,2016,1,55,272,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Mangoupa,Mbomou,Rafai,Rafai,24.109608,4.978925
+SI_FAR_20160928,23.11.2016,22.09.2016,23.09.2016,SI,2016,17,2415,8822,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Farazala,Ouham,Kabo,Ouaki,18.747848,7.383994
+SI_FAR_20160928,23.11.2016,22.09.2016,23.09.2016,SI,2016,17,2415,8822,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Farazala,Ouham,Kabo,Ouaki,18.747848,7.383994
 ACT_GRI_20161026,18.11.2016,12.11.2016,12.11.2016,ACTED,2016,2,45,174,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Grimari,Ouaka,Grimari,Grimari,20.0552,5.741367
 PU_NOL_20161107,15.11.2016,09.11.2016,12.11.2016,PU-AMI,2016,1,153,765,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Nola,Sangha-Mbaere,Nola,Nola,16.04494,3.524026
 ACF_NDI_20161021,08.11.2016,02.11.2016,04.11.2016,ACF,2016,1,16,72,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Ndim,Ouham Pende,Ngaoundaye,Dilouki,15.769,7.254
 ACT_ALI_20161020,08.11.2016,31.10.2016,31.10.2016,ACTED,2016,1,68,340,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Aliwali,Haut-Mbomou,Zemio,Zemio,25.058596,5.058728
 ACT_FIN_20161025,08.11.2016,31.10.2016,31.10.2016,ACTED,2016,2,115,580,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Finzane,Haut-Mbomou,Zemio,Zemio,25.168278,5.121937
 ACT_NGA_20161015,07.11.2016,15.10.2016,15.11.2016,ACTED,2016,1,3361,13602,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Ngakobo,Ouaka,Bambari,Ngougbia,20.730846,5.339652
+ACT_BIA_20160911,31.10.2016,23.09.2016,25.09.2016,ACTED,2016,2,25,125,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bianga,Ouaka,Kouango,Kouango,20.4,4.83
 ACT_GUE_20160921,11.10.2016,07.10.2016,07.10.2016,ACTED,2016,1,18,63,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Guerekindo,Mbomou,Rafai,Rafai,24.349098,5.079482
 ACT_BAN_20160511,10.10.2016,04.10.2016,05.10.2016,ACTED,2016,7,468,2771,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Banangui,Haut-Mbomou,Zemio,Zemio,25.23299,5.550962
 ACF_PAM_20160922,07.10.2016,03.10.2016,06.10.2016,ACF,2016,2,97,485,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Nana-Bakassa,Ouham,Nana-Bakassa,Nana-Bakassa,17.282323,6.986891
 ACT_YAN_20160913,03.10.2016,24.09.2016,24.09.2016,ACTED,2016,3,194,940,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Yangoussi,Mbomou,Bakouma,0,22.843,5.9255
-ACT_BIA_20160911,31.10.2016,23.09.2016,25.09.2016,ACTED,2016,2,25,125,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bianga,Ouaka,Kouango,Kouango,20.4,4.83
-SI_FAR_20160928,23.11.2016,22.09.2016,23.09.2016,SI,2016,17,2415,8822,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Farazala,Ouham,Kabo,Ouaki,18.747848,7.383994
-SI_FAR_20160928,23.11.2016,22.09.2016,23.09.2016,SI,2016,17,2415,8822,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Farazala,Ouham,Kabo,Ouaki,18.747848,7.383994
 SI_BAL_20160912,03.10.2016,21.09.2016,24.09.2016,SI,2016,9,552,2760,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Balteze,Ouham,Kabo,Sido,18.421818,7.636297
-PU_TIR_20160909,22.09.2016,15.09.2016,17.09.2016,PU-AMI,2016,2,40,174,Oui,Non,Oui,Oui,Non,Non,Non,Non,Non,Oui,Oui,Non,Non,Oui,Non,Non,Non,Tiri,Bamingui-Bangoran,Ndele,Dar El Kouti,20.399447,8.599117
 ACT_BAK_20160909,26.09.2016,13.09.2016,14.09.2016,ACTED,2016,5,400,2000,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Oui,Bakala-Koupi,Ouaka,Bakala,Koudou-Bego,20.397154,6.105071
+PU_TIR_20160909,22.09.2016,15.09.2016,17.09.2016,PU-AMI,2016,2,40,174,Oui,Non,Oui,Oui,Non,Non,Non,Non,Non,Oui,Oui,Non,Non,Oui,Non,Non,Non,Tiri,Bamingui-Bangoran,Ndele,Dar El Kouti,20.399447,8.599117
 PU_KPA_20160722,06.09.2016,01.09.2016,03.09.2016,PU-AMI,2016,2,460,2300,Oui,Non,Non,Oui,Non,Oui,Non,Non,Oui,Non,Oui,Oui,Oui,Oui,Non,Non,Non,Krakoma,Bamingui-Bangoran,Ndele,Mbolo-Pata,21.28193,8.101935
 PU_KOT_20160817,01.09.2016,27.08.2016,28.08.2016,PU-AMI,2016,1,800,4000,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Kotissako,Bamingui-Bangoran,Bamingui,Vassako,20.385602,8.14359
-ACF_Bem_20160811,31.08.2016,11.08.2016,18.08.2016,ACF,2016,2,693,3465,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Bémal 1,Ouham,Batangafo,0,17.867414,7.128078
 PU_YEL_20160727,01.09.2016,09.08.2016,13.08.2016,PU-AMI,2016,1,40,200,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Yele-Wayombo,Mambere-Kadei,Amada-Gaza,Haute-Boumbe,14.757952,4.63883
-ACF_Kam_20160810,31.08.2016,08.08.2016,17.08.2016,ACF,2016,5,779,3892,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Kambakota,Ouham,Batangafo,0,17.861828,7.16889
 PU_ZOU_20160810,01.09.2016,28.07.2016,14.08.2016,PU-AMI,2016,2,100,500,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Zoukoutouniala,Bamingui-Bangoran,Ndele,Dar El Kouti,20.608739,8.564903
+ACF_Bem_20160811,31.08.2016,11.08.2016,18.08.2016,ACF,2016,2,693,3465,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,BÃ©mal 1,Ouham,Batangafo,0,17.867414,7.128078
+ACF_Kam_20160810,31.08.2016,08.08.2016,17.08.2016,ACF,2016,5,779,3892,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Kambakota,Ouham,Batangafo,0,17.861828,7.16889
 ACF_Ban_20160722,27.07.2016,24.07.2016,27.07.2016,ACF,2016,2,66,399,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Bang,Ouham Pende,Ngaoundaye,Kodi,15.540389,7.477394
 PU_NOU_20160716,20.07.2016,12.07.2016,15.07.2016,PU-AMI,2016,4,344,1724,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Noufou,Mambere-Kadei,Gamboula,0,14.810714,4.592044
 PU_DIL_20160710,20.07.2016,12.07.2016,15.07.2016,PU-AMI,2016,2,167,835,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Dilapoko,Mambere-Kadei,Gamboula,Basse-Boumne,15.09166,4.36372
 ACT_IPP_20160627,20.07.2016,12.07.2016,12.07.2016,ACTED,2016,8,0,0,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Ippy,Ouaka,Ippy,Ippy,21.195078,6.271642
-ACT_SER_20160624,13.07.2016,02.07.2016,02.07.2016,ACTED,2016,9,0,4522,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Serenga et Polonda,Basse-Kotto,Mobaye,Mobaye,21.283722,4.551444
 PU_FOU_20160615,20.07.2016,08.06.2016,10.06.2016,PU-AMI,2016,1,62,0,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Fouca,Nana-Mambere,Bouar,0,15.806403,5.089239
+PU_BOS_20160608,20.07.2016,06.06.2016,08.06.2016,PU-AMI,2016,2,0,0,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Bossoui,Lobaye,Boganda,Boganda,17.388806,4.112028
+PU_OUH_20160518,20.07.2016,06.06.2016,06.06.2016,PU-AMI,2016,6,373,1865,Oui,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Ouhi,Bamingui-Bangoran,Ndele,Dar El Kouti,20.701461,8.428897
+PU_YAW_20160603,20.07.2016,30.05.2016,04.06.2016,PU-AMI,2016,2,0,0,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Yawa,Lobaye,Boganda,Boganda,17.093922,4.348097
+ACT_SER_20160624,13.07.2016,02.07.2016,02.07.2016,ACTED,2016,9,0,4522,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Serenga et Polonda,Basse-Kotto,Mobaye,Mobaye,21.283722,4.551444
 SI_BA2_20160601,16.06.2016,08.06.2016,11.06.2016,SI,2016,11,1383,6942,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Batangafo,Ouham,Batangafo,Batangafo,18.285135,7.300987
 SI_BAT_20160601,16.06.2016,08.06.2016,11.06.2016,SI,2016,7,318,1593,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Batangafo,Ouham,Batangafo,Batangafo,18.285135,7.300987
 SI_BA3_20160601,16.06.2016,08.06.2016,11.06.2016,SI,2016,7,193,965,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Gbazara,Ouham,Batangafo,Ouassi,18.436268,7.459128
 SI_BA4_20160601,16.06.2016,08.06.2016,11.06.2016,SI,2016,16,1506,7496,Oui,Non,Oui,Non,Oui,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Gbazara,Ouham,Batangafo,Ouassi,18.436268,7.459128
 ACF_Nie_20160601,14.06.2016,08.06.2016,13.06.2016,ACF,2016,3,73,365,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Niem,Nana-Mambere,Bouar,Niem-Yelewa,15.230062,6.198608
-PU_BOS_20160608,20.07.2016,06.06.2016,08.06.2016,PU-AMI,2016,2,0,0,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Bossoui,Lobaye,Boganda,Boganda,17.388806,4.112028
-PU_OUH_20160518,20.07.2016,06.06.2016,06.06.2016,PU-AMI,2016,6,373,1865,Oui,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Ouhi,Bamingui-Bangoran,Ndele,Dar El Kouti,20.701461,8.428897
 ACF_Ass_20160605,09.06.2016,06.06.2016,09.06.2016,ACF,2016,5,92,487,Oui,Non,Non,Oui,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Assoulemaka,Kemo,Mala,Mala,19.661434,6.031003
 ACF_Man_20160601,06.06.2016,01.06.2016,03.06.2016,ACF,2016,4,182,910,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Mann,Ouham Pende,Ngaoundaye,Kodi,15.485058,7.375917
-PU_YAW_20160603,20.07.2016,30.05.2016,04.06.2016,PU-AMI,2016,2,0,0,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Yawa,Lobaye,Boganda,Boganda,17.093922,4.348097
 ACT_ZAC_20160414,30.05.2016,24.05.2016,24.05.2016,ACTED,2016,1,37,83,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,Zacko 8,Haute-Kotto,Yalinga,Yalinga,22.834408,6.285185
-PU_DAT_20160518,27.05.2016,18.05.2016,20.05.2016,PU-AMI,2016,3,278,1388,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Daté,Mambere-Kadei,Amada-Gaza,Haute-Boumbe,15.54736,4.639364
+PU_DAT_20160518,27.05.2016,18.05.2016,20.05.2016,PU-AMI,2016,3,278,1388,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,DatÃ©,Mambere-Kadei,Amada-Gaza,Haute-Boumbe,15.54736,4.639364
 PU_NGA_20160429,27.05.2016,28.04.2016,29.04.2016,PU-AMI,2016,3,1095,5474,Non,Non,Oui,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Ngarba,Bamingui-Bangoran,Ndele,Dar El Kouti,20.496477,9.203859
+ACF_May_20160403,06.05.2016,03.04.2016,06.04.2016,ACF,2016,1,452,2260,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Mayolara,Nana-Mambere,Baboua,Goudrot,14.956389,6.402414
+ACF_Bes_20160402,06.05.2016,02.04.2016,06.04.2016,ACF,2016,1,346,1730,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Besson,Nana-Mambere,Baboua,Goudrot,14.816071,6.258945
+ACT_NGA_20151111,28.04.2016,21.11.2015,21.11.2015,ACTED,2015,5,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Ngakobo,Ouaka,Bambari,Ngougbia,20.730846,5.339652
+ACT_BEM_20151107,28.04.2016,19.11.2015,19.11.2015,ACTED,2015,2,76,366,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,BÃ©ma,Mbomou,Ouango,Ouango,22.442181,4.142042
 PU_NOL_20160418,27.04.2016,20.04.2016,21.04.2016,PU-AMI,2016,1,170,850,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Nola,Sangha-Mbaere,Nola,Nola,16.04494,3.524026
 PU_GAS_20160426,27.04.2016,20.04.2016,22.04.2016,PU-AMI,2016,2,95,447,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Gassai,Bamingui-Bangoran,Ndele,Dar El Kouti,19.309496,8.771306
 ACT_DEM_20160319,27.04.2016,13.04.2016,14.04.2016,ACTED,2016,1,800,4000,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Dembia,Mbomou,Rafai,Rafai,25.078602,5.955747
 PU_BOU_20160412,27.04.2016,12.04.2016,15.04.2016,PU-AMI,2016,2,706,3530,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Bouli,Mambere-Kadei,Carnot,Carnot,15.520583,4.906083
 ACF_Mai_20160408,15.04.2016,08.04.2016,14.04.2016,ACF,2016,4,351,1727,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Maitikoulou,Ouham,Markounda,Nana Markounda,17.625642,7.925992
 ACF_Dok_20160408,14.04.2016,08.04.2016,14.04.2016,ACF,2016,8,214,1071,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Dokabi,Ouham,Markounda,Nana Markounda,17.253312,7.732101
-ACF_May_20160403,06.05.2016,03.04.2016,06.04.2016,ACF,2016,1,452,2260,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Mayolara,Nana-Mambere,Baboua,Goudrot,14.956389,6.402414
-ACF_Bes_20160402,06.05.2016,02.04.2016,06.04.2016,ACF,2016,1,346,1730,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Besson,Nana-Mambere,Baboua,Goudrot,14.816071,6.258945
 SI_BOT_20160320,01.04.2016,25.03.2016,25.03.2016,SI,2016,5,182,910,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Botto,Nana-Gribizi,Kaga-Bandoro,Botto,19.100667,6.975222
 ACF_BO2_20160303,08.03.2016,03.03.2016,07.03.2016,ACF,2016,1,44,220,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Ndali,Ouham,Nana-Bakassa,Nana-Bakassa,17.299074,6.951541
 ACF_Bol_20160303,07.03.2016,03.03.2016,07.03.2016,ACF,2016,1,21,105,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Bolongofio,Ouham,Nana-Bakassa,Nana-Bakassa,17.468049,6.804646
@@ -139,108 +157,106 @@ ACT_KOU_20160210,16.02.2016,15.02.2016,15.02.2016,ACTED,2016,1,33,150,Non,Oui,No
 ACT_NIA_20160208,16.02.2016,13.02.2016,13.02.2016,ACTED,2016,6,1341,6706,Oui,Non,Non,Oui,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Niakari,Mbomou,Bangassou,Sayo Niakari,22.753196,4.838819
 ACT_MAB_20160203,16.02.2016,12.02.2016,12.02.2016,ACTED,2016,4,204,542,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Mabo,Mbomou,Gambo,Gambo,22.533842,4.666018
 ACF_Boy_20160208,16.02.2016,08.02.2016,15.02.2016,ACF,2016,1,107,534,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Boya i,Ouham,Bouca,Lady Gbawi,18.543181,6.952328
-ACF_Boz_20160208,11.02.2016,08.02.2016,11.02.2016,ACF,2016,2,124,620,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bozakon,Ouham,Bouca,Lady Gbawi,18.504728,6.952119
 PU_BOG_20160202,14.02.2016,02.02.2016,06.02.2016,PU-AMI,2016,2,510,2550,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Oui,Non,Non,Oui,Non,Non,Non,Boganangone,Lobaye,Boganangone,Boganangone,17.198067,4.695853
 PU_MBA_20160202,14.02.2016,01.02.2016,03.02.2016,PU-AMI,2016,2,280,1401,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Mballa,Bamingui-Bangoran,Ndele,Mbolo-Pata,20.86152,7.919522
-ACT_IRA_20160120,08.02.2016,31.01.2016,01.02.2016,ACTED,2016,7,19,95,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Ira Banda,Haute-Kotto,Bria,Daho-Mboutou,22.071622,5.949359
-ACT_TAM_20160119,09.02.2016,29.01.2016,29.01.2016,ACTED,2016,1,179,829,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Non,Tambourah,Haut-Mbomou,Zemio,Zemio,25.219842,5.17573
-SI_BOT_20160121,01.02.2016,28.01.2016,28.01.2016,SI,2016,6,0,0,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Botto,Nana-Gribizi,Kaga-Bandoro,Botto,19.100667,6.975222
-PU_DED_20160112,19.01.2016,12.01.2016,14.01.2016,PU-AMI,2016,3,22,106,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Dédé Makbouba,Mambere-Kadei,Dede-Mokouba,0,15.242819,3.916667
+ACF_Boz_20160208,11.02.2016,08.02.2016,11.02.2016,ACF,2016,2,124,620,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bozakon,Ouham,Bouca,Lady Gbawi,18.504728,6.952119
 ACF_Ndo_20160111,10.02.2016,11.01.2016,10.02.2016,ACF,2016,2,88,360,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Ndongue,Nana-Mambere,Bouar,Zotoua-Bangarem,15.600002,5.628799
+ACT_TAM_20160119,09.02.2016,29.01.2016,29.01.2016,ACTED,2016,1,179,829,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Non,Tambourah,Haut-Mbomou,Zemio,Zemio,25.219842,5.17573
 ACF_Nam_20160111,09.02.2016,11.01.2016,09.02.2016,ACF,2016,1,28,110,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Nambena,Nana-Mambere,Bouar,Niem-Yelewa,15.256994,6.54445
+ACT_IRA_20160120,08.02.2016,31.01.2016,01.02.2016,ACTED,2016,7,19,95,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Ira Banda,Haute-Kotto,Bria,Daho-Mboutou,22.071622,5.949359
+SI_BOT_20160121,01.02.2016,28.01.2016,28.01.2016,SI,2016,6,0,0,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Botto,Nana-Gribizi,Kaga-Bandoro,Botto,19.100667,6.975222
 ACF_Pak_20160111,27.01.2016,11.01.2016,13.01.2016,ACF,2016,1,180,600,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Pakame,Nana-Mambere,Bouar,Niem-Yelewa,15.247827,6.574338
-ACF_SAN_20151221,28.12.2015,21.12.2015,21.12.2015,ACF,2015,5,598,2990,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Oui,Oui,Non,Oui,Oui,Non,Non,Non,Sangare lim,Ouham Pende,Koui,Koui,15.358343,6.950599
-ACF_BOH_20151220,28.12.2015,20.12.2015,20.12.2015,ACF,2015,6,7600,38000,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Non,Non,Belge,Ouham Pende,Bocaranga,Loura,15.79824,7.060915
+PU_DED_20160112,19.01.2016,12.01.2016,14.01.2016,PU-AMI,2016,3,22,106,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,DÃ©dÃ© Makbouba,Mambere-Kadei,Dede-Mokouba,0,15.242819,3.916667
 ACT_NDO_20151129,12.01.2016,19.12.2015,19.12.2015,ACTED,2015,2,317,2000,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Ndoro,Ouaka,Kouango,0,20.392742,5.141333
 ACT_LEK_20151122,12.01.2016,19.12.2015,20.12.2015,ACTED,2015,2,222,1400,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Lekpa,Basse-Kotto,Alindao,Yambele-Ewou,21.01476,5.386805
+ACF_SAN_20151221,28.12.2015,21.12.2015,21.12.2015,ACF,2015,5,598,2990,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Oui,Oui,Non,Oui,Oui,Non,Non,Non,Sangare lim,Ouham Pende,Koui,Koui,15.358343,6.950599
+ACF_BOH_20151220,28.12.2015,20.12.2015,20.12.2015,ACF,2015,6,7600,38000,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Non,Non,Belge,Ouham Pende,Bocaranga,Loura,15.79824,7.060915
 ACF_MAR_20151023,08.12.2015,05.12.2015,05.12.2015,ACF,2015,1,256,1280,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Marali,Ouham,Bouca,0,18.404156,6.036561
-ACF_MAR_20150609,08.12.2015,05.12.2015,05.12.2015,ACF,2015,1,901,3442,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Marzé,Ouham,Bouca,0,18.778981,6.847689
+ACF_MAR_20150609,08.12.2015,05.12.2015,05.12.2015,ACF,2015,1,901,3442,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,MarzÃ©,Ouham,Bouca,0,18.778981,6.847689
 PU_ADO_20151104,04.12.2015,26.11.2015,26.12.2015,PU-AMI,2015,4,298,1489,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Adoumindou,Bamingui-Bangoran,Bamingui,Vassako,20.611689,8.278108
-ACT_NGA_20151111,28.04.2016,21.11.2015,21.11.2015,ACTED,2015,5,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Ngakobo,Ouaka,Bambari,Ngougbia,20.730846,5.339652
-ACT_BEM_20151107,28.04.2016,19.11.2015,19.11.2015,ACTED,2015,2,76,366,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Béma,Mbomou,Ouango,Ouango,22.442181,4.142042
 ACT_GBA_20151031,16.11.2015,05.11.2015,06.11.2015,ACTED,2015,20,844,4220,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Gbakoro,Basse-Kotto,Zangba,Yabongo,20.6009,4.56999
-ACTED_MAL_20150802,16.11.2015,04.11.2015,06.11.2015,ACTED,2015,11,681,3405,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Nzéleté,Basse-Kotto,Alindao,Bangui-Kette,21.02753,5.087301
-ACT_BIA_20150924,13.10.2015,26.09.2015,27.09.2015,ACTED,2015,1,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bianga,Ouaka,Kouango,Kouango,20.4,4.83
-SI_OUA_20150923,14.10.2015,24.09.2015,24.09.2015,SI,2015,1,187,1304,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Ouandago 4,Nana-Gribizi,Kaga-Bandoro,Nana-Outa,18.8427,7.262246
+ACTED_MAL_20150802,16.11.2015,04.11.2015,06.11.2015,ACTED,2015,11,681,3405,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,NzÃ©letÃ©,Basse-Kotto,Alindao,Bangui-Kette,21.02753,5.087301
+SI_FAY_20150320,09.11.2015,16.06.2015,16.06.2015,SI,2015,5,131,655,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Faya 1,Nana-Gribizi,Kaga-Bandoro,Ndenga,19.263804,6.756221
 ACT_AWA_20150820,19.10.2015,18.09.2015,19.09.2015,ACTED,2015,6,4000,20000,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Awatche,Ouaka,Bambari,Pladama-Ouaka,20.508512,5.630318
-ACF_MAL_20150904,15.09.2015,08.09.2015,09.09.2015,ACF,2015,0,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Ndere,Kemo,Dekoa,Tilo,19.356138,6.25394
 PU_KRA_20150909,19.10.2015,07.09.2015,09.09.2015,PU-AMI,2015,2,130,650,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Krakoma,Bamingui-Bangoran,Ndele,Mbolo-Pata,21.28193,8.101935
+SI_OUA_20150923,14.10.2015,24.09.2015,24.09.2015,SI,2015,1,187,1304,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Ouandago 4,Nana-Gribizi,Kaga-Bandoro,Nana-Outa,18.8427,7.262246
+ACT_BIA_20150924,13.10.2015,26.09.2015,27.09.2015,ACTED,2015,1,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bianga,Ouaka,Kouango,Kouango,20.4,4.83
+ACF_MAL_20150904,15.09.2015,08.09.2015,09.09.2015,ACF,2015,0,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Ndere,Kemo,Dekoa,Tilo,19.356138,6.25394
 PU_AMA_20150902,08.09.2015,02.09.2015,04.09.2015,PU-AMI,2015,3,141,513,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Amada Gaza,Mambere-Kadei,Amada-Gaza,0,15.209111,4.768658
 PU_KOM_20150903,08.09.2015,02.09.2015,03.09.2015,PU-AMI,2015,2,300,1500,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Komasssa,Sangha-Mbaere,Nola,Nola,15.875968,3.654226
-PU_YAM_20150826,31.08.2015,26.08.2015,26.08.2015,PU-AMI,2015,1,40,200,Oui,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Yamatchoké,Sangha-Mbaere,Nola,0,15.504203,3.457325
+PU_YAM_20150826,31.08.2015,26.08.2015,26.08.2015,PU-AMI,2015,1,40,200,Oui,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,YamatchokÃ©,Sangha-Mbaere,Nola,0,15.504203,3.457325
 PU_KOU_20150818,25.08.2015,17.08.2015,18.08.2015,PU-AMI,2015,2,0,0,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Koundi,Bamingui-Bangoran,Ndele,Dar El Kouti,20.7,8.827633
+SI_BOT_20150722,24.08.2015,22.07.2015,22.07.2015,SI,2015,0,78,390,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Botto,Nana-Gribizi,Kaga-Bandoro,Botto,19.100667,6.975222
 ACT_GOY_20150802,18.08.2015,16.08.2015,17.08.2015,ACTED,2015,12,734,3668,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Boy Kota,Ouaka,Kouango,Cochio-Toulou,20.576496,5.15827
 PU_POT_20150731,12.08.2015,04.08.2015,05.08.2015,PU-AMI,2015,3,101,253,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Berberati,Mambere-Kadei,Berberati,Basse-Batouri,15.787529,4.255473
-SI_BOT_20150722,24.08.2015,22.07.2015,22.07.2015,SI,2015,0,78,390,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Botto,Nana-Gribizi,Kaga-Bandoro,Botto,19.100667,6.975222
 ACF_BOM_20150720,31.07.2015,20.07.2015,20.07.2015,ACF,2015,1,374,1870,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Bomentana Centre,Ouham,Nangha Boguila,Nangha Boguila,16.942772,6.986135
+ACF_BEM_20150715,31.07.2015,15.07.2015,15.07.2015,ACF,2015,1,167,835,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,BÃ©mal 1,Ouham,Batangafo,0,17.867414,7.128078
+PU_BER_20150520,28.07.2015,20.05.2015,20.05.2015,PU-AMI,2015,0,0,0,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Berberati,Mambere-Kadei,Berberati,Basse-Batouri,15.787529,4.255473
 DRC_MAR_20150717,21.07.2015,17.07.2015,17.07.2015,DRC,2015,1,156,938,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Oui,Markounda,Ouham,Markounda,Nana Markounda,16.966936,7.61732
 ACT_NGA_20150603,21.07.2015,17.07.2015,20.07.2015,ACTED,2015,3,121,322,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Boy Kota,Ouaka,Kouango,Cochio-Toulou,20.576496,5.15827
-ACF_BEM_20150715,31.07.2015,15.07.2015,15.07.2015,ACF,2015,1,167,835,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bémal 1,Ouham,Batangafo,0,17.867414,7.128078
-DRC_BEY_20150618,07.07.2015,03.07.2015,03.07.2015,DRC,2015,2,73,372,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,Béyongo,Ouham,Markounda,Nana Markounda,17.045556,8
+PU_NOL_20150623,09.07.2015,01.11.2014,04.11.2014,PU-AMI,2014,3,22700,113396,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,Nola,Sangha-Mbaere,Nola,Nola,16.04494,3.524026
+DRC_BEY_20150618,07.07.2015,03.07.2015,03.07.2015,DRC,2015,2,73,372,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,BÃ©yongo,Ouham,Markounda,Nana Markounda,17.045556,8
+DRC_GBA_20150618,01.07.2015,18.06.2015,18.06.2015,DRC,2015,1,207,1034,Oui,Non,Non,Oui,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Gbanda,Ouham,Batangafo,Batangafo,18.011072,7.216039
 PU_NOL_20160601,30.06.2015,25.06.2015,26.06.2015,PU-AMI,2015,3,60,300,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Yantchi,Sangha-Mbaere,Nola,Bilolo,15.494817,3.460481
 PU_NOL_20150620,30.06.2015,25.06.2015,26.06.2015,PU-AMI,2015,3,0,0,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Salo,Sangha-Mbaere,Nola,Salo,16.103793,3.184154
-DRC_GBA_20150618,01.07.2015,18.06.2015,18.06.2015,DRC,2015,1,207,1034,Oui,Non,Non,Oui,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Gbanda,Ouham,Batangafo,Batangafo,18.011072,7.216039
-SI_FAY_20150320,09.11.2015,16.06.2015,16.06.2015,SI,2015,5,131,655,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Faya 1,Nana-Gribizi,Kaga-Bandoro,Ndenga,19.263804,6.756221
-DRC_BEO_20150610,23.06.2015,10.06.2015,10.06.2015,DRC,2015,1,235,2045,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Beogombo 2,Ouham Pende,Paoua,Nana-Barya,16.615853,7.415468
-DRC_KOZ_20150601,26.06.2015,04.06.2015,04.06.2015,DRC,2015,3,168,840,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Kozoro 1,Ouham,Bouca,Lady Gbawi,18.505414,6.840072
-DRC_HER_20150529,23.06.2015,02.06.2015,02.06.2015,DRC,2015,1,81,245,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Herbo,Ouham Pende,Ngaoundaye,Yeme,16.092648,7.556351
-DRC_BOL_20150520,21.05.2015,02.06.2015,02.06.2015,DRC,2015,1,176,522,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Bolgue,Ouham,Markounda,Nana Markounda,17.005704,7.273226
 DRC_MBI_20150507,29.06.2015,01.06.2015,01.06.2015,DRC,2015,1,331,1027,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Mbinai,Ouham Pende,Ngaoundaye,Kodi,15.439806,7.425272
+DRC_KOZ_20150601,26.06.2015,04.06.2015,04.06.2015,DRC,2015,3,168,840,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Oui,Non,Oui,Non,Non,Non,Non,Kozoro 1,Ouham,Bouca,Lady Gbawi,18.505414,6.840072
+DRC_BEO_20150610,23.06.2015,10.06.2015,10.06.2015,DRC,2015,1,235,2045,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Non,Non,Beogombo 2,Ouham Pende,Paoua,Nana-Barya,16.615853,7.415468
+DRC_HER_20150529,23.06.2015,02.06.2015,02.06.2015,DRC,2015,1,81,245,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Herbo,Ouham Pende,Ngaoundaye,Yeme,16.092648,7.556351
+ACF_BOG_20150528,09.06.2015,26.05.2015,30.05.2015,ACF,2015,0,0,0,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Boganangone,Lobaye,Boganangone,Boganangone,17.198067,4.695853
 SI_BI1_20150516,02.06.2015,01.06.2015,01.06.2015,SI,2015,2,383,1960,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Kaga-Bandoro,Nana-Gribizi,Kaga-Bandoro,Kaga-Bandoro,19.185733,6.992369
 DRC_BEP_20150521,29.05.2015,27.05.2015,27.05.2015,DRC,2015,1,552,1630,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,Non,Oui,Non,Oui,Non,Non,Bepikasse 1,Ouham Pende,Paoua,Mia-Pende,16.638503,7.604638
-ACF_BOG_20150528,09.06.2015,26.05.2015,30.05.2015,ACF,2015,0,0,0,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Boganangone,Lobaye,Boganangone,Boganangone,17.198067,4.695853
 ACTED_MBO_20150522,29.05.2015,24.05.2015,25.05.2015,ACTED,2015,1,135,675,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Mbo-Pouloubou,Basse-Kotto,Mingala,Kotto,21.639282,5.126245
-PU_BER_20150520,28.07.2015,20.05.2015,20.05.2015,PU-AMI,2015,0,0,0,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Berberati,Mambere-Kadei,Berberati,Basse-Batouri,15.787529,4.255473
+DRC_BOL_20150520,21.05.2015,02.06.2015,02.06.2015,DRC,2015,1,176,522,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Bolgue,Ouham,Markounda,Nana Markounda,17.005704,7.273226
 PU_NGA_20150501,19.05.2015,11.05.2015,14.05.2015,PU-AMI,2015,3,436,2180,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Ngarba,Bamingui-Bangoran,Ndele,Dar El Kouti,20.496477,9.203859
 ACTED_MAL_20150429,19.05.2015,07.05.2015,07.05.2015,ACTED,2015,0,0,0,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Maloum,Ouaka,Bambari,Bambari,21.06537,5.852494
-ACTED_TAB_20150429,07.05.2015,06.05.2015,06.05.2015,ACTED,2015,3,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Tabara,Ouaka,Bambari,Bambari,20.544011,5.939525
 ACF_KOU_20150501,12.05.2015,01.05.2015,02.05.2015,ACF,2015,1,200,1000,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Koui,Ouham Pende,Koui,Koui,15.453221,6.951955
+ACTED_TAB_20150429,07.05.2015,06.05.2015,06.05.2015,ACTED,2015,3,0,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Tabara,Ouaka,Bambari,Bambari,20.544011,5.939525
 PU_NDI_20150425,04.05.2015,01.05.2015,01.05.2015,PU-AMI,2015,5,25,125,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Ndinguiri,Mambere-Kadei,Gadzi,Topia,16.336991,4.886027
 DRC_NZA_20150422,04.05.2015,25.04.2015,25.04.2015,DRC,2015,1,322,1610,Oui,Non,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Nzapoye,Ouham Pende,Ngaoundaye,Lim,15.651473,7.438171
-DRC_BED_20150422,23.04.2015,24.04.2015,24.04.2015,DRC,2015,5,810,4232,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Bedoua 1,Ouham Pende,Paoua,Mia-Pende,16.458098,7.602153
-DRC_NGO_20150423,04.05.2015,23.04.2015,23.04.2015,DRC,2015,1,1066,6400,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Ngoutéré,Ouham Pende,Bocaranga,Pende,15.898247,6.771819
-ACTED_GBO_20150424,25.04.2015,23.04.2015,24.04.2015,ACTED,2015,8,0,837,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Gbolo,Mbomou,Bakouma,Bakouma,22.748606,5.698269
-PU_MBA_20150313,20.04.2015,21.04.2015,23.04.2015,PU-AMI,2015,6,600,3000,Non,Non,Oui,Non,Oui,Oui,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Oui,Boy bale,Mambere-Kadei,Gadzi,Mbali,16.757124,5.225732
-ACTED_KRA_20150418,27.04.2015,18.04.2015,18.04.2015,ACTED,2015,1,0,213,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Krakoundji,Ouaka,Bambari,0,20.319167,5.420694
+DRC_NGO_20150423,04.05.2015,23.04.2015,23.04.2015,DRC,2015,1,1066,6400,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,NgoutÃ©rÃ©,Ouham Pende,Bocaranga,Pende,15.898247,6.771819
 ACF_BOW_20150417,28.04.2015,17.04.2015,17.04.2015,ACF,2015,1,1000,5000,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Non,Bowara,Ouham,Nana-Bakassa,Nana-Bakassa,17.384206,7.169761
 ACF_BOU_20150415,28.04.2015,15.04.2015,15.04.2015,ACF,2015,1,50,250,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Bouanga,Kemo,Dekoa,0,15.588614,6.236853
-ACF_DEK_20150415,28.04.2015,15.04.2015,15.04.2015,ACF,2015,1,416,2080,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Dékoa,Kemo,Dekoa,Dekoa,19.118972,6.518772
+ACF_DEK_20150415,28.04.2015,15.04.2015,15.04.2015,ACF,2015,1,416,2080,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,DÃ©koa,Kemo,Dekoa,Dekoa,19.118972,6.518772
+ACTED_KRA_20150418,27.04.2015,18.04.2015,18.04.2015,ACTED,2015,1,0,213,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Krakoundji,Ouaka,Bambari,0,20.319167,5.420694
+ACTED_GBO_20150424,25.04.2015,23.04.2015,24.04.2015,ACTED,2015,8,0,837,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Gbolo,Mbomou,Bakouma,Bakouma,22.748606,5.698269
+DRC_BED_20150422,23.04.2015,24.04.2015,24.04.2015,DRC,2015,5,810,4232,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Oui,Bedoua 1,Ouham Pende,Paoua,Mia-Pende,16.458098,7.602153
+PU_MBA_20150313,20.04.2015,21.04.2015,23.04.2015,PU-AMI,2015,6,600,3000,Non,Non,Oui,Non,Oui,Oui,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Oui,Boy bale,Mambere-Kadei,Gadzi,Mbali,16.757124,5.225732
 DRC_TOU_20150407,19.04.2015,14.04.2015,14.04.2015,DRC,2015,1,6,30,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Touga,Ouham Pende,Ngaoundaye,Lim,15.645415,7.44371
 PU_BAM_20150320,14.04.2015,13.04.2015,15.04.2015,PU-AMI,2015,1,0,709,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bamingui,Bamingui-Bangoran,Bamingui,Vassako,20.179799,7.530107
-ACTED_BEM_20150327,14.04.2015,10.04.2015,10.04.2015,ACTED,2015,1,990,4950,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,Béma,Mbomou,Ouango,Ouango,22.442181,4.142042
+ACTED_BEM_20150327,14.04.2015,10.04.2015,10.04.2015,ACTED,2015,1,990,4950,Non,Non,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Oui,Non,Oui,Non,Non,BÃ©ma,Mbomou,Ouango,Ouango,22.442181,4.142042
 ACTED_DER_20150227,14.04.2015,10.04.2015,10.04.2015,ACTED,2015,1,440,2200,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Derbissaka,Mbomou,Rafai,Rafai,24.847812,5.774286
 PU_TIR_20150320,14.04.2015,03.04.2015,03.04.2015,PU-AMI,2015,1,85,85,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Tiri,Bamingui-Bangoran,Ndele,Dar El Kouti,20.399447,8.599117
 PU_MIA_20150320,14.04.2015,02.04.2015,02.04.2015,PU-AMI,2015,1,20,100,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Miamani,Bamingui-Bangoran,Ndele,Dar El Kouti,20.000353,8.754661
-ACF_KOU_20150325,03.04.2015,02.04.2015,02.04.2015,ACF,2015,1,1400,7000,Oui,Non,Non,Non,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Kouki,Ouham,Nana-Bakassa,Nana-Bakassa,17.309082,7.166343
 PU_GOL_20150320,14.04.2015,01.04.2015,01.04.2015,PU-AMI,2015,1,80,400,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Oui,Non,Non,Oui,Non,Non,Golongosso,Bamingui-Bangoran,Ndele,Dar El Kouti,19.18565,8.924383
-ACF_BOK_20150327,30.03.2015,27.03.2015,27.03.2015,ACF,2015,0,6,30,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,Bokoute 1,Kemo,Sibut,Ngoumbele,19.486982,5.788886
+ACF_KOU_20150325,03.04.2015,02.04.2015,02.04.2015,ACF,2015,1,1400,7000,Oui,Non,Non,Non,Oui,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Kouki,Ouham,Nana-Bakassa,Nana-Bakassa,17.309082,7.166343
+ACF_KOU_20150124,01.04.2015,24.01.2015,24.01.2015,ACF,2015,1,1400,7000,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Kouki,Ouham,Nana-Bakassa,Nana-Bakassa,17.309082,7.166343
 SI_MBR_20141216,31.03.2015,26.03.2015,26.03.2015,SI,2015,2,47,261,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Grevai,Nana-Gribizi,Kaga-Bandoro,0,19.427128,7.064633
-SI_DER_20150228,24.03.2015,20.03.2015,20.03.2015,SI,2015,0,0,1846,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Grivaï,Nana-Gribizi,Kaga-Bandoro,Grivai-Pamia,19.437234,7.064233
-ACTED_GOU_20150319,31.03.2015,19.03.2015,19.03.2015,ACTED,2015,0,520,2600,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,Goussiéma,Ouaka,Kouango,Kouango,20.12675,5.395833
+ACTED_GOU_20150319,31.03.2015,19.03.2015,19.03.2015,ACTED,2015,0,520,2600,Oui,Non,Non,Oui,Oui,Non,Non,Non,Oui,Non,Non,Oui,Oui,Non,Non,Non,Non,GoussiÃ©ma,Ouaka,Kouango,Kouango,20.12675,5.395833
+ACF_BOK_20150327,30.03.2015,27.03.2015,27.03.2015,ACF,2015,0,6,30,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,Bokoute 1,Kemo,Sibut,Ngoumbele,19.486982,5.788886
+PU_DED_20150312,27.03.2015,18.03.2015,18.03.2015,PU-AMI,2015,2,60,300,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,DÃ©dÃ© Makbouba,Mambere-Kadei,Dede-Mokouba,0,15.242819,3.916667
 PU_MBA_20150318,25.03.2015,19.03.2015,19.03.2015,PU-AMI,2015,5,180,900,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Mbandjifolo,Mambere-Kadei,Dede-Mokouba,0,15.255556,4.075833
-PU_DED_20150312,27.03.2015,18.03.2015,18.03.2015,PU-AMI,2015,2,60,300,Oui,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Dédé Makbouba,Mambere-Kadei,Dede-Mokouba,0,15.242819,3.916667
+SI_DER_20150228,24.03.2015,20.03.2015,20.03.2015,SI,2015,0,0,1846,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,GrivaÃ¯,Nana-Gribizi,Kaga-Bandoro,Grivai-Pamia,19.437234,7.064233
+DRC_BEB_20150212,24.03.2015,05.03.2015,05.03.2015,DRC,2015,1,31,50,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Oui,Non,Non,Bebingui,Ouham Pende,Paoua,Mia-Pende,16.526,7.814075
+ACF_GBA_20150223,24.03.2015,23.02.2015,23.02.2015,ACF,2015,0,13,65,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Gbakara,Ouham,Bossangoa,Soumbe,17.641028,6.436505
+ACF_BOY_20150123,24.03.2015,23.01.2015,23.01.2015,ACF,2015,0,26,130,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Boyongo-Kette,Ouham,Bossangoa,Ndoro Mboli,17.36229,6.526361
+ACF_BOM_20150128,23.03.2015,28.01.2015,28.01.2015,ACF,2015,0,76,399,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Bombere-Kota,Ouham,Bossangoa,Ben Zambe,17.548962,6.914322
 DRC_MBA_20150110,20.03.2015,12.03.2015,12.03.2015,DRC,2015,0,273,1248,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Mbada,Ouham,Bouca,Lady Gbawi,18.562368,6.865547
 ACTED_GOU_20150312,20.03.2015,12.03.2015,12.03.2015,ACTED,2015,0,85,410,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Goussoubanda,Ouaka,Bambari,Pladama-Ouaka,20.559548,5.895595
 ACTED_TOG_20150312,20.03.2015,12.03.2015,12.03.2015,ACTED,2015,0,203,1016,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Togo,Ouaka,Bambari,Pladama-Ouaka,20.57274,5.880615
 ACTED_AND_20150308,20.03.2015,11.03.2015,14.03.2015,ACTED,2015,0,41,204,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Andjikapa,Basse-Kotto,Zangba,0,20.750833,4.744444
-ACF_KAB_20150305,19.03.2015,06.03.2015,06.03.2015,ACF,2015,0,120,599,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Kaboro,Ouham,Nana-Bakassa,Nana-Bakassa,17.529444,6.970833
-DRC_BEB_20150212,24.03.2015,05.03.2015,05.03.2015,DRC,2015,1,31,50,Oui,Non,Non,Non,Non,Oui,Non,Non,Oui,Non,Oui,Non,Oui,Non,Oui,Non,Non,Bebingui,Ouham Pende,Paoua,Mia-Pende,16.526,7.814075
 PU_NAO_20150303,20.03.2015,05.03.2015,05.03.2015,PU-AMI,2015,0,20,1,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Oui,Oui,Non,Non,Non,Non,Nao,Mambere-Kadei,Berberati,Ouakanga,15.318057,4.526812
 ACTED_NGO_20150305,20.03.2015,05.03.2015,05.03.2015,ACTED,2015,0,19,95,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Ngoulinga,Ouaka,Grimari,Grimari,20.069115,5.709005
 ACTED_AGO_20150305,20.03.2015,05.03.2015,05.03.2015,ACTED,2015,0,610,3050,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Agoumar,Mbomou,Rafai,Rafai,23.917023,4.993979
 ACTED_LIH_20150206,20.03.2015,04.03.2015,04.03.2015,ACTED,2015,0,0,0,Oui,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Lihoto,Ouaka,Kouango,Azengue-Mindou,20.15837,5.312277
 SI_BOT_20150127,20.03.2015,02.03.2015,16.04.2015,SI,2015,15,1513,0,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Kaga-Bandoro,Nana-Gribizi,Kaga-Bandoro,Kaga-Bandoro,19.185733,6.992369
+ACF_KAB_20150305,19.03.2015,06.03.2015,06.03.2015,ACF,2015,0,120,599,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Kaboro,Ouham,Nana-Bakassa,Nana-Bakassa,17.529444,6.970833
 ACF_BES_20150221,03.03.2015,27.02.2015,27.02.2015,ACF,2015,0,85,381,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Besson,Nana-Mambere,Baboua,Goudrot,14.816071,6.258945
 PU_ORE_20150213,03.03.2015,25.02.2015,25.02.2015,PU-AMI,2015,1,50,250,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Ore,Mambere-Kadei,Gamboula,Basse-Boumne,15.082169,4.364897
 PU_DIL_20150213,03.03.2015,25.02.2015,25.02.2015,PU-AMI,2015,1,35,200,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Oui,Non,Non,Non,Non,Dilapoko,Mambere-Kadei,Gamboula,Basse-Boumne,15.09166,4.36372
 ACTED_MOB_20150217,03.03.2015,25.02.2015,25.02.2015,ACTED,2015,0,558,4469,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Mobaye - gp Mangbango,Basse-Kotto,Mobaye,Mobaye,21.176833,4.319708
-ACF_GBA_20150223,24.03.2015,23.02.2015,23.02.2015,ACF,2015,0,13,65,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Gbakara,Ouham,Bossangoa,Soumbe,17.641028,6.436505
 ACF_YON_20150221,03.03.2015,21.02.2015,21.02.2015,ACF,2015,0,1151,5753,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Yongoro Mbolaye,Nana-Mambere,Bouar,Herman-Brousse,15.586952,6.235382
 ACF_GBB_20150220,03.03.2015,20.02.2015,20.02.2015,ACF,2015,3,243,1215,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Bofire,Ouham,Bossangoa,Ben Zambe,17.766026,6.71861
 ACTED_DIM_20150112,03.03.2015,13.02.2015,13.02.2015,ACTED,2015,0,0,18000,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Dimbi,Basse-Kotto,Kembe,Kembe,21.72028,4.624735
 ACTED_OUA_20150112,03.03.2015,10.02.2015,10.02.2015,ACTED,2015,0,46,226,Non,Oui,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Ouazzoua,Mbomou,Ouango,0,22.418461,4.270408
 ACF_SAB_20150204,03.03.2015,04.02.2015,04.02.2015,ACF,2015,0,100,500,Oui,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Sabewa,Nana-Mambere,Bouar,Niem-Yelewa,14.982606,6.668017
-ACF_BOM_20150128,23.03.2015,28.01.2015,28.01.2015,ACF,2015,0,76,399,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Oui,Non,Non,Non,Non,Oui,Non,Non,Bombere-Kota,Ouham,Bossangoa,Ben Zambe,17.548962,6.914322
-ACF_KOU_20150124,01.04.2015,24.01.2015,24.01.2015,ACF,2015,1,1400,7000,Oui,Non,Non,Non,Oui,Oui,Non,Non,Non,Non,Non,Non,Oui,Oui,Non,Non,Non,Kouki,Ouham,Nana-Bakassa,Nana-Bakassa,17.309082,7.166343
-ACF_BOY_20150123,24.03.2015,23.01.2015,23.01.2015,ACF,2015,0,26,130,Oui,Non,Non,Oui,Non,Non,Non,Non,Non,Non,Non,Non,Non,Non,Oui,Non,Non,Boyongo-Kette,Ouham,Bossangoa,Ndoro Mboli,17.36229,6.526361
-PU_NOL_20150623,09.07.2015,01.11.2014,04.11.2014,PU-AMI,2014,3,22700,113396,Oui,Non,Non,Oui,Oui,Oui,Non,Non,Oui,Non,Oui,Oui,Oui,Non,Non,Non,Non,Nola,Sangha-Mbaere,Nola,Nola,16.04494,3.524026
