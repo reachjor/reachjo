@@ -143,7 +143,7 @@ a:hover{text-decoration: underline;}
 							<h3>Interventions</h3>
 							</div>
 							<div  class="col-md-4" align="right">
-								<h3a><br>Dernière actualisation: 27 mai 2019</h3a>
+								<h3a><br>Dernière actualisation: 20 février 2020</h3a>
 							</div>
 						</div>
 						<div class="row">
@@ -397,8 +397,9 @@ var Partnergp = PartnerDim.group().reduceCount();
 			  return "WASH"  
 			else if (d.NFI_WASH == "NFI-WASH" )
 			  return "NFI-WASH"	
+			  
 			else
-			  return "NFI-WASH"   			
+			  return "NFI-WASH-Autre"   			
 			});   
   
   var intergp = interdim.group();  
@@ -627,13 +628,10 @@ var Partnergp = PartnerDim.group().reduceCount();
 		.elasticX(true)
         .width(300)
         .height(300)
-		.elasticX(true)
-        .renderLabel(true)
-        .colors(['#3182bd'])
+		.renderLabel(true)
 		.ordering(function (p) { return -p.value;})
-        .xAxis().ticks(4).tickFormat(d3.format(""))
-		
-		;  
+        .colors(['#3182bd'])
+		.xAxis().ticks(4).tickFormat(d3.format("s"));  
 		
 	dc.rowChart("#cccm .prefNFI",groupname)
         .dimension(prefec)
@@ -658,7 +656,7 @@ var yeargp  = xf.dimension(function(d) { return d.year; });
 		.group(yeargroup)
 		.width(300)
         .height(200)
-		.x(d3.scale.ordinal().domain([2014,2015,2016,2017,2018,2019]))
+		.x(d3.scale.ordinal().domain([2014,2015,2016,2017,2018,2019,2020]))
 		.xUnits(dc.units.ordinal)
 		.transitionDuration(500)
 		.centerBar(true)	
